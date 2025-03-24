@@ -1,0 +1,3 @@
+# Introducción {.unnumbered}
+
+  Este estudio utiliza datos de la Encuesta Nacional de Hogares de Costa Rica...

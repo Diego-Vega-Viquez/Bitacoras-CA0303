@@ -19,13 +19,13 @@ bibliography: references.bib
 csl: apa.csl
 
 format:
-  html:
+  # html:
       # Pueden usar cualquier tema de los que están aca:
       # https://quarto.org/docs/output-formats/html-themes.html a excepción de
       # los oscuros porque no entiende nada.
-    theme: cosmo
+    # theme: cosmo
   pdf:
-    documentclass: scrreprt
+    documentclass: book
 
 execute:
   freeze: auto
