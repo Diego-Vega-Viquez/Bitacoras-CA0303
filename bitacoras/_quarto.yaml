@@ -1,0 +1,35 @@
+project:
+  type: book
+  output-dir: "docs"
+
+lang: es
+
+book:
+  title: "Bitácoras, CA-0303 (I-2025)"
+  author: "Jose Andrey Prado Rojas, José Carlos Quintero Cedeño, Diego Alberto Vega Víquez" 
+  date: today
+  #site-url: google.com # Vacío por el momento
+  repo-actions: [edit]
+  downloads: [pdf, epub]
+  chapters:
+    - "index.qmd"
+    - "bitacora-1.qmd"
+
+bibliography: references.bib
+csl: apa.csl
+
+format:
+  html:
+      # Pueden usar cualquier tema de los que están aca:
+      # https://quarto.org/docs/output-formats/html-themes.html a excepción de
+      # los oscuros porque no entiende nada.
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+execute:
+  freeze: auto
+  cache: true
+
+from: markdown+tex_math_single_backslash+emoji
+link-external-newwindow: true
