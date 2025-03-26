@@ -2,20 +2,75 @@
 
 ## Parte de planificación
 
+### Pregunta de investigación
+
+El propósito de este trabajo es determinar cómo varía el acceso a oportunidades laborales y el nivel económico de una persona en función del grado de discapacidad que presente
+
 ### Definición de la idea
 
+Es evidente que las habilidades que posee una persona son un factor determinante en su inserción en el mercado laboral y, por ende, en su posición dentro del estrato socioeconómico. Estas habilidades están directamente influenciadas por las capacidades físicas e intelectuales del individuo, por lo que es razonable suponer que las personas con algún grado de discapacidad podrían enfrentar mayores desafíos para acceder a oportunidades laborales en igualdad de condiciones.
 
+Dado que el empleo constituye una de las principales vías para la movilidad social y el acceso a mejores condiciones de vida, resulta fundamental ver en qué medida las personas con distintos niveles de discapacidad logran integrarse al mercado laboral y cómo esto impacta en su situación económica. Comprender esta brecha permitirá no solo identificar las principales barreras que enfrentan estos grupos, sino también generar evidencia que contribuya al diseño de políticas públicas y estrategias de inclusión laboral más efectivas.
+
+
+
+### Conceptualización de la idea
+A continuación, se presentan una serie de definiciones:
+
+- Determinar: Decidir algo, despejar la incertidumbre sobre ello.
+- Oportunidad: Momento o circunstancia oportunos o convenientes para algo.
+- Laboral: Perteneciente o relativo al trabajo, en su aspecto económico, jurídico y social.
+- Económico: Perteneciente o relativo a la economía.
+- Discapacidad: Situación de la persona que, por sus condiciones físicas, sensoriales, intelectuales o mentales duraderas, encuentra dificultades para su participación e inclusión social.
 
 ### Identificación de tensiones
+Los potenciales problemas con los que cuenta esta idea son:
+
+-	No es sencillo establecer una relación directa entre el grado de discapacidad y las oportunidades económicas, ya que existen múltiples factores intervinientes (educación, políticas públicas, entorno familiar, etc.).
+
+-	Existen múltiples variables por cada factor interviniente, de modo que la escogencia limitada de variables para hacer el análisis estadístico podría reducir el alcance de los resultados.
+
+-	Dependiendo de la metodología utilizada, los resultados pueden variar si se consideran diferentes definiciones y métricas, especialmente tratando temas sociales como la discriminación y el acceso a oportunidades laborales.
+
+-	Existen percepciones sociales y estereotipos sobre la población con discapacidad que pueden influir en la recopilación y análisis de datos, afectando la interpretación de los resultados.
 
 
 
 ### Reformulación de la idea en modo preguntas
 
+-	¿De qué manera influye el grado de discapacidad en la tasa de empleo y el tipo de ocupación al que acceden las personas en Costa Rica?
 
+-	¿Cuáles son las diferencias en el nivel de ingresos y las oportunidades laborales entre personas con distintos grados de discapacidad?
+
+-	¿Cómo afectan las políticas de inclusión laboral y protección social al acceso de oportunidades económicas para personas con discapacidad?
+
+-	¿Existen patrones regionales en Costa Rica que muestren diferencias significativas en el acceso al empleo y nivel económico según el grado de discapacidad?
 
 ### Argumentación de las preguntas
 
+*¿De qué manera influye el grado de discapacidad en la tasa de empleo y el tipo de ocupación al que acceden las personas en Costa Rica?*
+
+-	Lógica: Existen estudios previos que demuestran que la discapacidad puede ser un factor que limita la inserción laboral debido a barreras estructurales y sociales. Analizar cómo influye en la tasa de empleo y el tipo de ocupación permitirá identificar posibles desigualdades y factores de exclusión.
+- Ética: La investigación utilizará datos oficiales y metodologías estadísticas para garantizar transparencia en los hallazgos.
+- Emocional: Comprender esta relación puede servir para diseñar estrategias y/o políticas que fomenten una inserción laboral más justa y equitativa, mejorando la calidad de vida de muchas personas.
+
+*¿Cuáles son las diferencias en el nivel de ingresos y las oportunidades laborales entre personas con distintos grados de discapacidad?*
+
+-	Lógica: Es razonable suponer que existen diferencias económicas entre personas con y sin discapacidad debido a factores como discriminación, acceso limitado a educación y oportunidades laborales.
+-	Ética: Se utilizarán datos confiables para evitar sesgos y garantizar que los hallazgos reflejen la realidad, caracterizando la discapacidad entre diferentes niveles.
+-	Emocional: La investigación puede ayudar a visibilizar desigualdades y promover políticas para reducir la brecha económica en función del grado de discapacidad.
+
+*¿Cómo afectan las políticas de inclusión laboral y protección social al acceso de oportunidades económicas para personas con discapacidad?*
+
+-	Lógica: Las políticas de inclusión laboral y protección social pueden mitigar las barreras económicas y laborales para personas con discapacidad. Evaluar su impacto permitirá conocer su efectividad.
+-	Ética: Se hará un análisis imparcial basado en datos, evitando cualquier alteración de los resultados para favorecer o perjudicar alguna política específica.
+-	Emocional: Identificar políticas efectivas puede traducirse en mejores oportunidades y condiciones de vida para las personas con discapacidad.
+
+*¿Existen patrones regionales en Costa Rica que muestren diferencias significativas en el acceso al empleo y nivel económico según el grado de discapacidad?*
+
+-	Lógica: Es posible que existan diferencias en el acceso al empleo según la región debido a factores como desarrollo económico, infraestructura y cultura local.
+-	Ética: Se trabajará con datos desagregados de fuentes oficiales (como el INEC) para evitar interpretaciones erróneas.
+-	Emocional: Determinar estos patrones puede orientar estrategias específicas para reducir las desigualdades regionales en materia de inclusión laboral y económica.
 
 
 ### Argumentación a través de datos
