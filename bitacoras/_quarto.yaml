@@ -6,13 +6,16 @@ lang: es
 
 book:
   title: "Bitácoras, CA-0303 (I-2025)"
-  author: "Jose Andrey Prado Rojas, José Carlos Quintero Cedeño, Diego Alberto Vega Víquez" 
+  author: 
+    - "Jose Andrey Prado Rojas" 
+    - "José Carlos Quintero Cedeño" 
+    - "Diego Alberto Vega Víquez" 
   date: today
-  #site-url: google.com # Vacío por el momento
+  publisher: "Universidad de Costa Rica"
   repo-actions: [edit]
   downloads: [pdf, epub]
   chapters:
-    - "index.qmd"
+    - "index.qmd"        # es un archivo obligatorio en un proyecto de libro (type: book)
     - "bitacora-1.qmd"
 
 bibliography: references.bib
@@ -25,7 +28,21 @@ format:
       # los oscuros porque no entiende nada.
     # theme: cosmo
   pdf:
-    documentclass: book
+    documentclass: book       # Clase de documento (book, report, etc.)
+    papersize: letter         # Tamaño del papel (A4, letter)
+    fontsize: 12pt            # Tamaño de fuente
+    linestretch: 1
+    geometry:  # Configuración de márgenes y diseño de página (paquete LaTeX 'geometry')
+      - top=3cm       # Margen superior 
+      - bottom=3cm    # Margen inferior 
+      - left=3cm      # Margen izquierdo 
+      - right=2.5cm     # Margen derecho 
+      - headheight=15pt  # Altura mínima reservada para el encabezado (15 puntos)
+      - footskip=1.5cm   # Espacio entre el pie de página y el final del texto (1.5cm)
+    classoption: oneside  # Elimina la distinción entre páginas pares/impares
+    openany: true         # Permite que los capítulos comiencen en cualquier página
+    top-level-division: chapter #define cuál es el nivel jerárquico que se usará para estructurar el doc
+    number-sections: false  # Desactiva numeración automática
 
 execute:
   freeze: auto
