@@ -50,27 +50,47 @@ Los potenciales problemas con los que cuenta esta idea son:
 
 *¿De qué manera influye el grado de discapacidad en la tasa de empleo y el tipo de ocupación al que acceden las personas en Costa Rica?*
 
--	Lógica: Existen estudios previos que demuestran que la discapacidad puede ser un factor que limita la inserción laboral debido a barreras estructurales y sociales. Analizar cómo influye en la tasa de empleo y el tipo de ocupación permitirá identificar posibles desigualdades y factores de exclusión.
-- Ética: La investigación utilizará datos oficiales y metodologías estadísticas para garantizar transparencia en los hallazgos.
+-	Lógica: La discapacidad puede ser un factor que limita la inserción laboral debido a barreras estructurales y sociales. Analizar cómo influye en la tasa de empleo y el tipo de ocupación permitirá identificar posibles desigualdades y factores de exclusión. Sin embargo, hay que tomar en consideración que las personas con discapacidad pueden estar desalentadas en encontrar trabajo debido a su condición, por lo cual no aparecerían en las mediciones macroeconómicas realizadas por la autoridad de turno. 
+
+- Ética: La investigación utilizará datos oficiales y metodologías estadísticas para garantizar transparencia en los hallazgos. Sin embargo, debido a lo mencionado anteriormente, no se puede asegurar que se abarque un panorama completo sobre la discapacidad y el desempleo. 
+
 - Emocional: Comprender esta relación puede servir para diseñar estrategias y/o políticas que fomenten una inserción laboral más justa y equitativa, mejorando la calidad de vida de muchas personas.
+
+- Conclusión: la propuesta para estudiar la manera en que el grado de discapacidad influye en la tasa de empleo y el tipo de ocupación es importante para potencialmente identificar posibles desigualdades en la sociedad y factores de exclusión. Sin embargo, hay que tomar en cuenta la forma en que se recopilan los datos a la hora de llegar a un índice de empleo, puesto que este omite aquellas personas que no buscan o están desalentadas a buscar trabajo, y las personas que experimenten un grado de discapacidad grave pueden estar en este grupo. 
+
 
 *¿Cuáles son las diferencias en el nivel de ingresos y las oportunidades laborales entre personas con distintos grados de discapacidad?*
 
--	Lógica: Es razonable suponer que existen diferencias económicas entre personas con y sin discapacidad debido a factores como discriminación, acceso limitado a educación y oportunidades laborales.
--	Ética: Se utilizarán datos confiables para evitar sesgos y garantizar que los hallazgos reflejen la realidad, caracterizando la discapacidad entre diferentes niveles.
--	Emocional: La investigación puede ayudar a visibilizar desigualdades y promover políticas para reducir la brecha económica en función del grado de discapacidad.
+-	Lógica: Es razonable suponer que existen diferencias económicas entre personas con y sin discapacidad debido a factores como discriminación, acceso limitado a educación y oportunidades laborales. Empero, la condición socioeconómica de las personas es compleja, con múltiples factores que facilitan u obstaculizan su desarrollo independientemente del grado de discapacidad que presente una persona.
+
+-	Ética: Se utilizarán datos confiables para evitar sesgos y garantizar que los hallazgos reflejen la realidad, caracterizando la discapacidad entre diferentes niveles. No obstante, es difícil encontrar datos que reflejen la mayor cantidad de aristas que envuelvan la vida económica y laboral de una persona, especialmente si esta presenta un grado considerable de discapacidad.
+
+-	Emocional: La investigación puede ayudar a visibilizar desigualdades y promover políticas para reducir la brecha económica en función del grado de discapacidad. Sin embargo, el hecho de hacer énfasis al grado de discapacidad del individuo no debería minimizar el papel de otros factores en la determinación del nivel socioeconómico de las personas.
+
+- Conclusión:  El análisis de las diferencias en ingresos y oportunidades laborales según el grado de discapacidad debe considerar la interacción de múltiples factores para obtener una visión integral. Garantizar el uso de datos confiables es esencial para evitar sesgos y reflejar la realidad con precisión. Además, es importante que los resultados no solo visibilicen desigualdades, sino que también fomenten acciones que mejoren la inclusión laboral y económica de las personas con discapacidad. 
+
 
 *¿Cómo afectan las políticas de inclusión laboral y protección social al acceso de oportunidades económicas para personas con discapacidad?*
 
--	Lógica: Las políticas de inclusión laboral y protección social pueden mitigar las barreras económicas y laborales para personas con discapacidad. Evaluar su impacto permitirá conocer su efectividad.
--	Ética: Se hará un análisis imparcial basado en datos, evitando cualquier alteración de los resultados para favorecer o perjudicar alguna política específica.
--	Emocional: Identificar políticas efectivas puede traducirse en mejores oportunidades y condiciones de vida para las personas con discapacidad.
+-	Lógica: Las políticas de inclusión laboral y protección social pueden mitigar las barreras económicas y laborales para personas con discapacidad. Evaluar su impacto permitirá conocer su efectividad. No obstante, el carácter multidimensional de la condición económica de las personas podría nublar en cierta medida qué tanto influye el grado de discapacidad. 
+
+-	Ética: la elaboración de un análisis imparcial basado en datos evitaría cualquier alteración de los resultados para favorecer o perjudicar alguna política específica. Sin embargo, hay que asegurarse que los datos sean igualmente imparciales. 
+
+-	Emocional: Identificar políticas efectivas puede traducirse en mejores oportunidades y condiciones de vida para las personas con discapacidad. 
+
+- Conclusión: Si bien las políticas de inclusión laboral y protección social pueden mejorar el acceso a oportunidades económicas para las personas con discapacidad, su impacto debe evaluarse dentro de un contexto más amplio. Un análisis basado en datos confiables permitirá evitar interpretaciones sesgadas y reconocer que estas políticas, aunque necesarias, no son suficientes por sí solas para eliminar las desigualdades, por lo que deben complementarse con otras estrategias que aborden las barreras estructurales existentes.
+
 
 *¿Existen patrones regionales en Costa Rica que muestren diferencias significativas en el acceso al empleo y nivel económico según el grado de discapacidad?*
 
--	Lógica: Es posible que existan diferencias en el acceso al empleo según la región debido a factores como desarrollo económico, infraestructura y cultura local.
+-	Lógica: Es posible que existan diferencias en el acceso al empleo según la región debido a factores como desarrollo económico, infraestructura y cultura local. Por otra parte, la variabilidad en el acceso a empleo podría tener causas más estructurales, lo cual haría de este estudio una labor metodológicamente muy compleja.
+
 -	Ética: Se trabajará con datos desagregados de fuentes oficiales (como el INEC) para evitar interpretaciones erróneas.
+
 -	Emocional: Determinar estos patrones puede orientar estrategias específicas para reducir las desigualdades regionales en materia de inclusión laboral y económica.
+
+- Conclusión: Identificar patrones regionales en el acceso al empleo y nivel económico según el grado de discapacidad podría permitir comprender mejor las desigualdades existentes en Costa Rica. Sin embargo, debido a la complejidad de los factores involucrados, es esencial un enfoque riguroso basado en datos desagregados y oficiales. Los hallazgos podrán servir de base para diseñar estrategias más efectivas que fomenten una inclusión laboral equitativa en todas las regiones de planificación.
+
 
 
 ### Argumentación a través de datos
