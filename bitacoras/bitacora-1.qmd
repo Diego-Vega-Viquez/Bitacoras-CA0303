@@ -860,7 +860,14 @@ Las variables de la base de datos se pueden categorizar en los siguientes grupos
 
 
 
-### Principios y teorías
+### Principios, teorías o metodologías
+
+De acuerdo con @Schur2017, existen dos vías para explicar las disparidades laborales entre personas con y sin discapacidad:
+
+- Teorías no discriminatorias: desde una perspectiva económica, las tasas de empleo más bajas entre las personas con discapacidad pueden explicarse por la interacción entre los salarios de reserva (el salario mínimo aceptable para aceptar un empleo) y los salarios ofrecidos por los empleadores. La disponibilidad de ingresos por discapacidad puede aumentar estos salarios de reserva, lo que reduce la probabilidad de aceptar empleos. Además, los costos adicionales asociados con el trabajo (transporte adaptado, tecnología asistiva, rehabilitación médica) pueden elevar aún más el umbral salarial mínimo para que una persona con discapacidad decida trabajar. Por otro lado, las disparidades salariales también pueden atribuirse a menores niveles educativos, menos oportunidades de formación y menores tasas de promoción, lo que contribuye a una menor productividad y salarios más bajos. 
+
+- Teorías discriminatorias: La discriminación basada en prejuicios sostiene que algunos empleadores rechazan contratar personas con discapacidad debido a estigmas sociales o temores sobre su desempeño. Por otro lado, la discriminación estadística ocurre cuando los empleadores asumen que las personas con discapacidad tienen una menor productividad y toman decisiones de contratación o promoción basadas en esta percepción generalizada, en lugar de evaluar el desempeño individual. Factores como la cultura corporativa y los estereotipos influyen en las oportunidades de empleo, con evidencia de que los empleadores a menudo tienen expectativas más bajas para los trabajadores con discapacidad y enfrentan presiones sociales para no contratarlos. También se plantea un modelo de monopsonio, en el cual las personas con discapacidad tienen menos movilidad laboral debido a dificultades para cambiar de empleo, lo que les impide negociar mejores salarios y condiciones de trabajo.
+
 
 
 
