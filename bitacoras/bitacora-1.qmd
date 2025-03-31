@@ -862,7 +862,7 @@ Las variables de la base de datos se pueden categorizar en los siguientes grupos
 
 ### Principios, teorías o metodologías
 
-De acuerdo con @Schur2017, existen dos vías para explicar las disparidades laborales entre personas con y sin discapacidad:
+De acuerdo con @schur_disability_2017, existen dos vías para explicar las disparidades laborales entre personas con y sin discapacidad:
 
 - Teorías no discriminatorias: desde una perspectiva económica, las tasas de empleo más bajas entre las personas con discapacidad pueden explicarse por la interacción entre los salarios de reserva (el salario mínimo aceptable para aceptar un empleo) y los salarios ofrecidos por los empleadores. La disponibilidad de ingresos por discapacidad puede aumentar estos salarios de reserva, lo que reduce la probabilidad de aceptar empleos. Además, los costos adicionales asociados con el trabajo (transporte adaptado, tecnología asistiva, rehabilitación médica) pueden elevar aún más el umbral salarial mínimo para que una persona con discapacidad decida trabajar. Por otro lado, las disparidades salariales también pueden atribuirse a menores niveles educativos, menos oportunidades de formación y menores tasas de promoción, lo que contribuye a una menor productividad y salarios más bajos. 
 
@@ -872,7 +872,21 @@ De acuerdo con @Schur2017, existen dos vías para explicar las disparidades labo
 
 
 ## Parte de escritura
-  
+
+En Costa Rica, las oportunidades laborales y el acceso a fuentes de ingresos varían significativamente según el tipo de discapacidad, lo que se traduce en una mayor propensión a empleos de baja calificación y en condiciones precarias. @vargas2013 señala que las personas con discapacidad se concentran en trabajos de baja cualificación, con un 7,7% en el sector agrícola y un 5% en empleos no calificados. Además, estos individuos presentan una alta incidencia de trabajo precario, con un 12% en trabajo familiar y un 6% en autoempleo. Un aspecto relevante es el aumento de hogares liderados por personas con discapacidad, que pasaron del 0,53% en 1927 al 8% en el año 2000, lo que sugiere una conexión entre discapacidad y precariedad socioeconómica.
+
+@oca_retos_2020 destaca que la tasa de empleo entre personas con discapacidad en Costa Rica es solo del 40%, mientras que el desempleo alcanza el 60%, lo que refleja barreras estructurales significativas en el acceso al trabajo. Entre los obstáculos principales se identifican la falta de perfiles laborales inclusivos, la necesidad de adaptaciones físicas y los prejuicios en los procesos de contratación. Además, la brecha educativa es evidente, ya que solo el 17,1% de las personas con discapacidad alcanza la educación superior, en comparación con el 24,7% de la población sin discapacidad. Esta diferencia educativa repercute en las oportunidades de empleo y en la posibilidad de acceder a trabajos mejor remunerados.
+
+El impacto del género también es un factor determinante en las oportunidades laborales de las personas con discapacidad. Malo Ocaña y Quintana @malo_ocana_genero_2006 resaltan que las mujeres con discapacidad enfrentan mayores barreras para participar en el mercado laboral debido a la intersección entre roles familiares y discapacidad. En muchos casos, la sociedad asigna a estas mujeres la responsabilidad del cuidado del hogar, lo que reduce aún más sus posibilidades de empleo formal.
+
+Si bien los estudios no ofrecen comparaciones directas sobre el nivel de ingresos entre distintos grados o tipos de discapacidad, la evidencia sugiere que las oportunidades laborales varían dependiendo de las características específicas de la discapacidad. Las personas con discapacidad suelen concentrarse en sectores de baja remuneración y en empleos precarios, lo que limita su acceso a fuentes de ingresos estables. Además, el sesgo en la contratación basado en el tipo de discapacidad es una realidad que excluye a ciertos grupos, como aquellos con discapacidades psicosociales o intelectuales, quienes enfrentan mayores dificultades para ingresar al mercado laboral formal, @oca_retos_2020.
+
+A partir del análisis de estos estudios, se observa que las personas con discapacidad en Costa Rica enfrentan múltiples barreras para acceder a empleos de calidad, lo que repercute en su nivel de ingresos y en su estabilidad económica. Estas barreras incluyen la falta de acceso a educación superior, la exclusión laboral por prejuicios o falta de adaptación en el entorno de trabajo y la intersección con otros factores como el género y la jefatura de hogar. Ante este panorama, es fundamental implementar políticas públicas que fomenten la inclusión laboral de las personas con discapacidad, a través de incentivos para empresas que adopten ajustes razonables y programas de formación que mejoren su empleabilidad. Asimismo, es necesario continuar con investigaciones que analicen de manera más detallada las diferencias en ingresos entre distintos tipos y grados de discapacidad, para diseñar estrategias efectivas de equidad e inclusión en el ámbito laboral costarricense.
+
+
+
 {{< pagebreak >}}
 
+
+# Bibliografía
   
