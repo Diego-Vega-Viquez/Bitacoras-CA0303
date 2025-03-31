@@ -823,42 +823,85 @@ Las variables de la base de datos se pueden categorizar en los siguientes grupos
 
 ### Búsqueda de bibliografía
 
+Combinaciones de palabras clave:
 
+ - discapacidad + empleo + Costa Rica
+
+ - oportunidades laborales + discapacidad + ingresos
+
+ - inclusión laboral + personas con discapacidad
+
+ - discapacidad + nivel socioeconómico + empleo
+
+ - barreras laborales + discapacidad + acceso al trabajo
+
+ - políticas de inclusión + empleo + discapacidad
+
+ - mercado laboral + discapacidad + brecha de ingresos
 
 ### Fichas de literatura
 
-- Título: Disability at Work: A Look Back and Forward
+::: {.callout-note }
 
-- Autores: Lisa Schur, Kyongji Han, Andrea Kim, Mason Ameri, Peter Blanck, Douglas Kruse
+#### Disability at Work: A Look Back and Forward
 
-- Año de publicación: 2017
+- **Título:** Disability at Work: A Look Back and Forward
 
-- Tema principal: Disparidades laborales entre personas con y sin discapacidad
+- **Autores:** Lisa Schur, Kyongji Han, Andrea Kim, Mason Ameri, Peter Blanck, Douglas Kruse
 
-- Forma de organizarlo:
-    - Cronológico: Basado en datos de 2006, publicado en 2017.
+- **Año de publicación:** 2017
+
+- **Tema principal:** Disparidades laborales entre personas con y sin discapacidad
+
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en datos de 2006, publicado en 2017.
     
-    - Metodológico: Análisis de la General Social Survey (GSS) de 2006 en EE. UU. 
+    - **Metodológico:** Análisis de la General Social Survey (GSS) de 2006 en EE. UU. 
     
-    - Temático: Aspectos económicos y laborales de la inclusión de personas con discapacidad.
+    - **Temático:** Aspectos económicos y laborales de la inclusión de personas con discapacidad.
     
-    - Teórico: Comparación entre teorías discriminatorias y no discriminatorias sobre las disparidades laborales de personas con discapacidad.
+    - **Teórico:** Comparación entre teorías discriminatorias y no discriminatorias sobre las disparidades laborales de personas con discapacidad.
     
-- Resumen en una oración: Las personas con discapacidad enfrentan desventajas laborales significativas en términos de estabilidad, ingresos y beneficios, lo que impacta negativamente su calidad de vida.
+- **Resumen en una oración:** Las personas con discapacidad enfrentan desventajas laborales significativas en términos de estabilidad, ingresos y beneficios, lo que impacta negativamente su calidad de vida.
 
-- Argumento central: Las disparidades laborales entre personas con y sin discapacidad limitan sus oportunidades económicas y sociales. Factores como menor seguridad laboral, acceso restringido a beneficios, y la prevalencia de trabajos temporales contribuyen a esta desigualdad.
+- **Argumento central:** Las disparidades laborales entre personas con y sin discapacidad limitan sus oportunidades económicas y sociales. Factores como menor seguridad laboral, acceso restringido a beneficios, y la prevalencia de trabajos temporales contribuyen a esta desigualdad.
 
-- Posibles problemas con el argumento o tema: El estudio se basa en datos de 2006, lo que podría limitar su aplicabilidad a contextos más recientes. Además, aunque se consideran tanto explicaciones discriminatorias como no discriminatorias, la medición del impacto real de la discriminación en las oportunidades laborales sigue siendo un tema complejo.
+- **Posibles problemas con el argumento o tema:** El estudio se basa en datos de 2006, lo que podría limitar su aplicabilidad a contextos más recientes. Además, aunque se consideran tanto explicaciones discriminatorias como no discriminatorias, la medición del impacto real de la discriminación en las oportunidades laborales sigue siendo un tema complejo.
 
-- Resumen en un párrafo: Este estudio examina las desigualdades laborales que enfrentan las personas con discapacidad, destacando que son más propensas a tener empleos de menor calidad, con menor seguridad y acceso restringido a beneficios como seguro de salud y pensión. También tienen menos oportunidades de participar en la toma de decisiones laborales y suelen ocupar trabajos temporales o a medio tiempo, con menores salarios y prestaciones. Para explicar estas disparidades, los autores analizan dos enfoques teóricos: el discriminatorio y el no discriminatorio. Desde la perspectiva no discriminatoria, las diferencias en el empleo pueden atribuirse a preferencias individuales, como aceptar salarios más bajos a cambio de mayor flexibilidad, como el trabajo remoto. En contraste, la perspectiva discriminatoria sugiere que algunos empleadores evitan contratar a personas con discapacidad debido a prejuicios sobre su productividad o al costo percibido de los ajustes en el lugar de trabajo. El estudio utiliza datos de la General Social Survey (GSS) de 2006 para evaluar estas dinámicas y su impacto en la inclusión laboral.
+- **Resumen en un párrafo:** Este estudio examina las desigualdades laborales que enfrentan las personas con discapacidad, destacando que son más propensas a tener empleos de menor calidad, con menor seguridad y acceso restringido a beneficios como seguro de salud y pensión. También tienen menos oportunidades de participar en la toma de decisiones laborales y suelen ocupar trabajos temporales o a medio tiempo, con menores salarios y prestaciones. Para explicar estas disparidades, los autores analizan dos enfoques teóricos: el discriminatorio y el no discriminatorio. Desde la perspectiva no discriminatoria, las diferencias en el empleo pueden atribuirse a preferencias individuales, como aceptar salarios más bajos a cambio de mayor flexibilidad, como el trabajo remoto. En contraste, la perspectiva discriminatoria sugiere que algunos empleadores evitan contratar a personas con discapacidad debido a prejuicios sobre su productividad o al costo percibido de los ajustes en el lugar de trabajo. El estudio utiliza datos de la General Social Survey (GSS) de 2006 para evaluar estas dinámicas y su impacto en la inclusión laboral.
 
+:::
 
-## Construcción de la UVE de Godwin
+::: {.callout-note }
 
+#### Retos para la inclusión laboral de personas con discapacidad en Costa Rica
 
-### Conceptos básicos
+- **Título:** Retos para la inclusión laboral de personas con discapacidad en Costa Rica
 
+- **Autor:** Héctor Andrés Canossa Montes de Oca
 
+- **Año de publicación:** 2020
+
+- **Tema principal:** Discriminación laboral y barreras para la inclusión de personas con discapacidad en Costa Rica.
+
+- **Forma de organizarlo:**
+    - **Cronológico:**  Análisis de datos desde 2018 y revisión histórica de políticas (ej. Ley 7600 de 1996).
+    
+    - **Metodológico:** Investigación descriptiva con encuestas a empresas y entrevistas a personas con discapacidad.
+    
+    - **Temático:** Discapacidad, empleo, políticas públicas y brechas socioeconómicas.
+    
+    - **Teórico:** Modelo social de la discapacidad, enfocandose en barreras estructurales
+    
+- **Resumen en una oración:** Se edentifican barreras actitudinales, educativas y legales que limitan la inclusión laboral de personas discapacitadas en Costa Rica.
+
+- **Argumento central:** Más de la mitad de las personas con discapacidad enfrentan un desempleo debido a la falta de perfiles laborales inclusivos, prejuicios empresariales y escasa promoción estatal, a pesar de leyes como la Ley 7600.
+
+- **Posibles problemas con el argumento o tema:** El estudio hasta cierto punto se puede interpretar que presenta un sesgo muestral debido a que incluye solo a tres personas con discapacidad, es estos, todo con educación superior. Además de esto, se basa en datos de 2018-2019, sin considerar el impacto de la pandemia. Finalmente cabe destacar que enfoque empresarial limita el análisis de sectores informales, donde muchas personas con discapacidad trabajan.
+
+- **Resumen en un párrafo:** El documento presenta un análisis de los desafíos de la integración laboral por parte de las personas con discapacidad en Costa Rica, entre los principales datos se encuentra el hecho que el 60% de las personas con discapacidad se encuentran desempleadas. A través de una encuesta y entrevistas a 381 empresas, se encontró que las barreras incluyen la falta de oportunidades físicas, prácticas de empleo sesgadas y falta de conocimiento de los beneficios fiscales. Las empresas consideran que la inclusión es costosa, mientras que las personas con discapacidad enfatizan la discriminación conductual. Si bien existen leyes que reservan un procentaje de los servicios públicos a este tema, su implementación es débil. El autor recomienda el entrenamiento interno, la adaptación inteligente y un mayor control del estado.
+
+:::
 
 ### Principios, teorías o metodologías
 
@@ -869,6 +912,10 @@ De acuerdo con @schur_disability_2017, existen dos vías para explicar las dispa
 - Teorías discriminatorias: La discriminación basada en prejuicios sostiene que algunos empleadores rechazan contratar personas con discapacidad debido a estigmas sociales o temores sobre su desempeño. Por otro lado, la discriminación estadística ocurre cuando los empleadores asumen que las personas con discapacidad tienen una menor productividad y toman decisiones de contratación o promoción basadas en esta percepción generalizada, en lugar de evaluar el desempeño individual. Factores como la cultura corporativa y los estereotipos influyen en las oportunidades de empleo, con evidencia de que los empleadores a menudo tienen expectativas más bajas para los trabajadores con discapacidad y enfrentan presiones sociales para no contratarlos. También se plantea un modelo de monopsonio, en el cual las personas con discapacidad tienen menos movilidad laboral debido a dificultades para cambiar de empleo, lo que les impide negociar mejores salarios y condiciones de trabajo.
 
 
+## Construcción de la UVE de Godwin
+
+
+### Conceptos básicos
 
 
 ## Parte de escritura
