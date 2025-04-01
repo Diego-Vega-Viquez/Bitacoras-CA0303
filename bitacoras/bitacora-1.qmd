@@ -946,6 +946,14 @@ De acuerdo con @schur_disability_2017, existen dos vías para explicar las dispa
 
 ### Conceptos básicos
 
+A partir de lo indicado en @inec_enadis_2023_pdf, podemos definir los siguientes conceptos:
+
+- Discapacidad: La discapacidad, además de ser una condición de salud, se puede comprender como la manera en que el entorno afecta a la persona. Si hay barreras, como edificios inaccesibles, su participación se limita. Si hay apoyos, como dispositivos de ayuda, sus oportunidades mejoran. Todo depende de qué tan inclusiva sea la sociedad.
+
+- Oportunidades laborales: Las oportunidades laborales son las posibilidades que tiene una persona de acceder a un empleo digno y adecuado a sus habilidades, formación y necesidades. En la ENADIS, se puede observar a través de la condición de actividad (que distingue la participación de las personas en el mercado laboral), la calificación de grupo ocupacional (que ubica a las personas según el tipo de trabajo que realiza o realizó) y la situación en la ocupación (que se refiere a la posición que las personas trabajadoras tienen en la relación productiva respecto a la utilización de la fuerza de trabajo y las relaciones de producción).
+
+- Ingreso: comprende la suma de las entradas que percibe una persona a partir de diferentes fuentes, entre las que destacan aquellas por concepto de trabajo, rentas o transferencias.
+
 
 ## Parte de escritura
 
