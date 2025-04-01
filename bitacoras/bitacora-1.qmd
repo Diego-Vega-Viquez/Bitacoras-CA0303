@@ -891,15 +891,44 @@ Combinaciones de palabras clave:
     
     - **Temático:** Discapacidad, empleo, políticas públicas y brechas socioeconómicas.
     
-    - **Teórico:** Modelo social de la discapacidad, enfocandose en barreras estructurales
+    - **Teórico:** Modelo social de la discapacidad, enfocándose en barreras estructurales
     
-- **Resumen en una oración:** Se edentifican barreras actitudinales, educativas y legales que limitan la inclusión laboral de personas discapacitadas en Costa Rica.
+- **Resumen en una oración:** Se identifican barreras actitudinales, educativas y legales que limitan la inclusión laboral de personas discapacitadas en Costa Rica.
 
 - **Argumento central:** Más de la mitad de las personas con discapacidad enfrentan un desempleo debido a la falta de perfiles laborales inclusivos, prejuicios empresariales y escasa promoción estatal, a pesar de leyes como la Ley 7600.
 
 - **Posibles problemas con el argumento o tema:** El estudio hasta cierto punto se puede interpretar que presenta un sesgo muestral debido a que incluye solo a tres personas con discapacidad, es estos, todo con educación superior. Además de esto, se basa en datos de 2018-2019, sin considerar el impacto de la pandemia. Finalmente cabe destacar que enfoque empresarial limita el análisis de sectores informales, donde muchas personas con discapacidad trabajan.
 
 - **Resumen en un párrafo:** El documento presenta un análisis de los desafíos de la integración laboral por parte de las personas con discapacidad en Costa Rica, entre los principales datos se encuentra el hecho que el 60% de las personas con discapacidad se encuentran desempleadas. A través de una encuesta y entrevistas a 381 empresas, se encontró que las barreras incluyen la falta de oportunidades físicas, prácticas de empleo sesgadas y falta de conocimiento de los beneficios fiscales. Las empresas consideran que la inclusión es costosa, mientras que las personas con discapacidad enfatizan la discriminación conductual. Si bien existen leyes que reservan un procentaje de los servicios públicos a este tema, su implementación es débil. El autor recomienda el entrenamiento interno, la adaptación inteligente y un mayor control del estado.
+
+:::
+
+::: {.callout-note }
+
+- **Título:** Encuesta Nacional sobre Discapacidad 2023: Resultados generales
+
+- **Autor:** Instituto Nacional de Estadística y Censos (INEC)
+
+- **Año de publicación:** 2023
+
+- **Tema principal:** Situación nacional sobre la población con algún grado de discapacidad
+
+- **Forma de organizarlo:**
+    - **Cronológico:**  2023
+    
+    - **Metodológico:** Investigación descriptiva con base en la encuesta nacional de personas con discapacidad.
+    
+    - **Temático:** Discapacidad, empleo, economía.
+    
+    - **Teórico:** 
+    
+- **Resumen en una oración:** se muestra un panorama sobre la situación laboral y económica de personas con discapacidad
+
+- **Argumento central:** 
+
+- **Posibles problemas con el argumento o tema:** 
+
+- **Resumen en un párrafo:** es un informe que muestra el resultado de las mediciones sociodemográficas, económicas y laborales de personas con diferentes grados de discapacidad para determinar la situación actual. Se recopila información de los hogares y de los individuos, relacionada con el ingreso, el trabajo y la discapacidad.
 
 :::
 
