@@ -934,30 +934,30 @@ Combinaciones de palabras clave:
 
 ::: {.callout-note }
 
-- **Título:** 
+- **Título:** La población con discapacidad en los censos del siglo XX en Costa Rica
 
-- **Autor:** 
+- **Autor:** Mariana Campos Vargas
 
-- **Año de publicación:** 
+- **Año de publicación:** 2013
 
-- **Tema principal:** 
+- **Tema principal:** La evolución del tratamiento de la discapacidad en los censos de población de Costa Rica durante el siglo XX.
 
 - **Forma de organizarlo:**
-    - **Cronológico:**  
+    - **Cronológico:**  Evolución de los censos desde 1892 hasta el 2000
     
-    - **Metodológico:**
+    - **Metodológico:** Revisión documental y análisis cualitativo del contenido de los censos.
     
-    - **Temático:** 
+    - **Temático:** Inclusión, medición y conceptualización de la discapacidad en los instrumentos censales.
     
-    - **Teórico:** 
+    - **Teórico:** Modelos de la discapacidad, en especial el modelo médico y el modelo social.
     
-- **Resumen en una oración:** 
+- **Resumen en una oración:** El texto analiza cómo se abordó la discapacidad en los censos costarricenses del siglo XX.
 
-- **Argumento central:** 
+- **Argumento central:** La inclusión de la discapacidad en los censos costarricenses ha sido limitada y refleja las concepciones sociales y políticas dominantes de cada época, por lo que es necesario mejorar su medición para visibilizar a esta población.
 
-- **Posibles problemas con el argumento o tema:** 
+- **Posibles problemas con el argumento o tema:** El autor señala la omisión o tratamiento superficial del tema en varios censos, la falta de continuidad en las preguntas sobre discapacidad, y la escasa adaptación a estándares internacionales, lo que dificulta la generación de datos comparables y útiles para políticas públicas.
 
-- **Resumen en un párrafo:** 
+- **Resumen en un párrafo:** Analiza cómo los censos de población de Costa Rica a lo largo del siglo XX han abordado el tema de la discapacidad. Se muestra que los primeros censos (1892–1950) ignoraron completamente a esta población, mientras que en censos posteriores se incluyeron preguntas, aunque con limitaciones metodológicas y conceptuales. El enfoque utilizado ha oscilado entre una visión médica reduccionista y una más integral, acorde con el modelo social de la discapacidad. La autora subraya cómo los instrumentos censales reflejan las ideas y valores sociales de su tiempo, y critica la escasa coherencia en el tratamiento del tema, lo cual afecta la generación de datos confiables. Concluye que la invisibilidad estadística de esta población ha dificultado su reconocimiento en políticas públicas y llama a una mejor conceptualización y medición de la discapacidad.
 
 :::
 
