@@ -95,7 +95,9 @@ Los potenciales problemas con los que cuenta esta idea son:
 
 ### Argumentación a través de datos
 
-Los datos utilizados durante el trabajo provienen de la Encuesta Nacional sobre Discapacidad (ENADIS), específicamente la realizada en el 2023, realizada por el Instituto Nacional de Estadísticas y Censos (INEC). Los datos provenientes de esta encuesta recopila los datos de personas mayores a 18 años a lo largo del territorio costarricense durante el 9 de octubre y el 30 de noviembre del año 2023. El estudio se basa en personas costarricenses en situación de discapacidad, considerando una muestra de individuos adultos que habitan tanto zonas rurales como urbanas escogidos según el Marco Muestral de Viviendas realizado en el 2011 donde en total se incluyeron 10,461 unidades primarias de muestreo y 1,360,055 viviendas. El individuo o unidad estadística vital para la investigación es la accesibilidad de las personas en situación de discapacidad en su entorno según los datos suministrados. Se puede encontrar información con respecto a esta temática ya que el INED facilita el acceso a la información detallada del proceso de elaboración de las encuestas y las normativas que garantizan el acceso de las personas en situación de discapacidad en distintas instituciones. Además, el INEC realiza periodicamente la ENADIS por lo que se tiene a su vez la evolución histórica de los datos. Los datos fueron encontrados en la página del INEC <https://sistemas.inec.cr/pad5/index.php/catalog/351/data-dictionary>.
+Los datos utilizados durante el trabajo provienen de la Encuesta Nacional sobre Discapacidad (ENADIS), específicamente la realizada en el 2023, realizada por el Instituto Nacional de Estadísticas y Censos (INEC). Los datos provenientes de esta encuesta recopila los datos de personas mayores a 18 años a lo largo del territorio costarricense durante el 9 de octubre y el 30 de noviembre del año 2023. El estudio se basa en personas costarricenses en situación de discapacidad, considerando una muestra de individuos adultos que habitan tanto zonas rurales como urbanas escogidos según el Marco Muestral de Viviendas realizado en el 2011 donde en total se incluyeron 10,461 unidades primarias de muestreo y 1,360,055 viviendas. El individuo o unidad estadística vital para la investigación es la accesibilidad de las personas en situación de discapacidad en su entorno según los datos suministrados. 
+
+Se puede encontrar información con respecto a esta temática ya que el INEC facilita el acceso a la información detallada del proceso de elaboración de las encuestas y las normativas que garantizan el acceso de las personas en situación de discapacidad en distintas instituciones. Además, el INEC realiza periodicamente la ENADIS por lo que se tiene a su vez la evolución histórica de los datos. Los datos fueron encontrados en la página del INEC, a través del Programa Acelerado de Datos.
 
 Las variables de la base de datos se pueden categorizar en los siguientes grupos.
 
@@ -891,15 +893,15 @@ Combinaciones de palabras clave:
     
     - **Temático:** Discapacidad, empleo, políticas públicas y brechas socioeconómicas.
     
-    - **Teórico:** Modelo social de la discapacidad, enfocándose en barreras estructurales
+    - **Teórico:** Modelo social de la discapacidad, enfocándose en barreras estructurales.
     
-- **Resumen en una oración:** Se identifican barreras actitudinales, educativas y legales que limitan la inclusión laboral de personas discapacitadas en Costa Rica.
+- **Resumen en una oración:** Se identifican barreras actitudinales, educativas y legales que limitan la inclusión laboral de personas con discapacidad en Costa Rica.
 
 - **Argumento central:** Más de la mitad de las personas con discapacidad enfrentan un desempleo debido a la falta de perfiles laborales inclusivos, prejuicios empresariales y escasa promoción estatal, a pesar de leyes como la Ley 7600.
 
-- **Posibles problemas con el argumento o tema:** El estudio hasta cierto punto se puede interpretar que presenta un sesgo muestral debido a que incluye solo a tres personas con discapacidad, es estos, todo con educación superior. Además de esto, se basa en datos de 2018-2019, sin considerar el impacto de la pandemia. Finalmente cabe destacar que enfoque empresarial limita el análisis de sectores informales, donde muchas personas con discapacidad trabajan.
+- **Posibles problemas con el argumento o tema:** El estudio hasta cierto punto se puede interpretar que presenta un sesgo muestral debido a que incluye solo a tres personas con discapacidad, todos con educación superior. Además de esto, se basa en datos de 2018-2019, sin considerar el impacto de la pandemia. Finalmente cabe destacar que el enfoque empresarial limita el análisis de sectores informales, donde muchas personas con discapacidad trabajan.
 
-- **Resumen en un párrafo:** El documento presenta un análisis de los desafíos de la integración laboral por parte de las personas con discapacidad en Costa Rica, entre los principales datos se encuentra el hecho que el 60% de las personas con discapacidad se encuentran desempleadas. A través de una encuesta y entrevistas a 381 empresas, se encontró que las barreras incluyen la falta de oportunidades físicas, prácticas de empleo sesgadas y falta de conocimiento de los beneficios fiscales. Las empresas consideran que la inclusión es costosa, mientras que las personas con discapacidad enfatizan la discriminación conductual. Si bien existen leyes que reservan un procentaje de los servicios públicos a este tema, su implementación es débil. El autor recomienda el entrenamiento interno, la adaptación inteligente y un mayor control del estado.
+- **Resumen en un párrafo:** El documento presenta un análisis de los desafíos de la integración laboral por parte de las personas con discapacidad en Costa Rica, entre los principales datos se encuentra el hecho de que el 60% de las personas con discapacidad se encuentran desempleadas. A través de una encuesta y entrevistas a 381 empresas, se encontró que las barreras incluyen la falta de accesibilidad física, prácticas de empleo sesgadas y falta de conocimiento de los beneficios fiscales. Las empresas consideran que la inclusión es costosa, mientras que las personas con discapacidad enfatizan la discriminación conductual. Si bien existen leyes que reservan un porcentaje de los servicios públicos a este tema, su implementación es débil. El autor recomienda el entrenamiento interno, la adaptación inteligente y un mayor control del Estado.
 
 :::
 
@@ -980,7 +982,7 @@ De acuerdo con @schur_disability_2017, existen dos vías para explicar las dispa
 
 ### Conceptos básicos
 
-A partir de lo indicado en @inec_enadis_2023_pdf, podemos definir los siguientes conceptos:
+A partir de lo indicado por el @inec_enadis_2023_pdf, podemos definir los siguientes conceptos:
 
 - Discapacidad: La discapacidad, además de ser una condición de salud, se puede comprender como la manera en que el entorno afecta a la persona. Si hay barreras, como edificios inaccesibles, su participación se limita. Si hay apoyos, como dispositivos de ayuda, sus oportunidades mejoran. Todo depende de qué tan inclusiva sea la sociedad.
 
@@ -993,7 +995,7 @@ A partir de lo indicado en @inec_enadis_2023_pdf, podemos definir los siguientes
 
 El presente trabajo busca determinar cómo varía el acceso a oportunidades laborales y el nivel económico de una persona en función del grado de discapacidad que presente. La idea parte de una relación intuitiva: las limitaciones físicas, sensoriales o intelectuales podrían afectar las habilidades necesarias para insertarse en el mercado laboral, lo que a su vez condiciona la situación socioeconómica del individuo. No obstante, esta relación enfrenta varias tensiones. Por un lado, existen múltiples factores intervinientes como el nivel educativo, las políticas de inclusión laboral, el contexto familiar y regional, entre otros, que pueden mediar o incluso diluir el impacto directo del grado de discapacidad sobre los resultados económicos. Por otro lado, los estereotipos sociales y las limitaciones en la forma en que se recogen y categorizan los datos sobre discapacidad pueden sesgar los resultados o hacerlos difíciles de interpretar de forma concluyente.
 
-A partir de estas consideraciones, se plantea la siguiente pregunta de investigación: ¿De qué manera influye el grado de discapacidad en la tasa de empleo y el nivel económico de las personas en Costa Rica? La razón de ser de esta pregunta es que permite explorar no solo la existencia de una brecha laboral y económica entre personas con y sin discapacidad, sino también el impacto diferencial según la severidad de la condición. Asimismo, es una pregunta pertinente a nivel país, ya que Costa Rica cuenta con legislación e instituciones que promueven la inclusión laboral, pero cuyo impacto real aún necesita ser evaluado empíricamente.
+A partir de estas consideraciones, se plantea la siguiente pregunta de investigación: *¿De qué manera influye el grado de discapacidad en la tasa de empleo y el nivel económico de las personas en Costa Rica?* La razón de ser de esta pregunta es que permite explorar no solo la existencia de una brecha laboral y económica entre personas con y sin discapacidad, sino también el impacto diferencial según la severidad de la condición. Asimismo, es una pregunta pertinente a nivel país, ya que Costa Rica cuenta con legislación e instituciones que promueven la inclusión laboral, pero cuyo impacto real aún necesita ser evaluado empíricamente.
 
 Para responder esta pregunta, se plantea hacer un análisis utilizando datos numéricos que permitan comparar diferentes situaciones. Una forma de hacerlo es observar cómo cambian los promedios de empleo e ingresos entre personas con distintos niveles de discapacidad. También se pueden buscar relaciones generales entre estas variables para ver si existe algún patrón. Otra opción interesante sería crear una especie de “puntaje” que reúna varios aspectos del empleo, como si la persona tiene trabajo, qué tipo de trabajo tiene y cuánto gana, para así tener una idea más completa de su inclusión laboral.
 
@@ -1005,7 +1007,7 @@ El informe de @oca_retos_2020 muestra que la tasa de empleo entre personas con d
 
 El tipo y grado de discapacidad también influyen en la contratación. Por ejemplo, quienes presentan discapacidades psicosociales o intelectuales son los más excluidos del mercado laboral formal @oca_retos_2020. 
 
-Aunque no hay muchos estudios con comparaciones precisas entre ingresos y tipos de discapacidad, la evidencia sugiere una fuerte relación entre el grado de discapacidad, el tipo de empleo al que se accede y el nivel de ingresos percibidos. Esta realidad apunta a una mayor precariedad económica entre quienes presentan discapacidades más severas. Por tanto, es necesario analizar esta situación con datos actualizados para proponer políticas públicas que promuevan la inclusión laboral con equidad.
+Aunque no hay muchos estudios con comparaciones precisas entre ingresos y tipos de discapacidad, la evidencia sugiere una fuerte relación entre el grado de discapacidad, el tipo de empleo al que se accede y el nivel de ingresos percibidos. Esta realidad apunta a una mayor precariedad económica entre quienes presentan discapacidades más severas. Por tanto, es necesario analizar esta situación con datos actualizados para proponer medidas que promuevan la inclusión laboral con equidad.
 
 
 
