@@ -905,6 +905,8 @@ Combinaciones de palabras clave:
 
 ::: {.callout-note }
 
+#### Encuesta Nacional sobre Discapacidad 2023: Resultados generales
+
 - **Título:** Encuesta Nacional sobre Discapacidad 2023: Resultados generales
 
 - **Autor:** Instituto Nacional de Estadística y Censos (INEC)
@@ -933,6 +935,8 @@ Combinaciones de palabras clave:
 :::
 
 ::: {.callout-note }
+
+#### La población con discapacidad en los censos del siglo XX en Costa Rica
 
 - **Título:** La población con discapacidad en los censos del siglo XX en Costa Rica
 
