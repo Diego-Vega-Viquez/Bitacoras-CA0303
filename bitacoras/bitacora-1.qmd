@@ -980,6 +980,8 @@ De acuerdo con @schur_disability_2017, existen dos vías para explicar las dispa
 ## Construcción de la UVE de Godwin
 
 
+![UVE Heurística](UVE 1.png)
+
 ### Conceptos básicos
 
 A partir de lo indicado por el @inec_enadis_2023_pdf, podemos definir los siguientes conceptos:
