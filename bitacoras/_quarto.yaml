@@ -7,9 +7,9 @@ lang: es
 book:
   title: "Bitácoras, CA-0303 (I-2025)"
   author: 
-    - "Jose Andrey Prado Rojas" 
-    - "José Carlos Quintero Cedeño" 
-    - "Diego Alberto Vega Víquez" 
+    - "Jose Andrey Prado Rojas-C36174" 
+    - "José Carlos Quintero Cedeño-C26152" 
+    - "Diego Alberto Vega Víquez-C38367" 
   date: today
   publisher: "Universidad de Costa Rica"
   repo-actions: [edit]
