@@ -7,9 +7,9 @@ lang: es
 book:
   title: "Bitácoras, CA-0303 (I-2025)"
   author: 
-    - "Jose Andrey Prado Rojas" 
-    - "José Carlos Quintero Cedeño" 
-    - "Diego Alberto Vega Víquez" 
+    - "Jose Andrey Prado Rojas-C36174" 
+    - "José Carlos Quintero Cedeño-C26152" 
+    - "Diego Alberto Vega Víquez-C38367" 
   date: today
   publisher: "Universidad de Costa Rica"
   repo-actions: [edit]
@@ -38,7 +38,7 @@ format:
       - left=3cm      # Margen izquierdo 
       - right=2.5cm     # Margen derecho 
       - headheight=15pt  # Altura mínima reservada para el encabezado (15 puntos)
-      - footskip=1.5cm   # Espacio entre el pie de página y el final del texto (1.5cm)
+      - footskip=1.25cm   # Espacio entre el pie de página y el final del texto (1.5cm)
     classoption: oneside  # Elimina la distinción entre páginas pares/impares
     openany: true         # Permite que los capítulos comiencen en cualquier página
     top-level-division: chapter #define cuál es el nivel jerárquico que se usará para estructurar el doc
