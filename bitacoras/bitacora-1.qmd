@@ -94,7 +94,7 @@ Los potenciales problemas con los que cuenta esta idea son:
 
 
 ### Argumentación a través de datos
-
+D
 Los datos utilizados durante el trabajo provienen de la Encuesta Nacional sobre Discapacidad (ENADIS), específicamente la realizada en el 2023, realizada por el Instituto Nacional de Estadísticas y Censos (INEC). Los datos provenientes de esta encuesta recopila los datos de personas mayores a 18 años a lo largo del territorio costarricense durante el 9 de octubre y el 30 de noviembre del año 2023. El estudio se basa en personas costarricenses en situación de discapacidad, considerando una muestra de individuos adultos que habitan tanto zonas rurales como urbanas escogidos según el Marco Muestral de Viviendas realizado en el 2011 donde en total se incluyeron 10,461 unidades primarias de muestreo y 1,360,055 viviendas. El individuo o unidad estadística vital para la investigación es la accesibilidad de las personas en situación de discapacidad en su entorno según los datos suministrados. 
 
 Se puede encontrar información con respecto a esta temática ya que el INEC facilita el acceso a la información detallada del proceso de elaboración de las encuestas y las normativas que garantizan el acceso de las personas en situación de discapacidad en distintas instituciones. Además, el INEC realiza periodicamente la ENADIS por lo que se tiene a su vez la evolución histórica de los datos. Los datos fueron encontrados en la página del INEC, a través del Programa Acelerado de Datos.
@@ -692,6 +692,8 @@ Las variables de la base de datos se pueden categorizar en los siguientes grupos
 
 :Variables que caracterizan la información acerca de la violencia de las personas {#tbl-sec-18}
 
+Los datos utilizados durante el trabajo provienen de la Encuesta Nacional sobre Discapacidad (ENADIS), específicamente la realizada en el 2023, realizada por el Instituto Nacional de Estadísticas y Censos (INEC). Los datos provenientes de esta encuesta recopila los datos de personas mayores a 18 años a lo largo del territorio costarricense durante el 9 de octubre y el 30 de noviembre del año 2023. El estudio se basa en personas costarricenses en situación de discapacidad, considerando una muestra de individuos adultos que habitan tanto zonas rurales como urbanas escogidos según el Marco Muestral de Viviendas realizado en el 2011 donde en total se incluyeron 10,461 unidades primarias de muestreo y 1,360,055 viviendas. El individuo o unidad estadística vital para la investigación es la accesibilidad de las personas en situación de discapacidad en su entorno según los datos suministrados. Se puede encontrar información con respecto a esta temática ya que el INED facilita el acceso a la información detallada del proceso de elaboración de las encuestas y las normativas que garantizan el acceso de las personas en situación de discapacidad en distintas instituciones. Además, el INEC realiza periodicamente la ENADIS por lo que se tiene a su vez la evolución histórica de los datos. Los datos fueron encontrados en la página del INEC <https://sistemas.inec.cr/pad5/index.php/catalog/351/data-dictionary>. La base de datos utilizada presenta en total 631 variables pero al ser una cantidad bastante alta se utilizarán mayoritariamente las presentadas a continuación, posteriormente se categorizarán aún más para reducir la cantidad de variables y hacer el estudio más eficiente.
+
 | Identificador | Nombre | Descripción |
 |--------------|--------|-------------|
 | V1138 | Amenaza | Variable de amenazas o peligros relacionados con fenómenos naturales |
@@ -819,7 +821,7 @@ Las variables de la base de datos se pueden categorizar en los siguientes grupos
 | V1260 | Dis_grado | Grado de discapacidad en desempeño |
 | V1261 | Grado_discap | Grado de discapacidad |
 
-:Variables creadas por el INEC para resumir los datos {#tbl-sec-19}
+:Variables creadas por el INEC para resumir los datos {#tbl-datos}
 
 ## Revisión bibliográfica
 
