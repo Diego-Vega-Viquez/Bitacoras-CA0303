@@ -924,13 +924,13 @@ Combinaciones de palabras clave:
     
     - **Temático:** Discapacidad, empleo, economía.
     
-    - **Teórico:** 
+    - **Teórico:** al ser informe de los datos recolectados de la ENADIS, no proporciona teorías, sino que reporta la situación nacional.
     
-- **Resumen en una oración:** se muestra un panorama sobre la situación laboral y económica de personas con discapacidad
+- **Resumen en una oración:** se muestra un panorama sobre la situación laboral y económica de personas con discapacidad.
 
-- **Argumento central:** 
+- **Argumento central:** presenta información esencial para entender la fuente de información de los datos.
 
-- **Posibles problemas con el argumento o tema:** 
+- **Posibles problemas con el argumento o tema:** posibles sesgos en el muestreo.
 
 - **Resumen en un párrafo:** es un informe que muestra el resultado de las mediciones sociodemográficas, económicas y laborales de personas con diferentes grados de discapacidad para determinar la situación actual. Se recopila información de los hogares y de los individuos, relacionada con el ingreso, el trabajo y la discapacidad.
 
