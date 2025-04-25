@@ -7,11 +7,9 @@ enadis <- read_sav("data/ENADIS2023.sav")
 #se seleccionan las variables de interes
 enadis <- enadis %>% select(A5, A4, region, zona, Cap_grado, ING_PERCAPITA_HOGAR, condic_activi, B8a, B7)
 
-#se factorizan las variables, y se desfactorizan aquellas que sean numericas
-enadis <- enadis %>% mutate(across(everything(), as_factor)) 
-enadis$A5 <- as.numeric(enadis$A5)
-enadis$ING_PERCAPITA_HOGAR <- as.numeric(enadis$ING_PERCAPITA_HOGAR)
+# Solo factorizamos las columnas que son etiquetas (labelled) o caracteres (character)
+enadis <- enadis %>% mutate(across(where(~ is.labelled(.x) || is.character(.x)), as_factor))
 
 #se filtran por personas entre 18 y 65 años
 enadis <- enadis %>% filter(A5 >= 18 & A5 <= 65)
-
+s
