@@ -1,6 +1,5 @@
 library(haven)
-library(dplyr)
-library(tidyr)
+library(tidyverse)
 #se carga la base de datos
 enadis <- read_sav("data/ENADIS2023.sav")
 
@@ -12,4 +11,4 @@ enadis <- enadis %>% mutate(across(where(~ is.labelled(.x) || is.character(.x)),
 
 #se filtran por personas entre 18 y 65 años
 enadis <- enadis %>% filter(A5 >= 18 & A5 <= 65)
-s
+
