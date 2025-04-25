@@ -1,0 +1,220 @@
+# Bitácora 2
+
+## Parte de planificación
+
+### Ordenamiento de la Literatura
+
+| Organización |                                                        |                                                                                                                          | Literatura                                                                                                                    |         |                                                                                           |
+|--------------|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------|
+| **Tipo**     | **Tema general**                                       | **Tema específico**                                                                                                      | **Título**                                                                                                                    | **Año** | **Autor(es)**                                                                             |
+
+
+## Enlaces de la literatura
+
+[@inec_enadis_2023_pdf]: **Encuesta Nacional sobre Discapacidad (ENADIS): Metodología y Resultados [recurso electrónico]**
+
+Resumen: 
+
+Contraste:
+
+Contribución propia:
+
+[@schur_disability_2017]: **Disability at Work: A Look Back and Forward**
+
+**Resumen:**  
+**Contraste:**  
+**Contribución propia:**
+
+
+[@vargas2013]: **La población con discapacidad en los censos del siglo XX en Costa Rica**
+
+**Resumen:**  
+**Contraste:**  
+**Contribución propia:**
+
+
+[@malo_ocana_genero_2006]: **Género, discapacidad y posición familiar: la participación laboral de las mujeres con discapacidad**
+
+**Resumen:**  
+**Contraste:**  
+**Contribución propia:**
+
+
+[@oca_retos_2020]: **Retos para la inclusión laboral de personas con discapacidad en Costa Rica**
+
+**Resumen:**  
+**Contraste:**  
+**Contribución propia:**
+
+
+{{< pagebreak >}}
+  
+## Análisis estadísticos
+
+### Análisis descriptivo
+```{r Librerías}
+#| echo: false
+#| include: false
+#| warning: false
+#| message: false
+library(tidyverse)
+library(scales)    # Para formatear los números como porcentajes
+library(knitr)     # Para mostrar tablas
+library(kableExtra)
+library(GGally)
+
+################################
+# Librerías de carga_de_datos.R
+################################
+
+library("digest")
+library("tibble")
+library(ProjectTemplate)
+library(cowplot)
+# Estos son necesarios para cargar openintro
+library(airports)
+library(cherryblossom)
+library(usdata)
+library(openintro)
+library(haven) 
+library(ggridges) # Para usar geom_density_ridges
+library(sf) 
+library(RColorBrewer)
+library(see)
+```
+
+#### Formato tidy
+```{r Carga de datos}
+#| echo: false
+#| warning: false
+#| message: false
+# Código que no se mostrará
+variables_comunes <- readRDS("data/variables_comunes.rds")
+glimpse(variables_comunes)
+
+```
+
+#### Cuadros
+
+```{r Tabla1}
+#| echo: false
+# Cargar los datos sin mostrar el código
+
+```
+Esta tabla muestra ...
+```{r Tabla2}
+#| echo: false
+# Código que no se mostrará
+
+
+```
+En esta tabla se presenta...
+```{r Tabla3}
+#| echo: false
+# Código que no se mostrará
+
+```
+Esta tabla ofrece...
+
+```{r  Carga Datos }
+#| echo: false
+#| include: false
+```
+
+
+#### Gráficos
+
+```{r GRAFICO 1}
+#| echo: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 6
+#| message: false
+#############
+# GRAFICO 1 #
+#############
+
+```
+```{r GRAFICO 2}
+#| echo: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 6
+#| message: false
+#############
+# GRAFICO 2 #
+#############
+
+```
+```{r GRAFICO 3}
+#| echo: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 6
+#| message: false
+#############
+# GRAFICO 3 #
+#############
+
+```
+```{r GRAFICO 4}
+#| echo: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 6
+#| message: false
+#############
+# GRAFICO 4 #
+#############
+
+```
+
+
+
+
+### Construcción de fichas de resultados
+
+
+#### Hallazgo 1
+
+- Nombre de su hallazgo/resultado:
+- Resumen en una oración:
+- Principal característica: 
+- Problemas o posibles desafíos: 
+- Resumen en un párrafo: 
+
+#### Hallazgo 2
+
+- Nombre de su hallazgo/resultado:
+- Resumen en una oración:
+- Principal característica: 
+- Problemas o posibles desafíos: 
+- Resumen en un párrafo: 
+
+#### Hallazgo 3
+
+- Nombre de su hallazgo/resultado:
+- Resumen en una oración:
+- Principal característica: 
+- Problemas o posibles desafíos: 
+- Resumen en un párrafo: 
+
+#### Hallazgo 4
+
+- Nombre de su hallazgo/resultado:
+- Resumen en una oración:
+- Principal característica: 
+- Problemas o posibles desafíos: 
+- Resumen en un párrafo: 
+
+#### Hallazgo 5
+
+- Nombre de su hallazgo/resultado:
+- Resumen en una oración:
+- Principal característica: 
+- Problemas o posibles desafíos: 
+- Resumen en un párrafo: 
+
+### Propuesta Metodológica
+
+
