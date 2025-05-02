@@ -16,8 +16,12 @@ enadis_completa <- enadis_completa %>% filter(A5 >= 18 & A5 <= 65)
 # enadis JOSE
 enadis <- enadis_completa %>% select(A5, A4, region, zona, Cap_grado, ING_PERCAPITA_HOGAR, condic_activi, B8a, B7, Nivel_Instru)
 
-# Guarda la base de datos en la carpeta data
-saveRDS(obj = enadis, file = "data/enadisJOSE.rds") # Recuerde actualizar esta cada vez que se cambie el código para que se guarde
+# Guardado de Bases de Datos
+
+# Recuerde actualizar esta cada vez que se cambie el código para que se guarde
+# Guarda las base de datos en la carpeta data
+saveRDS(obj = enadis, file = "data/enadisJOSE.rds") 
+saveRDS(obj = enadis_completa, file = "data/enadis_completa.rds")
 
 
 

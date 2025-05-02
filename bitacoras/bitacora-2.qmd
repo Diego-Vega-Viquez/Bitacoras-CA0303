@@ -100,8 +100,8 @@ library(see)
 #| warning: false
 #| message: false
 # Código que no se mostrará
-variables_comunes <- readRDS("data/variables_comunes.rds")
-glimpse(variables_comunes)
+enadis_completa <- readRDS("../data/enadis_completa.rds")
+glimpse(enadis_completa)
 
 ```
 
