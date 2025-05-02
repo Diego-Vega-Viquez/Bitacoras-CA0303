@@ -9,6 +9,7 @@ library(qqplotr)
 
 
 #No olvide cargar base de datos en manejo_de_datos.R
+enadis <- readRDS("data/enadisJOSE.rds") # Listo
 
 #1-Pruebas para aplicar modelo de regresion lineal multiple
 

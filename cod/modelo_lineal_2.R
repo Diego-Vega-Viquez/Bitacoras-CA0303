@@ -4,7 +4,8 @@ library(car)
 library(performance)
 library(ggplot2)
 
-# Partimos de la base ya limpia: recordar cargar la enadis en manejo de datos
+# Partimos de la base ya limpia: 
+enadis <- readRDS("data/enadisJOSE.rds") 
 
 enadis <- enadis %>%
   mutate(log_ingreso = log(ING_PERCAPITA_HOGAR + 1)) %>% drop_na()

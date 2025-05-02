@@ -5,6 +5,7 @@ library(viridis)
 library(scales)
 
 #No olvide cargar base de datos en manejo_de_datos.R
+enadis <- readRDS("data/enadisJOSE.rds") # Listo
 
 ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
   geom_bar(position = "fill", color = "white", width = 0.75) +  # Ajuste de ancho

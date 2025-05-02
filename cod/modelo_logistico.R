@@ -10,6 +10,8 @@ library(nnet)
 library(pscl)
 library(caret)
 
+# Carga la base de datos
+enadis <- readRDS("data/enadisJOSE.rds") 
 
 # Ajustar el modelo multinomial
 modelo_mnlogit <- multinom(condic_activi ~ A5 + A4 + region + zona + Cap_grado + Nivel_Instru + ING_PERCAPITA_HOGAR,
