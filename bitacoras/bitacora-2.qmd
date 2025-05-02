@@ -102,7 +102,6 @@ library(see)
 # Código que no se mostrará
 enadis_completa <- readRDS("../data/enadis_completa.rds")
 glimpse(enadis_completa)
-
 ```
 
 #### Cuadros
