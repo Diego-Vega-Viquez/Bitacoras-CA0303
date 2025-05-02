@@ -3,9 +3,11 @@ library(haven)
 library(ggridges)
 library(viridis)
 library(scales)
+library(labelled)
 
 #No olvide cargar base de datos en manejo_de_datos.R
 enadis <- readRDS("data/enadisJOSE.rds") # Listo
+enadis_completa <- readRDS("data/enadis_completa.rds") # Listo
 
 ##############
 # GRAFICOS  #
@@ -115,6 +117,144 @@ ggsave("res/graficos/grad_disc_por_reg_zon.png",
        height = 6.5, # Tamaño: 6 pulgadas de alto
        dpi = 900)  # Calidad: 900 pixeles por pulgada
 
+
+
+
+# Gráfico de distribución del ingreso neto del hogar según grado de discapacidad (DIEGO)
+ggplot(enadis_completa %>% drop_na(TOTAL_INGRESO_HOGAR, Cap_grado),
+       aes(x = Cap_grado, y = TOTAL_INGRESO_HOGAR, fill = Cap_grado)) +
+  geom_boxplot(width = 0.6, outlier.shape = NA) +
+  scale_y_continuous(
+    labels = scales::comma_format(prefix = "₡"),
+    limits = c(0, 1750000)
+  ) +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8, guide = "none") +
+  labs(
+    title = "Gráfico 4. \nIngreso neto total del hogar según grado de discapacidad",
+    subtitle = "Distribución del ingreso mensual neto del hogar en Costa Rica, 2023",
+    x = "Grado de Discapacidad",
+    y = "Ingreso per cápita del hogar (colones)",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title.x = element_text(face = "bold", size = 30),
+    axis.title.y = element_text(face = "bold", size = 30),
+    axis.text = element_text(size = 25),
+    legend.position = "none"
+  )
+
+ggsave("res/graficos/ingreso_hogar_vs_grado_discapacidad.png", 
+       plot = last_plot(), 
+       device = "jpg", 
+       width = 18,
+       height = 6.5,
+       dpi = 900)
+
+
+
+# Gráfico de dispersión del ingreso per cápita según puntaje de discapacidad (DIEGO)
+ggplot(enadis_completa %>% drop_na(ING_PERCAPITA_HOGAR, Dis_puntaje),
+       aes(x = Dis_puntaje, y = ING_PERCAPITA_HOGAR)) +
+  geom_point(alpha = 0.3, color = "#2c7fb8") +
+  geom_smooth(method = "loess", se = FALSE, color = "#f03b20", linewidth = 1.5) +
+  scale_y_continuous(
+    labels = scales::comma_format(prefix = "₡"),
+    limits = c(0, 2500000)
+  ) +
+  scale_x_continuous(name = "Puntaje de discapacidad") +
+  labs(
+    title = "Gráfico 5. \nRelación entre puntaje de discapacidad e ingreso per cápita",
+    subtitle = "Tendencia del ingreso según nivel de discapacidad en Costa Rica, 2023",
+    y = "Ingreso per cápita del hogar (colones)",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_text(face = "bold", size = 30),
+    axis.text = element_text(size = 25),
+    legend.position = "none"
+  )
+
+ggsave("res/graficos/ingreso_vs_puntaje_discapacidad.png", 
+       plot = last_plot(), 
+       device = "jpg", 
+       width = 18,
+       height = 6.5,
+       dpi = 900)
+
+
+
+
+# Gráfico 6: Uso de productos de apoyo según condición de aseguramiento (JOSE)
+ggplot(enadis_completa %>% drop_na(USA_PRODUCTOS, A11Condi_aseg),
+       aes(x = A11Condi_aseg, fill = USA_PRODUCTOS)) +
+  geom_bar(position = "fill", width = 0.75, color = "white") +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(
+    title = "Gráfico 6. \nUso de productos de apoyo según condición de aseguramiento",
+    subtitle = "Distribución porcentual de personas según tipo de aseguramiento en Costa Rica, 2023",
+    x = "Condición de aseguramiento",
+    y = "",
+    fill = "Uso de productos de apoyo",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_text(face = "bold", size = 30),
+    axis.text = element_text(size = 25),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 30),
+    legend.text = element_text(size = 25)
+  ) +
+  coord_flip()
+
+ggsave("res/graficos/uso_productos_vs_aseguramiento.png", 
+       plot = last_plot(), 
+       device = "jpg", 
+       width = 18,
+       height = 6.5,
+       dpi = 900)
+
+
+
+
+# Gráfico 7: Relación entre edad y desempeño funcional (JOSE)
+
+ggplot(enadis_completa %>% drop_na(A5, Des_puntaje),
+       aes(x = A5, y = Des_puntaje)) +
+  geom_point(alpha = 0.2, color = "#3182bd") +
+  geom_smooth(method = "loess", se = FALSE, color = "#e6550d", linewidth = 1.5) +
+  scale_y_continuous(name = "Puntaje de desempeño") +
+  scale_x_continuous(name = "Edad (años)", breaks = seq(20, 100, by = 10)) +
+  labs(
+    title = "Gráfico 7. \nRelación entre edad y puntaje de desempeño funcional",
+    subtitle = "Tendencia del desempeño físico y cognitivo según edad en Costa Rica, 2023",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_text(face = "bold", size = 30),
+    axis.text = element_text(size = 25),
+    legend.position = "none"
+  )
+
+ggsave("res/graficos/edad_vs_desempeno.png", 
+       plot = last_plot(), 
+       device = "jpg", 
+       width = 18,
+       height = 6.5,
+       dpi = 900)
+
+
+
+
+
+
+
+
+
 ##############
 #   TABLAS   #
 ##############
@@ -149,3 +289,43 @@ cuadro_discapacidad_region_zona <- enadis %>%
   mutate(Proporcion = Cantidad / sum(Cantidad),
          Proporcion = percent(Proporcion, accuracy = 0.01, decimal.mark = ",")) %>%
   ungroup()
+
+label_col <- var_label(enadis_completa$Grado_discap)
+
+# Tabla de distribución porcentual del ingreso per cápita por grado de discapacidad (DIEGO)
+cuadro_ingreso_vs_grado_discap <- enadis_completa %>%
+  drop_na(Grado_discap, QUINTIL_INGRESO) %>%
+  count(Grado_discap, QUINTIL_INGRESO, name = "Cantidad") %>%
+  group_by(Grado_discap) %>%
+  mutate(Proporcion = Cantidad / sum(Cantidad)) %>%
+  ungroup() %>%
+  mutate(Proporcion = percent(Proporcion, accuracy = 0.01, decimal.mark = ",")) %>%
+  select(-Cantidad) %>%
+  pivot_wider(names_from = QUINTIL_INGRESO, values_from = Proporcion, values_fill = "0,00%") %>%
+  rename(!!label_col  := Grado_discap)
+
+# Tabla de distribución de enfermedades crónicas por grado de discapacidad (DIEGO)
+cuadro_enfermedades_vs_grado_discap <- enadis_completa %>%
+  drop_na(Grado_discap, Tiene_enfer) %>%
+  count(Grado_discap, Tiene_enfer, name = "Cantidad") %>%
+  group_by(Grado_discap) %>%
+  mutate(Proporcion = Cantidad / sum(Cantidad)) %>%
+  ungroup() %>%
+  mutate(Proporcion = percent(Proporcion, accuracy = 0.01, decimal.mark = ",")) %>%
+  select(-Cantidad) %>%
+  pivot_wider(names_from = Tiene_enfer, values_from = Proporcion, values_fill = "0,00%") %>%
+  rename(!!label_col  := Grado_discap)
+
+# Tabla de necesidad de productos de apoyo según grado de discapacidad (DIEGO)
+cuadro_productos_vs_grado_discap <- enadis_completa %>%
+  drop_na(Grado_discap, PROD_ASIS) %>%
+  count(Grado_discap, PROD_ASIS, name = "Cantidad") %>%
+  group_by(Grado_discap) %>%
+  mutate(Proporcion = Cantidad / sum(Cantidad)) %>%
+  ungroup() %>%
+  mutate(Proporcion = percent(Proporcion, accuracy = 0.01, decimal.mark = ",")) %>%
+  select(-Cantidad) %>%
+  pivot_wider(names_from = PROD_ASIS, values_from = Proporcion, values_fill = "0,00%") %>%
+  rename(!!label_col  := Grado_discap)
+
+
