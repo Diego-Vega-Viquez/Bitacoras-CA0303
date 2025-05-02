@@ -205,6 +205,8 @@ env$grafico5
 #############
 env$grafico6
 ```
+### Propuesta Metodológica
+
 
 
 ### Construcción de fichas de resultados
@@ -212,45 +214,45 @@ env$grafico6
 
 #### Hallazgo 1
 
-- Nombre de su hallazgo/resultado:
-- Resumen en una oración:
-- Principal característica: 
-- Problemas o posibles desafíos: 
-- Resumen en un párrafo: 
+- **Nombre de su hallazgo/resultado:** Relación entre grado de discapacidad e ingreso per cápita del hogar.
+- **Resumen en una oración:** A mayor grado de discapacidad, menor tiende a ser el ingreso mensual neto per cápita del hogar.
+- **Principal característica:** Existe una tendencia decreciente en la mediana del ingreso conforme aumenta la severidad de la discapacidad.
+- **Problemas o posibles desafíos:** El gráfico 4 no expresa explícitamente información sobre otras variables, por lo que pueden existir otros factores que unfluyan en el hallazgo observado.
+- **Resumen en un párrafo:** El gráfico 4 muestra la distribución del ingreso mensual neto por cápita del hogar por nivel de discapacidad. Se observa una tendencia específica: los hogares en los cuales habitan personas sin discapacidad tienen ingresos más elevados si se comparan con los en los cuales habitan personas con discapacidades leve, moderada o severa. Dicha caída progresiva conduce a una correlación negativa entre nivel de discapacidad y nivel económico. Sin embargo, este patrón pudiera estar condicionado por otras variables no expresadas de manera explícita en este gráfico.
 
 #### Hallazgo 2
 
-- Nombre de su hallazgo/resultado:
-- Resumen en una oración:
-- Principal característica: 
-- Problemas o posibles desafíos: 
-- Resumen en un párrafo: 
+- **Nombre de su hallazgo/resultado:** Relación entre nivel de discapacidad y nivel de ingreso
+- **Resumen en una oración:** A mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar.
+- **Principal característica:** Hay una relación negativa entre el nivel de discapacidad y el ingreso per cápita, hay gran dispersión en los ingresos
+- **Problemas o posibles desafíos:** El gráfico 5 expone un alto nivel de variabilidad en los ingresos y no distingue otros factores de contexto que podrían explicar la variación.
+- **Resumen en un párrafo:** El gráfico 5 muestra cómo el ingreso mensual per cápita del hogar decrece conforme crece el puntaje de discapacidad de las personas, lo cual invita a pensar que quienes enfrentan mayores limitaciones tienden a estar en desventaja económica. Aunque la tendencia general es decreciente, se observa una gran dispersión de datos, lo que indica que otros factores también pueden influir en el ingreso. Aun así, la asociación negativa detectada refuerza la hipótesis de que la discapacidad puede representar una barrera importante para el acceso a mejores condiciones de vida.
 
 #### Hallazgo 3
 
-- Nombre de su hallazgo/resultado:
-- Resumen en una oración:
-- Principal característica: 
-- Problemas o posibles desafíos: 
-- Resumen en un párrafo: 
+- **Nombre de su hallazgo/resultado:**
+- **Resumen en una oración:**
+- **Principal característica:** 
+- **Problemas o posibles desafíos:**
+- **Resumen en un párrafo:**
 
 #### Hallazgo 4
 
-- Nombre de su hallazgo/resultado:
-- Resumen en una oración:
-- Principal característica: 
-- Problemas o posibles desafíos: 
-- Resumen en un párrafo: 
+- **Nombre de su hallazgo/resultado:**
+- **Resumen en una oración:**
+- **Principal característica:** 
+- **Problemas o posibles desafíos:**
+- **Resumen en un párrafo:**
 
 #### Hallazgo 5
 
-- Nombre de su hallazgo/resultado:
-- Resumen en una oración:
-- Principal característica: 
-- Problemas o posibles desafíos: 
-- Resumen en un párrafo: 
+- **Nombre de su hallazgo/resultado:**
+- **Resumen en una oración:**
+- **Principal característica:** 
+- **Problemas o posibles desafíos:**
+- **Resumen en un párrafo:**
 
-### Propuesta Metodológica
+
 
 
 {{< pagebreak >}}
