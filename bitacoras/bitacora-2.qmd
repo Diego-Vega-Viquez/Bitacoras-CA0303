@@ -129,6 +129,11 @@ Esta tabla ofrece...
 ```{r  Carga Datos }
 #| echo: false
 #| include: false
+#| warning: false
+#| message: false
+
+env <- new.env()
+source("../cod/graficos_y_cuadros.R", local = env)
 ```
 
 
@@ -137,49 +142,69 @@ Esta tabla ofrece...
 ```{r GRAFICO 1}
 #| echo: false
 #| warning: false
-#| fig-width: 10
-#| fig-height: 6
 #| message: false
+#| fig-width: 20
+#| fig-height: 8.5
 #############
 # GRAFICO 1 #
 #############
-
+env$grafico1
 ```
 ```{r GRAFICO 2}
 #| echo: false
 #| warning: false
-#| fig-width: 10
-#| fig-height: 6
 #| message: false
+#| fig-width: 20
+#| fig-height: 6.5
 #############
 # GRAFICO 2 #
 #############
-
+env$grafico2
 ```
 ```{r GRAFICO 3}
 #| echo: false
 #| warning: false
-#| fig-width: 10
-#| fig-height: 6
 #| message: false
+#| fig-width: 18
+#| fig-height: 8.5
 #############
 # GRAFICO 3 #
 #############
-
+env$grafico3
 ```
 ```{r GRAFICO 4}
 #| echo: false
 #| warning: false
-#| fig-width: 10
-#| fig-height: 6
 #| message: false
+#| fig-width: 18
+#| fig-height: 8.5
 #############
 # GRAFICO 4 #
 #############
-
+env$grafico4
 ```
-
-
+```{r GRAFICO 5}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
+#############
+# GRAFICO 5 #
+#############
+env$grafico5
+```
+```{r GRAFICO 6}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
+#############
+# GRAFICO 6 #
+#############
+env$grafico6
+```
 
 
 ### Construcción de fichas de resultados
@@ -228,3 +253,7 @@ Esta tabla ofrece...
 ### Propuesta Metodológica
 
 
+{{< pagebreak >}}
+
+
+# Bibliografía

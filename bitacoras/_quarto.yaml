@@ -17,6 +17,7 @@ book:
   chapters:
     - "index.qmd"        # es un archivo obligatorio en un proyecto de libro (type: book)
     - "bitacora-1.qmd"
+    - "bitacora-2.qmd"
 
 bibliography: references.bib
 csl: apa.csl
