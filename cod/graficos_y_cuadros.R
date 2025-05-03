@@ -128,30 +128,30 @@ ggsave("res/graficos/grad_disc_por_reg_zon.png",
 
 
 # Gráfico de distribución del ingreso neto del hogar según grado de discapacidad (DIEGO)
-grafico4 <- ggplot(enadis_completa %>% drop_na(TOTAL_INGRESO_HOGAR, Cap_grado),
-       aes(x = Cap_grado, y = TOTAL_INGRESO_HOGAR, fill = Cap_grado)) +
-  geom_boxplot(width = 0.6, outlier.shape = NA) +
-  scale_y_continuous(
-    labels = scales::comma_format(prefix = "₡"),
-    limits = c(0, 1750000)
+grafico4 <- ggplot(enadis %>% drop_na(ING_PERCAPITA_HOGAR, Cap_grado),
+                   aes(x = Cap_grado, y = ING_PERCAPITA_HOGAR, fill = Cap_grado)) +
+  geom_boxplot(width = 0.6) +
+  scale_y_log10(
+    labels = scales::label_number(prefix = "₡", big.mark = ",")
   ) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8, guide = "none") +
   labs(
-    title = "Gráfico 4. \nIngreso neto total del hogar según grado de discapacidad",
+    title = "Gráfico 4. \nIngreso per capita del hogar según grado de discapacidad",
     subtitle = "Distribución del ingreso mensual neto del hogar en Costa Rica, 2023",
     x = "Grado de Discapacidad",
-    y = "Ingreso per cápita del hogar (colones)",
+    y = "Ingreso per cápita del hogar (escala logarítmica, colones)",
     caption = "Fuente: INEC, ENADIS 2023."
   ) +
   theme_minimal(base_size = 14) +
   theme(
-   plot.title = element_text(size = 32, face = "bold", hjust = 0),
-   plot.subtitle = element_text(size = 28, hjust = 0),
+    plot.title = element_text(size = 32, face = "bold", hjust = 0),
+    plot.subtitle = element_text(size = 28, hjust = 0),
     axis.title.x = element_text(face = "bold", size = 20),
     axis.title.y = element_text(face = "bold", size = 20),
     axis.text = element_text(size = 15),
     legend.position = "none"
-  )
+  ) + 
+  coord_flip()
 
 ggsave("res/graficos/ingreso_hogar_vs_grado_discapacidad.png", 
        plot = last_plot(), 
@@ -159,8 +159,6 @@ ggsave("res/graficos/ingreso_hogar_vs_grado_discapacidad.png",
        width = 18,
        height = 8.5,
        dpi = 900)
-
-
 
 # Gráfico de dispersión del ingreso per cápita según puntaje de discapacidad (DIEGO)
 grafico5 <- ggplot(enadis_completa %>% drop_na(ING_PERCAPITA_HOGAR, Dis_puntaje),
@@ -237,6 +235,44 @@ ggsave("res/graficos/edad_vs_desempeno.png",
 ##############
 #   TABLAS   #
 ##############
+
+# Tabla de la distribucion del ingreso per capita del hogar segun grado de discapacidad
+
+cuadro_ingreso_vs_grad_disc <- enadis %>%
+  group_by(Cap_grado) %>%
+  summarise(
+    n = n(),
+    Media = mean(ING_PERCAPITA_HOGAR, na.rm = TRUE),
+    Desviación = sd(ING_PERCAPITA_HOGAR, na.rm = TRUE),
+    Q1 = quantile(ING_PERCAPITA_HOGAR, 0.25, na.rm = TRUE),
+    Mediana = median(ING_PERCAPITA_HOGAR, na.rm = TRUE),
+    Q3 = quantile(ING_PERCAPITA_HOGAR, 0.75, na.rm = TRUE)
+    )
+# Tabla de horas trabajadas segun el grado de discapacidad
+
+cuadro_horas_vs_grad_disc <- enadis %>%
+  drop_na(Cap_grado, B7) %>%
+  count(Cap_grado, B7, name = "Cantidad") %>%
+  group_by(Cap_grado) %>%
+  mutate(Proporcion = Cantidad / sum(Cantidad)) %>%
+  ungroup() %>%
+  mutate(Proporcion = percent(Proporcion, accuracy = 0.01, decimal.mark = ",")) %>%
+  select(-Cantidad) %>%
+  pivot_wider(names_from = B7, values_from = Proporcion, values_fill = "0,00%")
+
+# Tabla de puestos de trabajo segun grado de discapacidad
+
+cuadro_puestos_vs_grad_disc <- enadis %>%
+  drop_na(Cap_grado, B8a) %>%
+  count(Cap_grado, B8a, name = "Cantidad") %>%
+  group_by(Cap_grado) %>%
+  mutate(Proporcion = Cantidad / sum(Cantidad)) %>%
+  ungroup() %>%
+  mutate(Proporcion = percent(Proporcion, accuracy = 0.01, decimal.mark = ",")) %>%
+  select(-Cantidad) %>%
+  pivot_wider(names_from = B8a, values_from = Proporcion, values_fill = "0,00%")
+
+
 
 # Tabla de distribución porcentual de la posición en el trabajo según el grado de dificultad en la capacidad. (JOSE)
 cuadro_pos_trab_vs_grad_disc <- enadis %>%
