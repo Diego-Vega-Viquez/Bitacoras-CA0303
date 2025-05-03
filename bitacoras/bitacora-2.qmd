@@ -1,5 +1,207 @@
 # Bitácora 2
 
+## Nuevas fichas de literatura
+
+::: {.callout-note }
+
+#### Estudio sobre el agravio comparativo económico que origina la discapacidad
+
+- **Título:** Estudio sobre el agravio comparativo económico que origina la discapacidad
+- **Autores:** Antonio Jiménez Lara y Agustín Huete García
+- **Año de publicación:** 2010
+- **Tema principal:** Impacto económico de la discapacidad en España
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en datos de la Encuesta EDAD 2008.
+    - **Metodológico:** Análisis de datos estadísticos y trabajo de campo cualitativo.
+    - **Temático:** Discapacidad, Economía.
+    - **Teórico:** Teoría de la discriminación económica y del sobrecoste asociado a la discapacidad.
+- **Resumen en una oración:** El estudio cuantifica los costes directos y de oportunidad que enfrentan las personas con discapacidad y sus hogares en España.
+- **Argumento central:** El documento plantea que las personas con discapacidad sufren un agravio económico relevante, expresado tanto en gastos monetarios adicionales como en pérdida de ingresos, exacerbado por la insuficiencia de apoyos estatales y la desigualdad en el acceso a recursos básicos.
+- **Posibles problemas con el argumento o tema:** El estudio reconoce la dificultad de captar la totalidad del impacto económico real debido a la falta de datos precisos y la subestimación del gasto y de las pérdidas de ingresos en las fuentes utilizadas.
+- **Resumen en un párrafo:** Los autores analizan cómo la discapacidad genera un agravio económico en los hogares españoles, señalando que las personas con discapacidad afrontan gastos directos significativos, como un gasto medio anual de 2.874 euros por hogar, lo que representa el 9% del gasto promedio anual en el país. Además, los hogares afectados perciben un 25% menos de ingresos que aquellos sin discapacidad, equivalente a una pérdida anual de unos 20 mil millones de euros. Se estima que el coste de oportunidad asociado al cuidado familiar no remunerado alcanza los 87 mil millones de euros, aproximadamente el 7% del PIB. 
+
+:::
+
+::: {.callout-note }
+
+#### Dead End Jobs or a Path to Economic Well Being? The Consequences of Non-Standard Work among People with Disabilities
+
+- **Título:** Dead End Jobs or a Path to Economic Well Being? The Consequences of Non-Standard Work among People with Disabilities
+- **Autores:** Lisa A. Schur
+- **Año de publicación:** 2002
+- **Tema principal:** Impacto del empleo no tradicional en la situación económica de personas con discapacidad
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en datos recolectados entre 1992 y 2001.
+    - **Metodológico:** Uso de encuestas nacionales y revisión de casos legales.
+    - **Temático:** Empleo, Discapacidad.
+    - **Teórico:** Desigualdad económica asociada al tipo de empleo y la discapacidad.
+- **Resumen en una oración:** El estudio analiza cómo los trabajos no convencionales afectan la estabilidad económica de las personas con discapacidad.
+- **Argumento central:** El documento plantea que las personas con discapacidad están más presentes en empleos no tradicionales, donde ganan menos, reciben menos beneficios y tienen más probabilidades de vivir en pobreza, afectando sus posibilidades de mejorar su situación económica.
+- **Posibles problemas con el argumento o tema:** Se mencionan limitaciones en la calidad de los datos, posibles errores al medir la discapacidad y complicaciones al usar los resultados de demandas judiciales como forma de medir mejoras laborales.
+- **Resumen en un párrafo:** Los autores explican que las personas con discapacidad en Estados Unidos suelen trabajar en empleos de medio tiempo, temporales o como independientes mucho más que las personas sin discapacidad. Indican que un 44% de trabajadores con discapacidad está en este tipo de empleos, mientras que solo un 22% de personas sin discapacidad lo está. También se menciona que estos trabajadores ganan entre un 14% y un 22% menos y que aproximadamente un 20% vive en pobreza, lo que es el doble comparado con personas sin discapacidad en trabajos parecidos. El estudio, usando encuestas y revisiones de casos legales, muestra que solo un 25% de las demandas laborales de personas con discapacidad tienen éxito. 
+
+:::
+
+::: {.callout-note }
+
+#### Inequality in Labour Market Opportunities for People with Disabilities: Evidence for Six Latin American Countries
+
+- **Título:** Inequality in Labour Market Opportunities for People with Disabilities: Evidence for Six Latin American Countries
+- **Autores:** Mónica Pinilla-Roncancio y Mauricio Gallardo
+- **Año de publicación:** 2023
+- **Tema principal:** Desigualdad en las oportunidades laborales de personas con discapacidad en seis países latinoamericanos
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en encuestas de hogares hechas entre 2016 y 2017.
+    - **Metodológico:** Se utilizó el Índice de Oportunidades Humanas (HOI) junto con datos de encuestas.
+    - **Temático:** Empleo, Discapacidad.
+    - **Teórico:** Teoría de equidad de oportunidades en el ámbito laboral.
+- **Resumen en una oración:** Este estudio analiza las diferencias en las oportunidades laborales para personas con discapacidad en seis países de América Latina.
+- **Argumento central:** El estudio dice que las personas con discapacidad tienen muchas más dificultades para conseguir empleo en América Latina, y que esto cambia bastante dependiendo del país, siendo peor para las mujeres y quienes viven en zonas rurales.
+- **Posibles problemas con el argumento o tema:** Se mencionan problemas porque los datos no siempre son fáciles de comparar entre los países, y eso puede afectar los resultados.
+- **Resumen en un párrafo:** Los autores estudian cómo es la situación laboral para personas con discapacidad en Bolivia, Chile, Colombia, Costa Rica, México y Perú. Usaron encuestas y el Índice de Oportunidades Humanas para ver las diferencias. Encontraron que en todos los países las personas con discapacidad tienen menos chances de trabajar, pero especialmente en Costa Rica y Colombia, donde las oportunidades laborales bajan más de un 30%. En cambio, en Perú más del 80% de las personas con discapacidad tienen acceso al empleo, aunque con diferencias internas. Además, ser mujer o vivir en el campo reduce todavía más la posibilidad de conseguir trabajo. Un dato importante es que en Colombia las personas con discapacidad tienen un 98% menos de probabilidad de estar empleadas.
+
+:::
+
+::: {.callout-note }
+
+#### The Disability Employment Puzzle: A Field Experiment on Employer Hiring Behavior
+
+- **Título:** The Disability Employment Puzzle: A Field Experiment on Employer Hiring Behavior
+- **Autores:** Mason Ameri, Lisa Schur, Meera Adya, Scott Bentley, Patrick McKay y Douglas Kruse
+- **Año de publicación:** 2015
+- **Tema principal:** Discriminación laboral hacia personas con discapacidad en procesos de contratación
+- **Forma de organizarlo:**
+    - **Cronológico:** Datos recogidos entre junio y agosto de 2013.
+    - **Metodológico:** Experimento de campo enviando solicitudes ficticias a ofertas de empleo.
+    - **Temático:** Discriminación, Empleo, Discapacidad.
+    - **Teórico:** Teoría de la discriminación y del capital humano.
+- **Resumen en una oración:** Este estudio investiga si las personas con discapacidad enfrentan discriminación a la hora de buscar empleo en Estados Unidos.
+- **Argumento central:** El estudio muestra que las personas con discapacidad, a pesar de tener buenas calificaciones, reciben mucho menos interés de los empleadores que las personas sin discapacidad.
+- **Posibles problemas con el argumento o tema:** Se reconoce que tal vez no todos los empleadores leyeron las cartas de presentación donde se hablaba de la discapacidad, lo que podría hacer que el problema parezca más pequeño de lo que realmente es.
+- **Resumen en un párrafo:** Los autores hicieron un experimento enviando más de 6,000 solicitudes de trabajo a ofertas en el área de contabilidad. Unas solicitudes mencionaban una discapacidad (lesión medular o Asperger) y otras no. Encontraron que las personas con discapacidad recibieron 26% menos respuestas de interés que quienes no mencionaban discapacidad. Además, se vio que la diferencia era mayor para quienes tenían más experiencia laboral y que las pequeñas empresas (con menos de 15 empleados) eran las que menos respondían.  
+
+:::
+
+::: {.callout-note }
+
+#### Income and Employment Equity of Graduates with and without Disabilities
+
+- **Título:** Income and Employment Equity of Graduates with and without Disabilities
+- **Autores:** Michelle Donelly, Scott Gordon y Alison Bowling
+- **Año de publicación:** 2020
+- **Tema principal:** Desigualdad de ingresos y empleo entre graduados con y sin discapacidad en Australia
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en datos del Censo Australiano de 2011.
+    - **Metodológico:** Análisis descriptivo y de regresión de datos censales.
+    - **Temático:** Empleo, Discapacidad, Economía.
+    - **Teórico:** Teoría de equidad de ingresos y empleo.
+- **Resumen en una oración:** El estudio analiza las diferencias de ingresos y empleo entre graduados con y sin discapacidad en Australia.
+- **Argumento central:** El estudio muestra que los graduados con discapacidad ganan mucho menos, trabajan menos horas y tienen trayectorias laborales más inestables que los graduados sin discapacidad, con diferencias aún más marcadas por género.
+- **Posibles problemas con el argumento o tema:** Se reconocen limitaciones en la definición de discapacidad usada en el censo y posibles sesgos en la información recolectada.
+- **Resumen en un párrafo:** Los autores analizaron datos del Censo Australiano de 2011 para comparar los ingresos de graduados con y sin discapacidad. Encontraron que los graduados con discapacidad ganaban en promedio $494 AUD por semana, lo que equivale al 53% de los ingresos de quienes no tenían discapacidad. Además, trabajaban menos horas (20.6 horas semanales frente a 31.2 horas) y recibían un salario por hora 15% más bajo. Las mujeres con discapacidad fueron el grupo con menores ingresos, ganando apenas un 35% de lo que ganaban los hombres sin discapacidad. El estudio también mostró que las diferencias de ingreso aumentaban con la edad y que, aunque la indigeneidad fue un factor de inequidad en general, entre mujeres graduadas no se observaron diferencias significativas. 
+
+:::
+
+::: {.callout-note }
+
+#### A Study on the Employment and Wage Outcomes of People with Disabilities
+
+- **Título:** A Study on the Employment and Wage Outcomes of People with Disabilities
+- **Autores:** Sévane Ananian y Giulia Dellaferrera
+- **Año de publicación:** 2024
+- **Tema principal:** Resultados laborales y salariales de personas con discapacidad a nivel internacional
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en encuestas de hogares realizadas entre 2013 y 2022.
+    - **Metodológico:** Análisis econométrico de datos censales de 65 países.
+    - **Temático:** Economía, Discapacidad.
+    - **Teórico:** Teoría de discriminación y equidad de oportunidades laborales.
+- **Resumen en una oración:** El estudio analiza las diferencias de empleo y salarios entre personas con y sin discapacidad en varios países.
+- **Argumento central:** El estudio demuestra que las personas con discapacidad tienen menos posibilidades de participar en el mercado laboral, enfrentan mayores tasas de desempleo y ganan menos que quienes no tienen discapacidad, incluso cuando tienen niveles similares de educación y experiencia.
+- **Posibles problemas con el argumento o tema:** Se reconoce que las diferencias entre países y la forma de medir la discapacidad pueden afectar los resultados, así como la falta de datos sobre discapacidades menos visibles.
+- **Resumen en un párrafo:** Los autores analizaron datos de 65 países para comparar los resultados laborales de personas con y sin discapacidad. Encontraron que tener discapacidad disminuye en promedio en 25% la probabilidad de participar en el mercado laboral y aumenta en 7% la probabilidad de estar desempleado. Además, las personas con discapacidad ganan un 12% menos por hora que las personas sin discapacidad, y tres cuartas partes de esa brecha salarial no se explican por diferencias de edad, educación u ocupación. El estudio también muestra que en países de ingresos bajos y medianos, las personas con discapacidad tienen tasas de informalidad y trabajo temporal mucho más altas.
+
+:::
+
+::: {.callout-note }
+
+#### Multinomial Logistic Regression to Estimate and Predict the Job Opportunities for People with Disabilities in Chile
+
+- **Título:** Multinomial Logistic Regression to Estimate and Predict the Job Opportunities for People with Disabilities in Chile
+- **Autores:** Nelson Lay-Raby, Hanns de la Fuente-Mella y Omar Lameles-Corvalán
+- **Año de publicación:** 2021
+- **Tema principal:** Predicción de oportunidades laborales para personas con discapacidad en Chile
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en datos del Segundo Estudio Nacional de Discapacidad en Chile (ENDISC II) de 2015.
+    - **Metodológico:** Modelo de regresión logística multinomial aplicado a una muestra de 1,566 adultos.
+    - **Temático:** Empleo, Discapacidad.
+    - **Teórico:** Modelo social de la discapacidad y teoría económica del empleo.
+- **Resumen en una oración:** Este estudio analiza cómo diferentes factores influyen en las oportunidades de empleo de personas con discapacidad en Chile.
+- **Argumento central:** El estudio muestra que factores como el nivel educativo, los ingresos autónomos, la edad y los subsidios del Estado afectan de manera importante las probabilidades de que una persona con discapacidad consiga trabajo en Chile.
+- **Posibles problemas con el argumento o tema:** Se reconoce que la muestra solo incluye a personas hasta 30 años y que algunos factores sociales o de contexto podrían no estar completamente reflejados en el análisis.
+- **Resumen en un párrafo:** Los autores utilizaron datos del Segundo Estudio Nacional de Discapacidad en Chile para construir un modelo de regresión logística multinomial que permitiera predecir las oportunidades laborales de personas con discapacidad. La muestra incluyó a 1,566 personas adultas entre 18 y 30 años, y se analizaron variables como ingresos autónomos, pensiones, subsidios mensuales y anuales, edad, estado civil, y último nivel educativo alcanzado. Se encontró que tener un nivel educativo más alto y recibir ingresos propios aumentaba de manera considerable la probabilidad de empleo. Las personas con discapacidad severa tenían menos posibilidades de insertarse laboralmente, y el acceso a subsidios mensuales también mostraba una relación importante. El modelo tuvo un buen ajuste, logrando clasificar correctamente el 92.3% de los casos.
+
+:::
+
+::: {.callout-note }
+
+#### Effects of Disability on Income and Income Composition
+
+- **Título:** Effects of Disability on Income and Income Composition
+- **Autores:** Christy Pu y Huei-Fen Syu
+- **Año de publicación:** 2023
+- **Tema principal:** Efectos de la discapacidad sobre el ingreso y su composición en Taiwán
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en datos fiscales de 1999 a 2015.
+    - **Metodológico:** Uso de datos administrativos y análisis estadístico de ingresos.
+    - **Temático:** Economía, Discapacidad.
+    - **Teórico:** Teoría de composición del ingreso y desigualdad económica.
+- **Resumen en una oración:** El estudio analiza cómo la discapacidad afecta el ingreso total y la composición de los tipos de ingreso en Taiwán.
+- **Argumento central:** El estudio muestra que tras el inicio de una discapacidad, el ingreso total no disminuye en general, pero la composición del ingreso cambia de manera importante, con diferencias según la edad y el tipo de ingreso.
+- **Posibles problemas con el argumento o tema:** Se reconoce que los datos incluyen solo hogares con ingresos tributables y que no se pueden distinguir tipos ni severidades de discapacidad.
+- **Resumen en un párrafo:** Los autores analizaron datos fiscales de Taiwán para comparar los cambios en el ingreso de personas con discapacidad y personas sin discapacidad. Encontraron que, en promedio, el ingreso total aumentó un 10.4% tras el inicio de la discapacidad, y que los salarios no disminuyeron de manera significativa. Sin embargo, la composición de los ingresos cambió, destacándose un aumento en los ingresos por intereses y transacciones de propiedades. Antes de los 50 años, las personas con discapacidad tenían una mayor proporción de ingresos por intereses, pero después de esa edad, esta proporción era mayor en personas sin discapacidad. También se observó que la proporción de ingresos por salarios disminuía conforme aumentaba la edad.
+
+:::
+
+::: {.callout-note }
+
+#### More than just lower wages: intrinsic job quality for college graduates with disabilities
+
+- **Título:** More than just lower wages: intrinsic job quality for college graduates with disabilities
+- **Autores:** Megan Henly y Debra L. Brucker
+- **Año de publicación:** 2020
+- **Tema principal:** Calidad intrínseca del trabajo para graduados universitarios con discapacidad
+- **Forma de organizarlo:**
+    - **Cronológico:** Basado en datos de la Encuesta Nacional de Graduados Universitarios de 2017.
+    - **Metodológico:** Análisis de datos de encuesta y modelación de calidad de empleo.
+    - **Temático:** Educación, Empleo, Discapacidad.
+    - **Teórico:** Teoría de calidad del trabajo y desigualdad laboral.
+- **Resumen en una oración:** El estudio analiza las diferencias en salarios y calidad intrínseca del trabajo entre graduados universitarios con y sin discapacidad en Estados Unidos.
+- **Argumento central:** El estudio plantea que los graduados universitarios con discapacidad reciben menores salarios y disfrutan de menor calidad intrínseca en el trabajo en comparación con sus pares sin discapacidad.
+- **Posibles problemas con el argumento o tema:** Se señala que las medidas usadas para evaluar la calidad intrínseca son subjetivas y podrían no captar todas las dimensiones relevantes del trabajo.
+- **Resumen en un párrafo:** Los autores analizaron datos de una encuesta nacional de graduados universitarios para comparar la calidad del empleo entre personas con y sin discapacidad. Encontraron que los trabajadores con discapacidad ganaban un salario medio de $63,600 USD, mientras que los trabajadores sin discapacidad ganaban $70,000 USD. Además, aunque ambos grupos valoraban mucho aspectos como la autonomía y la realización personal, las personas con discapacidad reportaban niveles significativamente más bajos en tres de los cuatro indicadores de calidad intrínseca del trabajo. En general, solo el 63% de los trabajadores con discapacidad estaba satisfecho en todas las dimensiones analizadas, frente al 70% de los trabajadores sin discapacidad. Finalmente, el estudio mostró que tener una discapacidad redujo en 29% las probabilidades de tener un empleo considerado de alta calidad intrínseca.
+
+:::
+
+::: {.callout-note }
+
+#### Informe Mundial sobre la Discapacidad
+
+- **Título:** Informe Mundial sobre la Discapacidad
+- **Autores:** Organización Mundial de la Salud (OMS) y Banco Mundial
+- **Año de publicación:** 2011
+- **Tema principal:** Discapacidad, Salud, Educación, Empleo
+- **Forma de organizarlo:**
+    - **Cronológico:** Datos y análisis recopilados hasta 2010.
+    - **Metodológico:** Revisión de literatura, análisis de encuestas internacionales y consultas regionales.
+    - **Temático:** Discapacidad, Salud, Educación, Empleo.
+    - **Teórico:** Modelo biopsicosocial de la discapacidad.
+- **Resumen en una oración:** El informe analiza la situación mundial de las personas con discapacidad y propone acciones para mejorar su inclusión social.
+- **Argumento central:** El informe muestra que más de mil millones de personas viven con algún tipo de discapacidad y enfrentan barreras significativas en salud, educación, empleo y participación social.
+- **Posibles problemas con el argumento o tema:** Se reconoce que la falta de datos comparables y de definiciones comunes limita el conocimiento sobre la situación de la discapacidad a nivel mundial.
+- **Resumen en un párrafo:** Los autores presentan un diagnóstico global basado en datos de encuestas y revisiones de literatura sobre la vida de las personas con discapacidad. Se estima que el 15% de la población mundial vive con alguna forma de discapacidad, y que cerca de 200 millones experimentan dificultades considerables en su funcionamiento. El informe destaca que estas personas tienen peores resultados en salud, educación y empleo, y mayores tasas de pobreza que el resto de la población. Además, identifica barreras ambientales, actitudinales y legales que afectan su participación social. Se abordan temas como la accesibilidad, la rehabilitación, la asistencia personal y la necesidad de ambientes inclusivos, basándose en el modelo de la Clasificación Internacional del Funcionamiento, la Discapacidad y la Salud (CIF). Cada capítulo ofrece recomendaciones específicas para gobiernos y actores sociales con el fin de promover la equidad y los derechos de las personas con discapacidad.
+
+:::
+
 ## Parte de planificación
 
 ### Ordenamiento de la Literatura
