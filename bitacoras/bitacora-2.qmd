@@ -202,11 +202,54 @@
 
 :::
 
+::: {.callout-note}
+
+#### The Chi-square Test of Independence
+
+- **Título:** The Chi-square Test of Independence  
+- **Autores:** Mary L. McHugh  
+- **Año de publicación:** 2013  
+- **Tema principal:** Prueba de independencia Chi-cuadrado en datos categóricos  
+- **Forma de organizarlo:**
+    - **Cronológico:** Aplicación contemporánea en estudios con variables cualitativas.  
+    - **Metodológico:** Uso de estadística no paramétrica.  
+    - **Temático:** Estadística.  
+    - **Teórico:** Análisis de hipótesis con variables categóricas.  
+- **Resumen en una oración:** El artículo explica cómo usar la prueba Chi-cuadrado para analizar si dos variables están relacionadas.  
+- **Argumento central:** La autora presenta la prueba Chi-cuadrado como una herramienta útil para saber si hay relación entre variables categóricas, sobre todo cuando no se pueden usar pruebas paramétricas más comunes.  
+- **Posibles problemas con el argumento o tema:** La prueba necesita ciertos requisitos, como que las muestras no sean pequeñas y que los datos estén bien organizados; si no se cumplen, los resultados pueden no ser fiables.  
+- **Resumen en un párrafo:** Este artículo describe qué es y para qué sirve la prueba Chi-cuadrado de independencia. Se usa cuando las variables que se quieren comparar están en categorías, por ejemplo, si una persona está vacunada o no, y si se enfermó o no. La autora explica que esta prueba no necesita que los datos sigan una distribución normal, lo cual es útil cuando no se pueden aplicar otras pruebas estadísticas. A través de un ejemplo sobre vacunación y tipos de neumonía, se muestran los pasos para calcular los valores esperados y determinar si las diferencias encontradas son significativas. También se habla de otra medida, el V de Cramér, que sirve para saber qué tan fuerte es la relación entre las variables. Al final, se compara esta prueba con otras parecidas, explicando cuándo es mejor usar una u otra.
+
+:::
+
+::: {.callout-note}
+
+#### Methodology and Application of the Kruskal-Wallis Test
+
+- **Título:** Methodology and Application of the Kruskal-Wallis Test  
+- **Autores:** Eva Ostertagová, Oskar Ostertag y Jozef Kováč  
+- **Año de publicación:** 2014  
+- **Tema principal:** Prueba no paramétrica Kruskal-Wallis y su aplicación práctica  
+- **Forma de organizarlo:**
+    - **Cronológico:** Se basa en datos y métodos recientes  
+    - **Metodológico:** Uso de la prueba Kruskal-Wallis con análisis comparativo entre grupos  
+    - **Temático:** Estadística  
+    - **Teórico:** Comparación de grupos usando rangos en lugar de promedios  
+- **Resumen en una oración:**  
+  El texto explica cómo funciona la prueba Kruskal-Wallis y cuándo conviene usarla si los datos no cumplen los requisitos de una prueba común como el ANOVA.  
+- **Argumento central:**  
+  La prueba Kruskal-Wallis es útil para comparar tres o más grupos cuando los datos no son normales ni tienen varianzas similares, permitiendo saber si hay diferencias importantes entre ellos.  
+- **Posibles problemas con el argumento o tema:**  
+  Aunque no exige tantos requisitos como otras pruebas, necesita que los grupos sean independientes y parecidos en forma; además, si el resultado da diferencia, no muestra claramente entre qué grupos ocurre, así que hay que hacer comparaciones por separado.  
+- **Resumen en un párrafo:**  
+  Este artículo presenta la prueba Kruskal-Wallis como una forma de comparar varios grupos cuando los datos no permiten usar pruebas más comunes como el ANOVA. Explica paso a paso cómo se realiza el cálculo, qué condiciones debe cumplir y qué hacer si hay valores repetidos. Incluye un ejemplo con datos reales sobre el efecto de cinco tipos de recubrimiento en tubos, usando MATLAB para el análisis. Como los datos no cumplían con las condiciones necesarias para un análisis normal, se usó esta prueba y se encontró que al menos uno de los grupos era diferente. Para saber cuáles eran distintos, se hicieron comparaciones entre pares de grupos.
+
+:::
+
+
 ## Parte de planificación
 
-### Ordenamiento de la Literatura
-
-## Ordenamiento de la literatura
+### Ordenamiento de la literatura
 
 > **Nota:** Todas las referencias incluidas en la siguiente tabla corresponden a estudios de tipo **temático**, es decir, se agrupan por temas relevantes para el análisis del vínculo entre discapacidad y condiciones socioeconómicas.
 
@@ -225,7 +268,7 @@
 | Empleo, Discapacidad                         | Predicción de empleo en Chile                                        | Multinomial Logistic Regression to Estimate and Predict the Job Opportunities | 2021   | Nelson Lay-Raby, Hanns de la Fuente-Mella y Omar Lameles-Corvalán                                  |
 
 
-## Enlaces de la literatura
+### Enlaces de la literatura
 
 **Informe Mundial sobre la Discapacidad – OMS y Banco Mundial (2011)**
 
@@ -510,6 +553,29 @@ env$grafico6
 ```
 ### Propuesta Metodológica
 
+**Prueba 1: Ingreso per cápita vs. Grado de discapacidad**
+
+- **Prueba aplicada:** Kruskal-Wallis (porque los ingresos no siguen una distribución normal).
+- **Resultado:** χ² = 192.41, gl = 3, *p* < 2.2e-16
+- **Interpretación:** El resultado muestra diferencias estadísticamente significativas en la distribución del ingreso per cápita entre los distintos grados de discapacidad. Esto quiere decir que el nivel de discapacidad de una persona está relacionado con su ingreso económico, y no todas las personas con diferentes grados de discapacidad tienen la misma distribución de ingresos.
+
+**Prueba 2: Condición de actividad vs. Grado de discapacidad**
+
+- **Prueba aplicada:** Chi-cuadrado de independencia
+- **Resultado:** χ² = 219.33, gl = 6, *p* < 2.2e-16
+- **Interpretación:** Hay una asociación significativa entre el grado de discapacidad y la condición de actividad (ocupado, desocupado o fuera de la fuerza de trabajo). En otras palabras, la probabilidad de estar ocupado o no cambia dependiendo del grado de discapacidad que tiene la persona. Esto indica desigualdades en el acceso al empleo según la condición funcional.
+
+**Prueba 3: Horas trabajadas vs. Grado de discapacidad**
+
+- **Prueba aplicada:** Chi-cuadrado de independencia
+- **Resultado:** χ² = 173.32, gl = 9, *p* < 2.2e-16
+- **Interpretación:** También existe una relación significativa entre el grado de discapacidad y la cantidad de horas trabajadas. Esto sugiere que, entre quienes trabajan, el grado de discapacidad afecta cuántas horas pueden o suelen trabajar. Probablemente, las personas con mayor grado de discapacidad tienden a estar en jornadas reducidas o más flexibles.
+
+**Prueba 4: Puesto de trabajo vs. Grado de discapacidad (solo ocupados)**
+
+- **Prueba aplicada:** Chi-cuadrado de independencia (solo en personas ocupadas)
+- **Resultado:** χ² = 114.06, gl = 15, *p* < 2.2e-16
+- **Interpretación:** Dentro del grupo de personas que están ocupadas, hay una diferencia significativa en el tipo de puesto de trabajo según el grado de discapacidad. Esto significa que, aunque estén trabajando, las personas con discapacidad pueden estar concentradas en tipos de puestos específicos, como trabajo por cuenta propia o en sectores informales, posiblemente por limitaciones o exclusiones en otros tipos de empleo.
 
 
 ### Construcción de fichas de resultados
