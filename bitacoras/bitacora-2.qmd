@@ -206,58 +206,159 @@
 
 ### Ordenamiento de la Literatura
 
-| **Tipo**     | **Tema general**                            | **Tema específico**                                                 | **Título**                                                                 | **Año** | **Autor(es)**                                                                                      |
-|--------------|----------------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|--------|----------------------------------------------------------------------------------------------------|
-| Temático     | Discapacidad, Salud, Educación, Empleo       | Situación mundial sobre discapacidad                                 | Informe Mundial sobre la Discapacidad                                       | 2011   | OMS y Banco Mundial                                                                                 |
-| Temático     | Discapacidad, Economía                       | Impacto económico de la discapacidad                                 | Estudio sobre el agravio comparativo que origina la discapacidad            | 2010   | Antonio Jiménez Lara y Agustín Huete García                                                         |
-| Temático     | Economía, Discapacidad                       | Resultados laborales internacionales                                 | A Study on the Employment and Wage Outcomes of People with Disabilities     | 2024   | Sévane Ananian y Giulia Dellaferrera                                                               |
-| Temático     | Educación, Economía, Discapacidad            | Desigualdad de ingresos entre graduados                              | Income and Employment Equity of Graduates with and without Disabilities     | 2020   | Michelle Donelly, Scott Gordon y Alison Bowling                                                    |
-| Temático     | Empleo, Discapacidad                         | Oportunidades laborales en América Latina                            | Inequality in Labour Market Opportunities for People with Disabilities      | 2023   | Mónica Pinilla-Roncancio y Mauricio Gallardo                                                       |
-| Temático     | Empleo, Discapacidad                         | Empleo no tradicional                                                | Dead End Jobs or a Path to Economic Well Being?                             | 2002   | Lisa A. Schur                                                                                        |
-| Temático     | Discapacidad, Economía, Empleo               | Disparidades laborales entre personas con discapacidad               | Disability at Work: A Look Back and Forward                                 | 2017   | Lisa Schur, Kyongji Han, Andrea Kim, Mason Ameri, Peter Blanck, Douglas Kruse                      |
-| Temático     | Discriminación, Empleo, Discapacidad         | Discriminación en contratación laboral                               | The Disability Employment Puzzle                                            | 2015   | Mason Ameri, Lisa Schur, Meera Adya, Scott Bentley, Patrick McKay y Douglas Kruse                  |
-| Temático     | Educación, Empleo, Discapacidad              | Calidad intrínseca del empleo                                        | More than just lower wages: intrinsic job quality for college graduates... | 2020   | Megan Henly y Debra L. Brucker                                                                      |
-| Temático     | Discapacidad, Empleo, Políticas Públicas     | Inclusión laboral en Costa Rica                                      | Retos para la inclusión laboral de personas con discapacidad en Costa Rica | 2020   | Héctor Andrés Canossa Montes de Oca                                                                 |
-| Temático     | Empleo, Discapacidad                         | Predicción de empleo en Chile                                        | Multinomial Logistic Regression to Estimate and Predict the Job Opportunities | 2021   | Nelson Lay-Raby, Hanns de la Fuente-Mella y Omar Lameles-Corvalán                                 |
+## Ordenamiento de la literatura
 
+> **Nota:** Todas las referencias incluidas en la siguiente tabla corresponden a estudios de tipo **temático**, es decir, se agrupan por temas relevantes para el análisis del vínculo entre discapacidad y condiciones socioeconómicas.
+
+| **Tema general**                            | **Tema específico**                                                 | **Título**                                                                 | **Año** | **Autor(es)**                                                                                      |
+|---------------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------|--------|----------------------------------------------------------------------------------------------------|
+| Discapacidad, Salud, Educación, Empleo       | Situación mundial sobre discapacidad                                 | Informe Mundial sobre la Discapacidad                                       | 2011   | OMS y Banco Mundial                                                                                 |
+| Discapacidad, Economía                       | Impacto económico de la discapacidad                                 | Estudio sobre el agravio comparativo que origina la discapacidad            | 2010   | Antonio Jiménez Lara y Agustín Huete García                                                         |
+| Economía, Discapacidad                       | Resultados laborales internacionales                                 | A Study on the Employment and Wage Outcomes of People with Disabilities     | 2024   | Sévane Ananian y Giulia Dellaferrera                                                               |
+| Educación, Economía, Discapacidad            | Desigualdad de ingresos entre graduados                              | Income and Employment Equity of Graduates with and without Disabilities     | 2020   | Michelle Donelly, Scott Gordon y Alison Bowling                                                    |
+| Empleo, Discapacidad                         | Oportunidades laborales en América Latina                            | Inequality in Labour Market Opportunities for People with Disabilities      | 2023   | Mónica Pinilla-Roncancio y Mauricio Gallardo                                                       |
+| Empleo, Discapacidad                         | Empleo no tradicional                                                | Dead End Jobs or a Path to Economic Well Being?                             | 2002   | Lisa A. Schur                                                                                       |
+| Discapacidad, Economía, Empleo               | Disparidades laborales entre personas con discapacidad               | Disability at Work: A Look Back and Forward                                 | 2017   | Lisa Schur, Kyongji Han, Andrea Kim, Mason Ameri, Peter Blanck, Douglas Kruse                      |
+| Discriminación, Empleo, Discapacidad         | Discriminación en contratación laboral                               | The Disability Employment Puzzle                                            | 2015   | Mason Ameri, Lisa Schur, Meera Adya, Scott Bentley, Patrick McKay y Douglas Kruse                  |
+| Educación, Empleo, Discapacidad              | Calidad intrínseca del empleo                                        | More than just lower wages: intrinsic job quality for college graduates... | 2020   | Megan Henly y Debra L. Brucker                                                                      |
+| Discapacidad, Empleo, Políticas Públicas     | Inclusión laboral en Costa Rica                                      | Retos para la inclusión laboral de personas con discapacidad en Costa Rica | 2020   | Héctor Andrés Canossa Montes de Oca                                                                 |
+| Empleo, Discapacidad                         | Predicción de empleo en Chile                                        | Multinomial Logistic Regression to Estimate and Predict the Job Opportunities | 2021   | Nelson Lay-Raby, Hanns de la Fuente-Mella y Omar Lameles-Corvalán                                  |
 
 
 ## Enlaces de la literatura
 
-[@inec_enadis_2023_pdf]: **Encuesta Nacional sobre Discapacidad (ENADIS): Metodología y Resultados [recurso electrónico]**
-
-Resumen: 
-
-Contraste:
-
-Contribución propia:
-
-[@schur_disability_2017]: **Disability at Work: A Look Back and Forward**
+**Informe Mundial sobre la Discapacidad – OMS y Banco Mundial (2011)**
 
 **Resumen:**  
+Este informe habla sobre cómo viven las personas con discapacidad en todo el mundo. Explica que hay más de mil millones de personas en esta condición y que se enfrentan a muchos obstáculos en temas como salud, educación, trabajo y participación social. También señala que es importante que los gobiernos hagan políticas que respeten sus derechos para mejorar su inclusión.
+
 **Contraste:**  
-**Contribución propia:**
+El informe da una visión general de la situación en todo el mundo, a diferencia de otros estudios que son más específicos y que hablan sobre problemas concretos como el empleo o el dinero que ganan las personas con discapacidad en ciertos países o regiones.
 
+**Contribución propia:**  
+Aunque este informe ayuda mucho a entender la situación de manera global, también deja claro que es necesario tener estudios más locales que expliquen mejor qué pasa en cada país. Así se pueden hacer políticas que se adapten mejor a cada realidad y no quedarse solo con una visión muy amplia.
 
-[@vargas2013]: **La población con discapacidad en los censos del siglo XX en Costa Rica**
+**Estudio sobre el agravio comparativo económico que origina la discapacidad – Antonio Jiménez Lara y Agustín Huete García (2010)**
 
 **Resumen:**  
+Este estudio analiza cómo la discapacidad afecta la economía de las personas y sus familias en España. Encontraron que quienes tienen discapacidad gastan más dinero en su vida diaria y además ganan menos ingresos que las personas sin discapacidad. También se habla de cómo el apoyo que da el Estado no alcanza para cubrir esas diferencias.
+
 **Contraste:**  
-**Contribución propia:**
+A diferencia del Informe Mundial sobre la Discapacidad, que da una idea general del problema a nivel mundial, este estudio se enfoca en un país en específico y da cifras claras sobre cuánto afecta económicamente vivir con una discapacidad. Mientras uno presenta el panorama grande, este otro aterriza el problema en la vida diaria de las personas en España.
 
+**Contribución propia:**  
+Estudios como este son importantes porque ayudan a entender que las barreras no son solo sociales o de participación, sino que también tienen un impacto directo en el bolsillo de las personas. Tener datos concretos permite que se hagan políticas públicas más realistas y no solo basadas en buenas intenciones.
 
-[@malo_ocana_genero_2006]: **Género, discapacidad y posición familiar: la participación laboral de las mujeres con discapacidad**
+**Effects of Disability on Income and Income Composition – Christy Pu y Huei-Fen Syu (2023)**
 
 **Resumen:**  
+Este estudio analiza qué pasa con los ingresos de las personas cuando adquieren una discapacidad en Taiwán. Encontraron que, aunque el ingreso total no baja mucho, sí cambia la forma en la que las personas obtienen su dinero. Por ejemplo, ganan menos por salario y dependen más de intereses o transacciones de propiedades, sobre todo conforme van envejeciendo.
+
 **Contraste:**  
-**Contribución propia:**
+Al igual que el estudio en España, este trabajo se enfoca en cómo la discapacidad tiene un efecto económico real. Sin embargo, mientras en España se veía una caída clara en los ingresos, aquí el ingreso total no baja tanto, pero sí cambia la composición de esos ingresos. Esto muestra que el impacto económico no siempre se ve igual en todos los países o contextos.
 
+**Contribución propia:**  
+Este tipo de estudios ayuda a ver que el problema económico de la discapacidad no solo es ganar menos dinero, sino también depender de otros tipos de ingresos que pueden ser menos estables. Entender estos matices es clave para diseñar apoyos económicos que realmente sirvan a las personas según su situación.
 
-[@oca_retos_2020]: **Retos para la inclusión laboral de personas con discapacidad en Costa Rica**
+**A Study on the Employment and Wage Outcomes of People with Disabilities – Sévane Ananian y Giulia Dellaferrera (2024)**
 
 **Resumen:**  
+Este estudio compara a nivel internacional las diferencias en empleo y salarios entre personas con y sin discapacidad. Los autores encontraron que las personas con discapacidad tienen menos posibilidades de estar empleadas y, cuando trabajan, suelen ganar menos dinero, aunque tengan niveles de educación y experiencia parecidos a los de personas sin discapacidad.
+
 **Contraste:**  
-**Contribución propia:**
+Este trabajo refuerza lo que otros estudios han señalado sobre los efectos económicos de la discapacidad, pero en lugar de enfocarse en un solo país, aquí se muestra cómo el problema es común en muchos países, especialmente en los de ingresos bajos y medios. Así se ve que las barreras no son solo un problema local, sino algo que pasa en todo el mundo.
+
+**Contribución propia:**  
+El estudio deja claro que aunque existan políticas de inclusión en muchos lugares, las personas con discapacidad siguen enfrentando dificultades grandes para conseguir y mantener trabajos bien pagados. Tener evidencia internacional ayuda a entender que se necesitan cambios más profundos y no solo esfuerzos aislados en ciertos países.
+
+**Income and Employment Equity of Graduates with and without Disabilities – Michelle Donelly, Scott Gordon y Alison Bowling (2020)**
+
+**Resumen:**  
+Este estudio analiza cómo les va en el empleo y en los ingresos a los graduados universitarios en Australia, comparando a quienes tienen discapacidad con quienes no la tienen. Los resultados muestran que los graduados con discapacidad ganan mucho menos, trabajan menos horas y tienen trayectorias laborales más inestables, siendo las mujeres con discapacidad las más afectadas.
+
+**Contraste:**  
+Al igual que los estudios anteriores que mostraban desventajas laborales para personas con discapacidad, este trabajo confirma que ni siquiera tener educación superior garantiza igualdad en el mercado laboral. Mientras en otros estudios se habla en general del empleo, aquí se ve que la inequidad persiste incluso entre quienes han logrado graduarse de la universidad.
+
+**Contribución propia:**  
+Este tipo de hallazgos es importante porque rompe con la idea de que solo falta educación para solucionar la desigualdad laboral. La discriminación o las barreras estructurales siguen afectando a las personas con discapacidad, aunque tengan títulos universitarios, lo que muestra que el problema es más complejo.
+
+**Inequality in Labour Market Opportunities for People with Disabilities – Mónica Pinilla-Roncancio y Mauricio Gallardo (2023)**
+
+**Resumen:**  
+Este estudio analiza las oportunidades laborales de las personas con discapacidad en seis países de América Latina. Los resultados muestran que, en todos los países, las personas con discapacidad tienen muchas menos posibilidades de conseguir empleo, pero la situación varía bastante entre un país y otro. También se encontró que las mujeres y las personas que viven en zonas rurales enfrentan todavía más dificultades.
+
+**Contraste:**  
+Este trabajo complementa lo que otros estudios internacionales han mostrado, pero se enfoca en una región específica como América Latina. Mientras que algunos trabajos anteriores se centraban en diferencias de ingresos, aquí se pone más atención en las oportunidades de acceso al trabajo, lo que ayuda a entender otra dimensión del problema.
+
+**Contribución propia:**  
+Este tipo de estudios es clave porque muestra que no todos los países tienen las mismas barreras, y que hay factores como el género o el lugar donde se vive que complican aún más el acceso al empleo. Entender estas diferencias internas ayuda a que las políticas de inclusión sean más específicas y no iguales para todos.
+
+**Dead End Jobs or a Path to Economic Well Being? – Lisa A. Schur (2002)**
+
+**Resumen:**  
+Este estudio analiza cómo afectan los trabajos de medio tiempo, temporales o independientes a las personas con discapacidad en Estados Unidos. La autora encontró que las personas con discapacidad tienen más probabilidades de estar en este tipo de empleos, que generalmente son peor pagados y ofrecen menos beneficios, lo cual aumenta el riesgo de vivir en pobreza.
+
+**Contraste:**  
+Este trabajo se conecta bien con los estudios anteriores que hablan de las barreras laborales, pero aquí se pone el foco en el tipo de empleo que logran conseguir las personas con discapacidad. Mientras otros estudios hablan más de si logran o no conseguir trabajo, este muestra que muchas veces sí consiguen trabajo, pero en condiciones mucho peores que el resto.
+
+**Contribución propia:**  
+Este enfoque es importante porque demuestra que no basta con decir que una persona con discapacidad tiene empleo; también hay que ver la calidad de ese trabajo. Tener un empleo de baja calidad puede seguir dejando a las personas en situaciones de vulnerabilidad económica.
+
+**Disability at Work: A Look Back and Forward – Lisa Schur et al. (2017)**
+
+**Resumen:**  
+Este estudio analiza las desventajas laborales que enfrentan las personas con discapacidad en términos de estabilidad, salarios y acceso a beneficios. También discute las razones detrás de estas diferencias, explicando que pueden deberse tanto a discriminación directa como a decisiones personales que las personas toman buscando flexibilidad laboral.
+
+**Contraste:**  
+Este trabajo conecta con los estudios anteriores que muestran las desventajas en el mercado laboral, pero agrega algo más: introduce la idea de que no todo es discriminación, sino que en algunos casos las personas con discapacidad aceptan condiciones diferentes para poder tener más flexibilidad. Esto hace que el análisis del problema sea un poco más matizado.
+
+**Contribución propia:**  
+Es importante reconocer que no todo puede explicarse solo por barreras externas. A veces las personas con discapacidad también toman decisiones estratégicas sobre su empleo. Ver el tema desde varios ángulos ayuda a no simplificar demasiado un problema que en realidad es bastante complejo.
+
+**The Disability Employment Puzzle – Mason Ameri et al. (2015)**
+
+**Resumen:**  
+Este estudio hizo un experimento en Estados Unidos para ver si las personas con discapacidad reciben menos interés de los empleadores al buscar trabajo. Enviaron miles de solicitudes ficticias y encontraron que las personas que mencionaban tener una discapacidad recibían menos respuestas positivas, a pesar de tener calificaciones similares a las de las personas sin discapacidad.
+
+**Contraste:**  
+Este trabajo complementa los estudios anteriores porque no solo muestra las desventajas en el empleo, sino que prueba de manera directa que la discriminación existe desde el momento en que las personas intentan entrar al mercado laboral. Mientras otros estudios hablaban de salarios o calidad del empleo, aquí se enfoca en el primer filtro: el proceso de contratación.
+
+**Contribución propia:**  
+Este tipo de investigaciones es muy valioso porque no depende solo de encuestas o percepciones, sino que demuestra con datos reales que la discriminación es un obstáculo real desde el inicio. Eso confirma que mejorar la inclusión laboral no solo depende de la persona con discapacidad, sino también de cambiar las actitudes de los empleadores.
+
+**More than just lower wages – Megan Henly y Debra L. Brucker (2020)**
+
+**Resumen:**  
+Este estudio analiza no solo cuánto ganan los graduados universitarios con discapacidad en Estados Unidos, sino también cómo es la calidad de sus trabajos. Encontraron que, además de ganar menos, estos trabajadores tienen empleos con menor autonomía, menos posibilidades de crecimiento y menos satisfacción personal comparado con los trabajadores sin discapacidad.
+
+**Contraste:**  
+A diferencia de otros estudios que se concentran en los salarios o en la posibilidad de tener un trabajo, este se enfoca en la calidad del empleo en sí. Aunque una persona con discapacidad logre conseguir un trabajo, eso no significa que sea un trabajo de buena calidad o que le permita crecer profesionalmente.
+
+**Contribución propia:**  
+Esto muestra que la inclusión laboral no debería medirse solo por la cantidad de personas empleadas, sino también por las condiciones en las que trabajan. No basta con tener un empleo; es necesario que ese empleo sea digno y que ofrezca posibilidades reales de desarrollo.
+
+**Retos para la inclusión laboral de personas con discapacidad en Costa Rica – Héctor Andrés Canossa Montes de Oca (2020)**
+
+**Resumen:**  
+Este estudio analiza las barreras que enfrentan las personas con discapacidad para entrar al mercado laboral en Costa Rica. A través de encuestas y entrevistas, se encontró que la mayoría de las empresas no contratan a personas con discapacidad por falta de accesibilidad, prejuicios o desconocimiento de los beneficios que ofrece el Estado.
+
+**Contraste:**  
+A diferencia de otros estudios más generales o internacionales, este trabajo se centra en el caso específico de Costa Rica, mostrando que, aunque existan leyes que promueven la inclusión, en la práctica las barreras siguen siendo muy fuertes. Confirma que los problemas que otros estudios mencionan también se repiten en el contexto costarricense.
+
+**Contribución propia:**  
+Este tipo de investigaciones locales es muy útil porque permite ver cómo los problemas de inclusión laboral no son solo un tema global, sino que también tienen raíces específicas en cada país.
+
+**Multinomial Logistic Regression to Estimate and Predict the Job Opportunities for People with Disabilities in Chile – Nelson Lay-Raby et al. (2021)**
+
+**Resumen:**  
+Este estudio usa un modelo estadístico para predecir las oportunidades de empleo de las personas con discapacidad en Chile. Analizando variables como el nivel educativo, los ingresos y los subsidios, encontraron que factores como tener más educación y contar con ingresos propios aumentan bastante las probabilidades de conseguir trabajo.
+
+**Contraste:**  
+Mientras que otros estudios describen las barreras o los efectos de la discapacidad en el empleo, este aporta un enfoque más predictivo, usando datos para calcular qué tan probable es que una persona consiga un trabajo. Esto le da un valor diferente, porque no solo muestra el problema, sino que ayuda a identificar qué características ayudan a mejorar las oportunidades.
+
+**Contribución propia:**  
+Tener estudios que no solo describan la situación, sino que también permitan hacer predicciones, es clave para entender mejor el problema. Saber qué factores hacen una diferencia permite enfocar los esfuerzos en áreas que realmente puedan mejorar las oportunidades laborales de las personas con discapacidad.
+
 
 
 {{< pagebreak >}}
