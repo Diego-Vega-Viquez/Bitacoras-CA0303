@@ -500,6 +500,7 @@ source("../cod/graficos_y_cuadros.R", local = env)
 
 #### Gráficos
 
+##### Gráfico. Condición de actividad según grado de discapacidad: Distribución porcentual de la condición de actividad laboral en Costa Rica, 2023 {#fig-activ-discapacidad}
 ```{r GRAFICO 1}
 #| echo: false
 #| warning: false
@@ -511,6 +512,7 @@ source("../cod/graficos_y_cuadros.R", local = env)
 #############
 env$grafico1
 ```
+##### Gráfico. Posición en el trabajo según grado de discapacidad: Distribución porcentual de personas ocupadas según tipo de empleo en Costa Rica, 2023 {#fig-posicion-discapacidad}
 ```{r GRAFICO 2}
 #| echo: false
 #| warning: false
@@ -522,6 +524,7 @@ env$grafico1
 #############
 env$grafico2
 ```
+##### Gráfico. Distribución de personas con discapacidad por región y zona de residencia: Comparación entre zonas urbanas y rurales en las distintas regiones de Costa Rica, 2023 {#fig-region-zona-discapacidad}
 ```{r GRAFICO 3}
 #| echo: false
 #| warning: false
@@ -533,6 +536,7 @@ env$grafico2
 #############
 env$grafico3
 ```
+##### Gráfico. Ingreso per cápita del hogar según grado de discapacidad: Distribución del ingreso mensual neto del hogar en Costa Rica, 2023 {#fig-ingreso-discapacidad}
 ```{r GRAFICO 4}
 #| echo: false
 #| warning: false
@@ -544,6 +548,7 @@ env$grafico3
 #############
 env$grafico4
 ```
+##### Gráfico. Relación entre puntaje de discapacidad e ingreso per cápita: Tendencia del ingreso según nivel de discapacidad en Costa Rica, 2023 {#fig-discapacidad-ingreso}
 ```{r GRAFICO 5}
 #| echo: false
 #| warning: false
@@ -555,6 +560,7 @@ env$grafico4
 #############
 env$grafico5
 ```
+##### Gráfico. Relación entre edad y puntaje de desempeño funcional: Tendencia del desempeño físico y cognitivo según edad en Costa Rica, 2023 {#fig-edad-desempeno}
 ```{r GRAFICO 6}
 #| echo: false
 #| warning: false

@@ -21,8 +21,8 @@ grafico1 <- ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +  # Ajuste de la paleta de colores
   scale_y_continuous(labels = scales::percent_format()) +
   labs(
-    title = "Gráfico 1. \nCondición de actividad según grado de discapacidad",
-    subtitle = "Distribución porcentual de la condición de actividad laboral en Costa Rica, 2023.",
+    # title = "Gráfico 1. \nCondición de actividad según grado de discapacidad",
+    # subtitle = "Distribución porcentual de la condición de actividad laboral en Costa Rica, 2023.",
     x = "Grado de Discapacidad",
     y = "",
     fill = "Condición de Actividad",
@@ -30,8 +30,8 @@ grafico1 <- ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
   ) +
   theme_minimal(base_size = 14) +  # Tamaño base ajustado
   theme(
-    plot.title = element_text(size = 32, face = "bold", hjust = 0),
-    plot.subtitle = element_text(size = 28, hjust = 0),
+    # plot.title = element_text(size = 32, face = "bold", hjust = 0),
+    # plot.subtitle = element_text(size = 28, hjust = 0),
     axis.title = element_text(face = "bold", size = 20),  # Títulos de ejes más grandes
     axis.text = element_text(face = "bold", size = 15),  # Texto de ejes más grande
     legend.position = "bottom",  # Posición de la leyenda
@@ -57,8 +57,8 @@ grafico2 <- ggplot(enadis %>% drop_na(), aes(x = Cap_grado, fill = B8a)) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
   scale_y_continuous(labels = percent_format()) +
   labs(
-    title = "Gráfico 2. \nPosición en el trabajo según grado de discapacidad",
-    subtitle = "Distribución porcentual de personas ocupadas según tipo de empleo en Costa Rica, 2023",
+    # title = "Gráfico 2. \nPosición en el trabajo según grado de discapacidad",
+    # subtitle = "Distribución porcentual de personas ocupadas según tipo de empleo en Costa Rica, 2023",
     x = "Grado de Discapacidad",
     y = "",
     fill = "Posición en el Trabajo",
@@ -66,8 +66,8 @@ grafico2 <- ggplot(enadis %>% drop_na(), aes(x = Cap_grado, fill = B8a)) +
   ) +
   theme_minimal(base_size = 14) +
   theme(
-   plot.title = element_text(size = 32, face = "bold", hjust = 0),
-   plot.subtitle = element_text(size = 28, hjust = 0),
+   # plot.title = element_text(size = 32, face = "bold", hjust = 0),
+   # plot.subtitle = element_text(size = 28, hjust = 0),
     axis.title = element_text(face = "bold", size = 20),
     axis.text = element_text(size = 15),
     legend.position = "bottom",
@@ -98,8 +98,8 @@ grafico3 <- enadis %>%
   ) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
   labs(
-    title = "Gráfico 3. \nDistribución de personas con discapacidad por región y zona de residencia",
-    subtitle = "Comparación entre zonas urbanas y rurales en las distintas regiones de Costa Rica, 2023",
+    # title = "Gráfico 3. \nDistribución de personas con discapacidad por región y zona de residencia",
+    # subtitle = "Comparación entre zonas urbanas y rurales en las distintas regiones de Costa Rica, 2023",
     x = "Región",
     y = "Personas con Discapacidad",
     fill = "Zona de Residencia",
@@ -107,8 +107,8 @@ grafico3 <- enadis %>%
   ) +
   theme_minimal(base_size = 14) +
   theme(
-   plot.title = element_text(size = 32, face = "bold", hjust = 0),
-   plot.subtitle = element_text(size = 28, hjust = 0),
+   # plot.title = element_text(size = 32, face = "bold", hjust = 0),
+   # plot.subtitle = element_text(size = 28, hjust = 0),
     axis.title.x = element_text(face = "bold", size = 20),  # Solo título eje X
     axis.title.y = element_text(face = "bold", size = 20, hjust = 0.9),  # Solo título eje Y
     axis.text = element_text(size = 15),
@@ -136,16 +136,16 @@ grafico4 <- ggplot(enadis %>% drop_na(ING_PERCAPITA_HOGAR, Cap_grado),
   ) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8, guide = "none") +
   labs(
-    title = "Gráfico 4. \nIngreso per capita del hogar según grado de discapacidad",
-    subtitle = "Distribución del ingreso mensual neto del hogar en Costa Rica, 2023",
+    # title = "Gráfico 4. \nIngreso per capita del hogar según grado de discapacidad",
+    # subtitle = "Distribución del ingreso mensual neto del hogar en Costa Rica, 2023",
     x = "Grado de Discapacidad",
     y = "Ingreso per cápita del hogar (escala logarítmica, colones)",
     caption = "Fuente: INEC, ENADIS 2023."
   ) +
   theme_minimal(base_size = 14) +
   theme(
-    plot.title = element_text(size = 32, face = "bold", hjust = 0),
-    plot.subtitle = element_text(size = 28, hjust = 0),
+    # plot.title = element_text(size = 32, face = "bold", hjust = 0),
+    # plot.subtitle = element_text(size = 28, hjust = 0),
     axis.title.x = element_text(face = "bold", size = 20),
     axis.title.y = element_text(face = "bold", size = 20),
     axis.text = element_text(size = 15),
@@ -171,15 +171,15 @@ grafico5 <- ggplot(enadis_completa %>% drop_na(ING_PERCAPITA_HOGAR, Dis_puntaje)
   ) +
   scale_x_continuous(name = "Puntaje de discapacidad") +
   labs(
-    title = "Gráfico 5. \nRelación entre puntaje de discapacidad e ingreso per cápita",
-    subtitle = "Tendencia del ingreso según nivel de discapacidad en Costa Rica, 2023",
+    # title = "Gráfico 5. \nRelación entre puntaje de discapacidad e ingreso per cápita",
+    # subtitle = "Tendencia del ingreso según nivel de discapacidad en Costa Rica, 2023",
     y = "Ingreso per cápita del hogar (colones)",
     caption = "Fuente: INEC, ENADIS 2023."
   ) +
   theme_minimal(base_size = 14) +
   theme(
-   plot.title = element_text(size = 32, face = "bold", hjust = 0),
-   plot.subtitle = element_text(size = 28, hjust = 0),
+   # plot.title = element_text(size = 32, face = "bold", hjust = 0),
+   # plot.subtitle = element_text(size = 28, hjust = 0),
     axis.title = element_text(face = "bold", size = 20),
     axis.text = element_text(size = 15),
     legend.position = "none"
@@ -204,14 +204,14 @@ grafico6 <- ggplot(enadis_completa %>% drop_na(A5, Des_puntaje),
   scale_y_continuous(name = "Puntaje de desempeño") +
   scale_x_continuous(name = "Edad (años)", breaks = seq(20, 100, by = 10)) +
   labs(
-    title = "Gráfico 6. \nRelación entre edad y puntaje de desempeño funcional",
-    subtitle = "Tendencia del desempeño físico y cognitivo según edad en Costa Rica, 2023",
+    # title = "Gráfico 6. \nRelación entre edad y puntaje de desempeño funcional",
+    # subtitle = "Tendencia del desempeño físico y cognitivo según edad en Costa Rica, 2023",
     caption = "Fuente: INEC, ENADIS 2023."
   ) +
   theme_minimal(base_size = 14) +
   theme(
-   plot.title = element_text(size = 32, face = "bold", hjust = 0),
-   plot.subtitle = element_text(size = 28, hjust = 0),
+   # plot.title = element_text(size = 32, face = "bold", hjust = 0),
+   # plot.subtitle = element_text(size = 28, hjust = 0),
     axis.title = element_text(face = "bold", size = 20),
     axis.text = element_text(size = 15),
     legend.position = "none"
