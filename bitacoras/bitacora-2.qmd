@@ -408,21 +408,96 @@ Tener estudios que no solo describan la situación, sino que también permitan h
   
 ## Análisis estadísticos
 
+```{r  Carga Datos }
+#| echo: false
+#| include: false
+#| warning: false
+#| message: false
+
+env <- new.env()
+source("../cod/graficos_y_cuadros.R", local = env)
+```
+
 ### Análisis descriptivo
 
 Para este trabajo se utilizó la base de datos ENADIS 2023, que recoge información sobre personas con y sin discapacidad en Costa Rica. Se filtró la muestra para incluir únicamente a personas entre 18 y 65 años. Las variables analizadas en esta sección son: grado de discapacidad, zona y región de residencia, condición de actividad, posición en el trabajo, cantidad de horas trabajadas semanalmente e ingreso per cápita del hogar. A partir de estas variables, se generaron distintos gráficos y cuadros que permiten observar cómo se distribuyen las personas según su situación.
 
-En la (figura grado discapacidad por reg/zona) se presenta la distribución de personas con discapacidad por región y por zona de residencia (urbana o rural). La región que tiene la mayor cantidad de personas con discapacidad es la Central, y dentro de esta región la mayoría vive en zonas urbanas. En otras regiones como Chorotega, Pacífico Central y Huetar Caribe, la diferencia entre zonas urbanas y rurales no es tan grande. En Huetar Norte, la cantidad de personas con discapacidad en zonas rurales supera claramente a la de zonas urbanas. En general, en casi todas las regiones, las zonas urbanas tienden a tener una mayor concentración de personas con discapacidad, excepto en algunas regiones donde lo rural tiene más peso. Es importante tomar en cuenta que el alto número de personas que viven en la región Central podría hacer que muchos de los resultados del estudio estén más influenciados por lo que ocurre en esa región, y no reflejen con la misma fuerza lo que pasa en otras partes del país.
+```{r}
+#| label: fig-region-zona-discapacidad
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
+#| fig-cap: "Distribución de personas con discapacidad por región y zona de residencia en Costa Rica, 2023."
 
-En la (Figura condicion actividad segun grado discapacidad) se muestra la condición de actividad según el grado de discapacidad. Las personas sin discapacidad tienen el mayor porcentaje en la categoría de ocupados, con un 70.5%. Luego, conforme aumenta el grado de discapacidad, ese porcentaje va bajando. Por ejemplo, entre las personas con discapacidad severa, solo el 51.4% está ocupada. Por el contrario, el porcentaje de personas que están fuera de la fuerza de trabajo va aumentando a medida que se agrava el grado de discapacidad. En el grupo sin discapacidad, ese porcentaje es de 25.1%, y en el grupo con discapacidad severa sube a 44.6%. La proporción de personas desocupadas no varía tanto entre los grupos, aunque sí presenta una ligera alza en el grupo moderado.
+env$grafico3
+```
 
-En la (Figura ingreso per capita) se puede ver cómo varía el ingreso per cápita del hogar según el grado de discapacidad. Se utilizó una escala logarítmica para representar mejor los valores extremos. Los diagramas de caja muestran que las personas sin discapacidad tienen una mediana de ingreso más alta que el resto. A medida que aumenta el grado de discapacidad, la mediana del ingreso baja. Además, la dispersión también es menor en los grupos con discapacidad severa o moderada. Se observan algunos valores extremos en todos los grupos, tanto por debajo como por encima de los rangos normales.
+En la @fig-region-zona-discapacidad se presenta la distribución de personas con discapacidad por región y por zona de residencia (urbana o rural). La región que tiene la mayor cantidad de personas con discapacidad es la Central, y dentro de esta región la mayoría vive en zonas urbanas. En otras regiones como Chorotega, Pacífico Central y Huetar Caribe, la diferencia entre zonas urbanas y rurales no es tan grande. En Huetar Norte, la cantidad de personas con discapacidad en zonas rurales supera claramente a la de zonas urbanas. En general, en casi todas las regiones, las zonas urbanas tienden a tener una mayor concentración de personas con discapacidad, excepto en algunas regiones donde lo rural tiene más peso. Es importante tomar en cuenta que el alto número de personas que viven en la región Central podría hacer que muchos de los resultados del estudio estén más influenciados por lo que ocurre en esa región, y no reflejen con la misma fuerza lo que pasa en otras partes del país.
+
+```{r}
+#| label: fig-activ-discapacidad
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 20
+#| fig-height: 8.5
+#| fig-cap: "Distribución porcentual de la condición de actividad laboral en Costa Rica, 2023."
+
+env$grafico1
+```
+
+En la @fig-activ-discapacidad se muestra la condición de actividad según el grado de discapacidad. Las personas sin discapacidad tienen el mayor porcentaje en la categoría de ocupados, con un 70.5%. Luego, conforme aumenta el grado de discapacidad, ese porcentaje va bajando. Por ejemplo, entre las personas con discapacidad severa, solo el 51.4% está ocupada. Por el contrario, el porcentaje de personas que están fuera de la fuerza de trabajo va aumentando a medida que se agrava el grado de discapacidad. En el grupo sin discapacidad, ese porcentaje es de 25.1%, y en el grupo con discapacidad severa sube a 44.6%. La proporción de personas desocupadas no varía tanto entre los grupos, aunque sí presenta una ligera alza en el grupo moderado.
+
+
+```{r}
+#| label: fig-ingreso-discapacidad
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
+#| fig-cap: "Distribución del ingreso mensual neto del hogar en Costa Rica, 2023."
+
+env$grafico4
+```
+
+En la @fig-ingreso-discapacidad se puede ver cómo varía el ingreso per cápita del hogar según el grado de discapacidad. Se utilizó una escala logarítmica para representar mejor los valores extremos. Los diagramas de caja muestran que las personas sin discapacidad tienen una mediana de ingreso más alta que el resto. A medida que aumenta el grado de discapacidad, la mediana del ingreso baja. Además, la dispersión también es menor en los grupos con discapacidad severa o moderada. Se observan algunos valores extremos en todos los grupos, tanto por debajo como por encima de los rangos normales.
 
 Estos datos se complementan con el (cuadro de estadísticos ingreso), donde se resumen los principales valores del ingreso per cápita. La media en el grupo sin discapacidad es de ₡285,065, y va bajando hasta ₡213,770 en el grupo con discapacidad severa. Las medianas y cuartiles siguen una tendencia parecida: por ejemplo, la mediana en el grupo sin discapacidad es de ₡200,000, y en el grupo severo es de ₡140,000. En todos los casos, se nota que tanto los promedios como los rangos intercuartílicos son más bajos cuando hay discapacidad, especialmente si esta es moderada o severa.
 
-La (Figura puestos segun grad discapacidad) muestra la posición en el trabajo principal según el grado de discapacidad. En el grupo sin discapacidad, la mayoría trabaja como empleado en una empresa privada (51.3%). En los grupos con discapacidad, este porcentaje va disminuyendo: en el grupo severo es de 42.6%. Por otro lado, el trabajo por cuenta propia tiene mayor peso en las personas con discapacidad. Por ejemplo, en el grupo severo, el 28.4% trabaja por cuenta propia, mientras que en el grupo sin discapacidad ese porcentaje es de 22.6%. También hay una pequeña diferencia en el empleo en casas particulares y en el porcentaje de personas que trabajan sin recibir pago, que son un poco más frecuentes en los grupos con discapacidad severa.
+
+```{r}
+#| label: fig-posicion-discapacidad
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 20
+#| fig-height: 6.5
+#| fig-cap: "Distribución porcentual de personas ocupadas según tipo de empleo en Costa Rica, 2023."
+
+env$grafico2
+```
+
+La @fig-posicion-discapacidad muestra la posición en el trabajo principal según el grado de discapacidad. En el grupo sin discapacidad, la mayoría trabaja como empleado en una empresa privada (51.3%). En los grupos con discapacidad, este porcentaje va disminuyendo: en el grupo severo es de 42.6%. Por otro lado, el trabajo por cuenta propia tiene mayor peso en las personas con discapacidad. Por ejemplo, en el grupo severo, el 28.4% trabaja por cuenta propia, mientras que en el grupo sin discapacidad ese porcentaje es de 22.6%. También hay una pequeña diferencia en el empleo en casas particulares y en el porcentaje de personas que trabajan sin recibir pago, que son un poco más frecuentes en los grupos con discapacidad severa.
 
 En cuanto a la cantidad de horas trabajadas semanalmente (ver Cuadro horas), se observa que en el grupo sin discapacidad la mayoría trabaja entre 40 y 48 horas por semana (56.4%). En los otros grupos, ese porcentaje va bajando. Las personas con discapacidad severa tienen el porcentaje más bajo en esta categoría (40.5%). En cambio, en las categorías de menos de 15 horas y de 15 a menos de 40 horas, se ven porcentajes más altos en los grupos con discapacidad. Por ejemplo, el 16.5% de las personas con discapacidad severa trabaja menos de 15 horas, mientras que en el grupo sin discapacidad ese valor es de 5.6%. Esto indica que en los grupos con discapacidad hay una mayor presencia de jornadas reducidas.
+
+```{r}
+#| label: fig-discapacidad-ingreso
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
+#| fig-cap: "Tendencia del ingreso según nivel de discapacidad en Costa Rica, 2023."
+
+env$grafico5
+```
+
+En la @fig-discapacidad-ingresol, lo que se puede identificar es la relación entre nivel de discapacidad y nivel de ingreso. Este gráfico muestra que, en general, a mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar, lo que sugiere una relación negativa entre ambas variables. La principal característica observada es la existencia de una amplia dispersión en los ingresos, lo que indica que, si bien la discapacidad afecta el nivel económico, también hay otros factores que inciden. Uno de los desafíos del análisis es precisamente esta variabilidad: el gráfico no considera directamente otros determinantes del ingreso como el nivel educativo, la región, o las políticas de inclusión laboral. A pesar de ello, el patrón decreciente refuerza la idea de que las personas con mayores limitaciones funcionales enfrentan barreras adicionales para acceder a empleos bien remunerados, lo cual impacta directamente su bienestar económico.
+
 
 ```{r Librerías}
 #| echo: false
@@ -487,90 +562,19 @@ En esta tabla se presenta...
 ```
 Esta tabla ofrece...
 
-```{r  Carga Datos }
-#| echo: false
-#| include: false
-#| warning: false
-#| message: false
-
-env <- new.env()
-source("../cod/graficos_y_cuadros.R", local = env)
-```
-
-
 #### Gráficos
 
-##### Gráfico. Condición de actividad según grado de discapacidad: Distribución porcentual de la condición de actividad laboral en Costa Rica, 2023 {#fig-activ-discapacidad}
-```{r GRAFICO 1}
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 20
-#| fig-height: 8.5
-#############
-# GRAFICO 1 #
-#############
-env$grafico1
-```
-##### Gráfico. Posición en el trabajo según grado de discapacidad: Distribución porcentual de personas ocupadas según tipo de empleo en Costa Rica, 2023 {#fig-posicion-discapacidad}
-```{r GRAFICO 2}
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 20
-#| fig-height: 6.5
-#############
-# GRAFICO 2 #
-#############
-env$grafico2
-```
-##### Gráfico. Distribución de personas con discapacidad por región y zona de residencia: Comparación entre zonas urbanas y rurales en las distintas regiones de Costa Rica, 2023 {#fig-region-zona-discapacidad}
-```{r GRAFICO 3}
+```{r}
+#| label: fig-edad-desempeno
 #| echo: false
 #| warning: false
 #| message: false
 #| fig-width: 18
 #| fig-height: 8.5
-#############
-# GRAFICO 3 #
-#############
-env$grafico3
-```
-##### Gráfico. Ingreso per cápita del hogar según grado de discapacidad: Distribución del ingreso mensual neto del hogar en Costa Rica, 2023 {#fig-ingreso-discapacidad}
-```{r GRAFICO 4}
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 18
-#| fig-height: 8.5
-#############
-# GRAFICO 4 #
-#############
-env$grafico4
-```
-##### Gráfico. Relación entre puntaje de discapacidad e ingreso per cápita: Tendencia del ingreso según nivel de discapacidad en Costa Rica, 2023 {#fig-discapacidad-ingreso}
-```{r GRAFICO 5}
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 18
-#| fig-height: 8.5
-#############
-# GRAFICO 5 #
-#############
-env$grafico5
-```
-##### Gráfico. Relación entre edad y puntaje de desempeño funcional: Tendencia del desempeño físico y cognitivo según edad en Costa Rica, 2023 {#fig-edad-desempeno}
-```{r GRAFICO 6}
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 18
-#| fig-height: 8.5
-#############
-# GRAFICO 6 #
-#############
+#| fig-cap: "Tendencia del desempeño físico y cognitivo según edad en Costa Rica, 2023."
+
 env$grafico6
+
 ```
 ### Propuesta Metodológica
 
@@ -607,16 +611,16 @@ env$grafico6
 - **Nombre de su hallazgo/resultado:** Relación entre grado de discapacidad e ingreso per cápita del hogar.
 - **Resumen en una oración:** A mayor grado de discapacidad, menor tiende a ser el ingreso mensual neto per cápita del hogar.
 - **Principal característica:** Existe una tendencia decreciente en la mediana del ingreso conforme aumenta la severidad de la discapacidad.
-- **Problemas o posibles desafíos:** El gráfico 4 no expresa explícitamente información sobre otras variables, por lo que pueden existir otros factores que unfluyan en el hallazgo observado.
-- **Resumen en un párrafo:** El gráfico 4 muestra la distribución del ingreso mensual neto por cápita del hogar por nivel de discapacidad. Se observa una tendencia específica: los hogares en los cuales habitan personas sin discapacidad tienen ingresos más elevados si se comparan con los en los cuales habitan personas con discapacidades leve, moderada o severa. Dicha caída progresiva conduce a una correlación negativa entre nivel de discapacidad y nivel económico. Sin embargo, este patrón pudiera estar condicionado por otras variables no expresadas de manera explícita en este gráfico.
+- **Problemas o posibles desafíos:** El @fig-ingreso-discapacidad no expresa explícitamente información sobre otras variables, por lo que pueden existir otros factores que unfluyan en el hallazgo observado.
+- **Resumen en un párrafo:** El @fig-ingreso-discapacidad muestra la distribución del ingreso mensual neto por cápita del hogar por nivel de discapacidad. Se observa una tendencia específica: los hogares en los cuales habitan personas sin discapacidad tienen ingresos más elevados si se comparan con los en los cuales habitan personas con discapacidades leve, moderada o severa. Dicha caída progresiva conduce a una correlación negativa entre nivel de discapacidad y nivel económico. Sin embargo, este patrón pudiera estar condicionado por otras variables no expresadas de manera explícita en este gráfico.
 
 #### Hallazgo 2
 
 - **Nombre de su hallazgo/resultado:** Relación entre nivel de discapacidad y nivel de ingreso
 - **Resumen en una oración:** A mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar.
 - **Principal característica:** Hay una relación negativa entre el nivel de discapacidad y el ingreso per cápita, hay gran dispersión en los ingresos
-- **Problemas o posibles desafíos:** El gráfico 5 expone un alto nivel de variabilidad en los ingresos y no distingue otros factores de contexto que podrían explicar la variación.
-- **Resumen en un párrafo:** El gráfico 5 muestra cómo el ingreso mensual per cápita del hogar decrece conforme crece el puntaje de discapacidad de las personas, lo cual invita a pensar que quienes enfrentan mayores limitaciones tienden a estar en desventaja económica. Aunque la tendencia general es decreciente, se observa una gran dispersión de datos, lo que indica que otros factores también pueden influir en el ingreso. Aun así, la asociación negativa detectada refuerza la hipótesis de que la discapacidad puede representar una barrera importante para el acceso a mejores condiciones de vida.
+- **Problemas o posibles desafíos:** El @fig-discapacidad-ingreso expone un alto nivel de variabilidad en los ingresos y no distingue otros factores de contexto que podrían explicar la variación.
+- **Resumen en un párrafo:** El @fig-discapacidad-ingreso muestra cómo el ingreso mensual per cápita del hogar decrece conforme crece el puntaje de discapacidad de las personas, lo cual invita a pensar que quienes enfrentan mayores limitaciones tienden a estar en desventaja económica. Aunque la tendencia general es decreciente, se observa una gran dispersión de datos, lo que indica que otros factores también pueden influir en el ingreso. Aun así, la asociación negativa detectada refuerza la hipótesis de que la discapacidad puede representar una barrera importante para el acceso a mejores condiciones de vida.
 
 #### Hallazgo 3
 
