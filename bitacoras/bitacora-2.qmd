@@ -406,7 +406,7 @@ Tener estudios que no solo describan la situación, sino que también permitan h
 
 {{< pagebreak >}}
   
-## Análisis estadísticos
+## Análisis descriptivo
 
 ```{r  Carga Datos }
 #| echo: false
@@ -417,8 +417,6 @@ Tener estudios que no solo describan la situación, sino que también permitan h
 env <- new.env()
 source("../cod/graficos_y_cuadros.R", local = env)
 ```
-
-### Análisis descriptivo
 
 Para este trabajo se utilizó la base de datos ENADIS 2023, que recoge información sobre personas con y sin discapacidad en Costa Rica. Se filtró la muestra para incluir únicamente a personas entre 18 y 65 años. Las variables analizadas en esta sección son: grado de discapacidad, zona y región de residencia, condición de actividad, posición en el trabajo, cantidad de horas trabajadas semanalmente e ingreso per cápita del hogar. A partir de estas variables, se generaron distintos gráficos y cuadros que permiten observar cómo se distribuyen las personas según su situación.
 
@@ -496,7 +494,7 @@ En cuanto a la cantidad de horas trabajadas semanalmente (ver Cuadro horas), se 
 env$grafico5
 ```
 
-En la @fig-discapacidad-ingresol, lo que se puede identificar es la relación entre nivel de discapacidad y nivel de ingreso. Este gráfico muestra que, en general, a mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar, lo que sugiere una relación negativa entre ambas variables. La principal característica observada es la existencia de una amplia dispersión en los ingresos, lo que indica que, si bien la discapacidad afecta el nivel económico, también hay otros factores que inciden. Uno de los desafíos del análisis es precisamente esta variabilidad: el gráfico no considera directamente otros determinantes del ingreso como el nivel educativo, la región, o las políticas de inclusión laboral. A pesar de ello, el patrón decreciente refuerza la idea de que las personas con mayores limitaciones funcionales enfrentan barreras adicionales para acceder a empleos bien remunerados, lo cual impacta directamente su bienestar económico.
+En la @fig-discapacidad-ingreso, lo que se puede identificar es la relación entre nivel de discapacidad y nivel de ingreso. Este gráfico muestra que, en general, a mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar, lo que sugiere una relación negativa entre ambas variables. La principal característica observada es la existencia de una amplia dispersión en los ingresos, lo que indica que, si bien la discapacidad afecta el nivel económico, también hay otros factores que inciden. Uno de los desafíos del análisis es precisamente esta variabilidad: el gráfico no considera directamente otros determinantes del ingreso como el nivel educativo, la región, o las políticas de inclusión laboral. A pesar de ello, el patrón decreciente refuerza la idea de que las personas con mayores limitaciones funcionales enfrentan barreras adicionales para acceder a empleos bien remunerados, lo cual impacta directamente su bienestar económico.
 
 
 ```{r Librerías}
@@ -576,7 +574,62 @@ Esta tabla ofrece...
 env$grafico6
 
 ```
-### Propuesta Metodológica
+## Propuesta Metodológica
+
+**Comentario**: En esta sección se expondrán las bases teóricas de la prueba de Kruskal-Wallis y la prueba Chi-cuadrado de independencia, así como las herramientas utilizadas para la implementación del código maqueta
+
+### Método #1: Prueba de Kruskal-Wallis
+
+Según @ostertagova2014kruskal, la prueba de Kruskal-Wallis es una buena opción cuando se quiere comparar varios grupos pero los datos no cumplen con la normalidad. 
+
+::: {.callout-note title="Definición 2.1 (Prueba de Kruskal-Wallis)"}
+La prueba de Kruskal-Wallis sirve para ver si las distribuciones de una variable son iguales entre varios grupos. Se basa en rangos y no en los valores originales. El estadístico se calcula con la fórmula:
+
+\[
+H = \frac{12}{N(N+1)} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)
+\]
+
+donde \( N \) es el total de observaciones, \( k \) el número de grupos, \( n_i \) el tamaño del grupo \( i \), y \( R_i \) la suma de los rangos del grupo \( i \).
+:::
+
+Lo que se hace es juntar todos los datos del ingreso, ordenarlos y asignarles un rango sin importar a qué grupo pertenecen. Luego se sacan los rangos por grupo y se calcula el valor de la prueba. La idea es ver si hay diferencias entre las distribuciones de ingreso según el grado de discapacidad (sin, leve, moderada y severa).
+
+Para decidir si las diferencias entre los grupos son significativas, se compara el valor p que se obtiene con un nivel de significancia, que normalmente es 0.05. Si el valor p es menor a 0.05, se rechaza la hipótesis nula y se concluye que sí hay diferencias entre los grupos.
+
+Esta prueba no necesita que los datos sean normales ni que tengan la misma varianza, por eso es útil para este tipo de datos sociales. También es resistente a valores extremos, lo cual es importante cuando se trabaja con ingresos. Por estas razones se eligió este método para el análisis.
+
+En esta prueba, la **hipótesis nula** plantea que no hay diferencias entre las distribuciones de los grupo, mientras que la **alternativa** indica que al menos uno de los grupos tiene una distribución diferente. La prueba permite detectar si esas diferencias son significativas.
+
+### Método #2: Prueba Chi-cuadrado de independencia
+
+La prueba Chi-cuadrado de independencia se va a usar para analizar si existe relación entre el grado de discapacidad y otras variables categóricas. Esta prueba es útil cuando se quiere ver si dos variables categóricas están asociadas o si son independientes.
+
+Según @mchugh2013chi, esta prueba compara lo que se observa en los datos con lo que se esperaría si no hubiera relación entre las variables. Si las diferencias entre lo observado y lo esperado son muy grandes, entonces se considera que hay una relación entre las variables.
+
+::: {.callout-note title="Definición 2.2 (Prueba Chi-cuadrado de independencia)"}
+El estadístico de la prueba se calcula con la fórmula:
+
+\[
+\chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+\]
+
+donde \( O_{ij} \) es la frecuencia observada en la celda \( i, j \), y \( E_{ij} \) es la frecuencia esperada, calculada como:
+
+\[
+E_{ij} = \frac{(F_i)(C_j)}{N}
+\]
+
+siendo \( F_i \) el total de la fila \( i \), \( C_j \) el total de la columna \( j \), y \( N \) el número total de casos.
+:::
+
+La **hipótesis nula** de esta prueba dice que las dos variables no tienen relación, o sea, que son independientes. En cambio, la **hipótesis alternativa** dice que sí hay una relación entre ellas.
+
+Para saber si las diferencias son significativas, se usa un valor de referencia que se llama nivel de significancia (generalmente 0.05). Si el valor p que se obtiene es menor a 0.05, se rechaza la hipótesis nula y se concluye que sí hay una asociación entre las variables.
+
+Esta prueba es muy útil en investigaciones sociales porque no requiere que los datos sean normales ni que los grupos tengan tamaños iguales. 
+
+### Código
+
 
 **Prueba 1: Ingreso per cápita vs. Grado de discapacidad**
 
