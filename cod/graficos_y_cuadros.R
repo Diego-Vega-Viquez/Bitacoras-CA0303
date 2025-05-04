@@ -412,4 +412,4 @@ cuadro_promedio_ingreso_vs_pos_y_grado <- enadis_completa %>%
     values_from = Promedio_Ingreso
   ) %>% mutate_if(is.numeric, ~ round(.x, 0))
 
-cuadro_promedio_ingreso_vs_pos_y_grado
+# cuadro_promedio_ingreso_vs_pos_y_grado
