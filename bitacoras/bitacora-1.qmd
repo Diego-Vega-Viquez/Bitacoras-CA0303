@@ -15,7 +15,7 @@ Dado que el empleo constituye una de las principales vías para la movilidad soc
 
 
 ### Conceptualización de la idea
-A continuación, se presentan una serie de definiciones:
+A continuación, se presentan una serie de definiciones obtenidas del diccionario de la @rae_diccionario_2023:
 
 - Determinar: Decidir algo, despejar la incertidumbre sobre ello.
 - Oportunidad: Momento o circunstancia oportunos o convenientes para algo.
