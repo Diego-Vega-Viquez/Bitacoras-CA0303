@@ -450,18 +450,18 @@ En la @fig-activ-discapacidad se muestra la condición de actividad según el gr
 
 
 ```{r}
-#| label: fig-ingreso-discapacidad
+#| label: fig-discapacidad-ingreso
 #| echo: false
 #| warning: false
 #| message: false
 #| fig-width: 18
 #| fig-height: 8.5
-#| fig-cap: "Distribución del ingreso mensual neto del hogar en Costa Rica, 2023."
+#| fig-cap: "Distribución del ingreso per cápita del hogar en Costa Rica, 2023."
 
 env$grafico4
 ```
 
-En la @fig-ingreso-discapacidad se puede ver cómo varía el ingreso per cápita del hogar según el grado de discapacidad. Se utilizó una escala logarítmica para representar mejor los valores extremos. Los diagramas de caja muestran que las personas sin discapacidad tienen una mediana de ingreso más alta que el resto. A medida que aumenta el grado de discapacidad, la mediana del ingreso baja. Además, la dispersión también es menor en los grupos con discapacidad severa o moderada. Se observan algunos valores extremos en todos los grupos, tanto por debajo como por encima de los rangos normales.
+En la @fig-discapacidad-ingreso se puede ver cómo varía el ingreso per cápita del hogar según el grado de discapacidad. Se utilizó una escala logarítmica para representar mejor los valores extremos. Los diagramas de caja muestran que las personas sin discapacidad tienen una mediana de ingreso más alta que el resto. A medida que aumenta el grado de discapacidad, la mediana del ingreso baja. Además, la dispersión también es menor en los grupos con discapacidad severa o moderada. Se observan algunos valores extremos en todos los grupos, tanto por debajo como por encima de los rangos normales.
 
 Estos datos se complementan con el (cuadro de estadísticos ingreso), donde se resumen los principales valores del ingreso per cápita. La media en el grupo sin discapacidad es de ₡285,065, y va bajando hasta ₡213,770 en el grupo con discapacidad severa. Las medianas y cuartiles siguen una tendencia parecida: por ejemplo, la mediana en el grupo sin discapacidad es de ₡200,000, y en el grupo severo es de ₡140,000. En todos los casos, se nota que tanto los promedios como los rangos intercuartílicos son más bajos cuando hay discapacidad, especialmente si esta es moderada o severa.
 
@@ -483,7 +483,7 @@ La @fig-posicion-discapacidad muestra la posición en el trabajo principal segú
 En cuanto a la cantidad de horas trabajadas semanalmente (ver Cuadro horas), se observa que en el grupo sin discapacidad la mayoría trabaja entre 40 y 48 horas por semana (56.4%). En los otros grupos, ese porcentaje va bajando. Las personas con discapacidad severa tienen el porcentaje más bajo en esta categoría (40.5%). En cambio, en las categorías de menos de 15 horas y de 15 a menos de 40 horas, se ven porcentajes más altos en los grupos con discapacidad. Por ejemplo, el 16.5% de las personas con discapacidad severa trabaja menos de 15 horas, mientras que en el grupo sin discapacidad ese valor es de 5.6%. Esto indica que en los grupos con discapacidad hay una mayor presencia de jornadas reducidas.
 
 ```{r}
-#| label: fig-discapacidad-ingreso
+#| label: fig-puntaje-discapacidad-ingreso
 #| echo: false
 #| warning: false
 #| message: false
@@ -494,7 +494,7 @@ En cuanto a la cantidad de horas trabajadas semanalmente (ver Cuadro horas), se 
 env$grafico5
 ```
 
-En la @fig-discapacidad-ingreso, lo que se puede identificar es la relación entre nivel de discapacidad y nivel de ingreso. Este gráfico muestra que, en general, a mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar, lo que sugiere una relación negativa entre ambas variables. La principal característica observada es la existencia de una amplia dispersión en los ingresos, lo que indica que, si bien la discapacidad afecta el nivel económico, también hay otros factores que inciden. Uno de los desafíos del análisis es precisamente esta variabilidad: el gráfico no considera directamente otros determinantes del ingreso como el nivel educativo, la región, o las políticas de inclusión laboral. A pesar de ello, el patrón decreciente refuerza la idea de que las personas con mayores limitaciones funcionales enfrentan barreras adicionales para acceder a empleos bien remunerados, lo cual impacta directamente su bienestar económico.
+En la @fig-puntaje-discapacidad-ingreso, lo que se puede identificar es la relación entre nivel de discapacidad y nivel de ingreso. Este gráfico muestra que, en general, a mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar, lo que sugiere una relación negativa entre ambas variables. La principal característica observada es la existencia de una amplia dispersión en los ingresos, lo que indica que, si bien la discapacidad afecta el nivel económico, también hay otros factores que inciden. Uno de los desafíos del análisis es precisamente esta variabilidad: el gráfico no considera directamente otros determinantes del ingreso como el nivel educativo, la región, o las políticas de inclusión laboral. A pesar de ello, el patrón decreciente refuerza la idea de que las personas con mayores limitaciones funcionales enfrentan barreras adicionales para acceder a empleos bien remunerados, lo cual impacta directamente su bienestar económico.
 
 
 ```{r Librerías}
@@ -535,7 +535,6 @@ library(see)
 #| message: false
 # Código que no se mostrará
 enadis_completa <- readRDS("../data/enadis_completa.rds")
-glimpse(enadis_completa)
 ```
 
 #### Cuadros
@@ -630,78 +629,126 @@ Esta prueba es muy útil en investigaciones sociales porque no requiere que los 
 
 ### Código
 
+Se carga la base de datos, con todas las variables que se utilizarán para el análisis:
+```{r}
+# Se seleccionan las variables para las pruebas de hipótesis
+enadis <- enadis_completa %>% 
+  select(A5, Cap_grado, ING_PERCAPITA_HOGAR, condic_activi, B8a, B7)
 
-**Prueba 1: Ingreso per cápita vs. Grado de discapacidad**
+# Se factorizan las columnas
+enadis <- enadis %>% 
+  mutate(across(where(~ is.labelled(.x) || is.character(.x)), as_factor))
 
-- **Prueba aplicada:** Kruskal-Wallis (porque los ingresos no siguen una distribución normal).
-- **Resultado:** χ² = 192.41, gl = 3, *p* < 2.2e-16
-- **Interpretación:** El resultado muestra diferencias estadísticamente significativas en la distribución del ingreso per cápita entre los distintos grados de discapacidad. Esto quiere decir que el nivel de discapacidad de una persona está relacionado con su ingreso económico, y no todas las personas con diferentes grados de discapacidad tienen la misma distribución de ingresos.
+# Se filtran por personas entre 18 y 65 años
+enadis <- enadis %>% filter(A5 >= 18 & A5 <= 65)
+```
+Se plantean las hipótesis de cada prueba:
 
-**Prueba 2: Condición de actividad vs. Grado de discapacidad**
+- Prueba 1: Ingreso per cápita del hogar vs grado de discapacidad
 
-- **Prueba aplicada:** Chi-cuadrado de independencia
-- **Resultado:** χ² = 219.33, gl = 6, *p* < 2.2e-16
-- **Interpretación:** Hay una asociación significativa entre el grado de discapacidad y la condición de actividad (ocupado, desocupado o fuera de la fuerza de trabajo). En otras palabras, la probabilidad de estar ocupado o no cambia dependiendo del grado de discapacidad que tiene la persona. Esto indica desigualdades en el acceso al empleo según la condición funcional.
+  - \( H_0 \): Las distribuciones del ingreso per cápita son iguales entre los distintos grados de discapacidad.
 
-**Prueba 3: Horas trabajadas vs. Grado de discapacidad**
+  - \( H_1 \): Al menos un grupo tiene una distribución distinta.
+  
+- Prueba 2: Condición de actividad vs grado de discapacidad
 
-- **Prueba aplicada:** Chi-cuadrado de independencia
-- **Resultado:** χ² = 173.32, gl = 9, *p* < 2.2e-16
-- **Interpretación:** También existe una relación significativa entre el grado de discapacidad y la cantidad de horas trabajadas. Esto sugiere que, entre quienes trabajan, el grado de discapacidad afecta cuántas horas pueden o suelen trabajar. Probablemente, las personas con mayor grado de discapacidad tienden a estar en jornadas reducidas o más flexibles.
+  - \( H_0 \): No existe asociación entre la condición de actividad y el grado de discapacidad.
 
-**Prueba 4: Puesto de trabajo vs. Grado de discapacidad (solo ocupados)**
+  - \( H_1 \): Sí existe asociación.
 
-- **Prueba aplicada:** Chi-cuadrado de independencia (solo en personas ocupadas)
-- **Resultado:** χ² = 114.06, gl = 15, *p* < 2.2e-16
-- **Interpretación:** Dentro del grupo de personas que están ocupadas, hay una diferencia significativa en el tipo de puesto de trabajo según el grado de discapacidad. Esto significa que, aunque estén trabajando, las personas con discapacidad pueden estar concentradas en tipos de puestos específicos, como trabajo por cuenta propia o en sectores informales, posiblemente por limitaciones o exclusiones en otros tipos de empleo.
+- Prueba 3: Horas de trabajo en el empleo principal vs grado de discapacidad
 
+  - \( H_0 \): No existe asociación entre las horas trabajadas en el empleo principal y el grado de discapacidad
+
+  - \( H_1 \): Sí existe asociación
+  
+- Prueba 4: Tipo de puesto de trabajo vs grado de discapacidad
+
+  - \( H_0 \): No existe asociación entre el tipo de puesto de trabajo y el grado de discapacidad
+
+  - \( H_1 \): Sí existe asociación
+  
+Se ejecutan las pruebas:
+```{r}
+#| echo: True
+#| warning: false
+#| message: false
+# Prueba 1:
+
+kruskal.test(ING_PERCAPITA_HOGAR ~ Cap_grado, data = enadis)
+
+# Prueba 2: 
+
+chisq.test(table(enadis$Cap_grado, enadis$condic_activi))
+
+# Prueba 3: 
+
+# Se descartan los valores NA de las horas trabajadas 
+
+enadis_filtrado <- enadis %>%
+  filter(!is.na(B7)) %>%
+  mutate(B7 = droplevels(B7))
+
+chisq.test(table(enadis_filtrado$Cap_grado, enadis_filtrado$B7))
+
+# Prueba 4: 
+
+#La tabla de contingencia solo contempla ocupados
+chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
+                 enadis$B8a[enadis$condic_activi == "Ocupados/as"]))
+
+```
 
 ### Construcción de fichas de resultados
 
-
 #### Hallazgo 1
 
-- **Nombre de su hallazgo/resultado:** Relación entre grado de discapacidad e ingreso per cápita del hogar.
-- **Resumen en una oración:** A mayor grado de discapacidad, menor tiende a ser el ingreso mensual neto per cápita del hogar.
-- **Principal característica:** Existe una tendencia decreciente en la mediana del ingreso conforme aumenta la severidad de la discapacidad.
-- **Problemas o posibles desafíos:** El @fig-ingreso-discapacidad no expresa explícitamente información sobre otras variables, por lo que pueden existir otros factores que unfluyan en el hallazgo observado.
-- **Resumen en un párrafo:** El @fig-ingreso-discapacidad muestra la distribución del ingreso mensual neto por cápita del hogar por nivel de discapacidad. Se observa una tendencia específica: los hogares en los cuales habitan personas sin discapacidad tienen ingresos más elevados si se comparan con los en los cuales habitan personas con discapacidades leve, moderada o severa. Dicha caída progresiva conduce a una correlación negativa entre nivel de discapacidad y nivel económico. Sin embargo, este patrón pudiera estar condicionado por otras variables no expresadas de manera explícita en este gráfico.
+-   **Nombre del hallazgo o resultado**: Ingreso per cápita según grado de discapacidad.
+
+-   **Resumen en una oración**: Las personas con diferentes grados de discapacidad no tienen el mismo ingreso per cápita del hogar.
+
+-   **Principal característica**: En los gráficos y cuadros se ve que los ingresos bajan conforme el grado de discapacidad es mayor. Además, se aplicó una prueba Kruskal-Wallis y el resultado fue significativo (\( \chi^2 \) = 192.41, gl = 3, p < 2.2e-16), lo que indica que hay diferencias claras entre los grupos.
+
+-   **Problemas o posibles desafíos**: El @fig-discapacidad-ingreso expone un alto nivel de variabilidad en los ingresos y no distingue otros factores de contexto que podrían explicar la variación.
+
+-   **Resumen en un párrafo**: Al comparar los ingresos per cápita entre los distintos grados de discapacidad, se nota que quienes no tienen discapacidad ganan más en promedio y tienen ingresos más variados. A medida que la discapacidad es más severa, los ingresos bajan. Esta diferencia no se da por casualidad, ya que la prueba estadística aplicada muestra que sí hay una diferencia significativa en los ingresos entre los distintos grupos.
+
 
 #### Hallazgo 2
 
-- **Nombre de su hallazgo/resultado:** Relación entre nivel de discapacidad y nivel de ingreso
-- **Resumen en una oración:** A mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar.
-- **Principal característica:** Hay una relación negativa entre el nivel de discapacidad y el ingreso per cápita, hay gran dispersión en los ingresos
-- **Problemas o posibles desafíos:** El @fig-discapacidad-ingreso expone un alto nivel de variabilidad en los ingresos y no distingue otros factores de contexto que podrían explicar la variación.
-- **Resumen en un párrafo:** El @fig-discapacidad-ingreso muestra cómo el ingreso mensual per cápita del hogar decrece conforme crece el puntaje de discapacidad de las personas, lo cual invita a pensar que quienes enfrentan mayores limitaciones tienden a estar en desventaja económica. Aunque la tendencia general es decreciente, se observa una gran dispersión de datos, lo que indica que otros factores también pueden influir en el ingreso. Aun así, la asociación negativa detectada refuerza la hipótesis de que la discapacidad puede representar una barrera importante para el acceso a mejores condiciones de vida.
+-   **Nombre del hallazgo o resultado**: Relación entre grado de discapacidad y situación laboral.
+
+-   **Resumen en una oración**: La condición laboral de las personas cambia dependiendo del grado de discapacidad.
+
+-   **Principal característica**: En los gráficos se ve que quienes tienen discapacidad, sobre todo severa, están más fuera de la fuerza de trabajo. La prueba chi-cuadrado (\( \chi^2 \) = 219.33, gl = 6, p < 2.2e-16) confirmó que sí hay una relación entre estas dos variables.
+
+-   **Problemas o posibles desafíos**: Esto puede afectar el acceso al empleo para las personas con discapacidad, aunque no se sabe por qué pasa solo con estos datos.
+
+-   **Resumen en un párrafo**: Al revisar los datos, se nota que las personas sin discapacidad están más ocupadas laboralmente, mientras que en los grupos con discapacidad hay más personas fuera de la fuerza de trabajo. Esta diferencia se ve más en el grupo con discapacidad severa. La prueba chi-cuadrado muestra que esta diferencia no es al azar, sino que sí hay relación entre el grado de discapacidad y la condición laboral.
 
 #### Hallazgo 3
 
-- **Nombre de su hallazgo/resultado:**
-- **Resumen en una oración:**
-- **Principal característica:** 
-- **Problemas o posibles desafíos:**
-- **Resumen en un párrafo:**
+-   **Nombre del hallazgo o resultado**: Horas trabajadas y grado de discapacidad.
+
+-   **Resumen en una oración**: Las horas que trabaja una persona cambian según su grado de discapacidad.
+
+-   **Principal característica**: En los cuadros se ve que las personas con discapacidad severa trabajan menos horas, y la prueba chi-cuadrado (\( \chi^2 \) = 173.32, gl = 9, p < 2.2e-16) dice que esta diferencia es significativa.
+
+-   **Problemas o posibles desafíos**: La base no permite saber si las personas trabajan menos horas por decisión propia, por barreras del entorno o por motivos de salud. Esto hace difícil entender si estas diferencias se deben a la disponibilidad, a la demanda laboral o a una limitación funcional directa.
+
+-   **Resumen en un párrafo**: Según los datos, las personas sin discapacidad tienden a trabajar jornadas completas, mientras que en los grupos con discapacidad hay más gente con jornadas cortas, especialmente los que tienen discapacidad severa. Esta diferencia fue confirmada con una prueba estadística, que indica que hay una relación significativa entre el grado de discapacidad y la cantidad de horas trabajadas.
 
 #### Hallazgo 4
 
-- **Nombre de su hallazgo/resultado:**
-- **Resumen en una oración:**
-- **Principal característica:** 
-- **Problemas o posibles desafíos:**
-- **Resumen en un párrafo:**
+-   **Nombre del hallazgo o resultado**: Tipo de trabajo y grado de discapacidad (personas ocupadas).
 
-#### Hallazgo 5
+-   **Resumen en una oración**: El tipo de puesto de trabajo cambia según el grado de discapacidad, incluso entre personas que sí tienen empleo.
 
-- **Nombre de su hallazgo/resultado:**
-- **Resumen en una oración:**
-- **Principal característica:** 
-- **Problemas o posibles desafíos:**
-- **Resumen en un párrafo:**
+-   **Principal característica**: En los gráficos se ve que las personas con discapacidad severa trabajan más por cuenta propia o en casas particulares. La prueba chi-cuadrado (\( \chi^2 \) = 114.06, gl = 15, p < 2.2e-16) confirma que hay diferencias reales entre los grupos.
 
+-   **Problemas o posibles desafíos**: Aunque todas las personas analizadas están ocupadas, los datos no permiten saber si las diferencias en el tipo de trabajo son por elección, por falta de oportunidades o por discriminación laboral. Esto puede limitar la interpretación del acceso real a empleos de calidad.
 
-
-
+-   **Resumen en un párrafo**: Cuando se compara el tipo de trabajo entre personas que están ocupadas, se nota que quienes no tienen discapacidad tienden a estar en empleos formales, como en empresas privadas. En cambio, las personas con discapacidad, sobre todo severa, están más en trabajos por cuenta propia o en puestos informales. Esta diferencia también fue confirmada con una prueba estadística que muestra que el tipo de trabajo está relacionado con el grado de discapacidad.
 {{< pagebreak >}}
 
 
