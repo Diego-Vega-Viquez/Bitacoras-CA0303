@@ -542,6 +542,7 @@ Esta estructura y limpieza de la base garantiza una exploración coherente y rep
 # Código que no se mostrará
 str(readRDS("../data/enadisJOSE.rds"))
 ```
+\newpage
 
 #### Cuadros
 
@@ -555,9 +556,14 @@ kable(env$cuadro_pos_trab_vs_grad_disc,
       caption = "Distribución porcentual de la posición en el trabajo según el grado de dificultad en la capacidad") %>%
   kable_styling(position = "center", 
                 bootstrap_options = c("striped", "hover", "responsive")) %>%
+  column_spec(1, width = "3cm") %>%
+  column_spec(2, width = "3cm") %>%
+  # Rota los nombres de las columnas
+  row_spec(0, angle = 90) %>%          ## Muchachos no encontré otra forma de hacer esto, todo lo que intenté hacía que la tabla divergiera a la derecha y el título quedaba cortado, si no les gusta podrían intentar ajustarla uds, yo la voy a dejar así pues es la opción más viable que encontré
   footnote(general = "ENADIS, Costa Rica. (2023)",
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
+
 ```
 ```{r Tabla2}
 #| echo: false
