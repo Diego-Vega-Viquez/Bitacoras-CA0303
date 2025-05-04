@@ -9,7 +9,7 @@ library(here)
 #No olvide cargar base de datos en manejo_de_datos.R
 enadis <- readRDS(here("data", "enadisJOSE.rds")) # Listo
 enadis_completa <- readRDS(here("data/enadis_completa.rds")) # Listo
-
+enadis_oc <- readRDS(here("data/enadis_oc.rds")) # Listo
 ##############
 # GRAFICOS  #
 ##############
