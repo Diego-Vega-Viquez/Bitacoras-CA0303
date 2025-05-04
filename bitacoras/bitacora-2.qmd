@@ -402,10 +402,6 @@ Mientras que otros estudios describen las barreras o los efectos de la discapaci
 **Contribución propia:**  
 Tener estudios que no solo describan la situación, sino que también permitan hacer predicciones, es clave para entender mejor el problema. Saber qué factores hacen una diferencia permite enfocar los esfuerzos en áreas que realmente puedan mejorar las oportunidades laborales de las personas con discapacidad.
 
-
-
-
-
 {{< pagebreak >}}
   
 ## Análisis descriptivo
@@ -532,12 +528,19 @@ library(kableExtra)
 ```
 
 #### Formato tidy
+
+Para el análisis se utilizó una versión depurada de la base de datos ENADIS 2023, la cual fue transformada para tener el formato tidy, en donde cada fila representa una persona encuestada y cada columna corresponde a una variable claramente definida. Se verificó que todas las variables presentaran la clase adecuada mediante la función `str()`, como se muestra más abajo, confirmando que las variables numéricas, como la edad (`A5`) o los ingresos (`ING_PERCAPITA_HOGAR`), se mantienen como numeric, mientras que las categóricas, como el sexo (`A4`), región (`region`) o condición de actividad (`condic_activi`), están correctamente codificadas como factores (`factor`). Además, las variables fueron renombradas con nombres intuitivos y estandarizados, facilitando su interpretación y manipulación posterior.
+
+Los valores faltantes (`NA`) fueron identificados, especialmente en variables relacionadas con el empleo como `B8a` (posición en el trabajo) y `B7` (cantidad de horas laboradas). Su presencia se explica porque algunas personas no forman parte de la población económicamente activa, por lo que estos valores fueron tratados adecuadamente en los análisis posteriores mediante filtrado y uso de funciones como `drop_na()` cuando era pertinente.
+
+Esta estructura y limpieza de la base garantiza una exploración coherente y reproducible, cumpliendo con los principios de orden, claridad y transparencia necesarios para un análisis cuantitativo riguroso.
+
 ```{r Carga de datos}
 #| echo: false
 #| warning: false
 #| message: false
 # Código que no se mostrará
-enadis <- readRDS("../data/enadis_completa.rds")
+str(readRDS("../data/enadisJOSE.rds"))
 ```
 
 #### Cuadros
@@ -556,7 +559,6 @@ kable(env$cuadro_pos_trab_vs_grad_disc,
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
 ```
-Esta tabla muestra ...
 ```{r Tabla2}
 #| echo: false
 #| warning: false
@@ -571,7 +573,6 @@ kable(env$cuadro_condic_actividad_vs_grad_disc,
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
 ```
-En esta tabla se presenta...
 ```{r Tabla4}
 #| echo: false
 #| warning: false
@@ -615,6 +616,7 @@ kable(env$cuadro_promedio_ingreso_vs_pos_y_grado,
 env$grafico6
 
 ```
+
 ## Propuesta Metodológica
 
 **Comentario**: En esta sección se expondrán las bases teóricas de la prueba de Kruskal-Wallis y la prueba Chi-cuadrado de independencia, así como las herramientas utilizadas para la implementación del código maqueta
