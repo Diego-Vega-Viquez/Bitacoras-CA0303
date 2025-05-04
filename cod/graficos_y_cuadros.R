@@ -10,7 +10,6 @@ library(here)
 enadis <- readRDS(here("data", "enadisJOSE.rds")) # Listo
 enadis_completa <- readRDS(here("data/enadis_completa.rds")) # Listo
 
-install.packages("labelled")
 ##############
 # GRAFICOS  #
 ##############
@@ -227,13 +226,54 @@ ggsave("res/graficos/edad_vs_desempeno.png",
 
 #Gráfico de Horas Laboradas para detectar Outliers (Andrey)
 
-enadis_completa
+grafico7 <- enadis_oc %>% ggplot(aes(Cap_grado, fill = B7)) + 
+  geom_bar(position = "fill", width = 0.75) +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
+  scale_y_continuous(labels = percent_format())+
+  labs(
+    x = "Grado de Discapacidad",
+    y = "Porcentaje",
+    fill = "Horas Laboradas",
+    caption = "Fuente: INEC, ENADIS 2023"
+  ) +
+  theme_minimal(base_size = 14) + 
+  theme(
+    axis.title = element_text(face = "bold", size = 17),
+    axis.text = element_text(size = 15),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 20),
+    legend.text = element_text(size = 15)
+  ) +
+  coord_flip()
+  
+  
+ggsave("res/graficos/grado_disc_vs_horas_lab.png", 
+       plot = last_plot(), 
+       device = "jpg", 
+       width = 18,
+       height = 8.5,
+       dpi = 900)
 
-grafico7 <- ggplot(enadis_completa %>% drop_na())
 
+grafico8 <- enadis_oc %>% ggplot(aes(x = horas, y = ING_PERCAPITA_HOGAR, fill = Cap_grado))+
+  geom_boxplot(outlier.colour = "gray", outlier.shape = 16, outlier.size = 2, width = 0.6)+
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
+  labs(
+    x = "Horas trabajadas (Punto Medio)",
+    y = "Ingreso per cápita (₡)",
+    fill = "Grado de Discapacidad",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_text(face = "bold", size = 20),
+    axis.text = element_text(size = 15),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 25),
+    legend.text = element_text(size = 18)
+  )
 
-
-
+print(grafico8)
 
 
 
@@ -349,4 +389,27 @@ cuadro_productos_vs_grado_discap <- enadis_completa %>%
   pivot_wider(names_from = PROD_ASIS, values_from = Proporcion, values_fill = "0,00%") %>%
   rename(!!label_col  := Grado_discap)
 
+cuadro_frec_relativa_pos_grado <- enadis_oc %>% 
+  count(Cap_grado, B8a) %>% group_by(Cap_grado) %>% 
+  mutate(
+    Total = sum(n),
+    Frecuencia_Relativa = n/Total
+  ) %>% ungroup() %>% select(-Total) %>% 
+  pivot_wider(
+    names_from = B8a,
+    values_from = Frecuencia_Relativa,
+    values_fill = 0
+  ) %>% 
+  mutate_if(is.numeric, ~ percent(.x, acurracy = 0.1))
 
+cuadro_promedio_ingreso_vs_pos_y_grado <- enadis_completa %>% 
+  filter(!is.na(ING_PERCAPITA_HOGAR), !is.na(condic_activi), !is.na(Cap_grado)) %>% 
+  group_by(condic_activi, Cap_grado) %>%  summarise(
+    Promedio_Ingreso = mean(ING_PERCAPITA_HOGAR, na.rm = TRUE),
+    .groups = "drop") %>% 
+  pivot_wider(
+    names_from = Cap_grado,
+    values_from = Promedio_Ingreso
+  ) %>% mutate_if(is.numeric, ~ round(.x, 0))
+
+cuadro_promedio_ingreso_vs_pos_y_grado

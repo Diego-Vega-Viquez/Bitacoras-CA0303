@@ -16,12 +16,26 @@ enadis_completa <- enadis_completa %>% filter(A5 >= 18 & A5 <= 65)
 # enadis JOSE
 enadis <- enadis_completa %>% select(A5, A4, region, zona, Cap_grado, ING_PERCAPITA_HOGAR, condic_activi, B8a, B7, Nivel_Instru)
 
+#enadis Andrey
+enadis_oc <- enadis_completa %>% filter(condic_activi == "Ocupados/as", !is.na(B7), !is.na(Cap_grado))
+
+enadis_oc$horas <- case_when(
+  enadis_oc$B7 == "Menos de 15 horas" ~ 7.5,
+  enadis_oc$B7 == "De 15 a menos de 40 horas" ~ 27.5,
+  enadis_oc$B7 == "De 40 a 48 horas" ~ 44,
+  enadis_oc$B7 == "Más de 48 horas" ~ 55,
+  TRUE ~ NA_real_
+)
+
+enadis_oc <- enadis_oc %>% filter(!is.na(ING_PERCAPITA_HOGAR))
+
 # Guardado de Bases de Datos
 
 # Recuerde actualizar esta cada vez que se cambie el código para que se guarde
 # Guarda las base de datos en la carpeta data
 saveRDS(obj = enadis, file = "data/enadisJOSE.rds") 
 saveRDS(obj = enadis_completa, file = "data/enadis_completa.rds")
+saveRDS(obj = enadis_oc, file = "data/enadis_oc.rds")
 
 
 
