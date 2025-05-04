@@ -402,6 +402,11 @@ Mientras que otros estudios describen las barreras o los efectos de la discapaci
 **Contribución propia:**  
 Tener estudios que no solo describan la situación, sino que también permitan hacer predicciones, es clave para entender mejor el problema. Saber qué factores hacen una diferencia permite enfocar los esfuerzos en áreas que realmente puedan mejorar las oportunidades laborales de las personas con discapacidad.
 
+## Actualización de la UVE de Godwin
+
+
+![UVE Heurística](UVE 2.png)
+
 
 
 {{< pagebreak >}}
@@ -526,6 +531,7 @@ library(ggridges) # Para usar geom_density_ridges
 library(sf) 
 library(RColorBrewer)
 library(see)
+library(kableExtra)
 ```
 
 #### Formato tidy
@@ -534,7 +540,7 @@ library(see)
 #| warning: false
 #| message: false
 # Código que no se mostrará
-enadis_completa <- readRDS("../data/enadis_completa.rds")
+enadis <- readRDS("../data/enadis_completa.rds")
 ```
 
 #### Cuadros
@@ -552,12 +558,36 @@ Esta tabla muestra ...
 
 ```
 En esta tabla se presenta...
-```{r Tabla3}
+```{r Tabla4}
 #| echo: false
-# Código que no se mostrará
+#| warning: false
+#| message: false
+#| label: tbl-ingreso-discapacidad
+
+kable(env$cuadro_ingreso_vs_grado_discap, 
+      caption = "Distribución porcentual del ingreso per cápita por grado de discapacidad") %>%
+  kable_styling(position = "center", 
+                bootstrap_options = c("striped", "hover", "responsive")) %>%
+  footnote(general = "ENADIS, Costa Rica. (2023)",
+           footnote_as_chunk = TRUE,
+           general_title = "Fuente: ")
 
 ```
-Esta tabla ofrece...
+```{r Tabla8}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-promedio_ingreso_vs_pos_y_grado 
+
+kable(env$cuadro_promedio_ingreso_vs_pos_y_grado,
+      caption = "Promedio del ingreso per cápita del hogar según condición de actividad y grado de discapacidad") %>%
+  kable_styling(position = "center", 
+                bootstrap_options = c("striped", "hover", "responsive")) %>%
+  footnote(general = "ENADIS, Costa Rica. (2023)",
+           footnote_as_chunk = TRUE,
+           general_title = "Fuente: ")
+
+```
 
 #### Gráficos
 
@@ -707,7 +737,7 @@ chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
 
 -   **Resumen en una oración**: Las personas con diferentes grados de discapacidad no tienen el mismo ingreso per cápita del hogar.
 
--   **Principal característica**: En los gráficos y cuadros se ve que los ingresos bajan conforme el grado de discapacidad es mayor. Además, se aplicó una prueba Kruskal-Wallis y el resultado fue significativo (\( \chi^2 \) = 192.41, gl = 3, p < 2.2e-16), lo que indica que hay diferencias claras entre los grupos.
+-   **Principal característica**: En los gráficos, @tbl-promedio_ingreso_vs_pos_y_grado y @tbl-ingreso-discapacidad se ve que los ingresos bajan conforme el grado de discapacidad es mayor. Además, se aplicó una prueba Kruskal-Wallis y el resultado fue significativo (\( \chi^2 \) = 192.41, gl = 3, p < 2.2e-16), lo que indica que hay diferencias claras entre los grupos.
 
 -   **Problemas o posibles desafíos**: El @fig-discapacidad-ingreso expone un alto nivel de variabilidad en los ingresos y no distingue otros factores de contexto que podrían explicar la variación.
 
