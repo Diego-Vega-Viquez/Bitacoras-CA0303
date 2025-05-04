@@ -10,6 +10,7 @@ library(here)
 enadis <- readRDS(here("data", "enadisJOSE.rds")) # Listo
 enadis_completa <- readRDS(here("data/enadis_completa.rds")) # Listo
 
+install.packages("labelled")
 ##############
 # GRAFICOS  #
 ##############
@@ -224,6 +225,11 @@ ggsave("res/graficos/edad_vs_desempeno.png",
        height = 8.5,
        dpi = 900)
 
+#Gráfico de Horas Laboradas para detectar Outliers (Andrey)
+
+enadis_completa
+
+grafico7 <- ggplot(enadis_completa %>% drop_na())
 
 
 
