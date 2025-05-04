@@ -94,6 +94,606 @@ Los potenciales problemas con los que cuenta esta idea son:
 
 
 ### Argumentación a través de datos
+<<<<<<< HEAD
+=======
+
+Los datos utilizados durante el trabajo provienen de la Encuesta Nacional sobre Discapacidad (ENADIS), específicamente la realizada en el 2023, realizada por el Instituto Nacional de Estadísticas y Censos (INEC). Los datos provenientes de esta encuesta recopila los datos de personas mayores a 18 años a lo largo del territorio costarricense durante el 9 de octubre y el 30 de noviembre del año 2023. El estudio se basa en personas costarricenses en situación de discapacidad, considerando una muestra de individuos adultos que habitan tanto zonas rurales como urbanas escogidos según el Marco Muestral de Viviendas realizado en el 2011 donde en total se incluyeron 10,461 unidades primarias de muestreo y 1,360,055 viviendas. El individuo o unidad estadística vital para la investigación es la accesibilidad de las personas en situación de discapacidad en su entorno según los datos suministrados. 
+
+Se puede encontrar información con respecto a esta temática ya que el INEC facilita el acceso a la información detallada del proceso de elaboración de las encuestas y las normativas que garantizan el acceso de las personas en situación de discapacidad en distintas instituciones. Además, el INEC realiza periodicamente la ENADIS por lo que se tiene a su vez la evolución histórica de los datos. Los datos fueron encontrados en la página del INEC, a través del Programa Acelerado de Datos.
+
+Las variables de la base de datos se pueden categorizar en los siguientes grupos.
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V635 | Hogar | Identifica si las personas que viven en un lugar comparten presupuesto y elaboran alimentos en común |
+| V636 | region | Región de planificación predefinida en la muestra (sin pregunta directa) |
+| V637 | zona | Clasificación de la zona como Urbana o Rural (predefinida en la muestra) |
+| V638 | V1 | Tipo de vivienda observado por la persona entrevistadora |
+| V639 | V1c1 | Existencia de amenaza de deslizamientos en la zona de la vivienda |
+| V640 | V1c2 | Existencia de amenaza de inundaciones en la zona de la vivienda |
+| V641 | V1c3 | Existencia de otras amenazas naturales en la zona de la vivienda |
+| V642 | V2a | Tipo de tenencia de la vivienda (propia, alquilada, prestada, etc.) |
+| V643 | V20a | Disponibilidad de cuartos para dormir en la vivienda |
+| V644 | V20b | Disponibilidad de sala o comedor en la vivienda |
+| V645 | V20c | Disponibilidad de salas adicionales (estudio, teletrabajo, televisión) |
+| V646 | V20d | Disponibilidad de baños completos con ducha y servicio sanitario |
+| V647 | V20e | Disponibilidad de cocina (espacio para cocinar) |
+| V648 | V20f | Disponibilidad de espacio para negocio en la vivienda |
+| V649 | V20a1 | Número de cuartos para dormir en la vivienda |
+| V650 | V20b1 | Número de salas o comedores en la vivienda |
+| V651 | V20c1 | Número de salas adicionales en la vivienda |
+| V652 | V20d1 | Número de baños completos en la vivienda |
+| V653 | V20e1 | Número de cocinas en la vivienda |
+| V654 | V20f1 | Número de espacios para negocio en la vivienda |
+| V655 | V21a | Acceso a servicio de electricidad |
+| V656 | V21b | Acceso a agua de un acueducto |
+| V657 | V21c | Acceso a Internet (incluye conexión por celular) |
+| V658 | V18p | Tenencia de Smart TV |
+| V659 | V18k | Tenencia de otro tipo de televisor |
+| V660 | V18l | Tenencia de servicio de televisión por cable o satélite |
+| V661 | V18j | Tenencia de radio o equipo de sonido |
+| V662 | V18h | Tenencia de computadora portátil o de escritorio |
+| V663 | V18r | Tenencia de celular |
+| V664 | V18i | Tenencia de tableta |
+| V665 | V18e | Disponibilidad de sistema de agua caliente para toda la casa |
+| V666 | V18f | Tenencia de tanque para almacenar agua |
+| V667 | V18q | Tenencia de panel solar |
+| V668 | V18o | Tenencia de moto (no de trabajo) |
+| V669 | V18n | Tenencia de carro (no de trabajo) |
+| V670 | V18h1 | Cantidad de computadoras portátil o de escritorio |
+| V671 | V18r1 | Cantidad de celulares |
+| V672 | V18i1 | Cantidad de tabletas |
+| V673 | V18o1 | Cantidad de motos (no de trabajo) |
+| V674 | V18n1 | Cantidad de carros (no de trabajo) |
+| V675 | V19a | Infraestructura accesible: rampas para silla de ruedas |
+| V676 | V19b | Infraestructura accesible: puertas con agarradera de palanca |
+| V677 | V19c | Infraestructura accesible: puertas y pasillos anchos para silla de ruedas |
+| V678 | V19d | Infraestructura accesible: barras de apoyo o gradas con baranda |
+
+:Variables de la Sección Vivienda y servicios {#tbl-sec-1}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V679 | R4a | Indica si la jefatura del hogar es compartida |
+| V680 | A3 | Relación de parentesco de la persona con la jefatura del hogar |
+| V681 | A4 | Sexo de la persona (hombre o mujer) |
+| V682 | A5 | Edad en años cumplidos de la persona |
+| V683 | A11 | Condición de aseguramiento social de la persona |
+| V684 | A15 | Nivel educativo y año más alto aprobado por la persona |
+
+:Variables de la Sección Social {#tbl-sec-2}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V685 | A7a | Lugar de residencia de la madre al momento del nacimiento de la persona |
+| V686 | A6 | Estado actual de convivencia (unión libre, casado, separado, divorciado, viudo, soltero) |
+| V687 | A25 | Autoidentificación étnica-racial de la persona |
+| V688 | A13 | Asistencia actual a algún centro educativo o de enseñanza |
+| V689 | A13a | Programa educativo específico al que asiste la persona |
+| V690 | A13c | Tipo de centro educativo (público, subvencionado, privado, extranjero) |
+| V691 | A13db | Existencia de puertas con agarradera de palanca en el centro educativo |
+| V692 | A13dc | Existencia de puertas y pasillos anchos para personas con silla de ruedas |
+| V693 | A13de | Presencia de luces de alerta visual y alarma de audio en el centro educativo |
+| V694 | A13dg | Disponibilidad de mobiliario adaptado en el centro educativo |
+| V695 | A13da | Existencia de rampas para personas con silla de ruedas |
+| V696 | A13dd | Disponibilidad de ascensor o elevador para personas con silla de ruedas |
+| V697 | A13df | Presencia de barras de apoyo o gradas con baranda |
+| V698 | A14a3 | Recepción de adecuación curricular significativa (modificación de contenidos u objetivos) |
+| V699 | A14a4 | Recepción de adecuación curricular no significativa (ampliación de tiempos o ajustes) |
+| V700 | A14a1 | Acceso a recursos especiales como Lesco o computadora con teclado grande |
+| V701 | A14a2 | Apoyo de docencia o profesionales como psicopedagogía o tutorías |
+| V702 | A17 | Motivo principal por el que no asiste a la escuela, colegio o universidad |
+| V703 | A16 | Certificación de cursos o formación adicional fuera de la educación formal |
+| V704 | A15a | Capacidad de leer y escribir |
+| V705 | A24_1 | Uso de celular en los últimos 3 meses |
+| V706 | A24_2 | Uso de computadora en los últimos 3 meses |
+| V707 | A24_3 | Uso de tableta en los últimos 3 meses |
+| V708 | A24_4 | Uso de Internet en los últimos 3 meses |
+| V709 | A24_0 | No uso de celular, computadora, tableta e Internet |
+| V710 | A12a | Uso de Lesco (Lengua de Señas Costarricense) |
+| V711 | A12b | Uso de señas caseras |
+| V712 | A12c | Uso de lenguaje gestual |
+| V713 | A12d | Uso de comunicación visual gestual |
+| V714 | A12e | Uso de otra lengua de señas |
+| V715 | A12f | Lesco como lengua materna |
+| V716 | A12_0 | No uso de ninguna lengua de señas |
+
+:Variables de la sección de Características Sociodemográficas {#tbl-sec-3}
+
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V717 | B1 | Situación laboral durante la semana pasada (trabajó, se ausentó, ayudó en negocio familiar, ninguna) |
+| V718 | B2 | Realización de actividad remunerada por al menos una hora la semana pasada |
+| V719 | B3 | Motivos de ausencia en el trabajo |
+| V720 | B4 | Cantidad de trabajos que tuvo durante la semana pasada |
+| V721 | B7 | Cantidad de horas laboradas semanalmente en el trabajo principal |
+| V722 | B8a | Posición o categoría ocupacional en el trabajo principal |
+| V723 | B8b | Lugar principal donde realiza las tareas laborales |
+| V724 | B9a | Existencia de puertas con agarradera de palanca en el lugar de trabajo |
+| V725 | B9b | Disponibilidad de puertas y pasillos anchos para personas con silla de ruedas |
+| V726 | B9c | Presencia de luces de alerta visual o alarma de audio en el lugar de trabajo |
+| V727 | B9d | Disponibilidad de mobiliario adaptado en el lugar de trabajo |
+| V728 | B9e | Existencia de rampas para personas con silla de ruedas |
+| V729 | B9f | Presencia de barras de apoyo y gradas con baranda |
+| V730 | B9g | Disponibilidad de ascensor o elevador para personas con silla de ruedas |
+| V731 | B12 | Gestiones realizadas para conseguir trabajo en las últimas 4 semanas |
+| V732 | B13 | Razón principal por la que no buscó trabajo en las últimas 4 semanas |
+| V733 | B14 | Disponibilidad para comenzar a trabajar inmediatamente |
+| V734 | B15 | Razón principal por la que no ha conseguido trabajo |
+| V735 | B16a | Recepción de ingresos por alquileres, beneficios de asociaciones, intereses bancarios |
+| V736 | B16b | Recepción de ingresos por pensión alimentaria o ayudas de otros hogares |
+| V737 | B16c | Recepción de ingresos por jubilaciones nacionales e internacionales |
+| V738 | B16d | Recepción de ingresos por pensiones del Régimen No Contributivo (RNC) |
+| V739 | B16e | Recepción de ingresos por ayudas, subsidios o becas de instituciones públicas |
+| V740 | B16f | Recepción de ingresos por otras transferencias en dinero o en especie |
+
+:Variables  que caracterizan el empleo y los ingresos de los hogares {#tbl-sec-4}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V741 | C1 | Evaluación de la facilidad para usar servicios de salud con escala 1-5. |
+| V742 | C2 | Accesibilidad en espacios públicos de socialización, escala 1-5. |
+| V743 | C3 | Facilidad de uso en tiendas y comercios locales, escala 1-5. |
+| V744 | C4 | Acceso a iglesias y centros de culto, escala 1-5. |
+| V745 | C5 | Accesibilidad en sistemas de transporte público, escala 1-5. |
+| V746 | C6 | Facilidad de movimiento dentro de la vivienda, escala 1-5. |
+| V747 | C7 | Impacto del entorno natural en actividades, escala 1-5. |
+| V748 | C8 | Condiciones de luz natural y actividades, escala 1-5. |
+| V749 | C9 | Influencia de niveles de ruido en actividades, escala 1-5. |
+| V750 | C10 | Dificultad en aglomeraciones de gente, escala 1-5. |
+| V751 | C11 | Accesibilidad en instalaciones deportivas, escala 1-5. |
+| V752 | C12 | Facilidad de actividades en lugar de trabajo, escala 1-5. |
+| V753 | C13 | Accesibilidad en centro educativo, escala 1-5. |
+
+: Variables que describen el ambiente como barrera o facilitador {#tbl-sec-5}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V754 | D1 | Dificultad para ponerse de pie estando sentado, escala 1-5. |
+| V755 | D2 | Dificultad para estar de pie durante 30 minutos, escala 1-5. |
+| V756 | D3 | Dificultad para salir de casa, escala 1-5. |
+| V757 | D4 | Dificultad para caminar 100 metros, escala 1-5. |
+| V758 | D5 | Dificultad para caminar un kilómetro, escala 1-5. |
+| V759 | D6 | Dificultad para realizar actividades físicas exigentes, escala 1-5. |
+| V760 | D7 | Dificultad para llegar a lugares deseados, escala 1-5. |
+| V761 | D8 | Dificultad para manipular objetos pequeños, escala 1-5. |
+| V762 | D9 | Dificultad para levantar objetos con las manos, escala 1-5. |
+| V763 | D10 | Dificultad para asearse o vestirse, escala 1-5. |
+| V764 | D11 | Dificultad para alimentarse, escala 1-5. |
+| V765 | D12 | Dificultad para usar el servicio sanitario, escala 1-5. |
+| V766 | D13 | Dificultad para cortarse las uñas de los pies, escala 1-5. |
+| V767 | D14 | Dificultad para cuidar la salud, escala 1-5. |
+| V768 | D15 | Dificultad para ver objetos de lejos, escala 1-5. |
+| V769 | D16 | Dificultad para ver objetos de cerca, escala 1-5. |
+| V770 | D17 | Dificultad para oír conversación en lugar silencioso, escala 1-5. |
+| V771 | D18 | Dificultad para oír conversación con ruido, escala 1-5. |
+| V772 | D19 | Dificultad por dolor físico, escala 1-5. |
+| V773 | D20 | Dificultad para dormir, escala 1-5. |
+| V774 | D21 | Dificultad por cansancio y falta de energía, escala 1-5. |
+| V775 | D22 | Dificultad por tristeza o depresión, escala 1-5. |
+| V776 | D23 | Dificultad por preocupación o ansiedad, escala 1-5. |
+| V777 | D24 | Dificultad para respirar, escala 1-5. |
+| V778 | D25 | Dificultad para toser o respirar con ruido, escala 1-5. |
+| V779 | D26 | Dificultad para relacionarse con personas cercanas, escala 1-5. |
+| V780 | D27 | Dificultad para relacionarse con desconocidos, escala 1-5. |
+| V781 | D28 | Dificultad para hacer o mantener amistades, escala 1-5. |
+| V782 | D29 | Dificultad para tener relación de pareja, escala 1-5. |
+| V783 | D30 | Dificultad para manejar el estrés, escala 1-5. |
+| V784 | D31 | Dificultad para enfrentar tareas diarias, escala 1-5. |
+| V785 | D32 | Dificultad para ser entendido, escala 1-5. |
+| V786 | D33 | Dificultad para entender a otros, escala 1-5. |
+| V787 | D34 | Dificultad por olvidos o mala memoria, escala 1-5. |
+| V788 | D35 | Dificultad para recordar tareas importantes, escala 1-5. |
+| V789 | D36 | Dificultad para encontrar soluciones diarias, escala 1-5. |
+| V790 | D37 | Dificultad para comprender el entorno, escala 1-5. |
+| V791 | D38 | Dificultad para leer, escribir o calcular, escala 1-5. |
+| V792 | D39 | Dificultad para hacer trabajo doméstico, escala 1-5. |
+| V793 | D40 | Dificultad para administrar dinero, escala 1-5. |
+| V794 | D41 | Dificultad para hacer actividades relajantes, escala 1-5. |
+| V795 | D42 | Dificultad para participar en actividades comunales, escala 1-5. |
+| V796 | D43 | Dificultad para participar en política, escala 1-5. |
+| V797 | D44 | Dificultad para usar transporte público, escala 1-5. |
+| V798 | D45 | Dificultad para cuidar o apoyar a otros, escala 1-5. |
+| V799 | D46 | Dificultad para postularse a empleo, escala 1-5. |
+| V800 | D47 | Dificultad para conseguir empleo, escala 1-5. |
+| V801 | D48 | Dificultad para recibir educación, escala 1-5. |
+| V802 | D49 | Dificultad para realizar tareas en el trabajo, escala 1-5. |
+| V803 | D50 | Dificultad para realizar tareas en lugar de estudio, escala 1-5. |
+
+: Variables que caracterizan el desempeño y funcionamiento de la persona {#tbl-sec-6}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V804 | E1 | Autoevaluación del estado general de salud física y mental |
+| V805 | E8 | Dificultad para moverse en la cama sin apoyo |
+| V806 | E9 | Dificultad para desplazarse en la calle |
+| V807 | E10 | Dificultad para realizar compras o visitar centros de salud |
+| V808 | E11 | Dificultad para manipular objetos pequeños |
+| V809 | E12 | Dificultad para alimentarse de manera independiente |
+| V810 | E13 | Dificultad para usar instalaciones sanitarias |
+| V811 | E14 | Percepción de dolor físico |
+| V812 | E15 | Dificultad para conciliar y mantener el sueño |
+| V813 | E16 | Experimentación de tristeza o estados depresivos |
+| V814 | E17 | Nivel de ansiedad y nerviosismo |
+| V815 | E18 | Dificultad respiratoria |
+| V816 | E19 | Capacidad de relacionarse con personas cercanas |
+| V817 | E20 | Capacidad de gestionar tareas diarias |
+| V818 | E21 | Dificultad para realizar trabajo doméstico |
+| V819 | E22 | Participación en actividades comunitarias |
+| V820 | E23 | Capacidad de cuidar o apoyar a otros |
+| V821 | E24 | Habilidades de comunicación social |
+| V822 | E25 | Capacidad de aprender tareas nuevas |
+| V823 | E26 | Desempeño de tareas laborales |
+| V824 | E27 | Desempeño de tareas académicas |
+
+:Variables que caracterizan la capacidad y salud de las personas {#tbl-sec-7}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V825 | F1 | Presencia de hipertensión arterial |
+| V826 | F2 | Existencia de diabetes mellitus |
+| V827 | F3 | Condiciones de artritis o desgaste |
+| V828 | F4 | Enfermedades cardíacas o infarto |
+| V829 | F5 | Enfermedades respiratorias crónicas |
+| V830 | F6 | Dolores crónicos en espalda/columna |
+| V831 | F7 | Dolores de cabeza crónicos |
+| V832 | F8 | Depresión crónica |
+| V833 | F9 | Ansiedad crónica |
+| V834 | F10 | Gastritis o úlceras gástricas |
+| V835 | F11 | Presencia de cáncer |
+| V836 | F12 | Existencia de Alzheimer |
+| V837 | F13 | Enfermedades renales |
+| V838 | F14 | Enfermedades de la piel |
+| V839 | F15 | Trastornos mentales |
+| V840 | F16 | Trastornos del sueño |
+| V841 | F17 | Trastornos auditivos |
+| V842 | F18 | Obesidad |
+| V843 | F19 | Enfermedades de tiroides |
+| V844 | F20 | Otras enfermedades crónicas |
+| V845 | FA1 | Diagnóstico de hipertensión |
+| V846 | FA2 | Diagnóstico de diabetes |
+| V847 | FA3 | Diagnóstico de artritis |
+| V848 | FA4 | Diagnóstico de enfermedades cardíacas |
+| V849 | FA5 | Diagnóstico de enfermedades respiratorias |
+| V850 | FA6 | Diagnóstico de dolores de espalda |
+| V851 | FA7 | Diagnóstico de dolores de cabeza |
+| V852 | FA8 | Diagnóstico de depresión |
+| V853 | FA9 | Diagnóstico de ansiedad |
+| V854 | FA10 | Diagnóstico de gastritis |
+| V855 | FA11 | Diagnóstico de cáncer |
+| V856 | FA12 | Diagnóstico de Alzheimer |
+| V857 | FA13 | Diagnóstico de enfermedades renales |
+| V858 | FA14 | Diagnóstico de enfermedades de piel |
+| V859 | FA15 | Diagnóstico de trastornos mentales |
+| V860 | FA16 | Diagnóstico de trastornos del sueño |
+| V861 | FA17 | Diagnóstico de trastornos auditivos |
+| V862 | FA18 | Diagnóstico de obesidad |
+| V863 | FA19 | Diagnóstico de enfermedades de tiroides |
+| V864 | FA20 | Diagnóstico de otras enfermedades |
+| V865 | FB1 | Medicamentos para hipertensión |
+| V866 | FB2 | Medicamentos para diabetes |
+| V867 | FB3 | Medicamentos para artritis |
+| V868 | FB4 | Medicamentos para enfermedades cardíacas |
+| V869 | FB5 | Medicamentos para enfermedades respiratorias |
+| V870 | FB6 | Medicamentos para dolores de espalda |
+| V871 | FB7 | Medicamentos para dolores de cabeza |
+| V872 | FB8 | Medicamentos para depresión |
+| V873 | FB9 | Medicamentos para ansiedad |
+| V874 | FB10 | Medicamentos para gastritis |
+| V875 | FB11 | Medicamentos para cáncer |
+| V876 | FB12 | Medicamentos para Alzheimer |
+| V877 | FB13 | Medicamentos para enfermedades renales |
+| V878 | FB14 | Medicamentos para enfermedades de piel |
+| V879 | FB15 | Medicamentos para trastornos mentales |
+| V880 | FB16 | Medicamentos para trastornos del sueño |
+| V881 | FB17 | Medicamentos para trastornos auditivos |
+| V882 | FB18 | Medicamentos para obesidad |
+| V883 | FB19 | Medicamentos para enfermedades de tiroides |
+| V884 | FB20 | Medicamentos para otras enfermedades |
+| V885 | FC1 | Tratamientos adicionales para hipertensión |
+| V886 | FC2 | Tratamientos adicionales para diabetes |
+| V887 | FC3 | Tratamientos adicionales para artritis |
+| V888 | FC4 | Tratamientos adicionales para enfermedades cardíacas |
+| V889 | FC5 | Tratamientos adicionales para enfermedades respiratorias |
+| V890 | FC6 | Tratamientos adicionales para dolores de espalda |
+| V891 | FC7 | Tratamientos adicionales para dolores de cabeza |
+| V892 | FC8 | Tratamientos adicionales para depresión |
+| V893 | FC9 | Tratamientos adicionales para ansiedad |
+| V894 | FC10 | Tratamientos adicionales para gastritis |
+| V895 | FC11 | Tratamientos adicionales para cáncer |
+| V896 | FC12 | Tratamientos adicionales para Alzheimer |
+| V897 | FC13 | Tratamientos adicionales para enfermedades renales |
+| V898 | FC14 | Tratamientos adicionales para enfermedades de piel |
+| V899 | FC15 | Tratamientos adicionales para trastornos mentales |
+| V900 | FC16 | Tratamientos adicionales para trastornos del sueño |
+| V901 | FC17 | Tratamientos adicionales para trastornos auditivos |
+| V902 | FC18 | Tratamientos adicionales para obesidad |
+| V903 | FC19 | Tratamientos adicionales para enfermedades de tiroides |
+| V904 | FC20 | Tratamientos adicionales para otras enfermedades |
+| V905 | F22 | Ceguera |
+| V906 | F23 | Baja visión |
+| V907 | F24 | Sordera |
+| V908 | F25 | Baja audición |
+| V909 | F26 | Deficiencias físicas por accidente |
+| V910 | F27 | Deficiencias físicas congénitas |
+| V911 | F28 | Síndrome de Down o deficiencias intelectuales |
+| V912 | F29 | Deficiencias del habla y lenguaje |
+| V913 | F30 | Trastorno del espectro autista |
+| V914 | F31 | Otras deficiencias |
+| V915 | FD22 | Diagnóstico de ceguera |
+| V916 | FD23 | Diagnóstico de baja visión |
+| V917 | FD24 | Diagnóstico de sordera |
+| V918 | FD25 | Diagnóstico de baja audición |
+| V919 | FD26 | Diagnóstico de deficiencias físicas por accidente |
+| V920 | FD27 | Diagnóstico de deficiencias físicas congénitas |
+| V921 | FD28 | Diagnóstico de Síndrome de Down |
+| V922 | FD29 | Diagnóstico de deficiencias del habla |
+| V923 | FD30 | Diagnóstico de trastorno autista |
+| V924 | FD31 | Diagnóstico de otras deficiencias |
+| V925 | FE22 | Apoyo por ceguera |
+| V926 | FE23 | Apoyo por baja visión |
+| V927 | FE24 | Apoyo por sordera |
+| V928 | FE25 | Apoyo por baja audición |
+| V929 | FE26 | Apoyo por deficiencias físicas por accidente |
+| V930 | FE27 | Apoyo por deficiencias físicas congénitas |
+| V931 | FE28 | Apoyo por Síndrome de Down |
+| V932 | FE29 | Apoyo por deficiencias del habla |
+| V933 | FE30 | Apoyo por trastorno autista |
+| V934 | FE31 | Apoyo por otras deficiencias |
+
+:Variables que caracterizan la condición de salud de los individuos {#tbl-sec-8}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V935 | H1 | Asistencia para caminar o subir gradas: Necesidad de apoyo para movilizarse |
+| V936 | H2 | Asistencia para bañarse, vestirse o ir al baño: Apoyo en actividades de higiene personal |
+| V937 | H3 | Asistencia para alimentarse: Ayuda durante las comidas |
+| V938 | H4 | Asistencia para utilizar el servicio sanitario: Apoyo en necesidades básicas |
+| V939 | H5 | Asistencia para acostarse y levantarse: Ayuda en movimientos de descanso |
+| V940 | H6 | Asistencia para hacer trabajo doméstico: Apoyo en tareas del hogar |
+| V941 | H7 | Asistencia para cuidar o dar apoyo: Ayuda en cuidado de otros |
+| V942 | H8 | Asistencia para salir: Apoyo para movilizarse fuera del hogar |
+| V943 | H9 | Asistencia para hacer compras o ir a un centro de salud: Ayuda en actividades externas |
+| V944 | H10 | Asistencia para comunicarse: Apoyo en interacción social |
+| V945 | H10a | Asistencia para manejar su propio dinero: Ayuda en gestión financiera |
+| V946 | H10b | Asistencia para tomar medicamentos: Apoyo en tratamiento médico |
+| V947 | H11 | Asistencia para realizar otra actividad: Ayuda en actividades adicionales |
+| V948 | HA1 | Frecuencia de asistencia para caminar o subir gradas: Nivel de apoyo requerido |
+| V949 | HA2 | Frecuencia de asistencia para bañarse, vestirse o ir al baño: Nivel de apoyo requerido |
+| V950 | HA3 | Frecuencia de asistencia para alimentarse: Nivel de apoyo requerido |
+| V951 | HA4 | Frecuencia de asistencia para utilizar el servicio sanitario: Nivel de apoyo requerido |
+| V952 | HA5 | Frecuencia de asistencia para acostarse y levantarse: Nivel de apoyo requerido |
+| V953 | HA6 | Frecuencia de asistencia para hacer trabajo doméstico: Nivel de apoyo requerido |
+| V954 | HA7 | Frecuencia de asistencia para cuidar o dar apoyo: Nivel de apoyo requerido |
+| V955 | HA8 | Frecuencia de asistencia para salir a la calle: Nivel de apoyo requerido |
+| V956 | HA9 | Frecuencia de asistencia para hacer compras o ir a un centro de salud: Nivel de apoyo requerido |
+| V957 | HA10 | Frecuencia de asistencia para comunicarse: Nivel de apoyo requerido |
+| V958 | HA10a | Frecuencia de asistencia para manejar su propio dinero: Nivel de apoyo requerido |
+| V959 | HA10b | Frecuencia de asistencia para tomar medicamentos: Nivel de apoyo requerido |
+| V960 | HA11 | Frecuencia de asistencia para realizar otra actividad: Nivel de apoyo requerido |
+| V961 | H12 | Cantidad de personas que brindan asistencia: Número de cuidadores |
+| V962 | H13 | Principal asistencia es parte del hogar: Origen del apoyo principal |
+| V963 | H14 | Relación de parentesco de asistencia de otro hogar: Vínculo con cuidador |
+| V964 | H17 | La persona que asiste recibe pago regular: Compensación del cuidador |
+| V965 | H18 | Necesidad de más asistencia: Requerimiento adicional de apoyo |
+| V966 | H19 | Necesidad de alguien que asista: Percepción de apoyo requerido |
+| V967 | H20 | Principal motivo de falta de asistencia: Razones de ausencia de apoyo |
+| V968 | H21 | Frecuencia de decisión sobre ropa diaria: Control en vestimenta |
+| V969 | H22 | Frecuencia de decisión sobre actividades importantes: Control en vida personal |
+| V970 | H23 | Frecuencia de decisión sobre lugares a visitar: Control de movilidad |
+| V971 | H24 | Frecuencia de decisión sobre personas a ver: Control de interacciones sociales |
+| V972 | H25 | Frecuencia de decisión sobre uso de dinero: Control financiero |
+| V973 | H26 | Calidad de la asistencia recibida: Percepción del apoyo |
+
+: Variables que caracterizan el apoyo o asistencia personal que tienen las personas {#tbl-sec-9}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V974 | I1 | Evaluación de la participación familiar en decisiones personales |
+| V975 | I2 | Permiso de participación en actividades sociales |
+| V976 | I3 | Capacidad de tomar decisiones cotidianas |
+| V977 | I4 | Autonomía para tomar decisiones importantes de vida |
+| V978 | I5 | Nivel de aceptación personal por parte de otros |
+| V979 | I6 | Paciencia de las personas hacia el individuo |
+| V980 | I7 | Trato justo y dignidad recibidos |
+| V981 | I8 | Respeto percibido de otras personas |
+| V982 | I9 | Valoración personal por parte de otros |
+| V983 | I10 | Percepción de utilidad social |
+
+: Variables que caracterizan las actitudes de las otras personas {#tbl-sec-10}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V984 | J1_1 | Uso de anteojos o lentes de contacto como producto de apoyo |
+| V985 | J1_2 | Uso de complementos nutricionales como apoyo |
+| V986 | J1_3 | Uso de ayudas para movilidad (bastón, muletas, silla de ruedas) |
+| V987 | J1_4 | Uso de mobiliario adaptado (cama ortopédica, colchón anti escaras) |
+| V988 | J1_5 | Uso de audífonos |
+| V989 | J1_6 | Uso de prótesis u órtesis de extremidades |
+| V990 | J1_7 | Uso de productos de cuidado personal (pañales, silla de baño) |
+| V991 | J1_8 | Uso de animales de asistencia |
+| V992 | J1_9 | Uso de materiales y tecnologías de apoyo para comunicación |
+| V993 | J1_10 | Ajustes en puesto de trabajo |
+| V994 | J1_11 | Uso de Lesco para estudio |
+| V995 | J1_88 | Otros productos de apoyo |
+| V996 | J2_1 | Adquisición de productos de apoyo con ingresos propios |
+| V997 | J2_2 | Adquisición de productos de apoyo por préstamo |
+| V998 | J2_3 | Adquisición de productos de apoyo por donación |
+| V999 | J2_4 | Adquisición de productos de apoyo por institución pública |
+| V1000 | J2_8 | Otra forma de adquisición de productos de apoyo |
+| V1001 | J3 | Facilidad de vida con productos de apoyo |
+| V1002 | J4 | Problemas con productos de apoyo |
+| V1003 | J5_1 | Inadecuación de productos de apoyo a necesidades |
+| V1004 | J5_2 | Incompatibilidad de productos de apoyo con entorno |
+| V1005 | J5_3 | Falta de repuestos o reparación |
+| V1006 | J5_4 | Mala calidad de productos de apoyo |
+| V1007 | J5_5 | Limitaciones económicas para mantenimiento |
+| V1008 | J5_6 | Necesidad de ayuda para usar productos de apoyo |
+| V1009 | J5_7 | Percepción de trato diferente al usar productos |
+| V1010 | J5_8 | Falta de capacitación de proveedores de servicio |
+| V1011 | J5_9 | Restricciones para usar productos de apoyo |
+| V1012 | J6 | Necesidad de otros productos de apoyo |
+| V1013 | J7_1 | Requiere anteojos o lentes de contacto |
+| V1014 | J7_2 | Requiere complementos nutricionales |
+| V1015 | J7_3 | Requiere ayudas para movilidad |
+| V1016 | J7_4 | Requiere mobiliario adaptado |
+| V1017 | J7_5 | Requiere audífonos |
+| V1018 | J7_6 | Requiere prótesis u órtesis |
+| V1019 | J7_7 | Requiere productos de cuidado personal |
+| V1020 | J7_8 | Requiere animales de asistencia |
+| V1021 | J7_9 | Requiere materiales de comunicación adaptados |
+| V1022 | J7_10 | Requiere ajustes en puesto de trabajo |
+| V1023 | J7_11 | Requiere Lesco para estudio |
+| V1024 | J7_88 | Requiere otros productos adicionales |
+| V1025 | J8 | Necesidad de productos de apoyo sin uso actual |
+| V1026 | J9_1 | Necesidad de anteojos o lentes de contacto |
+| V1027 | J9_2 | Necesidad de complementos nutricionales |
+| V1028 | J9_3 | Necesidad de ayudas para movilidad |
+| V1029 | J9_4 | Necesidad de mobiliario adaptado |
+| V1030 | J9_5 | Necesidad de audífonos |
+| V1031 | J9_6 | Necesidad de prótesis u órtesis |
+| V1032 | J9_7 | Necesidad de productos de cuidado personal |
+| V1033 | J9_8 | Necesidad de animales de asistencia |
+| V1034 | J9_9 | Necesidad de materiales de comunicación adaptados |
+| V1035 | J9_10 | Necesidad de ajustes en puesto de trabajo |
+| V1036 | J9_11 | Necesidad de Lesco para estudio |
+| V1037 | J9_88 | Necesidad de otros productos de apoyo |
+| V1038 | J10 | Motivo principal de no tener productos de apoyo necesarios |
+
+: Variables que describen los productos de apoyo, servicios y animales de asistencia de las personas {#tbl-sec-11}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V1042 | K4 | Verificación de servicios de rehabilitación en últimos 12 meses |
+| V1043 | K5 | Frecuencia de atención de rehabilitación |
+| V1044 | K6a | Tipo de centro de rehabilitación (público, privado, otro) |
+| V1045 | K7 | Indicación profesional de necesidad de rehabilitación |
+| V1046 | K9 | Uso de servicios de salud o rehabilitación |
+| V1047 | K10 | Uso de servicios de educación |
+| V1048 | K11 | Uso de servicios de transporte público |
+| V1049 | K12 | Uso de servicios de beneficios sociales |
+| V1050 | K13 | Uso de servicios de telecomunicaciones |
+| V1051 | K14 | Uso de servicios municipales |
+| V1052 | K15 | Uso de servicios bancarios |
+| V1053 | K16 | Uso de servicios comerciales |
+| V1054 | K17 | Uso de servicios judiciales |
+| V1055 | K19 | Uso de servicios de turismo |
+| V1056 | K20 | Uso de servicios profesionales independientes |
+| V1057 | K21 | Uso de otros tipos de servicios |
+| V1058 | KA9 | Calificación de servicios de salud o rehabilitación |
+| V1059 | KA10 | Calificación de servicios de educación |
+| V1060 | KA11 | Calificación de servicios de transporte público |
+| V1061 | KA12 | Calificación de servicios de beneficios sociales |
+| V1062 | KA13 | Calificación de servicios de telecomunicaciones |
+| V1063 | KA14 | Calificación de servicios municipales |
+| V1064 | KA15 | Calificación de servicios bancarios |
+| V1065 | KA16 | Calificación de servicios comerciales |
+| V1066 | KA17 | Calificación de servicios judiciales |
+| V1067 | KA19 | Calificación de servicios de turismo |
+| V1068 | KA20 | Calificación de servicios profesionales independientes |
+| V1069 | KA21 | Calificación de otros tipos de servicios |
+
+: Variables que caracterizan los servicios y su frecuencia {#tbl-sec-12}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V1070 | L1 | Evaluación de calidad de vida en últimos 30 días |
+| V1071 | L2 | Satisfacción personal con la salud |
+| V1072 | L3 | Satisfacción con habilidad para realizar actividades diarias |
+| V1073 | L4 | Satisfacción con relaciones personales |
+| V1074 | L5 | Satisfacción con la vivienda |
+| V1075 | L6 | Satisfacción con ubicación de la vivienda |
+| V1076 | L7 | Satisfacción con energía para actividades diarias |
+| V1077 | L8 | Satisfacción con recursos económicos para necesidades |
+| V1078 | L9 | Satisfacción personal consigo mismo |
+
+: Variables que caracterizan la calidad de vida de las personas {#tbl-sec-13}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V1079 | M9 | Participación en grupos u organizaciones en últimos 12 meses |
+| V1080 | M9a | Pertenencia a dirigencia de grupos u organizaciones |
+| V1081 | M10 | Motivo principal de no participación en grupos |
+| V1082 | M11 | Participación en últimas elecciones presidenciales |
+| V1083 | M12a | Dificultades enfrentadas al ejercer derecho al voto |
+| V1084 | M13 | Actividades de tiempo libre: internet, redes sociales, TV |
+| V1085 | M14 | Actividades de tiempo libre: reuniones sociales y familiares |
+| V1086 | M15 | Actividades de tiempo libre: actividades al aire libre |
+| V1087 | M17 | Actividades de tiempo libre: eventos religiosos o espirituales |
+| V1088 | M19 | Actividades de tiempo libre: práctica de deportes o ejercicio |
+| V1089 | M22 | Actividades de tiempo libre: juegos de mesa o video |
+| V1090 | M23 | Actividades de tiempo libre: actividades artísticas |
+| V1091 | M26 | Actividades de tiempo libre: visitas a comercios |
+| V1092 | M27 | Actividades de tiempo libre: eventos culturales y deportivos |
+| V1093 | M24 | Realización de otras actividades de tiempo libre |
+
+: Variables que caracterizan la participación política, social y tiempo libre de las personas {#tbl-sec-14}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V1094 | N1a | Evaluación de accesibilidad de información en instituciones públicas |
+
+: Variable que caracteriza el acceso a la información {#tbl-sec-15}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V1095 | O1 | Experiencia de discriminación en los últimos 12 meses |
+| V1096 | O2_1 | Discriminación por nivel socioeconómico o educativo |
+| V1097 | O2_2 | Discriminación por sexo |
+| V1098 | O2_3 | Discriminación por edad |
+| V1099 | O2_4 | Discriminación por origen étnico |
+| V1100 | O2_5 | Discriminación por orientación sexual o identidad de género |
+| V1101 | O2_6 | Discriminación por nacionalidad |
+| V1102 | O2_7 | Discriminación por apariencia personal |
+| V1103 | O2_8 | Discriminación por enfermedad o condición de salud |
+| V1104 | O2_9 | Discriminación por discapacidad |
+| V1105 | O2_10 | Discriminación por religión |
+| V1106 | O2_88 | Otro motivo de discriminación |
+| V1107 | O3_1 | Discriminación en el ámbito familiar |
+| V1108 | O3_2 | Discriminación en centros de salud |
+| V1109 | O3_4 | Discriminación en el trabajo |
+| V1110 | O3_5 | Discriminación en centro educativo |
+| V1111 | O3_7 | Discriminación en calle o transporte |
+| V1112 | O3_13 | Discriminación en espacios religiosos |
+| V1113 | O3_14 | Discriminación en oficinas gubernamentales |
+| V1114 | O3_15 | Discriminación en comercios y servicios |
+| V1115 | O3_16 | Discriminación en redes sociales |
+| V1116 | O3_88 | Discriminación en otros espacios |
+
+: Variables que caracterizan la percepción de la discriminación {#tbl-sec-16}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V1117 | G1 | Realización de exámenes para detectar VIH |
+| V1118 | G2 | Exámenes para detectar Infecciones de Transmisión Sexual |
+| V1119 | G3 | Realización de autoexamen de mama |
+| V1120 | G4 | Realización de Papanicolaou o citología vaginal |
+| V1121 | G5 | Exámenes ginecológicos como ultrasonidos o mamografía |
+| V1122 | G6 | Examen de próstata (análisis de sangre o tacto) |
+| V1123 | GA1 | Tiempo transcurrido desde último examen de VIH |
+| V1124 | GA2 | Tiempo desde último examen de Infecciones de Transmisión Sexual |
+| V1125 | GA3 | Tiempo desde último autoexamen de mama |
+| V1126 | GA4 | Tiempo desde último Papanicolaou |
+| V1127 | GA5 | Tiempo desde último examen ginecológico |
+| V1128 | GA6 | Tiempo desde último examen de próstata |
+| V1129 | G7 | Motivo principal de no realizar exámenes médicos |
+| V1130 | G8 | Recepción de información sobre salud sexual y reproductiva |
+| V1131 | G9 | Última vez que tuvo relaciones sexuales |
+
+: Variables que caracterizan la información acerca de la salud sexual de las personas {#tbl-sec-17}
+
+| Identificador | Nombre | Descripción |
+|--------------|--------|-------------|
+| V1132 | P1 | Experiencia de gritos, insultos, humillaciones o descalificaciones |
+| V1133 | P2 | Experiencia de golpes, heridas, jalones de pelo, empujones o patadas |
+| V1134 | P3 | Experiencia de acoso sexual u obligación de realizar actos sexuales |
+| V1135 | P4 | Negación de administrar dinero o recursos propios |
+| V1136 | P5 | Obligación o negación de realizar procedimientos médicos |
+| V1137 | P6 | Negación o limitación de necesidades básicas como alimentación, medicamentos, movilidad o productos de apoyo |
+
+:Variables que caracterizan la información acerca de la violencia de las personas {#tbl-sec-18}
+>>>>>>> 8f37e1732fc127374e815042496670b5e89f6a13
 
 Los datos utilizados durante el trabajo provienen de la Encuesta Nacional sobre Discapacidad (ENADIS), específicamente la realizada en el 2023, realizada por el Instituto Nacional de Estadísticas y Censos (INEC). Los datos provenientes de esta encuesta recopila los datos de personas mayores a 18 años a lo largo del territorio costarricense durante el 9 de octubre y el 30 de noviembre del año 2023. El estudio se basa en personas costarricenses en situación de discapacidad, considerando una muestra de individuos adultos que habitan tanto zonas rurales como urbanas escogidos según el Marco Muestral de Viviendas realizado en el 2011 donde en total se incluyeron 10,461 unidades primarias de muestreo y 1,360,055 viviendas. El individuo o unidad estadística vital para la investigación es la accesibilidad de las personas en situación de discapacidad en su entorno según los datos suministrados. Se puede encontrar información con respecto a esta temática ya que el INED facilita el acceso a la información detallada del proceso de elaboración de las encuestas y las normativas que garantizan el acceso de las personas en situación de discapacidad en distintas instituciones. Además, el INEC realiza periodicamente la ENADIS por lo que se tiene a su vez la evolución histórica de los datos. Los datos fueron encontrados en la página del INEC <https://sistemas.inec.cr/pad5/index.php/catalog/351/data-dictionary>. La base de datos utilizada presenta en total 631 variables pero al ser una cantidad bastante alta se utilizarán mayoritariamente las presentadas a continuación, posteriormente se categorizarán aún más para reducir la cantidad de variables y hacer el estudio más eficiente.
 
@@ -406,6 +1006,8 @@ A partir de estas consideraciones, se plantea la siguiente pregunta de investiga
 
 Para responder esta pregunta, se plantea hacer un análisis utilizando datos numéricos que permitan comparar diferentes situaciones. Una forma de hacerlo es observar cómo cambian los promedios de empleo e ingresos entre personas con distintos niveles de discapacidad. También se pueden buscar relaciones generales entre estas variables para ver si existe algún patrón. Otra opción interesante sería crear una especie de “puntaje” que reúna varios aspectos del empleo, como si la persona tiene trabajo, qué tipo de trabajo tiene y cuánto gana, para así tener una idea más completa de su inclusión laboral.
 
+En este contexto, el presente estudio buscará identificar, dentro del amplio conjunto de variables disponibles, cuáles están asociadas al ingreso económico y a la inclusión laboral de las personas con discapacidad. Esto permitirá distinguir los factores más determinantes y filtrar aquellos cuya relación con las condiciones laborales y económicas sea débil o nula. Así, el análisis se centrará en las dimensiones más relevantes para explicar las desigualdades observadas, lo cual servirá de base para una interpretación empírica más precisa y para el diseño de políticas públicas más focalizadas.
+
 En cuanto a los datos, se utilizarán los resultados de la Encuesta Nacional sobre Discapacidad (ENADIS 2023) del INEC, que cubre personas mayores de 18 años en zonas urbanas y rurales de Costa Rica. Proporciona datos laborales, económicos y sociales de la población con discapacidad, con acceso público a metodología y resultados, garantizando transparencia.
 
 En Costa Rica, las personas con discapacidad enfrentan grandes obstáculos para acceder a empleos de calidad, y estas barreras se acentúan según el grado de discapacidad. Esto repercute directamente en sus ingresos y condiciones de vida. Según @vargas2013, estas personas tienden a ocupar empleos de baja calificación, con un 7,7% trabajando en el sector agrícola y un 5% en ocupaciones no calificadas. Además, presentan alta incidencia de trabajo precario: 12% en trabajo familiar no remunerado y 6% en autoempleo. Estas condiciones reflejan una exclusión sistemática del mercado laboral formal.
@@ -417,9 +1019,4 @@ El tipo y grado de discapacidad también influyen en la contratación. Por ejemp
 Aunque no hay muchos estudios con comparaciones precisas entre ingresos y tipos de discapacidad, la evidencia sugiere una fuerte relación entre el grado de discapacidad, el tipo de empleo al que se accede y el nivel de ingresos percibidos. Esta realidad apunta a una mayor precariedad económica entre quienes presentan discapacidades más severas. Por tanto, es necesario analizar esta situación con datos actualizados para proponer medidas que promuevan la inclusión laboral con equidad.
 
 
-
-{{< pagebreak >}}
-
-
-# Bibliografía
   
