@@ -8,7 +8,13 @@ dplyr
 stringr
 forcats
 lubridate
+haven
+ggridges
+viridisLite
+viridis
 scales
+labelled
+here
 knitr
 kableExtra
 GGally
@@ -19,12 +25,6 @@ airports
 cherryblossom
 usdata
 openintro
-haven
-ggridges
 sf
 RColorBrewer
 see
-viridisLite
-viridis
-labelled
-here

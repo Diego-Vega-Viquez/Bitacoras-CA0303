@@ -350,12 +350,12 @@ cuadro_puestos_vs_grad_disc <- enadis %>%
 cuadro_pos_trab_vs_grad_disc <- enadis %>%
   drop_na(Cap_grado, B8a) %>%
   count(Cap_grado, B8a, name = "Cantidad") %>%
-  group_by(Cap_grado) %>%
+  group_by(B8a) %>%  # Cambia la agrupación para pivotear al revés
   mutate(Proporcion = Cantidad / sum(Cantidad)) %>%
   ungroup() %>%
   mutate(Proporcion = percent(Proporcion, accuracy = 0.01, decimal.mark = ",")) %>%
   select(-Cantidad) %>%
-  pivot_wider(names_from = B8a, values_from = Proporcion, values_fill = "0,00%")
+  pivot_wider(names_from = Cap_grado, values_from = Proporcion, values_fill = "0,00%")
 
 # Tabla de distribución porcentual que muestra la posición en el trabajo según el grado de dificultad en la capacidad (JOSE)
 cuadro_condic_actividad_vs_grad_disc <- enadis %>%

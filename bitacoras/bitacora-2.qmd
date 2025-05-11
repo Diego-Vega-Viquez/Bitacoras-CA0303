@@ -461,7 +461,25 @@ env$grafico4
 
 En la @fig-discapacidad-ingreso se puede ver cómo varía el ingreso per cápita del hogar según el grado de discapacidad. Se utilizó una escala logarítmica para representar mejor los valores extremos. Los diagramas de caja muestran que las personas sin discapacidad tienen una mediana de ingreso más alta que el resto. A medida que aumenta el grado de discapacidad, la mediana del ingreso baja. Además, la dispersión también es menor en los grupos con discapacidad severa o moderada. Se observan algunos valores extremos en todos los grupos, tanto por debajo como por encima de los rangos normales.
 
-Estos datos se complementan con el (cuadro de estadísticos ingreso), donde se resumen los principales valores del ingreso per cápita. La media en el grupo sin discapacidad es de ₡285,065, y va bajando hasta ₡213,770 en el grupo con discapacidad severa. Las medianas y cuartiles siguen una tendencia parecida: por ejemplo, la mediana en el grupo sin discapacidad es de ₡200,000, y en el grupo severo es de ₡140,000. En todos los casos, se nota que tanto los promedios como los rangos intercuartílicos son más bajos cuando hay discapacidad, especialmente si esta es moderada o severa.
+```{r Tabla4}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ingreso-discapacidad
+
+library(knitr)
+library(kableExtra)
+
+kable(env$cuadro_ingreso_vs_grado_discap, 
+      caption = "Distribución porcentual del ingreso per cápita por grado de discapacidad") %>%
+  kable_styling(position = "center", 
+                bootstrap_options = c("striped", "hover", "responsive")) %>%
+  footnote(general = "ENADIS, Costa Rica. (2023)",
+           footnote_as_chunk = TRUE,
+           general_title = "Fuente: ")
+```
+
+Estos datos se complementan con la @tbl-ingreso-discapacidad, donde se resumen los principales valores del ingreso per cápita. La media en el grupo sin discapacidad es de ₡285,065, y va bajando hasta ₡213,770 en el grupo con discapacidad severa. Las medianas y cuartiles siguen una tendencia parecida: por ejemplo, la mediana en el grupo sin discapacidad es de ₡200,000, y en el grupo severo es de ₡140,000. En todos los casos, se nota que tanto los promedios como los rangos intercuartílicos son más bajos cuando hay discapacidad, especialmente si esta es moderada o severa.
 
 
 ```{r Grafico2}
@@ -586,7 +604,7 @@ str(readRDS("../data/enadisJOSE.rds"))
 ```
 \newpage
 
-#### Cuadros
+#### Tablas
 
 ```{r Tabla1}
 #| echo: false
@@ -594,14 +612,11 @@ str(readRDS("../data/enadisJOSE.rds"))
 #| message: false
 #| label: tbl-pos_trab_vs_grad_disc
 
-kable(env$cuadro_pos_trab_vs_grad_disc, 
-      caption = "Distribución porcentual de la posición en el trabajo según el grado de dificultad en la capacidad") %>%
+kable(env$cuadro_pos_trab_vs_grad_disc,  
+      caption = "Distribución porcentual del grado de dificultad en la capacidad según la posición en el trabajo") %>%
   kable_styling(position = "center", 
                 bootstrap_options = c("striped", "hover", "responsive")) %>%
-  column_spec(1, width = "3cm") %>%
-  column_spec(2, width = "3cm") %>%
-  # Rota los nombres de las columnas
-  row_spec(0, angle = 90) %>%          ## Muchachos no encontré otra forma de hacer esto, todo lo que intenté hacía que la tabla divergiera a la derecha y el título quedaba cortado, si no les gusta podrían intentar ajustarla uds, yo la voy a dejar así pues es la opción más viable que encontré
+  column_spec(1, width = "5cm") %>%
   footnote(general = "ENADIS, Costa Rica. (2023)",
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
@@ -621,20 +636,7 @@ kable(env$cuadro_condic_actividad_vs_grad_disc,
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
 ```
-```{r Tabla4}
-#| echo: false
-#| warning: false
-#| message: false
-#| label: tbl-ingreso-discapacidad
 
-kable(env$cuadro_ingreso_vs_grado_discap, 
-      caption = "Distribución porcentual del ingreso per cápita por grado de discapacidad") %>%
-  kable_styling(position = "center", 
-                bootstrap_options = c("striped", "hover", "responsive")) %>%
-  footnote(general = "ENADIS, Costa Rica. (2023)",
-           footnote_as_chunk = TRUE,
-           general_title = "Fuente: ")
-```
 ```{r Tabla8}
 #| echo: false
 #| warning: false
@@ -648,21 +650,6 @@ kable(env$cuadro_promedio_ingreso_vs_pos_y_grado,
   footnote(general = "ENADIS, Costa Rica. (2023)",
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
-```
-
-#### Gráficos
-
-```{r}
-#| label: fig-edad-desempeno
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 18
-#| fig-height: 8.5
-#| fig-cap: "Tendencia del desempeño físico y cognitivo según edad en Costa Rica, 2023."
-
-env$grafico6
-
 ```
 
 ## Propuesta Metodológica
