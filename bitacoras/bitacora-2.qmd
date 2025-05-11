@@ -829,6 +829,18 @@ chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
 
 -   **Resumen en un párrafo**: Cuando se compara el tipo de trabajo entre personas que están ocupadas, se nota que quienes no tienen discapacidad tienden a estar en empleos formales, como en empresas privadas. En cambio, las personas con discapacidad, sobre todo severa, están más en trabajos por cuenta propia o en puestos informales. Esta diferencia también fue confirmada con una prueba estadística que muestra que el tipo de trabajo está relacionado con el grado de discapacidad.
 
+#### Hallazgo 5
+
+-   **Nombre del hallazgo o resultado**: Relación entre el nivel de discapacidad y el ingreso per cápita del hogar.
+
+-   **Resumen en una oración**: A mayor nivel de discapacidad, menor tiende a ser el ingreso per cápita del hogar.
+
+-   **Principal característica**: En la @fig-puntaje-discapacidad-ingreso se observa una tendencia descendente del ingreso conforme aumenta el puntaje de discapacidad, con amplia dispersión y presencia de valores atípicos.
+
+-   **Problemas o posibles desafíos**: Aunque la relación negativa es clara, la alta variabilidad en los datos sugiere que otros factores (educación, empleo, zona, políticas públicas) también influyen en el ingreso. No se aplicó aquí una regresión para estimar el efecto neto del puntaje.
+
+-   **Resumen en un párrafo**: El gráfico de dispersión entre el puntaje de discapacidad y el ingreso per cápita del hogar revela una tendencia clara: las personas con mayor nivel de discapacidad tienden a tener menores ingresos. Esta relación no es lineal ni uniforme, ya que hay una gran dispersión en los valores, lo que indica la influencia de múltiples factores externos. A pesar de algunos valores atípicos con ingresos altos incluso en personas con alto puntaje de discapacidad, la pendiente general del gráfico sugiere que la discapacidad actúa como una barrera económica relevante. Este hallazgo refuerza la necesidad de políticas específicas de apoyo económico y empleabilidad para quienes tienen mayores limitaciones funcionales.
+
 ## Actualización de la UVE de Godwin
 
 ![UVE Heurística](UVE 2.png)
