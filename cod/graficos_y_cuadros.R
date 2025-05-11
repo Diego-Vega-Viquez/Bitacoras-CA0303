@@ -10,6 +10,7 @@ library(here)
 enadis <- readRDS(here("data", "enadisJOSE.rds")) # Listo
 enadis_completa <- readRDS(here("data/enadis_completa.rds")) # Listo
 enadis_oc <- readRDS(here("data/enadis_oc.rds")) # Listo
+
 ##############
 # GRAFICOS  #
 ##############
@@ -301,8 +302,45 @@ grafico9 <- enadis_oc %>%
     panel.grid.major.x = element_blank()  # Elimina líneas de cuadrícula en X
   )
 
-print(grafico9)
+# Grafico estructura ocupacional según el total de horas trabajadas
 
+# Etiquetas para los paneles
+df_plot <- enadis_completa %>%
+  mutate(
+    Enfermedad = fct_recode(Tiene_enfer,
+                            "No tiene enfermedades crónicas" = "No tiene ninguna",
+                            "Tiene al menos una enfermedad crónica" = "Si tiene alguna")
+  ) %>%
+  filter(!is.na(Enfermedad), !is.na(B7), !is.na(Cali_grup_ocup))
+
+# Crear gráfico
+grafico_doble <- ggplot(df_plot, aes(x = B7, fill = Cali_grup_ocup)) +
+  geom_bar(position = "fill", color = "white") +
+  facet_wrap(~ Enfermedad) +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.85) +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  labs(
+    x = "Horas trabajadas semanalmente",
+    y = "Proporción",
+    fill = "Grupo Ocupacional",
+    caption = "Fuente: INEC, ENADIS 2023"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_text(face = "bold", size = 16),
+    axis.text = element_text(size = 13),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 14),
+    legend.text = element_text(size = 12),
+    strip.text = element_text(face = "bold", size = 15)
+  )
+# Guardar gráfico
+ggsave("res/graficos/doble_b7_vs_grupoocup_por_enfermedad.png",
+       plot = grafico_doble,
+       device = "png",
+       width = 18,
+       height = 8,
+       dpi = 900)
 
 ##############
 #   TABLAS   #

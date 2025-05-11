@@ -138,57 +138,56 @@ Los datos utilizados durante el trabajo provienen de la Encuesta Nacional sobre 
 Se puede encontrar información con respecto a esta temática ya que el INEC facilita el acceso a la información detallada del proceso de elaboración de las encuestas y las normativas que garantizan el acceso de las personas en situación de discapacidad en distintas instituciones. Además, el INEC realiza periodicamente la ENADIS por lo que se tiene a su vez la evolución histórica de los datos. Los datos fueron encontrados en la página del INEC <https://sistemas.inec.cr/pad5/index.php/catalog/351/data-dictionary>. La base de datos utilizada presenta en total 631 variables pero al ser una cantidad bastante alta se utilizarán mayoritariamente las presentadas a continuación, posteriormente se categorizarán aún más para reducir la cantidad de variables y hacer el estudio más eficiente.
 
 
-
-| Identificador | Nombre         | Descripción                                                                 |
-|---------------|----------------|-----------------------------------------------------------------------------|
-| V636          | region         | Región de planificación predefinida en la muestra (sin pregunta directa)   |
-| V637          | zona           | Clasificación de la zona como Urbana o Rural (predefinida en la muestra)   |
-| V681          | A4             | Sexo de la persona (hombre o mujer)                                        |
-| V682          | A5             | Edad en años cumplidos de la persona                                       |
-| V684          | A15            | Nivel educativo y año más alto aprobado por la persona                     |
-| V718          | B2             | Realización de actividad remunerada por al menos una hora la semana pasada|
-| V721          | B7             | Cantidad de horas laboradas semanalmente en el trabajo principal           |
-| V722          | B8a            | Posición o categoría ocupacional en el trabajo principal                   |
-| V723          | B8b            | Lugar principal donde realiza las tareas laborales                         |
-| V1141         | Nivel_Instru   | Nivel de instrucción recodificado                                          |
-| V1142         | Escolaridad    | Año de escolaridad (variable creada)                                       |
-| V1143         | A11Condi_aseg  | Condición de aseguramiento                                                 |
-| V1152         | B9_espacios    | Accesibilidad del lugar de trabajo                                         |
-| V1153         | condic_activi  | Condición de actividad                                                     |
-| V1154         | Cali_grup_ocup | Grupo ocupacional del empleo                                               |
-| V1155         | Posi_empleo    | Posición en el empleo                                                      |
-| V1156         | B4_rec         | Cantidad de trabajos                                                       |
-| V1157         | Total_transf_B16 | Total de ingresos por rentas y transferencias                           |
-| V1158         | TOTAL_TRABAJO  | Ingresos netos por trabajo                                                 |
-| V1159         | TOTAL_INGRESO_KISH | Ingreso total neto de kish por todas las fuentes                     |
-| V1160         | TOTAL_INGRESO_HOGAR | Total de ingreso neto del hogar                                      |
-| V1162         | ING_PERCAPITA_HOGAR | Ingresos per cápita del hogar                                       |
-| V1163         | QUINTIL_INGRESO| Quintiles del ingreso neto per cápita nacional                             |
-| V1164         | QUINTIL_ZONA   | Quintiles del ingreso neto per cápita por zona                             |
-| V1167         | Tiene_enfer    | Presencia de al menos una enfermedad crónica diagnosticada                 |
-| V1168         | Tiene_defi     | Presencia de al menos una deficiencia diagnosticada                        |
-| V1189         | FD22_REC       | Ceguera diagnosticada                                                      |
-| V1190         | FD23_REC       | Baja visión diagnosticada                                                  |
-| V1191         | FD24_REC       | Sordera diagnosticada                                                      |
-| V1192         | FD25_REC       | Baja audición diagnosticada                                                |
-| V1193         | FD26_REC       | Deficiencias físicas por accidente                                         |
-| V1194         | FD27_REC       | Deficiencias físicas por malformación                                      |
-| V1195         | FD28_REC       | Síndrome de Down u otra deficiencia intelectual                            |
-| V1196         | FD29_REC       | Deficiencia del habla y lenguaje                                           |
-| V1197         | FD30_REC       | Trastorno del espectro autista                                             |
-| V1198         | FD31_REC       | Otras deficiencias diagnosticadas                                          |
-| V1199         | ASIS_PER       | Recibe asistencia personal                                                 |
-| V1200         | asis_int       | Recibe asistencia personal intensa                                         |
-| V1212         | AUTONOMIA      | Autonomía para toma de decisiones                                          |
-| V1223         | ACTITUDES      | Percepción de actitudes de otras personas                                  |
-| V1224         | USA_PRODUCTOS  | Uso de productos de apoyo o asistencia                                     |
-| V1225         | PROD_ASIS      | Necesidad de productos de apoyo                                            |
-| V1256         | Cap_puntaje    | Métrica de capacidad                                                       |
-| V1257         | Des_puntaje    | Métrica de desempeño                                                       |
-| V1258         | Dis_puntaje    | Puntaje de discapacidad                                                    |
-| V1259         | Cap_grado      | Grado de dificultad en capacidad                                           |
-| V1260         | Dis_grado      | Grado de discapacidad en desempeño                                         |
-| V1261         | Grado_discap   | Grado de discapacidad                                                      |
+| Identificador | Nombre              | Descripción                                                               |
+|---------------|---------------------|---------------------------------------------------------------------------|
+| V636          | region              | Región de planificación predefinida en la muestra (sin pregunta directa)  |
+| V637          | zona                | Clasificación de la zona como Urbana o Rural (predefinida en la muestra)  |
+| V681          | A4                  | Sexo de la persona (hombre o mujer)                                       |
+| V682          | A5                  | Edad en años cumplidos de la persona                                      |
+| V684          | A15                 | Nivel educativo y año más alto aprobado por la persona                    |
+| V718          | B2                  | Actividad remunerada al menos una hora la semana pasada                   |
+| V721          | B7                  | Horas laboradas semanalmente en el trabajo principal                      |
+| V722          | B8a                 | Posición ocupacional en el trabajo principal                              |
+| V723          | B8b                 | Lugar principal donde realiza las tareas laborales                        |
+| V1141         | Nivel_Instru        | Nivel de instrucción recodificado                                         |
+| V1142         | Escolaridad         | Año de escolaridad (variable creada)                                      |
+| V1143         | A11Condi_aseg       | Condición de aseguramiento                                                |
+| V1152         | B9_espacios         | Accesibilidad del lugar de trabajo                                        |
+| V1153         | condic_activi       | Condición de actividad                                                    |
+| V1154         | Cali_grup_ocup      | Grupo ocupacional del empleo                                              |
+| V1155         | Posi_empleo         | Posición en el empleo                                                     |
+| V1156         | B4_rec              | Cantidad de trabajos                                                      |
+| V1157         | Total_transf_B16    | Ingresos por rentas y transferencias                                      |
+| V1158         | TOTAL_TRABAJO       | Ingresos netos por trabajo                                                |
+| V1159         | TOTAL_INGRESO_KISH  | Ingreso neto de kish por todas las fuentes                                |
+| V1160         | TOTAL_INGRESO_HOGAR | Total de ingreso neto del hogar                                           |
+| V1162         | ING_PERCAPITA_HOGAR | Ingresos per cápita del hogar                                             |
+| V1163         | QUINTIL_INGRESO     | Quintil de ingreso per cápita nacional                                    |
+| V1164         | QUINTIL_ZONA        | Quintil de ingreso per cápita por zona                                    |
+| V1167         | Tiene_enfer         | Presencia de al menos una enfermedad crónica diagnosticada                |
+| V1168         | Tiene_defi          | Presencia de al menos una deficiencia diagnosticada                       |
+| V1189         | FD22_REC            | Ceguera diagnosticada                                                     |
+| V1190         | FD23_REC            | Baja visión diagnosticada                                                 |
+| V1191         | FD24_REC            | Sordera diagnosticada                                                     |
+| V1192         | FD25_REC            | Baja audición diagnosticada                                               |
+| V1193         | FD26_REC            | Deficiencia física por accidente                                          |
+| V1194         | FD27_REC            | Deficiencia física por malformación                                       |
+| V1195         | FD28_REC            | Síndrome de Down u otra deficiencia intelectual                           |
+| V1196         | FD29_REC            | Deficiencia del habla y lenguaje                                          |
+| V1197         | FD30_REC            | Trastorno del espectro autista                                            |
+| V1198         | FD31_REC            | Otras deficiencias diagnosticadas                                         |
+| V1199         | ASIS_PER            | Recibe asistencia personal                                                |
+| V1200         | asis_int            | Recibe asistencia personal intensa                                        |
+| V1212         | AUTONOMIA           | Autonomía para toma de decisiones                                         |
+| V1223         | ACTITUDES           | Percepción de actitudes de otras personas                                 |
+| V1224         | USA_PRODUCTOS       | Uso de productos de apoyo o asistencia                                    |
+| V1225         | PROD_ASIS           | Necesidad de productos de apoyo                                           |
+| V1256         | Cap_puntaje         | Métrica de capacidad                                                      |
+| V1257         | Des_puntaje         | Métrica de desempeño                                                      |
+| V1258         | Dis_puntaje         | Puntaje de discapacidad                                                   |
+| V1259         | Cap_grado           | Grado de dificultad en capacidad                                          |
+| V1260         | Dis_grado           | Grado de discapacidad en desempeño                                        |
+| V1261         | Grado_discap        | Grado de discapacidad                                                     |
 
 
 :Variables seleccionadas de la base de datos {#tbl-datos}

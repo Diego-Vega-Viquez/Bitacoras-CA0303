@@ -652,6 +652,21 @@ kable(env$cuadro_promedio_ingreso_vs_pos_y_grado,
            general_title = "Fuente: ")
 ```
 
+#### Gráficos
+
+```{r}
+#| label: fig-doble_grafico
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8
+#| fig-cap: "Distribución del grupo ocupacional según horas trabajadas y presencia de enfermedades crónicas en Costa Rica, 2023."
+
+env$grafico_doble
+```
+
+
 ## Propuesta Metodológica
 
 **Comentario**: En esta sección se expondrán las bases teóricas de la prueba de Kruskal-Wallis y la prueba Chi-cuadrado de independencia, así como las herramientas utilizadas para la implementación del código maqueta
@@ -831,15 +846,15 @@ chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
 
 #### Hallazgo 5
 
--   **Nombre del hallazgo o resultado**: Relación entre el nivel de discapacidad y el ingreso per cápita del hogar.
+-   **Nombre del hallazgo o resultado**: Relación entre carga horaria, grupo ocupacional y enfermedades crónicas.
 
--   **Resumen en una oración**: A mayor nivel de discapacidad, menor tiende a ser el ingreso per cápita del hogar.
+-   **Resumen en una oración**: La distribución del grupo ocupacional varía según la cantidad de horas trabajadas y la presencia de enfermedades crónicas.
 
--   **Principal característica**: En la @fig-puntaje-discapacidad-ingreso se observa una tendencia descendente del ingreso conforme aumenta el puntaje de discapacidad, con amplia dispersión y presencia de valores atípicos.
+-   **Principal característica**: En el gráfico @fig-doble_grafico se observa que las personas con enfermedades crónicas tienden a concentrarse más en ocupaciones no calificadas, especialmente en las jornadas de menor duración. En contraste, entre quienes no presentan enfermedades, hay una mayor proporción en ocupaciones calificadas, en particular en las jornadas más extensas.
 
--   **Problemas o posibles desafíos**: Aunque la relación negativa es clara, la alta variabilidad en los datos sugiere que otros factores (educación, empleo, zona, políticas públicas) también influyen en el ingreso. No se aplicó aquí una regresión para estimar el efecto neto del puntaje.
+-   **Problemas o posibles desafíos**: La visualización no permite distinguir si la relación se debe a discriminación laboral, limitaciones de salud funcional o decisiones personales. Además, no controla por otras variables como edad, educación o región
 
--   **Resumen en un párrafo**: El gráfico de dispersión entre el puntaje de discapacidad y el ingreso per cápita del hogar revela una tendencia clara: las personas con mayor nivel de discapacidad tienden a tener menores ingresos. Esta relación no es lineal ni uniforme, ya que hay una gran dispersión en los valores, lo que indica la influencia de múltiples factores externos. A pesar de algunos valores atípicos con ingresos altos incluso en personas con alto puntaje de discapacidad, la pendiente general del gráfico sugiere que la discapacidad actúa como una barrera económica relevante. Este hallazgo refuerza la necesidad de políticas específicas de apoyo económico y empleabilidad para quienes tienen mayores limitaciones funcionales.
+-   **Resumen en un párrafo**: El gráfico @fig-doble_grafico muestra un patrón claro: las personas con enfermedades crónicas tienden a desempeñar ocupaciones menos calificadas, en especial cuando trabajan menos de 40 horas semanales. En cambio, las personas sin enfermedades están más representadas en ocupaciones calificadas y en jornadas completas o extensas. Esto sugiere una posible relación entre salud crónica y calidad del empleo. La asociación podría estar mediada por restricciones funcionales, discriminación o menor acceso a puestos formales, lo que refuerza la necesidad de políticas de inclusión laboral sensibles a la salud.
 
 ## Actualización de la UVE de Godwin
 
