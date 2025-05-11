@@ -254,12 +254,13 @@ ggsave("res/graficos/grado_disc_vs_horas_lab.png",
        height = 8.5,
        dpi = 900)
 
-
-grafico8 <- enadis_oc %>% ggplot(aes(x = horas, y = ING_PERCAPITA_HOGAR, fill = Cap_grado))+
-  geom_boxplot(outlier.colour = "gray", outlier.shape = 16, outlier.size = 2, width = 0.6)+
+#Gráfico de Ingreso Per Cápita según grado de discapacidad  SIN OUTLIERS(ANDREY)
+grafico8 <- enadis_oc %>% 
+  ggplot(aes(x = "", y = ING_PERCAPITA_HOGAR, fill = Cap_grado)) +
+  geom_boxplot(outlier.shape = NA, width = 0.6) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
   labs(
-    x = "Horas trabajadas (Punto Medio)",
+    x = NULL,  # Elimina el título del eje X
     y = "Ingreso per cápita (₡)",
     fill = "Grado de Discapacidad",
     caption = "Fuente: INEC, ENADIS 2023."
@@ -267,15 +268,40 @@ grafico8 <- enadis_oc %>% ggplot(aes(x = horas, y = ING_PERCAPITA_HOGAR, fill = 
   theme_minimal(base_size = 14) +
   theme(
     axis.title = element_text(face = "bold", size = 20),
-    axis.text = element_text(size = 15),
+    axis.text.x = element_blank(),  # Oculta etiquetas del eje X
+    axis.text.y = element_text(size = 15),
     legend.position = "bottom",
     legend.title = element_text(face = "bold", size = 25),
-    legend.text = element_text(size = 18)
+    legend.text = element_text(size = 18),
+    panel.grid.major.x = element_blank()  # Elimina líneas de cuadrícula en X
+  ) +
+  coord_cartesian(ylim = c(0, 1e6)) 
+
+print(grafico8)
+
+#Gráfico de Ingreso Per Cápita según grado de discapacidad CON OUTLIERS (ANDREY)
+grafico9 <- enadis_oc %>% 
+  ggplot(aes(x = "", y = ING_PERCAPITA_HOGAR, fill = Cap_grado)) +
+  geom_boxplot(outlier.colour = "gray", outlier.shape = 16, outlier.size = 2, width = 0.6)+
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
+  labs(
+    x = NULL,  # Elimina el título del eje X
+    y = "Ingreso per cápita (₡)",
+    fill = "Grado de Discapacidad",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_text(face = "bold", size = 20),
+    axis.text.x = element_blank(),  # Oculta etiquetas del eje X
+    axis.text.y = element_text(size = 15),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 25),
+    legend.text = element_text(size = 18),
+    panel.grid.major.x = element_blank()  # Elimina líneas de cuadrícula en X
   )
 
-print(grafico7)
-
-
+print(grafico9)
 
 
 ##############

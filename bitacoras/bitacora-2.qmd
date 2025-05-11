@@ -478,7 +478,7 @@ env$grafico2
 
 La @fig-posicion-discapacidad muestra la posición en el trabajo principal según el grado de discapacidad. En el grupo sin discapacidad, la mayoría trabaja como empleado en una empresa privada (51.3%). En los grupos con discapacidad, este porcentaje va disminuyendo: en el grupo severo es de 42.6%. Por otro lado, el trabajo por cuenta propia tiene mayor peso en las personas con discapacidad. Por ejemplo, en el grupo severo, el 28.4% trabaja por cuenta propia, mientras que en el grupo sin discapacidad ese porcentaje es de 22.6%. También hay una pequeña diferencia en el empleo en casas particulares y en el porcentaje de personas que trabajan sin recibir pago, que son un poco más frecuentes en los grupos con discapacidad severa.
 
-En cuanto a la cantidad de horas trabajadas semanalmente (ver Cuadro horas), se observa que en el grupo sin discapacidad la mayoría trabaja entre 40 y 48 horas por semana (56.4%). En los otros grupos, ese porcentaje va bajando. Las personas con discapacidad severa tienen el porcentaje más bajo en esta categoría (40.5%). En cambio, en las categorías de menos de 15 horas y de 15 a menos de 40 horas, se ven porcentajes más altos en los grupos con discapacidad. Por ejemplo, el 16.5% de las personas con discapacidad severa trabaja menos de 15 horas, mientras que en el grupo sin discapacidad ese valor es de 5.6%. Esto indica que en los grupos con discapacidad hay una mayor presencia de jornadas reducidas.
+En cuanto a la cantidad de horas trabajadas semanalmente (@fig-horas-laboradas), se observa que en el grupo sin discapacidad la mayoría trabaja entre 40 y 48 horas por semana (56.4%). En los otros grupos, ese porcentaje va bajando. Las personas con discapacidad severa tienen el porcentaje más bajo en esta categoría (40.5%). En cambio, en las categorías de menos de 15 horas y de 15 a menos de 40 horas, se ven porcentajes más altos en los grupos con discapacidad. Por ejemplo, el 16.5% de las personas con discapacidad severa trabaja menos de 15 horas, mientras que en el grupo sin discapacidad ese valor es de 5.6%. Esto indica que en los grupos con discapacidad hay una mayor presencia de jornadas reducidas.
 
 ```{r Grafico5}
 #| label: fig-puntaje-discapacidad-ingreso
@@ -493,6 +493,48 @@ env$grafico5
 ```
 
 En la @fig-puntaje-discapacidad-ingreso, lo que se puede identificar es la relación entre nivel de discapacidad y nivel de ingreso. Este gráfico muestra que, en general, a mayor puntaje de discapacidad, menor tiende a ser el ingreso mensual per cápita del hogar, lo que sugiere una relación negativa entre ambas variables. La principal característica observada es la existencia de una amplia dispersión en los ingresos, lo que indica que, si bien la discapacidad afecta el nivel económico, también hay otros factores que inciden. Uno de los desafíos del análisis es precisamente esta variabilidad: el gráfico no considera directamente otros determinantes del ingreso como el nivel educativo, la región, o las políticas de inclusión laboral. A pesar de ello, el patrón decreciente refuerza la idea de que las personas con mayores limitaciones funcionales enfrentan barreras adicionales para acceder a empleos bien remunerados, lo cual impacta directamente su bienestar económico.
+
+```{r Grafico7}
+#| label: fig-horas-laboradas
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
+#| fig-cap: "Distribución de las horas laboradas en Costa Rica, 2023."
+
+env$grafico7
+
+```
+En la @fig-horas-laboradas se presencia una mayor cantidad de personas que laboran menos de 15 horas en comparación a los demás grupos de personas sin embargo es curioso notar como igual existe un grupo muy amplio y parecido en porcentaje a los demás que laboran de 40 a 48 horas lo cual y es que al analizar @fig-ingreso-per-capita-sin-outliers podemos notar que las estadísticas de los hogares son realmente parecidas a excepción de valores "outliers" ya que sin estos los cuatro grupos tienen una media de aproximadamente 250.000 colones. Esto deja como hipótesis que muchos hogares cuya fuente de ingreso sufre de una discapacidad severa tienen muchas necesidades económicas por lo que igualmente deben trabajar una alta cantidad de horas.
+
+
+```{r Grafico8}
+#| label: fig-ingreso-per-capita-sin-outliers
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Distribución de las horas laboradas en Costa Rica sin outliers, 2023."
+
+env$grafico8
+```
+Como se mencionó anteriormente la distribución sin outliers de horas laboradas es muy similar, sin embargo considerando @fig-ingreso-per-capita-con-outliers se nota que al considerar los valores outliers efectivamente las familias sin grados de discapacidad presentan un mayor salario a comparaciónde los demás a excepción de dos casos donde una familia de grado leve y moderado presentan un salario mucho mayor. Para analizar mejor estos casos se puede aislar estos casos o analizar el perfil a una mayor profundidad para obtener la información necesaria.
+
+
+
+```{r Grafico8}
+#| label: fig-ingreso-per-capita-con-outliers
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Distribución de las horas laboradas en Costa Rica con outliers, 2023."
+
+env$grafico9
+```
 
 
 ```{r Librerías}
