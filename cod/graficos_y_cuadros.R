@@ -273,7 +273,7 @@ grafico8 <- enadis_oc %>% ggplot(aes(x = horas, y = ING_PERCAPITA_HOGAR, fill = 
     legend.text = element_text(size = 18)
   )
 
-print(grafico8)
+print(grafico7)
 
 
 
@@ -411,5 +411,3 @@ cuadro_promedio_ingreso_vs_pos_y_grado <- enadis_completa %>%
     names_from = Cap_grado,
     values_from = Promedio_Ingreso
   ) %>% mutate_if(is.numeric, ~ round(.x, 0))
-
-cuadro_promedio_ingreso_vs_pos_y_grado
