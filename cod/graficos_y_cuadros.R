@@ -9,7 +9,7 @@ library(here)
 #No olvide cargar base de datos en manejo_de_datos.R
 enadis <- readRDS(here("data", "enadisJOSE.rds")) # Listo
 enadis_completa <- readRDS(here("data/enadis_completa.rds")) # Listo
-
+enadis_oc <- readRDS(here("data/enadis_oc.rds")) # Listo
 ##############
 # GRAFICOS  #
 ##############
@@ -411,3 +411,6 @@ cuadro_promedio_ingreso_vs_pos_y_grado <- enadis_completa %>%
     names_from = Cap_grado,
     values_from = Promedio_Ingreso
   ) %>% mutate_if(is.numeric, ~ round(.x, 0))
+
+# cuadro_promedio_ingreso_vs_pos_y_grado
+
