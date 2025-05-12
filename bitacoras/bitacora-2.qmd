@@ -524,35 +524,7 @@ En la @fig-puntaje-discapacidad-ingreso, lo que se puede identificar es la relac
 env$grafico7
 
 ```
-En la @fig-horas-laboradas se presencia una mayor cantidad de personas que laboran menos de 15 horas en comparación a los demás grupos de personas sin embargo es curioso notar como igual existe un grupo muy amplio y parecido en porcentaje a los demás que laboran de 40 a 48 horas lo cual y es que al analizar @fig-ingreso-per-capita-sin-outliers podemos notar que las estadísticas de los hogares son realmente parecidas a excepción de valores "outliers" ya que sin estos los cuatro grupos tienen una media de aproximadamente 250.000 colones. Esto deja como hipótesis que muchos hogares cuya fuente de ingreso sufre de una discapacidad severa tienen muchas necesidades económicas por lo que igualmente deben trabajar una alta cantidad de horas.
-
-
-```{r Grafico8}
-#| label: fig-ingreso-per-capita-sin-outliers
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 10
-#| fig-height: 6
-#| fig-cap: "Distribución de las horas laboradas en Costa Rica sin outliers, 2023."
-
-env$grafico8
-```
-Como se mencionó anteriormente la distribución sin outliers de horas laboradas es muy similar, sin embargo considerando @fig-ingreso-per-capita-con-outliers se nota que al considerar los valores outliers efectivamente las familias sin grados de discapacidad presentan un mayor salario a comparaciónde los demás a excepción de dos casos donde una familia de grado leve y moderado presentan un salario mucho mayor. Para analizar mejor estos casos se puede aislar estos casos o analizar el perfil a una mayor profundidad para obtener la información necesaria.
-
-
-
-```{r Grafico8}
-#| label: fig-ingreso-per-capita-con-outliers
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 10
-#| fig-height: 6
-#| fig-cap: "Distribución de las horas laboradas en Costa Rica con outliers, 2023."
-
-env$grafico9
-```
+En la @fig-horas-laboradas se presencia una mayor cantidad de personas que laboran menos de 15 horas en comparación a los demás grupos de personas sin embargo es curioso notar como igual existe un grupo muy amplio y parecido en porcentaje a los demás que laboran de 40 a 48 horas lo cual y es que al analizar @fig-discapacidad-ingreso podemos notar que las estadísticas de los hogares son realmente parecidas a excepción de valores "outliers" ya que sin estos los cuatro grupos tienen una media de aproximadamente 250.000 colones. Esto deja como hipótesis que muchos hogares cuya fuente de ingreso sufre de una discapacidad severa tienen muchas necesidades económicas por lo que igualmente deben trabajar una alta cantidad de horas.
 
 
 ```{r Librerías}
@@ -651,6 +623,31 @@ kable(env$cuadro_promedio_ingreso_vs_pos_y_grado,
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
 ```
+
+```{r TablaAndrey1}
+#| label: tbl-cuadro_frec_rel_pos_grado
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Frecuencia relativa del grado de discapacidad según la posición de empleo en Costa Rica, 2023."
+
+env$cuadro_frec_relativa_pos_grado
+```
+
+```{r TablaAndrey1}
+#| label: tbl-cuadro_frec_rel_pos_grado
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Frecuencia relativa del grado de discapacidad según la posición de empleo en Costa Rica, 2023."
+
+env$cuadro_frec_relativa_pos_grado
+```
+
 
 #### Gráficos
 
