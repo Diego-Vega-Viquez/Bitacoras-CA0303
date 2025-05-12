@@ -636,18 +636,6 @@ kable(env$cuadro_promedio_ingreso_vs_pos_y_grado,
 env$cuadro_frec_relativa_pos_grado
 ```
 
-```{r TablaAndrey1}
-#| label: tbl-cuadro_frec_rel_pos_grado
-#| echo: false
-#| warning: false
-#| message: false
-#| fig-width: 10
-#| fig-height: 6
-#| fig-cap: "Frecuencia relativa del grado de discapacidad según la posición de empleo en Costa Rica, 2023."
-
-env$cuadro_frec_relativa_pos_grado
-```
-
 
 #### Gráficos
 
