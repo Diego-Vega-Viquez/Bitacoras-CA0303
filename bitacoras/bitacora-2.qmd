@@ -594,6 +594,9 @@ kable(env$cuadro_pos_trab_vs_grad_disc,
            general_title = "Fuente: ")
 
 ```
+
+Esta tabla muestra cómo varía el grado de dificultad en la capacidad de las personas con discapacidad según su posición en el empleo. Se observa que las personas que ocupan cargos como patronos o empleadores presentan mayoritariamente ninguna dificultad (59,85\%), mientras que las personas que trabajan como ayudantes sin recibir pago o como empleadas de casas particulares concentran porcentajes más altos en los niveles de dificultad severa (20,59\% y 21,03\% respectivamente).
+
 ```{r Tabla2}
 #| echo: false
 #| warning: false
@@ -609,6 +612,8 @@ kable(env$cuadro_condic_actividad_vs_grad_disc,
            general_title = "Fuente: ")
 ```
 
+La tabla presenta la condición de actividad laboral (ocupado/a, desocupado/a, fuera de la fuerza de trabajo) en función del grado de dificultad. Se destaca que a medida que aumenta la severidad de la dificultad, disminuye la proporción de personas ocupadas (70,51\% en el grupo sin dificultad vs. 51,44\% en el grupo con dificultad severa), mientras que aumenta notablemente el porcentaje de personas fuera de la fuerza de trabajo (25,05\% a 44,62\%).
+
 ```{r Tabla8}
 #| echo: false
 #| warning: false
@@ -623,6 +628,8 @@ kable(env$cuadro_promedio_ingreso_vs_pos_y_grado,
            footnote_as_chunk = TRUE,
            general_title = "Fuente: ")
 ```
+
+Esta tabla presenta el ingreso per cápita promedio del hogar en función de la condición de actividad y del grado de dificultad. Se evidencia una disminución sistemática del ingreso conforme aumenta la severidad de la discapacidad. Además, las personas ocupadas muestran ingresos más altos que las desocupadas o las que están fuera de la fuerza de trabajo, sin importar el grado de discapacidad.
 
 ```{r TablaAndrey1}
 #| label: tbl-cuadro_frec_rel_pos_grado
@@ -844,6 +851,7 @@ chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
 ## Actualización de la UVE de Godwin
 
 ![UVE Heurística](UVE 2.png)
+
 
 {{< pagebreak >}}
 

@@ -21,6 +21,8 @@ book:
 
 bibliography: references.bib
 csl: apa.csl
+nocite: |
+  @*
 
 format:
   # html:
@@ -44,6 +46,7 @@ format:
     openany: true         # Permite que los capítulos comiencen en cualquier página
     top-level-division: chapter #define cuál es el nivel jerárquico que se usará para estructurar el doc
     number-sections: false  # Desactiva numeración automática
+
 
 execute:
   freeze: auto
