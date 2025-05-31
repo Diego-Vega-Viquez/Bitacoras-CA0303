@@ -33,7 +33,7 @@ enadis_oc <- enadis_oc %>% filter(!is.na(ING_PERCAPITA_HOGAR))
 
 # Recuerde actualizar esta cada vez que se cambie el código para que se guarde
 # Guarda las base de datos en la carpeta data
-saveRDS(obj = enadis, file = "data/enadisJOSE.rds") 
+saveRDS(obj = enadis, file = "data/enadis.rds") 
 saveRDS(obj = enadis_completa, file = "data/enadis_completa.rds")
 saveRDS(obj = enadis_oc, file = "data/enadis_oc.rds")
 

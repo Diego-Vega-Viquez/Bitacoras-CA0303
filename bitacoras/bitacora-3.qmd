@@ -1,0 +1,171 @@
+# Bitácora 3
+
+## Parte de planificacion
+
+### Análisis de modelación
+
+#### *Carga automatica de datos*
+
+```{r}
+#| echo: true
+#| results: hide
+
+# Cargar paquetes necesarios
+library(haven)
+library(scales)
+library(tidyverse)
+
+enadis <- readRDS("../data/enadis.rds") %>%
+  select(
+    A5, A4, region, zona,               # Edad, sexo, ubicación
+    Cap_grado,                         # Grado de discapacidad
+    ING_PERCAPITA_HOGAR,              # Ingreso per cápita del hogar
+    condic_activi, B7, B8a             # Empleo: condición, horas, puesto
+  ) %>%
+  mutate(across(where(~ is.labelled(.x) || is.character(.x)), as_factor)) %>%
+  filter(A5 >= 18 & A5 <= 65)
+
+```
+
+#### *Análisis descriptivo completo*
+
+En las siguientes líneas se muestra el código para generar algunas figuras y cuadros que se mostraron en el análisis descriptivo. Aquellas figuras o cuadros cuyo código no se muestra en este apartado fueron descartadas para las siguientes etapas del proyecto.
+
+```{r}
+#Cantidad de personas con discapacidad según región y zona de residencia
+enadis %>%
+  filter(!is.na(Cap_grado)) %>%
+  count(region, zona) %>%
+  ggplot(aes(x = region, y = n, fill = zona)) +
+  geom_col(
+    position = position_dodge(width = 0.75),
+    width = 0.65,
+    color = "white"
+  ) +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
+  labs(
+    x = "Región",
+    y = "Personas con Discapacidad",
+    fill = "Zona de Residencia",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title.x = element_text(face = "bold", size = 20),
+    axis.title.y = element_text(face = "bold", size = 20, hjust = 0.9),
+    axis.text = element_text(size = 15),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 20),
+    legend.text = element_text(size = 15)
+  )
+
+```
+
+
+```{r}
+#Condición de actividad según grado de discapacidad
+ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
+  geom_bar(position = "fill", color = "white", width = 0.75) +  
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +  
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(
+    x = "Grado de Discapacidad",
+    y = "",
+    fill = "Condición de Actividad",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +  
+  theme(
+    axis.title = element_text(face = "bold", size = 20),  
+    axis.text = element_text(face = "bold", size = 15),  
+    legend.position = "bottom",  
+    legend.title = element_text(face = "bold", size = 20),  
+    legend.text = element_text(size = 15)  
+  )+
+  coord_flip()
+```
+```{r}
+#Distribución del ingreso per cápita por grado de discapacidad 
+ggplot(enadis %>% drop_na(ING_PERCAPITA_HOGAR, Cap_grado),
+       aes(x = Cap_grado, y = ING_PERCAPITA_HOGAR, fill = Cap_grado)) +
+  geom_boxplot(width = 0.6) +
+  scale_y_log10(
+    labels = scales::label_number(prefix = "₡", big.mark = ",")
+  ) +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8, guide = "none") +
+  labs(
+    x = "Grado de Discapacidad",
+    y = "Ingreso per cápita del hogar (escala logarítmica, colones)",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title.x = element_text(face = "bold", size = 20),
+    axis.title.y = element_text(face = "bold", size = 20),
+    axis.text = element_text(size = 15),
+    legend.position = "none"
+  ) + 
+  coord_flip()
+
+```
+
+```{r}
+#Posición en el trabajo según grado de discapacidad
+ggplot(enadis %>% drop_na(), aes(x = Cap_grado, fill = B8a)) +
+  geom_bar(position = "fill", width = 0.75) +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
+  scale_y_continuous(labels = percent_format()) +
+  labs(
+    x = "Grado de Discapacidad",
+    y = "",
+    fill = "Posición en el Trabajo",
+    caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title = element_text(face = "bold", size = 20),
+    axis.text = element_text(size = 15),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 25),
+    legend.text = element_text(size = 18)
+  ) +
+  coord_flip()
+
+```
+```{r}
+# horas laboradas por grado de discapacidad
+enadis %>% filter(condic_activi == "Ocupados/as", !is.na(B7), !is.na(Cap_grado)) %>% ggplot(aes(Cap_grado, fill = B7)) + 
+  geom_bar(position = "fill", width = 0.75) +
+  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
+  scale_y_continuous(labels = percent_format())+
+  labs(
+    x = "Grado de Discapacidad",
+    y = "Porcentaje",
+    fill = "Horas Laboradas",
+    caption = "Fuente: INEC, ENADIS 2023"
+  ) +
+  theme_minimal(base_size = 14) + 
+  theme(
+    axis.title = element_text(face = "bold", size = 17),
+    axis.text = element_text(size = 15),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 20),
+    legend.text = element_text(size = 15)
+  ) +
+  coord_flip()
+```
+
+
+#### *Ajuste del modelo*
+
+#### *Diagnóstico sobre el modelo*
+
+### Construcción de fichas de resultados
+
+### Ordenamiento de los elementos del reporte
+
+## Parte de escritura
+
+## Parte de reflexión
+
+
