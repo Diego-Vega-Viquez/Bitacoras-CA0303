@@ -388,13 +388,11 @@ Barreras estructurales para la inclusión laboral de personas con discapacidad e
 \hline
 & Teoría: Enfoques discriminatorios y no discriminatorios para explicar exclusión laboral \\
 \hline
-Resultados: Menor ingreso per cápita, mayor inactividad, menor cantidad de horas trabajadas, y mayor informalidad entre personas con mayor grado de discapacidad & Resultado: Acceso limitado a empleos de calidad, con menor autonomía, satisfacción y oportunidades de crecimiento \\
+Resultados: Menor ingreso per cápita, mayor inactividad, menor cantidad de horas trabajadas, y mayor informalidad entre personas con mayor grado de discapacidad & Resultado: resultados encontrados por otros autores \\
 \hline
 & Justificación del uso de la prueba Chi-cuadrado, V de Cramer para variables categóricas \\
 \hline
 & Justificación del uso de la prueba Kruskal-Wallis ante datos no normales \\
-\hline
-& Resultados: resultados encontrados por otros autores \\
 \hline
 
 \end{longtable}
