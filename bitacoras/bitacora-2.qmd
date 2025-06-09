@@ -778,6 +778,12 @@ Se plantean las hipótesis de cada prueba:
   - \( H_0 \): No existe asociación entre el tipo de puesto de trabajo y el grado de discapacidad
 
   - \( H_1 \): Sí existe asociación
+
+- Prueba 8: Grado de Discapacidad vs Grado ocupacional
+ 
+  - \( H_0 \): No hay diferencia en el tipo de ocupación según el grado de discapacidad.
+
+  - \( H_1 \): Las personas con discapacidad tienen más probabilidad de estar en ocupaciones de menor calificación.
   
 Se ejecutan las pruebas:
 ```{r}
@@ -839,6 +845,47 @@ cramerV(table(ocupados$Cap_grado, ocupados$B8a),
         bias.correct = TRUE)
 ```
 
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prueba 8: Cali_grup_ocup vs Grado_discap
+chisq.test(table(env$enadis_completa$Cali_grup_ocup, env$enadis_completa$Grado_discap))
+
+cramerV(table(env$enadis_completa$Cali_grup_ocup, env$enadis_completa$Grado_discap), bias.correct = TRUE)
+
+```
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+
+# Cambiar niveles de Cali_grup_ocup
+env$enadis_completa$Cali_grup_ocup <- factor(env$enadis_completa$Cali_grup_ocup,
+                                            levels = levels(env$enadis_completa$Cali_grup_ocup),
+                                            labels = c("Alta", "Media", "No Calificada", "No Especificado"))
+
+# Preparar datos
+datos <- env$enadis_completa %>%
+  group_by(Cali_grup_ocup, Grado_discap) %>%
+  summarise(n = n(), .groups = 'drop') %>%
+  mutate(freq = n / sum(n))
+
+# Gráfico
+ggplot(datos, aes(x = Cali_grup_ocup, y = freq, fill = Grado_discap)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(title = "Distribución del grado de discapacidad según nivel de trabajo.",
+       x = "Categoría de Ocupación",
+       y = "Porcentaje",
+       fill = "Grado_discap") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
 
 ### Construcción de fichas de resultados
 

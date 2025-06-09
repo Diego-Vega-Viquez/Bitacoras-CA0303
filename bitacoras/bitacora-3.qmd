@@ -258,10 +258,46 @@ La prueba Chi-Cuadrado indica una asociación fuerte o significativa entre el gr
 
 :::
 
+:::{.callout-note title="Prueba Chi-Cuadrado/ V de Cramer para la determinación de la califiación del trabajo según el grado de discapacidad."}
+*Resultados*
+
++ Estadístico ($\chi^2$) = 33.722
++ Grados de libertad = 6
++ Valor $p\;=\;7.612e-16$
++ V de Cramer = 0.047
+
+La prueba Chi-Cuadrado reveló una asociación significativa entre el grado de discapacidad y la calificación ocupacional, rechazando la hipótesis nula de independencia entre variables. El estadístico $\chi^2$ con los grados de libertad mostrados indican que las diferencias observadas en la distribución ocupacional no se deben al azar. Sin embargo, la V de Cramer = 0.047 señala que dicha asociación es débil, sugiriendo que el grado de discapacidad solo explica una parte de la variación en la calificación ocupacional, señalando que debe existir otro factor que requiera de un mayor análisis.
+:::
+
+
+
 Note como en conjunto, estas pruebas muestran una respuesta a la pregunta de investigación ya que al usar este conjunto de pruebas, Chi-Cuadrado, V de Cramer y Kruskall-Wallis se pueden afrontar tanto variables categóricas como variables numéricas para el análisis. Los resultados de estas pruebas indican que si hay influencia del grado de discapacidad en la situación de las personas, siedo el efecto más pronunciado en los ingresos percibidos y una afectación no tan significativa en las oportunidades laborales. 
 
 
 #### *Diagnóstico sobre el modelo*
+
+Se analizarán los distintos supuestos de las pruebas de hipótesis utilizadas y se verificará si cada análisis hecho cumple con dichos supuestos. Considere los siguientes resumenes de los supuestos de cada prueba.
+
+::: {.callout-note title="Supuestos de la Prueba de Kruskal-Wallis"}
+
+Para calcular una prueba de Kruskal-Wallis se debe disponer de varias muestras aleatorias independientes con características de, al menos, escala ordinal. Las variables no tienen que satisfacer una curva de distribución.
+:::
+
+Note que los datos de la ENADIS 2023 fueron recolectados mediante muestreo independiente, donde cada observación respresenta una persona diferente sin relación entre casos. Note que el ingreso per cápita del hogar es una variable continua que permite el ordenamiento de rangos necesario para la prueba de Kruskal-Wallis. Además las categorías de grado de discapacidad son mutuamente excluyentes y cada persona pertenece a un solo grupo.
+
+
+:::{.callout-note title="Supuestos de la Prueba Chi-Cuadrado"}
+Para calcular una prueba Chi-Cuadrado se debe disponer de variables categóricas independientes y los grupos de estas variables categóricas deben ser mutuamente excluyentes.
+:::
+
+Note que cada observación pertenece únicamente a una categoría de cada variable analizada, es decir son mutuamente excluyentes. Además de que todas las variables cumplen con una escala nominal u ordinal según el caso con categorías claras y adecuadas. Además una característica crucial es el tamaño de la muestran en este caso la ENADIS 2023 es lo suficientemente grande para garantizar buenos resultados con estas pruebas. 
+
+:::{.callout-note title="Supuestos de la prueba V de Cramer"}
+Para calcular una prueba V de Cramer se deben verificar los mismos supuestos que la Chi-Cuadrado.
+:::
+
+Para esta prueba se siguen resultados similares a los de la Chi-Cuadrado al pedir los mismos supuestos, sin embargo los resultados de esta en su mayoría fueron relaciones débiles por lo que se deben considerar otras variables otras con mayores pesos. Note que esta prueba no otorga una dirección para la fuerza, es decir no se sabe con certeza cual variable es la que provoca el cambio en la otra, solo se sabe la magnitud de esta.
+
 
 ### Construcción de fichas de resultados
 
@@ -300,6 +336,31 @@ Note como en conjunto, estas pruebas muestran una respuesta a la pregunta de inv
 -   **Problemas o posibles desafíos**: Este análisis se limita solo a las personas ocupadas, por lo que excluye a una proporción significativa de personas con discapacidad fuera del mercado laboral, y puede estar sesgado por esa selección.
 
 -   **Resumen en un párrafo**: Entre las personas ocupadas, se encontró una asociación débil entre el grado de discapacidad y el tipo de puesto laboral $(V = 0.07289)$. Aunque la prueba chi-cuadrado fue significativa, la fuerza de la relación es mínima, lo que sugiere que entre quienes logran insertarse laboralmente, el tipo de puesto no varía de forma importante según el nivel de discapacidad. Esto podría interpretarse como un signo positivo en términos de inclusión, aunque también puede reflejar una selección previa: quienes tienen mayores limitaciones funcionales pueden no estar representados en esta muestra ocupada.
+
+#### Hallazgo 9
+
+- **Nombre del hallazgo o resultado**: Aósociación entre el grado de discapacidad y la calificación ocupacional.
+
+- **Resumen en una oración**: Existe una asociación significativa entre el grado de discapacidad y la calificación ocupacional de las personas.
+
+- **Principal característica**: La prueba chi-cuadrado ($\chi^2$ = 33.722, gl = 6, $p\; = \; 7.612e-06$) confirma que exista una relación significativa entre estas variables sin embargo la prueba V de Cramer igual a 0.047 indica que la fuerza de la relación es débil.
+
+- **Problemas o posibles desafíos**: La asociación débil sugiere que hay otros factores que no se estpan considerando que también influyen en la calificación ocupacional, esto requiere un análisis más profundo.
+
+- *Resumen en un párrafo: La prueba chi-cuadrado revela que existe una asociación significativa entre el grado de discapacidad y la calificación ocupacional. Sin emvargo, la V de Cramer de 0.047 indica que esta asociación, aun que si existe, es realmente débil. Esto significa que el grado de discapacidad explica una parte de la variación en la califiación ocupacional sin embargo hay otros factores que también influyen en esto.
+
+
+#### Hallazgo 10
+
+- **Nombre del hallazgo o resultado**: Distribución diferencial de grados de discapacidad según calificación ocupacional
+
+- **Resumen en una oración**: Las personas con discapacidad severa están concentradas principalmente en ocupaciones no calificadas.
+
+- **Principal característica**: En el gráfico se observa que las personas con discapacidad severa representan una mayor proporción en la categoría "No Calificado" comparado con otras categorías ocupacionales, mientras que en ocupaciones de "Alta" calificación predominan personas sin discapacidad.
+
+- **Problemas o posibles desafíos**: Esta distribución sugiere barreras en el acceso a empleos de mayor calificación para personas con discapacidad severa, lo que puede influir en desigualdades socioeconómicas.
+
+- *Resumen en un párrafo: El gráfico muestra patrones claros de desigualdad según el grado de discpacidada. En las ocupaciones no calificadas, las personas con discapacidad severa tienen una representación proporcionalmente mayor, mientras que en ocupaciones de alta calificación, las personas sin discapacidad constituyen la gran mayoría. Las categorías intermedias muestran distribuciones balanceadas, pero aún con predominio de personas sin discapacidad. Esta distribución visual complementalos resultados de las pruebas de hipótesis del hallazgo 9.
 
 \newpage
 

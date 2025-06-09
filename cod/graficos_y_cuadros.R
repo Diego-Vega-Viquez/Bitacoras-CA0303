@@ -342,6 +342,10 @@ ggsave("res/graficos/doble_b7_vs_grupoocup_por_enfermedad.png",
        height = 8,
        dpi = 900)
 
+
+
+
+
 ##############
 #   TABLAS   #
 ##############
