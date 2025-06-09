@@ -557,6 +557,7 @@ library(sf)
 library(RColorBrewer)
 library(see)
 library(kableExtra)
+library(rcompanion)  # para la función cramerV()
 ```
 
 #### Formato tidy
@@ -808,6 +809,36 @@ chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
                  enadis$B8a[enadis$condic_activi == "Ocupados/as"]))
 
 ```
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prueba 5: Cap_grado vs condic_activi
+cramerV(table(enadis$Cap_grado, enadis$condic_activi), 
+        bias.correct = TRUE)
+```
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prueba 6: Cap_grado vs B7 (horas trabajadas)
+cramerV(table(enadis_filtrado$Cap_grado, enadis_filtrado$B7), 
+        bias.correct = TRUE)
+```
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prueba 7: Cap_grado vs B8a (tipo de puesto entre ocupados/as)
+ocupados <- enadis %>% filter(condic_activi == "Ocupados/as")
+cramerV(table(ocupados$Cap_grado, ocupados$B8a), 
+        bias.correct = TRUE)
+```
+
 
 ### Construcción de fichas de resultados
 
