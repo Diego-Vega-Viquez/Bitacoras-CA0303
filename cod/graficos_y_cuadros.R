@@ -453,6 +453,8 @@ cuadro_productos_vs_grado_discap <- enadis_completa %>%
   pivot_wider(names_from = PROD_ASIS, values_from = Proporcion, values_fill = "0,00%") %>%
   rename(!!label_col  := Grado_discap)
 
+#Tablas (ANDREY)
+
 cuadro_frec_relativa_pos_grado <- enadis_oc %>% 
   count(Cap_grado, B8a) %>% group_by(Cap_grado) %>% 
   mutate(
@@ -466,6 +468,8 @@ cuadro_frec_relativa_pos_grado <- enadis_oc %>%
   ) %>% 
   mutate_if(is.numeric, ~ percent(.x, acurracy = 0.1))
 
+print(cuadro_frec_relativa_pos_grado)
+
 cuadro_promedio_ingreso_vs_pos_y_grado <- enadis_completa %>% 
   filter(!is.na(ING_PERCAPITA_HOGAR), !is.na(condic_activi), !is.na(Cap_grado)) %>% 
   group_by(condic_activi, Cap_grado) %>%  summarise(
@@ -476,5 +480,5 @@ cuadro_promedio_ingreso_vs_pos_y_grado <- enadis_completa %>%
     values_from = Promedio_Ingreso
   ) %>% mutate_if(is.numeric, ~ round(.x, 0))
 
-# cuadro_promedio_ingreso_vs_pos_y_grado
+print(cuadro_promedio_ingreso_vs_pos_y_grado)
 

@@ -207,6 +207,60 @@ En el marco de esta investigación, esta estrategia metodológica contribuye dir
 
 Por ejemplo, si la prueba chi-cuadrado indica que hay una relación significativa entre el grado de discapacidad y la condición de actividad, y la V de Cramer sugiere una asociación fuerte, esto implica que el grado de discapacidad influye de manera importante en la participación laboral. Así, estas herramientas permiten pasar de una descripción superficial de diferencias a una evaluación estadística robusta, apoyando conclusiones sobre desigualdad y exclusión en el mercado laboral costarricense.
 
+En este caso se pueden analizar los resultados de las pruebas realizadas para verificar que estan se ajusten al propósito de la investigación
+
+
+::: {.callout-note title="Prueba de Kruskal-Wallis para ingreso per cápita según Grado de Discapacidad"}
+*Resultados*
+
++ Estadístico: H = 192.41
++ Grados de libertad = 3
++ Valor $p\;<\;2.2e-16$
+
+Dichos resultados dicen que hay una diferencia significativa entre los grupos de discapacidad, específicamente en la distribución del ingreso per cápita del hogar entre personas con diferentes grupos de discapacidad. Note como este resultado responde parte de la pregunta de investigación al demostrar que el nivel de ingresos varía sistemáticamente según el grado de discapacidad.
+:::
+
+:::{.callout-note title="Prueba Chi-Cuadrado/ V de Cramer para condición de Actividad según Grado de Discapacidad"}
+*Resultados*
+
++ Estadístico ($\chi^2$) = 219.33
++ Grados de libertad = 6
++ Valor $p\;<\;2.2e-16$
++ V de Cramer = 0.1058
+
+La prueba Chi-Cuadrado demuestra que existe una asociación significativa entre el grado de discapacidad y la condición de actividad laboral. Este hallazgo contribuye parcialmente a la respuesta de nuestra pregunta de investigación. Ahora considerando el resultado de la V de Cramer de 0.1058, este indica que hay una asociación débil, sugiriendo que aunque el grado de discapacidad influye en la participación laboral.
+
+:::
+
+:::{.callout-note title="Prueba Chi-Cuadrado/ V de Cramer para la determinación de las horas trabajadas según el grado de discapacidad"}
+*Resultados*
+
++ Estadístico ($\chi^2$) = 173.32
++ Grados de libertad = 9
++ Valor $p\;<\;2.2e-16$
++ V de Cramer = 0.0939
+
+Note como la prueba de Chi-Cuadrado confirma que existen diferencias significativas en la distribución de horas trabajadas semanalmente según el grado de discapacidad. Al igual que la prueba pasada, esto ayuda a resolver la pregunta de investigación, además al agregar el resultado de la V de Cramer este indica una asociación débil entre estas variables, lo que sugiere que el grado de discapacidad por si solo no es un factor clave para predecir las jornadas laborales. 
+
+:::
+
+
+
+:::{.callout-note title="Prueba Chi-Cuadrado/ V de Cramer para la determinación de la posición en el trabajo según el grado de discapacidad."}
+*Resultados*
+
++ Estadístico ($\chi^2$) = 114.06
++ Grados de libertad = 15
++ Valor $p\;<\;2.2e-16$
++ V de Cramer = 0.0729
+
+La prueba Chi-Cuadrado indica una asociación fuerte o significativa entre el grado de discapacidad y el tipo de posición laboral entre estas personas lo cual ayuda a responder la pregunta de investigación al mostrar que las personas con discapacidad severa tienden más al trabajo por cuenta propia. Sin embargo para este caso, la V de Cramer de 0.0729 indica un valor muy débil de asociación entre estas variables por lo que según este resultado el tipo de puesto no varía drásticamente entre el grado de discapacidad. 
+
+:::
+
+Note como en conjunto, estas pruebas muestran una respuesta a la pregunta de investigación ya que al usar este conjunto de pruebas, Chi-Cuadrado, V de Cramer y Kruskall-Wallis se pueden afrontar tanto variables categóricas como variables numéricas para el análisis. Los resultados de estas pruebas indican que si hay influencia del grado de discapacidad en la situación de las personas, siedo el efecto más pronunciado en los ingresos percibidos y una afectación no tan significativa en las oportunidades laborales. 
+
+
 #### *Diagnóstico sobre el modelo*
 
 ### Construcción de fichas de resultados
