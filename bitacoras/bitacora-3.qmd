@@ -388,17 +388,13 @@ Barreras estructurales para la inclusión laboral de personas con discapacidad e
 \hline
 & Teoría: Enfoques discriminatorios y no discriminatorios para explicar exclusión laboral \\
 \hline
-& Resultado: Menor acceso al empleo; barreras mayores para mujeres y zonas rurales \\
-\hline
-& Resultado: Evidencia experimental de discriminación en contratación \\
-\hline
 Resultados: Menor ingreso per cápita, mayor inactividad, menor cantidad de horas trabajadas, y mayor informalidad entre personas con mayor grado de discapacidad & Resultado: Acceso limitado a empleos de calidad, con menor autonomía, satisfacción y oportunidades de crecimiento \\
 \hline
-& Justificación del uso de la prueba Chi-cuadrado para variables categóricas \\
+& Justificación del uso de la prueba Chi-cuadrado, V de Cramer para variables categóricas \\
 \hline
 & Justificación del uso de la prueba Kruskal-Wallis ante datos no normales \\
 \hline
-& Modelo predictivo sobre empleo según educación e ingreso \\
+& Resultados: resultados encontrados por otros autores \\
 \hline
 
 \end{longtable}
@@ -429,19 +425,13 @@ Introducción & Teoría: Barreras estructurales globales para personas con disca
 \hline
 Introducción & Teoría: Enfoques discriminatorios y no discriminatorios para explicar exclusión laboral (secundario) \\
 \hline
-Introducción & Resultado: En América Latina, personas con discapacidad tienen menos acceso al empleo; barreras mayores para mujeres y zonas rurales (secundario) \\
+Metodología & Metodología: Justificación del uso de la prueba Chi-cuadrado, V de Cramer para variables categóricas (secundario) \\
 \hline
-Introducción & Resultado: Evidencia experimental de discriminación en contratación de personas con discapacidad(secundario) \\
-\hline
-Metodología & Metodología: Justificación del uso de la prueba Chi-cuadrado para variables categóricas (secundario) \\
-\hline
-Metodología & Metodología: Justificación del uso de la prueba Kruskal-Wallis cuando no hay normalidad ni varianzas iguales (Ostertagová et al., 2014) (secundario) \\
-\hline
-Metodología & Metodología y resultado: Modelo predictivo sobre empleo según educación e ingreso en personas con discapacidad (Chile) (secundario) \\
+Metodología & Metodología: Justificación del uso de la prueba Kruskal-Wallis cuando no hay normalidad ni varianzas iguales (secundario) \\
 \hline
 Resultados & Resultados de investigación: Las personas con mayor grado de discapacidad tienen menor ingreso per cápita del hogar. La condición de actividad cambia según el grado de discapacidad; mayor inactividad con discapacidad severa. Las personas con discapacidad severa trabajan menos horas; predominan jornadas parciales. Personas con discapacidad severa tienden a emplearse por cuenta propia o en trabajos informales (primario) \\
 \hline
-Resultados & Resultado: Acceso a empleos temporales o de baja calidad en personas con discapacidad (EE.UU.) (secundario) \\
+Resultados & Resultado: resultados encontrados por otros autores (secundario) \\
 \end{longtable}
 :::
 
