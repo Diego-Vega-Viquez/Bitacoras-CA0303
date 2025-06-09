@@ -344,6 +344,26 @@ siendo \( F_i \) el total de la fila \( i \), \( C_j \) el total de la columna \
 
 Cabe destacar que este tipo de análisis ha sido empleado en estudios como el de @lay_raby_multinomial_2021, donde se utilizaron datos representativos de Chile para modelar las probabilidades de acceso al empleo de personas con discapacidad. En ese trabajo se identificaron variables relevantes como el nivel educativo, el ingreso y los subsidios, que influyen de forma significativa en las oportunidades laborales. Aunque en este proyecto no se aplicó un modelo de regresión logística multinomial, los hallazgos de dicha investigación sirvieron de apoyo para la interpretación de los patrones encontrados con los métodos descriptivos y las pruebas de hipótesis seleccionadas.
 
+Cuando la prueba chi-cuadrado detecta una asociación significativa entre variables categóricas, se hace necesario cuantificar la fuerza de esa relación. Para este propósito se utilizó la V de Cramer, una medida que permite interpretar la magnitud del vínculo entre las variables analizadas.
+
+La V de Cramer tiene la ventaja de ser fácil de interpretar: sus valores van de 0 a 1, donde 0 indica ausencia de asociación y 1 representa una relación perfecta. Esta medida es particularmente útil en tablas de contingencia de cualquier dimensión, y permite comparar el grado de asociación entre diferentes pares de variables. Aunque no existe una escala rígida, se suele considerar que valores menores a 0.10 indican una relación débil, entre 0.10 y 0.29 una relación moderada, y mayores a 0.30 una relación fuerte.
+
+::: {.callout-note title="Definición 2.3 (V de Cramer)"}
+La V de Cramer es una medida de asociación entre dos variables categóricas. Se utiliza comúnmente después de realizar una prueba chi-cuadrado para cuantificar la intensidad de la relación. Su fórmula es:
+
+\[
+V = \sqrt{ \frac{\chi^2}{N \cdot (k - 1)} }
+\]
+
+donde:
+
+- \( \chi^2 \) es el estadístico de la prueba chi-cuadrado de independencia,  
+- \( N \) es el número total de observaciones,  
+- \( k \) es el menor entre el número de filas \( r \) o columnas \( c \): \( k = \min(r, c) \).
+
+El valor de \( V \) está acotado entre 0 y 1. Un valor cercano a 0 indica poca o ninguna asociación, mientras que un valor cercano a 1 indica una asociación fuerte.
+:::
+
 ### Resultados
 
 El análisis de los microdatos de la ENADIS 2023 revela una relación significativa entre el grado de discapacidad y diversos indicadores de acceso al empleo, ingreso y calidad laboral. Estos hallazgos empíricos coinciden con la literatura académica y técnica revisada, tanto en el contexto costarricense como en estudios realizados en el resto del mundo. A continuación, se presentan los principales resultados agrupados en cuatro dimensiones clave: ingreso, condición de actividad y horas trabajadas, posición ocupacional, y calidad del empleo.
