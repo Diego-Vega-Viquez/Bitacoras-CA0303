@@ -398,7 +398,7 @@ Sin embargo, no todas las diferencias observadas en los resultados laborales de 
 
 En este sentido, el presente estudio se enfoca en comprender cómo varía el acceso a oportunidades laborales y el nivel económico de las personas según el grado de discapacidad que presentan. A través del análisis de datos de la Encuesta Nacional sobre Discapacidad (ENADIS) 2023 realizada por el Instituto Nacional de Estadística y Censos de Costa Rica @inec_enadis_2023_pdf, se busca dar una mirada local y actualizada sobre el tema. Además, el estudio se inscribe dentro de una discusión más amplia que reconoce tanto los aspectos estructurales como las decisiones individuales que influyen en la trayectoria laboral de las personas con discapacidad. Esta visión más integral permite proponer recomendaciones que no se limiten únicamente a la creación de leyes inclusivas, sino también a la transformación de prácticas empresariales, educativas y culturales que favorezcan una integración real y sostenible.
 
-### Metodolgía
+### Metodología
 
 Para explorar las diferencias en oportunidades económicas y laborales entre personas con y sin discapacidad, se empleó un enfoque cuantitativo basado en datos de la Encuesta Nacional sobre Discapacidad 2023 (@inec_enadis_2023_pdf). Esta encuesta incluye información detallada sobre ingresos, empleo, nivel educativo, condiciones de salud y otros aspectos relevantes para el análisis de desigualdad.
 
