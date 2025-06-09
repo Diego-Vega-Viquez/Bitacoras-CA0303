@@ -386,7 +386,9 @@ De forma más específica, @pinilla_inequality_2023 señalan que en seis países
 ## Parte de reflexión
 
 
+## Actualización de la UVE de Godwin
 
+![UVE Heurística](UVE 3.png)
 
 {{< pagebreak >}}
 
