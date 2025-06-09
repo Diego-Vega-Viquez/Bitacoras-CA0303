@@ -211,6 +211,42 @@ Por ejemplo, si la prueba chi-cuadrado indica que hay una relación significativ
 
 ### Construcción de fichas de resultados
 
+#### Hallazgo 6
+
+- **Nombre del hallazgo o resultado**: Relación entre grado de discapacidad y condición de actividad.
+
+-   **Resumen en una oración**: Existe una asociación débil entre el grado de discapacidad y la condición de actividad laboral.
+
+-   **Principal característica**: El valor de la V de Cramer fue de 0.1058, lo que indica una relación moderada-débil, aunque significativa, entre ambas variables; es decir, el grado de discapacidad influye en la participación laboral, pero no con gran intensidad.
+
+-   **Problemas o posibles desafíos**: La debilidad de la asociación sugiere que hay otros factores más relevantes que explican la condición de actividad; además, la categorización puede no capturar plenamente la heterogeneidad de las trayectorias laborales.
+
+-   **Resumen en un párrafo**: Los resultados muestran que sí existe una relación entre el grado de discapacidad y la condición de actividad, pero esta relación no es fuerte. El valor de V de Cramer (0.1058) se ubica en el umbral inferior de lo que suele interpretarse como asociación moderada, lo cual indica que el grado de discapacidad incide en la actividad laboral, pero posiblemente en conjunto con otras variables no consideradas aquí. Por ejemplo, la edad, el nivel educativo o el acceso a apoyos pueden tener un peso mayor en la decisión de participar en el mercado de trabajo.
+
+#### Hallazgo 7
+
+-   **Nombre del hallazgo o resultado**: Grado de discapacidad y cantidad de horas trabajadas semanalmente.
+
+-   **Resumen en una oración**: Se encontró una asociación muy débil entre el grado de discapacidad y el rango de horas trabajadas semanalmente.
+
+-   **Principal característica**: El valor de la V de Cramer fue de 0.09389, lo que indica una asociación débil, cercana al umbral de irrelevancia estadística en cuanto a magnitud.
+
+-   **Problemas o posibles desafíos**: Los resultados pueden estar influenciados por la forma de categorizar las horas trabajadas, así como por la omisión de personas sin empleo, y no reflejan condiciones contractuales específicas ni factores estructurales como el subempleo.
+
+-   **Resumen en un párrafo**: Aunque la prueba chi-cuadrado confirmó que existe una relación significativa entre el grado de discapacidad y las horas trabajadas, la V de Cramer revela que dicha relación es muy débil (0.09389). Esto implica que el grado de discapacidad no es un buen predictor de la jornada laboral semanal en este conjunto de datos. Puede haber muchos otros elementos —como el tipo de ocupación, el sector económico o las condiciones familiares— que expliquen mejor la intensidad horaria del trabajo.
+
+#### Hallazgo 8
+
+-   **Nombre del hallazgo o resultado**: Grado de discapacidad y tipo de puesto de trabajo entre personas ocupadas.
+
+-   **Resumen en una oración**: La asociación entre el grado de discapacidad y el tipo de puesto entre ocupados/as es muy débil.
+
+-   **Principal característica**: La V de Cramer fue de 0.07289, el valor más bajo entre las tres pruebas, indicando una asociación débil entre el grado de discapacidad y la forma en que las personas acceden al empleo.
+
+-   **Problemas o posibles desafíos**: Este análisis se limita solo a las personas ocupadas, por lo que excluye a una proporción significativa de personas con discapacidad fuera del mercado laboral, y puede estar sesgado por esa selección.
+
+-   **Resumen en un párrafo**: Entre las personas ocupadas, se encontró una asociación débil entre el grado de discapacidad y el tipo de puesto laboral $(V = 0.07289)$. Aunque la prueba chi-cuadrado fue significativa, la fuerza de la relación es mínima, lo que sugiere que entre quienes logran insertarse laboralmente, el tipo de puesto no varía de forma importante según el nivel de discapacidad. Esto podría interpretarse como un signo positivo en términos de inclusión, aunque también puede reflejar una selección previa: quienes tienen mayores limitaciones funcionales pueden no estar representados en esta muestra ocupada.
+
 \newpage
 
 ### Ordenamiento de los elementos del reporte
@@ -388,41 +424,8 @@ El análisis de la variable posición en el trabajo mostró diferencias claras e
 
 De forma más específica, @pinilla_inequality_2023 señalan que en seis países latinoamericanos, las personas con discapacidad —y especialmente las mujeres y quienes viven en zonas rurales— enfrentan mayores obstáculos para conseguir empleo formal. Las barreras incluyen prejuicios, falta de adaptación en los procesos de contratación y ausencia de políticas activas que incentiven la contratación. En este sentido, los resultados de ENADIS muestran que el patrón costarricense se alinea con esta realidad regional.
 
-#### Hallazgo 6
+Los resultados anteriores se complementan con el cálculo de la V de Cramer, que permite evaluar la fuerza de la asociación entre el grado de discapacidad y las variables categóricas analizadas. En el caso de la condición de actividad, se obtuvo un valor de $V = 0.1058$, lo que indica una asociación débil pero no despreciable, en línea con la evidencia sobre desigualdades persistentes en el acceso al empleo. Para la variable horas trabajadas semanalmente, la asociación fue aún más débil $(V = 0.0939)$, lo que sugiere que, aunque existen diferencias significativas en la distribución de jornadas laborales, el grado de discapacidad no es por sí solo un fuerte determinante de dicha variación. Finalmente, la asociación entre grado de discapacidad y tipo de puesto de trabajo entre las personas ocupadas fue la más baja $(V = 0.0729)$, lo cual puede interpretarse como un reflejo de que, entre quienes logran insertarse en el mercado laboral, el tipo de puesto no varía sustancialmente según el nivel de discapacidad. Estos valores refuerzan la idea de que si bien el grado de discapacidad está asociado a la exclusión del empleo y a peores condiciones laborales, la fuerza de estas asociaciones es moderada o baja, y por tanto debe entenderse como parte de un entramado más amplio de barreras sociales, institucionales y económicas.
 
-- **Nombre del hallazgo o resultado**: Relación entre grado de discapacidad y condición de actividad.
-
--   **Resumen en una oración**: Existe una asociación débil entre el grado de discapacidad y la condición de actividad laboral.
-
--   **Principal característica**: El valor de la V de Cramer fue de 0.1058, lo que indica una relación moderada-débil, aunque significativa, entre ambas variables; es decir, el grado de discapacidad influye en la participación laboral, pero no con gran intensidad.
-
--   **Problemas o posibles desafíos**: La debilidad de la asociación sugiere que hay otros factores más relevantes que explican la condición de actividad; además, la categorización puede no capturar plenamente la heterogeneidad de las trayectorias laborales.
-
--   **Resumen en un párrafo**: Los resultados muestran que sí existe una relación entre el grado de discapacidad y la condición de actividad, pero esta relación no es fuerte. El valor de V de Cramer (0.1058) se ubica en el umbral inferior de lo que suele interpretarse como asociación moderada, lo cual indica que el grado de discapacidad incide en la actividad laboral, pero posiblemente en conjunto con otras variables no consideradas aquí. Por ejemplo, la edad, el nivel educativo o el acceso a apoyos pueden tener un peso mayor en la decisión de participar en el mercado de trabajo.
-
-#### Hallazgo 7
-
--   **Nombre del hallazgo o resultado**: Grado de discapacidad y cantidad de horas trabajadas semanalmente.
-
--   **Resumen en una oración**: Se encontró una asociación muy débil entre el grado de discapacidad y el rango de horas trabajadas semanalmente.
-
--   **Principal característica**: El valor de la V de Cramer fue de 0.09389, lo que indica una asociación débil, cercana al umbral de irrelevancia estadística en cuanto a magnitud.
-
--   **Problemas o posibles desafíos**: Los resultados pueden estar influenciados por la forma de categorizar las horas trabajadas, así como por la omisión de personas sin empleo, y no reflejan condiciones contractuales específicas ni factores estructurales como el subempleo.
-
--   **Resumen en un párrafo**: Aunque la prueba chi-cuadrado confirmó que existe una relación significativa entre el grado de discapacidad y las horas trabajadas, la V de Cramer revela que dicha relación es muy débil (0.09389). Esto implica que el grado de discapacidad no es un buen predictor de la jornada laboral semanal en este conjunto de datos. Puede haber muchos otros elementos —como el tipo de ocupación, el sector económico o las condiciones familiares— que expliquen mejor la intensidad horaria del trabajo.
-
-#### Hallazgo 8
-
--   **Nombre del hallazgo o resultado**: Grado de discapacidad y tipo de puesto de trabajo entre personas ocupadas.
-
--   **Resumen en una oración**: La asociación entre el grado de discapacidad y el tipo de puesto entre ocupados/as es muy débil.
-
--   **Principal característica**: La V de Cramer fue de 0.07289, el valor más bajo entre las tres pruebas, indicando una asociación débil entre el grado de discapacidad y la forma en que las personas acceden al empleo.
-
--   **Problemas o posibles desafíos**: Este análisis se limita solo a las personas ocupadas, por lo que excluye a una proporción significativa de personas con discapacidad fuera del mercado laboral, y puede estar sesgado por esa selección.
-
--   **Resumen en un párrafo**: Entre las personas ocupadas, se encontró una asociación débil entre el grado de discapacidad y el tipo de puesto laboral $(V = 0.07289)$. Aunque la prueba chi-cuadrado fue significativa, la fuerza de la relación es mínima, lo que sugiere que entre quienes logran insertarse laboralmente, el tipo de puesto no varía de forma importante según el nivel de discapacidad. Esto podría interpretarse como un signo positivo en términos de inclusión, aunque también puede reflejar una selección previa: quienes tienen mayores limitaciones funcionales pueden no estar representados en esta muestra ocupada.
 
 
 ## Parte de reflexión
