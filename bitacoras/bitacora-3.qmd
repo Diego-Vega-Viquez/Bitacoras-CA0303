@@ -201,6 +201,12 @@ En conjunto, los datos muestran una clara desventaja estructural para las person
 
 #### *Ajuste del modelo*
 
+El uso combinado de la prueba chi-cuadrado y la V de Cramer permite no solo detectar si existe una asociación significativa entre el grado de discapacidad y variables laborales como la condición de actividad, la posición en el empleo o la jornada laboral, sino también evaluar la fuerza de dicha asociación. Esto aporta una capa adicional de interpretación al análisis, ya que no basta con saber que hay relación, sino también cuán fuerte o débil es esa relación en la práctica.
+
+En el marco de esta investigación, esta estrategia metodológica contribuye directamente a responder la pregunta de investigación: ¿Cuáles son las diferencias en el nivel de ingresos y las oportunidades laborales entre personas con distintos grados de discapacidad? Al aplicar estas pruebas, es posible identificar si las personas con discapacidad enfrentan **desventajas sistemáticas** en variables clave del mercado laboral, y en qué medida dichas desventajas varían según el grado de discapacidad.
+
+Por ejemplo, si la prueba chi-cuadrado indica que hay una relación significativa entre el grado de discapacidad y la condición de actividad, y la V de Cramer sugiere una asociación fuerte, esto implica que el grado de discapacidad influye de manera importante en la participación laboral. Así, estas herramientas permiten pasar de una descripción superficial de diferencias a una evaluación estadística robusta, apoyando conclusiones sobre desigualdad y exclusión en el mercado laboral costarricense.
+
 #### *Diagnóstico sobre el modelo*
 
 ### Construcción de fichas de resultados
