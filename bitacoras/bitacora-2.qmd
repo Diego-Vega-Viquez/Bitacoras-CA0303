@@ -713,6 +713,30 @@ Para saber si las diferencias son significativas, se usa un valor de referencia 
 
 Esta prueba es muy útil en investigaciones sociales porque no requiere que los datos sean normales ni que los grupos tengan tamaños iguales. 
 
+### Método #3: Medida de asociación con V de Cramer
+
+::: {.callout-note title="Definición 2.3 (V de Cramer)"}
+La V de Cramer es una medida de asociación entre dos variables categóricas. Se utiliza comúnmente después de realizar una prueba chi-cuadrado para cuantificar la intensidad de la relación. Su fórmula es:
+
+\[
+V = \sqrt{ \frac{\chi^2}{N \cdot (k - 1)} }
+\]
+
+donde:
+
+- \( \chi^2 \) es el estadístico de la prueba chi-cuadrado de independencia,
+- \( N \) es el número total de observaciones,
+- \( k \) es el menor entre el número de filas \( r \) o el número de columnas \( c \), es decir: \( k = \min(r, c) \).
+
+El valor de \( V \) está acotado entre 0 y 1. Un valor cercano a 0 indica poca o ninguna asociación entre las variables, mientras que un valor cercano a 1 indica una asociación fuerte.
+:::
+
+La V de Cramer se utiliza para saber qué tan fuerte es la relación entre dos variables categóricas una vez que se ha determinado que sí existe asociación (por ejemplo, tras rechazar la hipótesis nula de independencia con una prueba chi-cuadrado). Su valor va de 0 a 1, donde 0 indica ninguna relación y 1 indica una relación perfecta.
+
+Aunque no tiene una regla universal, existen guías orientativas para interpretar la magnitud de V. Por ejemplo, valores menores a 0.1 suelen interpretarse como una relación débil, entre 0.1 y 0.3 como moderada, y mayores a 0.3 como fuerte, dependiendo también del tamaño de la tabla.
+
+Es especialmente útil cuando hay tablas grandes o cuando se quiere comparar la fuerza de asociación entre distintas parejas de variables categóricas.
+
 ### Código
 
 Se carga la base de datos, con todas las variables que se utilizarán para el análisis:
@@ -852,8 +876,3 @@ chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
 
 ![UVE Heurística](UVE 2.png)
 
-
-{{< pagebreak >}}
-
-
-# Bibliografía

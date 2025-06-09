@@ -161,7 +161,8 @@ ggplot(enadis %>% drop_na(), aes(x = Cap_grado, fill = B8a)) +
 #| fig-width: 18
 #| fig-height: 8.5
 # Distribución horas laboradas por grado de discapacidad
-enadis %>% filter(condic_activi == "Ocupados/as", !is.na(B7), !is.na(Cap_grado)) %>% ggplot(aes(Cap_grado, fill = B7)) + 
+enadis %>% filter(condic_activi == "Ocupados/as", !is.na(B7), 
+                  !is.na(Cap_grado)) %>% ggplot(aes(Cap_grado, fill = B7)) + 
   geom_bar(position = "fill", width = 0.75) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
   scale_y_continuous(labels = percent_format())+
@@ -182,6 +183,21 @@ enadis %>% filter(condic_activi == "Ocupados/as", !is.na(B7), !is.na(Cap_grado))
   coord_flip()
 ```
 
+Este análisis utiliza la base de datos ENADIS 2023, filtrada para personas entre 18 y 65 años. Se consideraron variables como el grado de discapacidad, región y zona de residencia, condición de actividad, posición en el trabajo, cantidad de horas laboradas e ingreso per cápita del hogar. Los resultados permiten identificar patrones relevantes sobre la situación socioeconómica de las personas con discapacidad en Costa Rica.
+
+En cuanto a la distribución territorial, la región Central concentra la mayor cantidad de personas con discapacidad, especialmente en zonas urbanas. Esta alta concentración podría generar un sesgo en los resultados generales, ya que el comportamiento de esta región podría influir más que el de otras. Sin embargo, en regiones como Huetar Norte, la mayoría de las personas con discapacidad vive en zonas rurales, lo que evidencia diferencias importantes entre regiones que deben considerarse para el diseño de políticas públicas.
+
+Respecto a la condición de actividad, se observa que el porcentaje de personas ocupadas disminuye a medida que aumenta el grado de discapacidad. Las personas sin discapacidad presentan una tasa de ocupación del 70.5%, mientras que en el grupo con discapacidad severa esta cifra cae a 51.4%. De forma paralela, el porcentaje de personas fuera de la fuerza de trabajo aumenta, pasando de 25.1% (sin discapacidad) a 44.6% (discapacidad severa). Aunque el desempleo abierto no varía sustancialmente, sí hay una ligera alza en los grupos con discapacidad moderada.
+
+El ingreso per cápita del hogar también se ve afectado por el grado de discapacidad. La mediana del ingreso desciende conforme aumenta la severidad de la discapacidad: ₡200,000 para personas sin discapacidad y ₡140,000 para las que presentan discapacidad severa. Además, los grupos con mayor discapacidad muestran menor dispersión en los ingresos, lo cual puede reflejar una concentración en los niveles más bajos de ingreso. A pesar de que se registran valores extremos en todos los grupos, la tendencia general es clara.
+
+En relación con la posición en el empleo, el empleo asalariado formal (principalmente en empresas privadas) es menos común entre personas con discapacidad. En el grupo sin discapacidad, el 51.3% trabaja en este tipo de empleo, mientras que en el grupo con discapacidad severa esa proporción baja a 42.6%. Por el contrario, el trabajo por cuenta propia aumenta con el grado de discapacidad, alcanzando un 28.4% en el grupo severo. También es más frecuente el empleo en casas particulares y el trabajo sin remuneración en los grupos con mayor discapacidad.
+
+En términos de la cantidad de horas trabajadas, las personas sin discapacidad tienden a laborar entre 40 y 48 horas semanales (56.4%), mientras que en el grupo con discapacidad severa solo el 40.5% lo hace. Las jornadas reducidas, especialmente las de menos de 15 horas, son más comunes entre las personas con discapacidad severa (16.5%), en contraste con el 5.6% del grupo sin discapacidad. No obstante, también se observa que algunas personas con discapacidad severa mantienen jornadas extensas, posiblemente por necesidad económica.
+
+Finalmente, la relación entre el puntaje de discapacidad y el ingreso per cápita mensual del hogar muestra una tendencia decreciente. A mayor grado de discapacidad, menor tiende a ser el ingreso. Aunque el gráfico correspondiente revela una amplia dispersión en los ingresos, lo que indica que otros factores también influyen, el patrón general respalda la hipótesis de que las personas con mayores limitaciones enfrentan barreras adicionales para acceder a empleos bien remunerados. Esto incide directamente sobre su bienestar económico y revela la necesidad de intervenciones específicas.
+
+En conjunto, los datos muestran una clara desventaja estructural para las personas con discapacidad, en especial para quienes presentan limitaciones moderadas o severas. Esta desventaja se refleja en el acceso al empleo, las condiciones laborales y los ingresos, lo cual subraya la importancia de diseñar políticas públicas inclusivas que aborden de forma integral estas desigualdades.
 
 #### *Ajuste del modelo*
 
@@ -350,3 +366,9 @@ De forma más específica, @pinilla_inequality_2023 señalan que en seis países
 ## Parte de reflexión
 
 
+
+
+{{< pagebreak >}}
+
+
+# Bibliografía
