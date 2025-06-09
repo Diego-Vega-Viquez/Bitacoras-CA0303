@@ -8,7 +8,9 @@
 
 ```{r}
 #| echo: true
-#| results: hide
+#| results: false
+#| message: false
+#| warning: false
 
 # Cargar paquetes necesarios
 library(haven)
@@ -32,6 +34,11 @@ enadis <- readRDS("../data/enadis.rds") %>%
 En las siguientes líneas se muestra el código para generar algunas figuras y cuadros que se mostraron en el análisis descriptivo. Aquellas figuras o cuadros cuyo código no se muestra en este apartado fueron descartadas para las siguientes etapas del proyecto.
 
 ```{r}
+#| echo: true
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
 #Cantidad de personas con discapacidad según región y zona de residencia
 enadis %>%
   filter(!is.na(Cap_grado)) %>%
@@ -63,6 +70,11 @@ enadis %>%
 
 
 ```{r}
+#| echo: true
+#| warning: false
+#| message: false
+#| fig-width: 20
+#| fig-height: 8.5
 #Condición de actividad según grado de discapacidad
 ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
   geom_bar(position = "fill", color = "white", width = 0.75) +  
@@ -85,6 +97,11 @@ ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
   coord_flip()
 ```
 ```{r}
+#| echo: true
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
 #Distribución del ingreso per cápita por grado de discapacidad 
 ggplot(enadis %>% drop_na(ING_PERCAPITA_HOGAR, Cap_grado),
        aes(x = Cap_grado, y = ING_PERCAPITA_HOGAR, fill = Cap_grado)) +
@@ -110,6 +127,11 @@ ggplot(enadis %>% drop_na(ING_PERCAPITA_HOGAR, Cap_grado),
 ```
 
 ```{r}
+#| echo: true
+#| warning: false
+#| message: false
+#| fig-width: 20
+#| fig-height: 6.5
 #Posición en el trabajo según grado de discapacidad
 ggplot(enadis %>% drop_na(), aes(x = Cap_grado, fill = B8a)) +
   geom_bar(position = "fill", width = 0.75) +
@@ -133,7 +155,12 @@ ggplot(enadis %>% drop_na(), aes(x = Cap_grado, fill = B8a)) +
 
 ```
 ```{r}
-# horas laboradas por grado de discapacidad
+#| echo: true
+#| warning: false
+#| message: false
+#| fig-width: 18
+#| fig-height: 8.5
+# Distribución horas laboradas por grado de discapacidad
 enadis %>% filter(condic_activi == "Ocupados/as", !is.na(B7), !is.na(Cap_grado)) %>% ggplot(aes(Cap_grado, fill = B7)) + 
   geom_bar(position = "fill", width = 0.75) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
