@@ -402,7 +402,6 @@ Mientras que otros estudios describen las barreras o los efectos de la discapaci
 **Contribución propia:**  
 Tener estudios que no solo describan la situación, sino que también permitan hacer predicciones, es clave para entender mejor el problema. Saber qué factores hacen una diferencia permite enfocar los esfuerzos en áreas que realmente puedan mejorar las oportunidades laborales de las personas con discapacidad.
 
-{{< pagebreak >}}
   
 ## Análisis descriptivo
 
@@ -787,32 +786,30 @@ Se plantean las hipótesis de cada prueba:
   
 Se ejecutan las pruebas:
 ```{r}
-#| echo: True
+#| echo: true
 #| warning: false
 #| message: false
-# Prueba 1:
 
-kruskal.test(ING_PERCAPITA_HOGAR ~ Cap_grado, data = enadis)
+# Prueba 1: 
+resultado1 <- kruskal.test(ING_PERCAPITA_HOGAR ~ Cap_grado, data = enadis)
+print(resultado1)
 
 # Prueba 2: 
-
-chisq.test(table(enadis$Cap_grado, enadis$condic_activi))
+resultado2 <- chisq.test(table(enadis$Cap_grado, enadis$condic_activi))
+print(resultado2)
 
 # Prueba 3: 
-
-# Se descartan los valores NA de las horas trabajadas 
-
-enadis_filtrado <- enadis %>%
-  filter(!is.na(B7)) %>%
+enadis_filtrado <- enadis %>% 
+  filter(!is.na(B7)) %>% 
   mutate(B7 = droplevels(B7))
 
-chisq.test(table(enadis_filtrado$Cap_grado, enadis_filtrado$B7))
+resultado3 <- chisq.test(table(enadis_filtrado$Cap_grado, enadis_filtrado$B7))
+print(resultado3)
 
 # Prueba 4: 
-
-#La tabla de contingencia solo contempla ocupados
-chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
-                 enadis$B8a[enadis$condic_activi == "Ocupados/as"]))
+resultado4 <- chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"], 
+                              enadis$B8a[enadis$condic_activi == "Ocupados/as"]))
+print(resultado4)
 
 ```
 
@@ -822,8 +819,9 @@ chisq.test(table(enadis$Cap_grado[enadis$condic_activi == "Ocupados/as"],
 #| message: false
 
 # Prueba 5: Cap_grado vs condic_activi
-cramerV(table(enadis$Cap_grado, enadis$condic_activi), 
-        bias.correct = TRUE)
+resultado5 <- cramerV(table(enadis$Cap_grado, enadis$condic_activi), 
+                      bias.correct = TRUE)
+print(resultado5)
 ```
 ```{r}
 #| echo: true
@@ -831,8 +829,9 @@ cramerV(table(enadis$Cap_grado, enadis$condic_activi),
 #| message: false
 
 # Prueba 6: Cap_grado vs B7 (horas trabajadas)
-cramerV(table(enadis_filtrado$Cap_grado, enadis_filtrado$B7), 
-        bias.correct = TRUE)
+resultado6 <- cramerV(table(enadis_filtrado$Cap_grado, enadis_filtrado$B7), 
+                      bias.correct = TRUE)
+print(resultado6)
 ```
 ```{r}
 #| echo: true
@@ -841,8 +840,9 @@ cramerV(table(enadis_filtrado$Cap_grado, enadis_filtrado$B7),
 
 # Prueba 7: Cap_grado vs B8a (tipo de puesto entre ocupados/as)
 ocupados <- enadis %>% filter(condic_activi == "Ocupados/as")
-cramerV(table(ocupados$Cap_grado, ocupados$B8a), 
-        bias.correct = TRUE)
+resultado7 <- cramerV(table(ocupados$Cap_grado, ocupados$B8a), 
+                      bias.correct = TRUE)
+print(resultado7)
 ```
 
 ```{r}
@@ -851,40 +851,51 @@ cramerV(table(ocupados$Cap_grado, ocupados$B8a),
 #| message: false
 
 # Prueba 8: Cali_grup_ocup vs Grado_discap
-chisq.test(table(env$enadis_completa$Cali_grup_ocup, env$enadis_completa$Grado_discap))
+resultado8_chi <- chisq.test(table(env$enadis_completa$Cali_grup_ocup, env$enadis_completa$Grado_discap))
+print(resultado8_chi)
 
-cramerV(table(env$enadis_completa$Cali_grup_ocup, env$enadis_completa$Grado_discap), bias.correct = TRUE)
+resultado8_cramer <- cramerV(table(env$enadis_completa$Cali_grup_ocup, env$enadis_completa$Grado_discap), 
+                             bias.correct = TRUE)
+print(resultado8_cramer)
 
 ```
 
 ```{r}
-#| echo: true
+#| label: fig-9-and
+#| echo: false
 #| warning: false
 #| message: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Distribución del grado de discapacidad según nivel de trabajo en Costa Rica, 2023."
 
+# Cambiar niveles de Cali_grup_ocup de forma más segura
+env$enadis_completa <- env$enadis_completa %>%
+  mutate(Cali_grup_ocup = factor(Cali_grup_ocup,
+                                levels = levels(Cali_grup_ocup),
+                                labels = c("Alta", "Media", "No Calificada", "No Especificado")))
 
-# Cambiar niveles de Cali_grup_ocup
-env$enadis_completa$Cali_grup_ocup <- factor(env$enadis_completa$Cali_grup_ocup,
-                                            levels = levels(env$enadis_completa$Cali_grup_ocup),
-                                            labels = c("Alta", "Media", "No Calificada", "No Especificado"))
-
-# Preparar datos
+# Preparar datos con manejo de NAs
 datos <- env$enadis_completa %>%
+  filter(!is.na(Cali_grup_ocup), !is.na(Grado_discap)) %>%
   group_by(Cali_grup_ocup, Grado_discap) %>%
   summarise(n = n(), .groups = 'drop') %>%
-  mutate(freq = n / sum(n))
+  group_by(Cali_grup_ocup) %>%
+  mutate(freq = n / sum(n)) %>%
+  ungroup()
 
-# Gráfico
-ggplot(datos, aes(x = Cali_grup_ocup, y = freq, fill = Grado_discap)) +
+# Crear el gráfico
+p <- ggplot(datos, aes(x = Cali_grup_ocup, y = freq, fill = Grado_discap)) +
   geom_bar(stat = "identity", position = "fill") +
   scale_y_continuous(labels = scales::percent_format()) +
-  labs(title = "Distribución del grado de discapacidad según nivel de trabajo.",
+  labs(caption = "Fuente: INEC, ENADIS 2023.",
        x = "Categoría de Ocupación",
        y = "Porcentaje",
-       fill = "Grado_discap") +
+       fill = "Grado discapacidad") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
+print(p)
 ```
 
 ### Construcción de fichas de resultados
