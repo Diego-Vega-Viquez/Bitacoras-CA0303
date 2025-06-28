@@ -1,0 +1,233 @@
+---
+title: "Acceso a oportunidades laborales y nivel económico según el grado de discapacidad"
+author:
+  - "Jose Andrey Prado Rojas-C36174"
+  - "José Carlos Quintero Cedeño-C26152"
+  - "Diego Alberto Vega Víquez-C38367"
+date: today
+bibliography: references.bib
+csl: apa.csl
+nocite: |
+  @*
+
+format:
+  pdf:
+    documentclass: book
+    papersize: letter
+    fontsize: 11pt
+    linestretch: 1
+    geometry:
+      - top=2.5cm
+      - bottom=2.5cm
+      - left=2.5cm
+      - right=2.5cm
+      - headheight=15pt
+      - footskip=1.25cm
+    classoption: oneside
+    openany: true
+    top-level-division: chapter
+    number-sections: false
+    include-in-header: 
+      text: |
+        \renewcommand{\maketitle}{}
+        \usepackage{tcolorbox}
+---
+
+**Análisis estadístico del acceso a oportunidades laborales y nivel económico según el grado de discapacidad en Costa Rica**
+
+\centerline{\textbf{Resumen}}
+
+Ut interdum laoreet maximus. In consectetur, neque eu elementum pretium, elit massa varius mi, id vulputate tortor ipsum ac libero. Cras viverra massa at ipsum lobortis dapibus. Ut faucibus magna quis dui pulvinar, vitae sodales mauris fermentum. Ut iaculis, sem ac condimentum scelerisque, erat urna aliquam orci, sit amet hendrerit augue orci vel ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet efficitur mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris a lacus odio. Donec iaculis dapibus iaculis. Vestibulum rutrum sapien at tortor tempus malesuada. Sed pellentesque ultrices scelerisque. Praesent accumsan lectus eu quam eleifend condimentum. Ut non mauris vitae erat imperdiet euismod quis et mauris. Quisque tempor et est quis consequat. Vivamus vulputate nulla sit amet velit auctor scelerisque. In ut gravida libero. Nunc id imperdiet tellus. In eget sodales lectus. Aenean dapibus fringilla bibendum. Aenean pretium, velit vitae eleifend eleifend, dolor ex pharetra dolor, quis sodales lectus neque quis ex. Etiam elit ipsum, fringilla in rutrum ac, mattis et lectus. Mauris hendrerit nisi quis lectus ornare, eget pellentesque sapien tincidunt.
+
+**Palabras clave**: 
+
+\centerline{\textbf{Agradecimientos}}
+Sed non orci venenatis ex tempus tincidunt quis quis ex. Aliquam molestie tortor vitae ullamcorper condimentum. Aliquam elementum aliquet bibendum. Pellentesque lacinia et neque ut venenatis. Vivamus quis tristique ante. Etiam in est sit amet risus sagittis lobortis a in nunc. Suspendisse sit amet tortor sed ex luctus viverra eu.
+
+### Introducción
+
+Suspendisse ultrices ultricies nunc, vitae efficitur nunc vehicula sit amet. Duis quis ante urna. Sed tempor turpis ut felis tincidunt, eget elementum massa luctus. In vel est ligula. Cras sed elit suscipit, interdum sapien sed, laoreet nisl. Suspendisse tempus lacus a risus mollis cursus. Sed elit eros, scelerisque sit amet convallis ut, tempus ac est. Nam at convallis lectus. In semper in ligula non ultrices. Vestibulum ac nulla cursus, malesuada libero sed, auctor justo. Vivamus non rutrum mi.
+
+In eget sapien in erat mollis interdum et vitae nunc. Sed ante tellus, feugiat at nisi id, posuere dictum lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed condimentum mauris commodo, maximus elit et, pulvinar nibh. Ut porta nisl elit, in mattis nunc convallis varius. Sed quis accumsan justo. Vestibulum eu diam orci. Quisque ut varius nulla. Duis risus nisi, venenatis sed metus non, sagittis imperdiet mi. Aenean tincidunt vulputate nulla non finibus. Praesent finibus lacinia nisi non iaculis. Proin vel dolor elementum felis mollis elementum. Etiam faucibus dictum mi id gravida. In condimentum mi diam, ac commodo nibh eleifend quis.
+
+In nisi erat, ornare sed nisi sit amet, sagittis pharetra nisl. Proin vitae mattis eros, sed volutpat dolor. Phasellus elementum enim nec vulputate consectetur. Vestibulum luctus porta tellus, convallis elementum nisi tempor quis. Donec porttitor eros sed odio dapibus, at blandit lorem convallis. Phasellus interdum ligula sed urna cursus, nec auctor dui dictum. Donec vitae dolor ligula. Sed feugiat laoreet leo, porta luctus arcu iaculis sit amet. Vestibulum aliquam velit nisi, ultrices mattis urna ultricies in. Nulla ullamcorper, lorem sed rutrum viverra, nunc neque mattis elit, a posuere ligula libero et lorem. Vivamus non tortor ante. Aenean sed nunc in nisi lobortis porttitor. Sed at est id dui laoreet rhoncus sit amet eget leo. Fusce consectetur nunc at ligula viverra euismod. Nunc justo augue, hendrerit vehicula nibh id, ornare interdum eros.
+
+Nulla facilisi. Proin nunc sapien, convallis id est vel, egestas vestibulum elit. Fusce nec velit at mi ullamcorper vulputate at nec dolor. In at augue hendrerit, interdum odio rhoncus, pulvinar orci. Vivamus volutpat mi ante, vel porttitor eros gravida pulvinar. Proin ut sodales augue. Donec posuere lacus ex, id viverra elit condimentum non.
+
+Nullam sit amet lorem viverra, accumsan massa ut, ultricies dui. Duis vitae felis dignissim, iaculis orci vel, cursus metus. Integer eleifend ac nunc a sollicitudin. Ut justo magna, congue vitae feugiat a, malesuada placerat tellus. Aliquam nec mollis magna, ut porta ligula. In vel sapien vel nisi faucibus pharetra. Nulla tempor diam magna, id blandit leo tristique dignissim. Praesent ultrices gravida blandit. Maecenas facilisis orci id sodales vestibulum. Cras auctor odio id quam laoreet semper. Donec ut magna mollis, porttitor felis at, tempus sapien. Nam tincidunt nibh eget neque gravida ultrices. Nunc et lacus eu erat lobortis tempor viverra sit amet mauris. Cras condimentum, turpis ut scelerisque eleifend, lorem sem interdum felis, non hendrerit mi nulla a libero. Duis vestibulum diam elementum, mollis dui vitae, rutrum purus. Sed id lorem nec velit consectetur semper id semper ipsum.
+
+Ut sodales maximus tellus, id sollicitudin ex. Mauris justo arcu, scelerisque vulputate mi sed, commodo eleifend nunc. Fusce sed lacus dapibus, ullamcorper lacus ac, varius orci. Praesent non condimentum tortor. Quisque efficitur justo a gravida ornare. Aenean consectetur, dui eu posuere porta, libero erat porta nunc, ac fringilla justo mauris vel metus. Nulla ultrices turpis id porttitor posuere. Ut pellentesque dignissim turpis eget hendrerit. Etiam venenatis sagittis volutpat. Sed vel tristique diam, quis lacinia justo. Nulla sollicitudin volutpat turpis. Sed aliquam ac dolor cursus ullamcorper. Cras vestibulum, nibh sed fringilla viverra, ipsum leo fermentum erat, sed elementum urna felis a lorem.
+
+Suspendisse ultrices ultricies nunc, vitae efficitur nunc vehicula sit amet. Duis quis ante urna. Sed tempor turpis ut felis tincidunt, eget elementum massa luctus. In vel est ligula. Cras sed elit suscipit, interdum sapien sed, laoreet nisl. Suspendisse tempus lacus a risus mollis cursus. Sed elit eros, scelerisque sit amet convallis ut, tempus ac est. Nam at convallis lectus. In semper in ligula non ultrices. Vestibulum ac nulla cursus, malesuada libero sed, auctor justo. Vivamus non rutrum mi.
+
+In eget sapien in erat mollis interdum et vitae nunc. Sed ante tellus, feugiat at nisi id, posuere dictum lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed condimentum mauris commodo, maximus elit et, pulvinar nibh. Ut porta nisl elit, in mattis nunc convallis varius. Sed quis accumsan justo. Vestibulum eu diam orci. Quisque ut varius nulla. Duis risus nisi, venenatis sed metus non, sagittis imperdiet mi. Aenean tincidunt vulputate nulla non finibus. Praesent finibus lacinia nisi non iaculis. Proin vel dolor elementum felis mollis elementum. Etiam faucibus dictum mi id gravida. In condimentum mi diam, ac commodo nibh eleifend quis.
+
+### Metodología
+
+**Descripción de los datos**
+
+**Fuente de la información**
+
+La fuente de datos corresponde a la Encuesta Nacional sobre Discapacidad (ENADIS), aplicada en Costa Rica por el Instituto Nacional de Estadística y Censos (@inec_enadis_2023_pdf). Esta encuesta proporciona información representativa a nivel nacional sobre características sociodemográficas, estado de salud, educación, empleo e ingresos de la población con y sin discapacidad.
+
+**Población de estudio**
+
+La población objeto de estudio se limita a las personas con edades entre 18 y 65 años, correspondiente a la población en edad de trabajar. Dentro de esta población, se analiza a las personas con discapacidad leve, moderada o severa, comparándolas con aquellas que no reportan discapacidad.
+
+**Contexto temporal y espacial de los datos**
+
+Los datos corresponden al año 2023 y tienen cobertura nacional, incluyendo tanto zonas urbanas como rurales de todas las regiones planificadas del país. Las estimaciones y análisis se basan en una muestra compleja, con ponderadores aplicados para representar correctamente a la población costarricense.
+
+**Unidad estadística o individuos**
+
+Cada unidad de análisis corresponde a una persona residente en Costa Rica entre 18 y 65 años, clasificada según su grado de discapacidad, nivel educativo, condición de actividad, tipo de empleo, horas laboradas e ingreso del hogar.
+
+**Variables de interés**
+
+Las variables utilizadas para el análisis son:
+
+*Grado de discapacidad*: sin discapacidad, leve, moderada y severa.
+
+*Condición de actividad*: ocupado, desocupado, fuera de la fuerza de trabajo.
+
+*Tipo de empleo principal*: empleado, trabajador por cuenta propia, informal, entre otros.
+
+*Cantidad de horas trabajadas*: categorizadas como menos de 15 horas, de 15 a menos de 40, de 40 a 48, y más de 48 horas semanales.
+
+*Ingreso per cápita del hogar*: calculado dividiendo el ingreso total del hogar entre la cantidad de personas que lo conforman.
+
+Estas variables se analizan para identificar las diferencias económicas y laborales asociadas al grado de discapacidad. Para cada una, se aplicaron pruebas estadísticas no paramétricas y categóricas según corresponda, considerando los supuestos metodológicos requeridos (como falta de normalidad en los ingresos y naturaleza categórica de la mayoría de las variables explicativas).
+
+**Métodos**
+
+**Prueba de Kruskal-Wallis**
+
+Esta prueba fue utilizada para determinar si existen diferencias en la distribución del ingreso per cápita del hogar entre personas clasificadas según su grado de discapacidad (sin, leve, moderada, severa). La prueba de Kruskal-Wallis permite comparar tres o más grupos independientes utilizando rangos en lugar de valores originales, lo cual es ideal cuando los datos no son normales o tienen valores atípicos importantes (@ostertagova2014kruskal).
+
+\begin{tcolorbox}[title=Prueba de Kruskal-Wallis]
+La prueba de Kruskal-Wallis sirve para ver si las distribuciones de una variable son iguales entre varios grupos. Se basa en rangos y no en los valores originales. El estadístico se calcula con la fórmula:
+
+\[
+H = \frac{12}{N(N+1)} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)
+\]
+
+donde \( N \) es el total de observaciones, \( k \) el número de grupos, \( n_i \) el tamaño del grupo \( i \), y \( R_i \) la suma de los rangos del grupo \( i \).
+\end{tcolorbox}
+
+La hipótesis nula establece que todas las distribuciones son iguales entre los grupos, y se rechaza si el valor p es menor al nivel de significancia (por ejemplo, 0.05), lo que indicaría que al menos un grupo tiene una distribución distinta de los demás.
+
+**Prueba Chi-cuadrado de independencia**
+
+Para analizar si existe una relación entre el grado de discapacidad y otras variables categóricas, como la condición de actividad o el tipo de jornada laboral, se aplicó la prueba Chi-cuadrado de independencia. Esta técnica permite evaluar si dos variables categóricas están asociadas o si son independientes (@mchugh2013chi).
+
+\begin{tcolorbox}[title=Prueba Chi-cuadrado de independencia]
+El estadístico de la prueba se calcula con la fórmula:
+
+\[
+\chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+\]
+
+donde \( O_{ij} \) es la frecuencia observada en la celda \( i, j \), y \( E_{ij} \) es la frecuencia esperada, calculada como:
+
+\[
+E_{ij} = \frac{(F_i)(C_j)}{N}
+\]
+
+siendo \( F_i \) el total de la fila \( i \), \( C_j \) el total de la columna \( j \), y \( N \) el número total de casos.
+\end{tcolorbox}
+
+
+Cabe destacar que este tipo de análisis ha sido empleado en estudios como el de @lay_raby_multinomial_2021, donde se utilizaron datos representativos de Chile para modelar las probabilidades de acceso al empleo de personas con discapacidad. En ese trabajo se identificaron variables relevantes como el nivel educativo, el ingreso y los subsidios, que influyen de forma significativa en las oportunidades laborales. Aunque en este proyecto no se aplicó un modelo de regresión logística multinomial, los hallazgos de dicha investigación sirvieron de apoyo para la interpretación de los patrones encontrados con los métodos descriptivos y las pruebas de hipótesis seleccionadas.
+
+Cuando la prueba chi-cuadrado detecta una asociación significativa entre variables categóricas, se hace necesario cuantificar la fuerza de esa relación. Para este propósito se utilizó la **V de Cramer**, una medida que permite interpretar la magnitud del vínculo entre las variables analizadas.
+
+La V de Cramer tiene la ventaja de ser fácil de interpretar: sus valores van de 0 a 1, donde 0 indica ausencia de asociación y 1 representa una relación perfecta. Esta medida es particularmente útil en tablas de contingencia de cualquier dimensión, y permite comparar el grado de asociación entre diferentes pares de variables. Aunque no existe una escala rígida, se suele considerar que valores menores a 0.10 indican una relación débil, entre 0.10 y 0.29 una relación moderada, y mayores a 0.30 una relación fuerte.
+
+\begin{tcolorbox}[title=V de Cramer]
+La V de Cramer es una medida de asociación entre dos variables categóricas. Se utiliza comúnmente después de realizar una prueba chi-cuadrado para cuantificar la intensidad de la relación. Su fórmula es:
+
+\[
+V = \sqrt{ \frac{\chi^2}{N \cdot (k - 1)} }
+\]
+
+donde:
+
+\begin{itemize}
+  \item \( \chi^2 \) es el estadístico de la prueba chi-cuadrado de independencia,  
+  \item \( N \) es el número total de observaciones,  
+  \item \( k \) es el menor entre el número de filas \( r \) o columnas \( c \): \( k = \min(r, c) \).
+\end{itemize}
+
+El valor de \( V \) está acotado entre 0 y 1. Un valor cercano a 0 indica poca o ninguna asociación, mientras que un valor cercano a 1 indica una asociación fuerte.
+\end{tcolorbox}
+
+### Resultados
+
+El análisis de los microdatos de la ENADIS 2023 revela una relación significativa entre el grado de discapacidad y diversos indicadores de acceso al empleo, ingreso y calidad laboral. Estos hallazgos empíricos coinciden con la literatura académica y técnica revisada, tanto en el contexto costarricense como en estudios realizados en el resto del mundo. A continuación, se presentan los principales resultados agrupados en cuatro dimensiones clave: ingreso, condición de actividad y horas trabajadas, posición ocupacional, y calidad del empleo.
+
+Los ingresos per cápita del hogar varían significativamente según el grado de discapacidad. La prueba de Kruskal-Wallis aplicada al ingreso per cápita arrojó un estadístico \( \chi^2 \) = 192.41, con 3 grados de libertad y un valor p < 2.2e-16, lo que confirma que las distribuciones de ingreso no son iguales entre los grupos. Las personas sin discapacidad tienen las medianas de ingreso más altas, mientras que estas disminuyen conforme aumenta la severidad de la discapacidad.
+
+Esta diferencia puede observarse gráficamente en la @fig-ingreso, donde se presenta un diagrama de cajas del ingreso per cápita del hogar (en escala logarítmica) según el grado de discapacidad.
+
+![Distribución del ingreso per cápita del hogar por grado de discapacidad](../res/graficos/ingreso_hogar_vs_grado_discapacidad.png){ #fig-ingreso width=80% }
+
+Se aprecia que las personas sin discapacidad concentran mayores niveles de ingreso y menor dispersión relativa. A medida que aumenta el grado de discapacidad (de leve a severo), la mediana de ingreso disminuye visiblemente, y la distribución presenta mayor asimetría y presencia de valores extremos. Además, la media (representada con una “x”) es sistemáticamente superior a la mediana, lo que sugiere que existen algunos ingresos altos que elevan el promedio, especialmente en los grupos sin discapacidad o con discapacidad leve.
+
+Este resultado es coherente con los hallazgos de @jimenez_agravio_2010 en España, donde se mostró que las personas con discapacidad no solo tienen menores ingresos, sino que deben asumir mayores gastos en su vida cotidiana, generando un agravio económico comparativo frente a la población general. A diferencia de este patrón de reducción absoluta del ingreso, el estudio de @pu_effects_2023 en Taiwán evidenció un fenómeno diferente: aunque el ingreso total no se reduce drásticamente tras adquirir una discapacidad, sí cambia su composición. Las personas con discapacidad pasan a depender menos del ingreso salarial y más de fuentes pasivas como intereses, renta de propiedades o transferencias. Este cambio en la composición puede indicar una mayor exposición a ingresos inestables o no recurrentes, situación que también podría darse en Costa Rica, aunque se requieren más estudios para confirmarlo.
+
+El análisis de la condición de actividad mediante la prueba de Chi-cuadrado reveló diferencias estadísticamente significativas (\( \chi^2 \) = 219.33, gl = 6, p < 2.2e-16). Las personas con discapacidad severa presentan una proporción mucho mayor de inactividad económica, mientras que la tasa de ocupación es más alta en personas sin discapacidad.
+
+Como se observa en la @fig-condic, estas diferencias son consistentes: la proporción de personas fuera de la fuerza de trabajo aumenta conforme se agrava el grado de discapacidad, pasando de un 25% en personas sin discapacidad a un 45% en aquellas con discapacidad severa. Por el contrario, la proporción de personas ocupadas disminuye notablemente en ese mismo trayecto, bajando de un 71% a solo un 51%. Este patrón es coherente con lo reportado por @ananian_study_2024, quienes concluyen que las tasas de participación laboral de personas con discapacidad son más bajas en la mayoría de países, incluso cuando estas personas tienen niveles de educación y experiencia similares a la población sin discapacidad.
+
+![Distribución porcentual de la condición de actividad por grado de discapacidad](../res/graficos/cond_act_seg_grad_disc.png){ #fig-condic width=80% }
+
+Además, la distribución de las horas trabajadas semanalmente presenta diferencias estadísticamente significativas entre los grupos definidos por grado de discapacidad (\( \chi^2 \) = 173.32, gl = 9, p < 2.2e-16). Tal como se muestra en la @fig-horas, en los grupos con discapacidad moderada y severa es más común observar jornadas parciales, especialmente aquellas inferiores a las 40 horas semanales. Por ejemplo, un 39% de las personas con discapacidad severa trabaja menos de 40 horas a la semana, en contraste con un 24% entre quienes no reportan discapacidad.
+
+Este patrón indica una reducción en la jornada laboral proporcional a la severidad de la discapacidad, y sugiere una mayor prevalencia de empleos de medio tiempo o con condiciones menos estables. Esta tendencia ha sido documentada por @donelly_income_2020, quienes demostraron que los graduados universitarios con discapacidad, además de recibir menores ingresos, tienden a trabajar menos horas y a enfrentar trayectorias laborales más fragmentadas. Asimismo, @henly_intrinsic_2020 señalan que la reducción de horas suele ir acompañada de menor autonomía y menores posibilidades de desarrollo profesional, contribuyendo a perpetuar un ciclo de precariedad.
+
+En el contexto costarricense, @oca_retos_2020 destacan que una proporción considerable de personas con discapacidad no trabaja debido a barreras estructurales como la falta de accesibilidad, prejuicios por parte de empleadores y desconocimiento sobre incentivos legales. Por tanto, las menores jornadas observadas no necesariamente reflejan una preferencia voluntaria por parte de las personas con discapacidad, sino limitaciones impuestas por un entorno laboral poco inclusivo.
+
+![Distribución de las horas laboradas semanales por grado de discapacidad](../res/graficos/grado_disc_vs_horas_lab.png){ #fig-horas width=80% }
+
+
+El análisis de la variable posición en el trabajo mostró diferencias claras entre los grupos según el grado de discapacidad (\( \chi^2 \) = 114.06, gl = 15, p < 2.2e-16). Como se observa en la @fig-posicion, las personas con discapacidad tienden a desempeñarse con mayor frecuencia como trabajadoras por cuenta propia o como ayudantes sin remuneración, mientras que la categoría de empleados asalariados es más común entre las personas sin discapacidad.
+
+![Distribución del grado de discapacidad por posición en el empleo principal](../res/graficos/pos_trabajo_vs_grad_disc.png){ #fig-posicion width=80% }
+
+Esta tendencia refleja un mayor grado de informalidad y vulnerabilidad laboral entre quienes presentan alguna discapacidad, lo cual coincide con lo planteado por @schur_dead_2002, quienes señalan que, en contextos donde el mercado laboral no es inclusivo, las personas con discapacidad terminan accediendo mayormente a empleos informales, temporales o de medio tiempo, que suelen estar peor remunerados y carecer de protección social.
+
+De forma complementaria, @pinilla_inequality_2023 documentan que en seis países latinoamericanos se observa un patrón similar: las personas con discapacidad, y especialmente las mujeres y quienes viven en zonas rurales, enfrentan mayores barreras para acceder al empleo formal. Estas barreras incluyen prejuicios en los procesos de contratación, escasa adaptación en los lugares de trabajo y ausencia de políticas efectivas que incentiven la inclusión laboral. En este sentido, los resultados costarricenses obtenidos a partir de la ENADIS 2023 refuerzan la evidencia sobre esta exclusión estructural en la región.
+
+
+Los resultados anteriores se complementan con el cálculo de la V de Cramer, una medida estadística utilizada para evaluar la fuerza de la asociación entre dos variables categóricas. A diferencia de la prueba Chi-cuadrado, que solo indica si existe una relación significativa, la V de Cramer permite cuantificar cuán fuerte o débil es esa relación. Sus valores van de 0 a 1, donde 0 significa ausencia total de asociación y 1 indica una relación perfecta.
+
+En este caso, el grado de discapacidad se contrastó con diferentes variables categóricas del ámbito laboral. En primer lugar, para la condición de actividad (ocupado/a, desocupado/a, fuera de la fuerza laboral), se obtuvo un valor de 
+$V = 0.1058$, lo cual representa una asociación débil pero no trivial. Este hallazgo es coherente con lo observado en la @fig-condic, donde se evidencia que la inactividad económica aumenta conforme se agrava el grado de discapacidad. Aunque la diferencia es visible, la magnitud moderada del valor indica que otros factores también contribuyen a la exclusión del empleo, como la falta de accesibilidad, prejuicios estructurales y políticas públicas insuficientes —tal como sugieren @ananian_study_2024 y @oca_retos_2020.
+
+Para la variable horas trabajadas semanalmente, el valor de la V de Cramer fue incluso menor $V = 0.0939$, indicando una asociación más débil. En la @fig-horas, se aprecia que las personas con discapacidad severa o moderada tienden a concentrarse en jornadas parciales (menos de 40 horas), en contraste con quienes no presentan discapacidad, que predominan en jornadas completas. Este patrón sugiere que, aunque hay diferencias significativas, la discapacidad por sí sola no explica completamente la distribución del tiempo laboral, lo cual coincide con lo documentado por @donelly_income_2020 y @henly_intrinsic_2020 sobre los obstáculos estructurales que afectan la estabilidad y calidad del empleo.
+
+Finalmente, en el análisis de la posición ocupacional (empleado/a, patrono/a, cuenta propia, ayudante sin remuneración), el valor de $V = 0.0729$ fue el más bajo de los tres casos. Esto indica que, entre las personas que sí están ocupadas, el tipo de puesto de trabajo no varía de forma marcada según el grado de discapacidad. Aun así, la @fig-posicion muestra que las personas con discapacidad tienen mayor presencia en trabajos por cuenta propia y no remunerados, lo cual puede estar vinculado a procesos de autoexclusión forzada o empleo informal, como también señalan @schur_dead_2002 y @pinilla_inequality_2023 en sus análisis sobre barreras de acceso al empleo formal.
+
+En conjunto, estos valores de la V de Cramer permiten afirmar que el grado de discapacidad sí está relacionado con peores condiciones laborales, pero que la fuerza de dicha relación es limitada, lo cual refuerza la necesidad de entender la exclusión laboral como un fenómeno multicausal. La discapacidad no actúa de manera aislada, sino en interacción con el entorno económico, institucional, educativo y sociocultural del país.
+
+{{< pagebreak >}}
+
+### Conclusiones
+
+Quisque ante lorem, viverra a diam vel, pulvinar aliquet nunc. Integer nibh justo, mattis a justo vel, ultrices porta dolor. Suspendisse sollicitudin bibendum justo, sit amet interdum felis semper vitae. Sed blandit non urna vel finibus. Suspendisse vel accumsan erat, euismod malesuada sem. In congue vitae lacus in tincidunt. Nulla et turpis nec metus suscipit bibendum ac at massa. Etiam hendrerit elit nunc, vitae suscipit mauris ullamcorper sed. Fusce pulvinar ligula sed felis varius, id finibus lectus accumsan. Suspendisse consectetur elit sit amet metus efficitur semper.
+
+Nullam non magna dictum, tempus massa ac, tincidunt est. Morbi in lacinia mi. Sed eget leo et augue blandit mollis. Donec placerat gravida luctus. Etiam sagittis leo vitae lacus auctor ultricies. Suspendisse elit libero, sagittis vel volutpat nec, ultricies nec ante. Curabitur et orci magna. Vivamus pharetra massa semper ornare sodales. Quisque et pretium orci.
+
+Donec eu semper mauris. Donec sed lacus sit amet turpis luctus facilisis mattis dapibus tellus. Morbi quis accumsan odio. Integer nulla felis, consectetur non cursus id, ultrices a mi. Nunc interdum cursus congue. Phasellus lobortis egestas dapibus. In hac habitasse platea dictumst. Nulla et dolor et felis lobortis luctus a in felis. Etiam non eros mollis, lacinia neque sed, ornare mi. Nam ut accumsan tellus, sagittis fringilla urna. Phasellus a pellentesque felis, eu congue nunc. Nulla consectetur purus quam, in aliquet nunc blandit eget.
+
+Vestibulum fringilla lorem sit amet bibendum eleifend. Nunc eget risus eget arcu semper fermentum. In hac habitasse platea dictumst. Donec tempor eleifend feugiat. Duis a mollis felis, venenatis aliquet nisi. Cras in nulla libero. Donec tincidunt nibh mi, ac sagittis neque aliquet vitae. Quisque sit amet sodales diam. Vivamus quis vestibulum tortor. Fusce neque elit, elementum quis dolor non, vulputate tempor est. Nulla sed ipsum sit amet dui dapibus ultricies ac vel libero. Vestibulum sodales neque in nisl dignissim fermentum. Aenean ornare purus id velit pretium tempus.
+
+Duis eros ex, auctor ac nisl sed, eleifend tristique ante. Praesent ut gravida lacus. Integer pulvinar at dolor quis sollicitudin. Curabitur odio velit, blandit eget mauris vitae, dapibus pulvinar risus. Proin ut odio non leo lobortis faucibus quis sed ipsum. Nulla pretium, diam sit amet vehicula fringilla, diam libero suscipit dui, quis facilisis urna orci sed diam. Integer nec augue in eros euismod interdum. Curabitur ipsum nibh, tristique quis erat ut, varius euismod turpis. Vestibulum auctor magna ut massa maximus commodo.
+
+Suspendisse molestie purus at magna vehicula ornare. Vestibulum et mollis dui, eget convallis leo. Mauris consectetur vel turpis congue rutrum. Nam bibendum sagittis aliquam. Quisque quis ante vitae est scelerisque ultrices id sit amet sem. Duis tincidunt vulputate neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sit amet purus hendrerit, faucibus ante id, ultricies orci. Phasellus pulvinar, felis eget cursus consequat, purus mi malesuada turpis, in ornare mi magna fermentum purus. Aliquam lacinia tortor tortor, a congue sem porta sed. Donec finibus, sapien consectetur suscipit aliquet, orci augue tincidunt leo, at auctor quam quam sed lectus.
+
+Pellentesque tempus purus et auctor interdum. Etiam at quam enim. Donec velit magna, dignissim congue fringilla et, facilisis non felis. Ut nisi orci, consequat nec iaculis sed, fringilla sed tortor. Quisque fringilla ullamcorper dignissim. Morbi condimentum lorem vel dui molestie, eget pellentesque lorem fermentum. Integer faucibus ex id libero viverra porta. Nunc bibendum metus vitae diam auctor, at tincidunt arcu dapibus. Donec venenatis sagittis libero sit amet ultrices.
+
+{{< pagebreak >}}
+
+### Bibliografía

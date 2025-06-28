@@ -5,9 +5,9 @@ library(viridis)
 library(scales)
 library(labelled)
 library(here)
-
+library(plyr)
 #No olvide cargar base de datos en manejo_de_datos.R
-enadis <- readRDS(here("data", "enadisJOSE.rds")) # Listo
+enadis <- readRDS(here("data", "enadis.rds")) # Listo
 enadis_completa <- readRDS(here("data/enadis_completa.rds")) # Listo
 enadis_oc <- readRDS(here("data/enadis_oc.rds")) # Listo
 
@@ -18,8 +18,10 @@ enadis_oc <- readRDS(here("data/enadis_oc.rds")) # Listo
 # Grafico distribución de la condición de actividad laboral según el grado de discapacidad. (JOSE)
 
 grafico1 <- ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
-  geom_bar(position = "fill", color = "white", width = 0.75) +  # Ajuste de ancho
-  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +  # Ajuste de la paleta de colores
+  geom_bar(position = "fill", width = 0.75) +  # Ajuste de ancho
+  scale_fill_viridis_d(option = "D",
+                       begin = 0.2,
+                       end = 0.8) +  # Ajuste de la paleta de colores
   scale_y_continuous(labels = scales::percent_format()) +
   labs(
     # title = "Gráfico 1. \nCondición de actividad según grado de discapacidad",
@@ -29,63 +31,254 @@ grafico1 <- ggplot(enadis, aes(x = Cap_grado, fill = condic_activi)) +
     fill = "Condición de Actividad",
     caption = "Fuente: INEC, ENADIS 2023."
   ) +
-  theme_minimal(base_size = 14) +  # Tamaño base ajustado
+  annotate(
+    "text",
+    x = 1,
+    y = 0.2505 / 2,
+    label = "25%",
+    color = "white",
+    size = 10
+  ) +
+  annotate(
+    "text",
+    x = 1,
+    y =  1 - 0.2505 / 2,
+    label = "71%",
+    color = "white",
+    size = 10
+  ) +
+  annotate(
+    "text",
+    x = 2,
+    y = 0.2505 / 2,
+    label = "28%",
+    color = "white",
+    size = 10
+  ) +
+  annotate(
+    "text",
+    x = 2,
+    y =  1 - 0.2505 / 2,
+    label = "68%",
+    color = "white",
+    size = 10
+  ) +
+  annotate(
+    "text",
+    x = 3,
+    y = 0.2505 / 2,
+    label = "33%",
+    color = "white",
+    size = 10
+  ) +
+  annotate(
+    "text",
+    x = 3,
+    y =  1 - 0.2505 / 2,
+    label = "62%",
+    color = "white",
+    size = 10
+  ) +
+  annotate(
+    "text",
+    x = 4,
+    y = 0.2505 / 2,
+    label = "45%",
+    color = "white",
+    size = 10
+  ) +
+  annotate(
+    "text",
+    x = 4,
+    y =  1 - 0.2505 / 2,
+    label = "51%",
+    color = "white",
+    size = 10
+  ) +
+  theme_minimal(base_size = 14) +  
   theme(
     # plot.title = element_text(size = 32, face = "bold", hjust = 0),
     # plot.subtitle = element_text(size = 28, hjust = 0),
-    axis.title = element_text(face = "bold", size = 20),  # Títulos de ejes más grandes
-    axis.text = element_text(face = "bold", size = 15),  # Texto de ejes más grande
-    legend.position = "bottom",  # Posición de la leyenda
-    legend.title = element_text(face = "bold", size = 20),  # Título de la leyenda
-    legend.text = element_text(size = 15)  # Texto de la leyenda más grande
-  )+
+    axis.title = element_text(face = "bold", size = 20),
+    axis.text = element_text(face = "bold", size = 20),
+    axis.text.x = element_blank(),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold", size = 20),
+    legend.text = element_text(size = 16)  
+    
+  ) +
   coord_flip()
 
 ggsave("res/graficos/cond_act_seg_grad_disc.png", 
        plot = last_plot(), 
        device = "jpg", 
-       width = 18, # Tamaño: 11.5 pulgadas de ancho
-       height = 6.5, # Tamaño: 6 pulgadas de alto
-       dpi = 900)  # Calidad: 900 pixeles por pulgada
-
-
+       width = 12, 
+       height = 6, 
+       dpi = 300)  
 
 
 # Gráfico de distribución de la posición en el trabajo según el grado de discapacidad. (JOSE)
 
-grafico2 <- ggplot(enadis %>% drop_na(), aes(x = Cap_grado, fill = B8a)) +
+grafico2 <- ggplot(enadis %>% drop_na(), aes(x = B8a, fill = Cap_grado)) +
   geom_bar(position = "fill", width = 0.75) +
   scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
   scale_y_continuous(labels = percent_format()) +
   labs(
     # title = "Gráfico 2. \nPosición en el trabajo según grado de discapacidad",
     # subtitle = "Distribución porcentual de personas ocupadas según tipo de empleo en Costa Rica, 2023",
-    x = "Grado de Discapacidad",
-    y = "",
-    fill = "Posición en el Trabajo",
+    fill = "Grado de Discapacidad",
+    y = NULL,
+    x = "Posición en el Trabajo",
     caption = "Fuente: INEC, ENADIS 2023."
+  ) +
+  annotate(
+    "text",
+    x = 1,
+    y= 1 - 0.6/2,
+    label = "60%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y= 1 - 0.43/2,
+    label = "43%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y= 1 - 0.48/2,
+    label = "48%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y= 1 - 0.35/2,
+    label = "35%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 1,
+    y = 0.05/2,
+    label = "4%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y= 0.14/2,
+    label = "14%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y= 0.12/2,
+    label = "12%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y= 0.21/2,
+    label = "21%",
+    color = "white",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 1,
+    y = 0.04 + 0.16/2,
+    label = "16%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y= 0.14 + 0.21/2,
+    label = "21%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y= 0.12 + 0.19/2,
+    label = "19%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y= 0.21 + 0.24/2,
+    label = "24%",
+    color = "white",
+    size = 5
+  ) +
+  annotate(
+    "text",
+    x = 1,
+    y = 0.04 + 0.16 + 0.19/2,
+    label = "19%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y= 0.14 + 0.21 + 0.22/2,
+    label = "22%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y= 0.12 + 0.19 + 0.21/2,
+    label = "21%",
+    color = "white",
+    size = 5
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y= 0.21 + 0.24 + 0.21/2,
+    label = "21%",
+    color = "white",
+    size = 5
   ) +
   theme_minimal(base_size = 14) +
   theme(
    # plot.title = element_text(size = 32, face = "bold", hjust = 0),
    # plot.subtitle = element_text(size = 28, hjust = 0),
-    axis.title = element_text(face = "bold", size = 20),
+    axis.title = element_text(face = "bold", size = 15, hjust = 1),
     axis.text = element_text(size = 15),
     legend.position = "bottom",
-    legend.title = element_text(face = "bold", size = 25),
-    legend.text = element_text(size = 18)
+    legend.title = element_text(face = "bold", size = 15),
+    legend.text = element_text(size = 15),
+    plot.caption = element_text(size = 10),
+    axis.text.x = element_blank()
   ) +
   coord_flip()
 
 ggsave("res/graficos/pos_trabajo_vs_grad_disc.png", 
        plot = last_plot(), 
        device = "jpg", 
-       width = 20, # Tamaño: 11.5 pulgadas de ancho
-       height = 6.5, # Tamaño: 6 pulgadas de alto
-       dpi = 900)  # Calidad: 900 pixeles por pulgada
-
-
-
+       width = 10, # Tamaño: 11.5 pulgadas de ancho
+       height = 3, # Tamaño: 6 pulgadas de alto
+       dpi = 300)  # Calidad: 900 pixeles por pulgada
 
 # Gráfico de barras que muestra la cantidad de personas con discapacidad según región de planificación y zona de residencia (urbana o rural) (JOSE)
 grafico3 <- enadis %>%
@@ -110,12 +303,13 @@ grafico3 <- enadis %>%
   theme(
    # plot.title = element_text(size = 32, face = "bold", hjust = 0),
    # plot.subtitle = element_text(size = 28, hjust = 0),
-    axis.title.x = element_text(face = "bold", size = 20),  # Solo título eje X
-    axis.title.y = element_text(face = "bold", size = 20, hjust = 0.9),  # Solo título eje Y
-    axis.text = element_text(size = 15),
+    axis.title.x = element_text(face = "bold", size = 30),  # Solo título eje X
+    axis.title.y = element_text(face = "bold", size = 30, hjust = 0.9),  # Solo título eje Y
+    axis.text = element_text(size = 30),
     legend.position = "bottom",
-    legend.title = element_text(face = "bold", size = 20),
-    legend.text = element_text(size = 15)
+    legend.title = element_text(face = "bold", size = 30),
+    legend.text = element_text(size = 30),
+    plot.caption = element_text(size = 20)
   )
 
 ggsave("res/graficos/grad_disc_por_reg_zon.png", 
@@ -130,27 +324,60 @@ ggsave("res/graficos/grad_disc_por_reg_zon.png",
 
 # Gráfico de distribución del ingreso neto del hogar según grado de discapacidad (DIEGO)
 grafico4 <- ggplot(enadis %>% drop_na(ING_PERCAPITA_HOGAR, Cap_grado),
-                   aes(x = Cap_grado, y = ING_PERCAPITA_HOGAR, fill = Cap_grado)) +
-  geom_boxplot(width = 0.6) +
+                   aes(x = Cap_grado, y = ING_PERCAPITA_HOGAR / 1000, fill = Cap_grado)) +
+  geom_boxplot(width = 0.6, linewidth = 1) +
   scale_y_log10(
     labels = scales::label_number(prefix = "₡", big.mark = ",")
   ) +
-  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8, guide = "none") +
+  scale_fill_viridis_d(option = "D", begin = 0.4, end = 1, guide = "none") +
   labs(
     # title = "Gráfico 4. \nIngreso per capita del hogar según grado de discapacidad",
     # subtitle = "Distribución del ingreso mensual neto del hogar en Costa Rica, 2023",
     x = "Grado de Discapacidad",
-    y = "Ingreso per cápita del hogar (escala logarítmica, colones)",
+    y = "Ingreso per cápita del hogar (escala logarítmica, miles de colones)",
     caption = "Fuente: INEC, ENADIS 2023."
   ) +
+  annotate(
+    "text",
+    x = 1,
+    y = 285065/1000,
+    label = "x",
+    color = "white",
+    size = 10
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y = 256304/1000,
+    label = "x",
+    color = "white",
+    size = 10
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y = 247662/1000,
+    label = "x",
+    color = "white",
+    size = 10
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y = 213771/1000,
+    label = "x",
+    color = "darkred",
+    size = 10
+  ) + 
   theme_minimal(base_size = 14) +
   theme(
     # plot.title = element_text(size = 32, face = "bold", hjust = 0),
     # plot.subtitle = element_text(size = 28, hjust = 0),
-    axis.title.x = element_text(face = "bold", size = 20),
-    axis.title.y = element_text(face = "bold", size = 20),
-    axis.text = element_text(size = 15),
-    legend.position = "none"
+    axis.title.x = element_text(face = "bold", size = 30),
+    axis.title.y = element_text(face = "bold", size = 30),
+    axis.text = element_text(size = 30),
+    legend.position = "none",
+    plot.caption = element_text(size = 20)
   ) + 
   coord_flip()
 
@@ -227,23 +454,164 @@ ggsave("res/graficos/edad_vs_desempeno.png",
 
 #Gráfico de Horas Laboradas para detectar Outliers (Andrey)
 
-grafico7 <- enadis_oc %>% ggplot(aes(Cap_grado, fill = B7)) + 
+grafico7 <- enadis_oc %>% mutate(B7 = mapvalues(
+  B7,
+  from = c(
+    "Menos de 15 horas",
+    "De 15 a menos de 40 horas",
+    "De 40 a 48 horas",
+    "Más de 48 horas"
+  ),
+  to = c("<15", "[15,40)", "[40,48]", ">48")
+)) %>% mutate(B7 = fct_relevel(B7, c(">48", "[40,48]", "[15,40)", "<15"))) %>%  ggplot(aes(Cap_grado, fill = B7)) +
   geom_bar(position = "fill", width = 0.75) +
-  scale_fill_viridis_d(option = "D", begin = 0.2, end = 0.8) +
-  scale_y_continuous(labels = percent_format())+
+  scale_fill_viridis_d(option = "D",
+                       begin = 0.2,
+                       end = 0.8) +
+  scale_y_continuous(labels = percent_format()) +
   labs(
     x = "Grado de Discapacidad",
-    y = "Porcentaje",
+    y = NULL,
     fill = "Horas Laboradas",
     caption = "Fuente: INEC, ENADIS 2023"
   ) +
-  theme_minimal(base_size = 14) + 
+  annotate(
+    "text",
+    x = 1,
+    y = 0.06/2,
+    label = "6%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y = 0.08/2,
+    label = "8%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y = 0.12/2,
+    label = "12%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y = 0.16/2,
+    label = "16%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 1,
+    y = 0.06 + 0.18/2,
+    label = "18%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y = 0.08 + 0.18/2,
+    label = "18%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y = 0.12 + 0.2/2,
+    label = "20%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y = 0.16 + 0.23/2,
+    label = "23%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 1,
+    y = 0.06 + 0.18 + 0.56/2,
+    label = "56%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y = 0.08 + 0.18 + 0.48/2,
+    label = "48%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y = 0.12 + 0.2 + 0.44/2,
+    label = "44%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y = 0.16 + 0.23 + 0.41/2,
+    label = "41%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 1,
+    y = 0.06 + 0.18 + 0.56 + 0.2/2,
+    label = "20%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 2,
+    y = 0.08 + 0.18 + 0.48 + 0.26/2,
+    label = "26%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 3,
+    y = 0.12 + 0.2 + 0.44 + 0.24/2,
+    label = "24%",
+    size = 12,
+    color = "white"
+  ) + 
+  annotate(
+    "text",
+    x = 4,
+    y = 0.16 + 0.23 + 0.41 + 0.2/2,
+    label = "20%",
+    size = 12,
+    color = "white"
+  ) + 
+  theme_minimal(base_size = 14) +
   theme(
-    axis.title = element_text(face = "bold", size = 17),
-    axis.text = element_text(size = 15),
+    axis.title = element_text(face = "bold", size = 30),
+    axis.text = element_text(size = 30),
     legend.position = "bottom",
-    legend.title = element_text(face = "bold", size = 20),
-    legend.text = element_text(size = 15)
+    legend.title = element_text(face = "bold", size = 30),
+    legend.text = element_text(size = 30),
+    plot.caption = element_text(size = 20),
+    axis.text.x = element_blank()
   ) +
   coord_flip()
   
@@ -486,3 +854,7 @@ cuadro_promedio_ingreso_vs_pos_y_grado <- enadis_completa %>%
 
 print(cuadro_promedio_ingreso_vs_pos_y_grado)
 
+rm(grafico5)
+rm(grafico6)
+rm(grafico8)
+rm(grafico9)

@@ -14,7 +14,17 @@ enadis_completa <- enadis_completa %>% mutate(across(where(~ is.labelled(.x) || 
 enadis_completa <- enadis_completa %>% filter(A5 >= 18 & A5 <= 65)
 
 # enadis JOSE
-enadis <- enadis_completa %>% select(A5, A4, region, zona, Cap_grado, ING_PERCAPITA_HOGAR, condic_activi, B8a, B7)
+enadis <- enadis_completa %>% select(A5,
+                                     A4,
+                                     region,
+                                     zona,
+                                     Cap_grado,
+                                     ING_PERCAPITA_HOGAR,
+                                     condic_activi,
+                                     B8a,
+                                     B7) %>%
+  mutate(B8a = fct_collapse(B8a, "Empleado/a" = levels(B8a)[str_detect(levels(B8a), "Empleado/a")]))
+
 
 #enadis Andrey
 enadis_oc <- enadis_completa %>% filter(condic_activi == "Ocupados/as", !is.na(B7), !is.na(Cap_grado))
