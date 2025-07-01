@@ -665,7 +665,7 @@ env$grafico_doble
 
 ### Método #1: Prueba de Kruskal-Wallis
 
-Según @ostertagova2014kruskal, la prueba de Kruskal-Wallis es una buena opción cuando se quiere comparar varios grupos pero los datos no cumplen con la normalidad. 
+Según, la prueba de Kruskal-Wallis es una buena opción cuando se quiere comparar varios grupos pero los datos no cumplen con la normalidad. 
 
 ::: {.callout-note title="Definición 2.1 (Prueba de Kruskal-Wallis)"}
 La prueba de Kruskal-Wallis sirve para ver si las distribuciones de una variable son iguales entre varios grupos. Se basa en rangos y no en los valores originales. El estadístico se calcula con la fórmula:

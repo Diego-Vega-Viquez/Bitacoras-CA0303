@@ -1,21 +1,19 @@
 ---
-title: "Acceso a oportunidades laborales y nivel económico según el grado de discapacidad"
+title: "Análisis estadístico del acceso a oportunidades laborales y nivel económico según el grado de discapacidad en Costa Rica"
 author:
-  - "Jose Andrey Prado Rojas-C36174"
-  - "José Carlos Quintero Cedeño-C26152"
-  - "Diego Alberto Vega Víquez-C38367"
+  - name: "Jose Andrey Prado Rojas"
+    email: "andrey.prado22@gmail.com"
+  - name: "José Carlos Quintero Cedeño"
+    email: "josecarlosquince@gmail.com"
+  - name: "Diego Alberto Vega Víquez"
+    email: "diegovv13@gmail.com"
 date: today
-bibliography: references.bib
-csl: apa.csl
-nocite: |
-  @*
-
 format:
+  docx:
+    reference-doc: docs/custom-reference-doc.docx
   pdf:
-    documentclass: book
-    papersize: letter
+    documentclass: article
     fontsize: 11pt
-    linestretch: 1
     geometry:
       - top=2.5cm
       - bottom=2.5cm
@@ -23,52 +21,62 @@ format:
       - right=2.5cm
       - headheight=15pt
       - footskip=1.25cm
+    linestretch: 1
+    toc: false
+    number-sections: false
     classoption: oneside
     openany: true
-    top-level-division: chapter
-    number-sections: false
+    colorlinks: false   
+    top-level-division: section
     include-in-header: 
       text: |
-        \renewcommand{\maketitle}{}
         \usepackage{tcolorbox}
+        \usepackage[hidelinks]{hyperref}
+      
+bibliography: references.bib
+csl: apa.csl
+nocite: |
+  @*
+lang: es
+abstract: |
+  Este trabajo explora la relación entre el grado de discapacidad y el acceso a oportunidades laborales y económicas en Costa Rica, utilizando datos de la Encuesta Nacional sobre Discapacidad (ENADIS 2023). Se parte del modelo social de la discapacidad y de marcos teóricos sobre desigualdad estructural y discriminación para analizar las barreras que enfrentan las personas con discapacidad en el mercado de trabajo. A través de pruebas estadísticas no paramétricas como Kruskal-Wallis y chi-cuadrado de independencia, se identifican asociaciones significativas entre el grado de discapacidad y variables como ingreso per cápita, condición de actividad, posición en el empleo y cantidad de horas trabajadas. Los resultados muestran que las personas con mayor grado de discapacidad presentan desventajas sistemáticas en términos de participación laboral, calidad del empleo y nivel de ingresos. Se concluye que existen patrones de exclusión vinculados al grado de discapacidad que refuerzan desigualdades económicas preexistentes, lo que evidencia la necesidad de políticas públicas inclusivas que aborden no solo el acceso, sino también la equidad en las condiciones de empleo.
+  
+keywords:
+  - Discapacidad
+  - Acceso al empleo
+  - Ingreso económico
+  - Grado de discapacidad
+  - Inclusión laboral
+  - Desigualdad socioeconómica
 ---
 
-**Análisis estadístico del acceso a oportunidades laborales y nivel económico según el grado de discapacidad en Costa Rica**
+```{r Librerías}
+#| echo: false
+#| warning: false
+#| message: false
+library(tidyverse)
+library(kableExtra)
+```
 
-\centerline{\textbf{Resumen}}
+**Palabras clave**: Discapacidad, Acceso al empleo, Ingreso económico, Grado de discapacidad, Inclusión laboral, Desigualdad socioeconómica
 
-Ut interdum laoreet maximus. In consectetur, neque eu elementum pretium, elit massa varius mi, id vulputate tortor ipsum ac libero. Cras viverra massa at ipsum lobortis dapibus. Ut faucibus magna quis dui pulvinar, vitae sodales mauris fermentum. Ut iaculis, sem ac condimentum scelerisque, erat urna aliquam orci, sit amet hendrerit augue orci vel ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet efficitur mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris a lacus odio. Donec iaculis dapibus iaculis. Vestibulum rutrum sapien at tortor tempus malesuada. Sed pellentesque ultrices scelerisque. Praesent accumsan lectus eu quam eleifend condimentum. Ut non mauris vitae erat imperdiet euismod quis et mauris. Quisque tempor et est quis consequat. Vivamus vulputate nulla sit amet velit auctor scelerisque. In ut gravida libero. Nunc id imperdiet tellus. In eget sodales lectus. Aenean dapibus fringilla bibendum. Aenean pretium, velit vitae eleifend eleifend, dolor ex pharetra dolor, quis sodales lectus neque quis ex. Etiam elit ipsum, fringilla in rutrum ac, mattis et lectus. Mauris hendrerit nisi quis lectus ornare, eget pellentesque sapien tincidunt.
+# Introducción
+La discapacidad constituye una dimensión estructural de la desigualdad social que afecta a millones de personas en todo el mundo. En contextos como el costarricense, donde la inclusión es un principio proclamado pero no siempre concretado, es fundamental comprender cómo varía el acceso a oportunidades laborales y económicas según el grado de discapacidad que enfrenta la población. Diversos estudios han demostrado que las personas con discapacidad no solo enfrentan barreras físicas o sensoriales, sino también exclusiones sistémicas que limitan sus posibilidades de participación económica, acceso a empleo formal y percepción de ingresos dignos. Estas desigualdades no surgen únicamente de la condición funcional individual, sino de la interacción entre ésta y un entorno que continúa siendo poco accesible, discriminatorio o indiferente.
 
-**Palabras clave**: 
+Este proyecto parte de la premisa de que no todas las personas con discapacidad viven la misma realidad. El grado de discapacidad —entendido como la severidad de la limitación funcional— puede intensificar los efectos de la exclusión laboral y económica. Así, mientras algunas personas logran insertarse en el mercado laboral en condiciones relativamente equitativas, otras enfrentan obstáculos persistentes, como el subempleo, la informalidad o el desempleo prolongado. La diversidad de trayectorias laborales en función del grado de discapacidad es una evidencia de que la inclusión no es un fenómeno binario, sino un continuo complejo influido por múltiples factores sociales, económicos y políticos.
 
-\centerline{\textbf{Agradecimientos}}
-Sed non orci venenatis ex tempus tincidunt quis quis ex. Aliquam molestie tortor vitae ullamcorper condimentum. Aliquam elementum aliquet bibendum. Pellentesque lacinia et neque ut venenatis. Vivamus quis tristique ante. Etiam in est sit amet risus sagittis lobortis a in nunc. Suspendisse sit amet tortor sed ex luctus viverra eu.
+A partir de datos de la Encuesta Nacional sobre Discapacidad @inec_enadis_2023_pdf, esta investigación adopta un enfoque cuantitativo para identificar patrones en la participación laboral, la posición ocupacional, las horas trabajadas y el ingreso per cápita del hogar. Estas dimensiones permiten construir un diagnóstico riguroso sobre las desigualdades que experimentan las personas con discapacidad en Costa Rica. En particular, se aplican pruebas estadísticas no paramétricas (como Kruskal-Wallis) y categóricas (como Chi-cuadrado y V de Cramer) para detectar asociaciones significativas entre el grado de discapacidad y diversas variables socioeconómicas.
 
-### Introducción
+Los resultados obtenidos aportan evidencia empírica que refuerza la necesidad de diseñar políticas públicas que no se limiten a promover el acceso formal al empleo, sino que también aborden la calidad, la estabilidad y la equidad en las condiciones laborales. Comprender estas diferencias es un paso clave para avanzar hacia una verdadera inclusión laboral. Al visibilizar los efectos concretos que tiene el grado de discapacidad en la vida económica de las personas, este estudio contribuye a la formulación de estrategias que respondan a las necesidades específicas de una población históricamente excluida del desarrollo social.
 
-Suspendisse ultrices ultricies nunc, vitae efficitur nunc vehicula sit amet. Duis quis ante urna. Sed tempor turpis ut felis tincidunt, eget elementum massa luctus. In vel est ligula. Cras sed elit suscipit, interdum sapien sed, laoreet nisl. Suspendisse tempus lacus a risus mollis cursus. Sed elit eros, scelerisque sit amet convallis ut, tempus ac est. Nam at convallis lectus. In semper in ligula non ultrices. Vestibulum ac nulla cursus, malesuada libero sed, auctor justo. Vivamus non rutrum mi.
 
-In eget sapien in erat mollis interdum et vitae nunc. Sed ante tellus, feugiat at nisi id, posuere dictum lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed condimentum mauris commodo, maximus elit et, pulvinar nibh. Ut porta nisl elit, in mattis nunc convallis varius. Sed quis accumsan justo. Vestibulum eu diam orci. Quisque ut varius nulla. Duis risus nisi, venenatis sed metus non, sagittis imperdiet mi. Aenean tincidunt vulputate nulla non finibus. Praesent finibus lacinia nisi non iaculis. Proin vel dolor elementum felis mollis elementum. Etiam faucibus dictum mi id gravida. In condimentum mi diam, ac commodo nibh eleifend quis.
-
-In nisi erat, ornare sed nisi sit amet, sagittis pharetra nisl. Proin vitae mattis eros, sed volutpat dolor. Phasellus elementum enim nec vulputate consectetur. Vestibulum luctus porta tellus, convallis elementum nisi tempor quis. Donec porttitor eros sed odio dapibus, at blandit lorem convallis. Phasellus interdum ligula sed urna cursus, nec auctor dui dictum. Donec vitae dolor ligula. Sed feugiat laoreet leo, porta luctus arcu iaculis sit amet. Vestibulum aliquam velit nisi, ultrices mattis urna ultricies in. Nulla ullamcorper, lorem sed rutrum viverra, nunc neque mattis elit, a posuere ligula libero et lorem. Vivamus non tortor ante. Aenean sed nunc in nisi lobortis porttitor. Sed at est id dui laoreet rhoncus sit amet eget leo. Fusce consectetur nunc at ligula viverra euismod. Nunc justo augue, hendrerit vehicula nibh id, ornare interdum eros.
-
-Nulla facilisi. Proin nunc sapien, convallis id est vel, egestas vestibulum elit. Fusce nec velit at mi ullamcorper vulputate at nec dolor. In at augue hendrerit, interdum odio rhoncus, pulvinar orci. Vivamus volutpat mi ante, vel porttitor eros gravida pulvinar. Proin ut sodales augue. Donec posuere lacus ex, id viverra elit condimentum non.
-
-Nullam sit amet lorem viverra, accumsan massa ut, ultricies dui. Duis vitae felis dignissim, iaculis orci vel, cursus metus. Integer eleifend ac nunc a sollicitudin. Ut justo magna, congue vitae feugiat a, malesuada placerat tellus. Aliquam nec mollis magna, ut porta ligula. In vel sapien vel nisi faucibus pharetra. Nulla tempor diam magna, id blandit leo tristique dignissim. Praesent ultrices gravida blandit. Maecenas facilisis orci id sodales vestibulum. Cras auctor odio id quam laoreet semper. Donec ut magna mollis, porttitor felis at, tempus sapien. Nam tincidunt nibh eget neque gravida ultrices. Nunc et lacus eu erat lobortis tempor viverra sit amet mauris. Cras condimentum, turpis ut scelerisque eleifend, lorem sem interdum felis, non hendrerit mi nulla a libero. Duis vestibulum diam elementum, mollis dui vitae, rutrum purus. Sed id lorem nec velit consectetur semper id semper ipsum.
-
-Ut sodales maximus tellus, id sollicitudin ex. Mauris justo arcu, scelerisque vulputate mi sed, commodo eleifend nunc. Fusce sed lacus dapibus, ullamcorper lacus ac, varius orci. Praesent non condimentum tortor. Quisque efficitur justo a gravida ornare. Aenean consectetur, dui eu posuere porta, libero erat porta nunc, ac fringilla justo mauris vel metus. Nulla ultrices turpis id porttitor posuere. Ut pellentesque dignissim turpis eget hendrerit. Etiam venenatis sagittis volutpat. Sed vel tristique diam, quis lacinia justo. Nulla sollicitudin volutpat turpis. Sed aliquam ac dolor cursus ullamcorper. Cras vestibulum, nibh sed fringilla viverra, ipsum leo fermentum erat, sed elementum urna felis a lorem.
-
-Suspendisse ultrices ultricies nunc, vitae efficitur nunc vehicula sit amet. Duis quis ante urna. Sed tempor turpis ut felis tincidunt, eget elementum massa luctus. In vel est ligula. Cras sed elit suscipit, interdum sapien sed, laoreet nisl. Suspendisse tempus lacus a risus mollis cursus. Sed elit eros, scelerisque sit amet convallis ut, tempus ac est. Nam at convallis lectus. In semper in ligula non ultrices. Vestibulum ac nulla cursus, malesuada libero sed, auctor justo. Vivamus non rutrum mi.
-
-In eget sapien in erat mollis interdum et vitae nunc. Sed ante tellus, feugiat at nisi id, posuere dictum lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed condimentum mauris commodo, maximus elit et, pulvinar nibh. Ut porta nisl elit, in mattis nunc convallis varius. Sed quis accumsan justo. Vestibulum eu diam orci. Quisque ut varius nulla. Duis risus nisi, venenatis sed metus non, sagittis imperdiet mi. Aenean tincidunt vulputate nulla non finibus. Praesent finibus lacinia nisi non iaculis. Proin vel dolor elementum felis mollis elementum. Etiam faucibus dictum mi id gravida. In condimentum mi diam, ac commodo nibh eleifend quis.
-
-### Metodología
+# Metodología
 
 **Descripción de los datos**
 
 **Fuente de la información**
 
-La fuente de datos corresponde a la Encuesta Nacional sobre Discapacidad (ENADIS), aplicada en Costa Rica por el Instituto Nacional de Estadística y Censos (@inec_enadis_2023_pdf). Esta encuesta proporciona información representativa a nivel nacional sobre características sociodemográficas, estado de salud, educación, empleo e ingresos de la población con y sin discapacidad.
+La fuente de datos corresponde a la Encuesta Nacional sobre Discapacidad (ENADIS), aplicada en Costa Rica por el Instituto Nacional de Estadística y Censos @inec_enadis_2023_pdf. Esta encuesta proporciona información representativa a nivel nacional sobre características sociodemográficas, estado de salud, educación, empleo e ingresos de la población con y sin discapacidad.
 
 **Población de estudio**
 
@@ -102,7 +110,7 @@ Estas variables se analizan para identificar las diferencias económicas y labor
 
 **Prueba de Kruskal-Wallis**
 
-Esta prueba fue utilizada para determinar si existen diferencias en la distribución del ingreso per cápita del hogar entre personas clasificadas según su grado de discapacidad (sin, leve, moderada, severa). La prueba de Kruskal-Wallis permite comparar tres o más grupos independientes utilizando rangos en lugar de valores originales, lo cual es ideal cuando los datos no son normales o tienen valores atípicos importantes (@ostertagova2014kruskal).
+Esta prueba fue utilizada para determinar si existen diferencias en la distribución del ingreso per cápita del hogar entre personas clasificadas según su grado de discapacidad (sin, leve, moderada, severa). La prueba de Kruskal-Wallis permite comparar tres o más grupos independientes utilizando rangos en lugar de valores originales, lo cual es ideal cuando los datos no son normales o tienen valores atípicos importantes @ostertagova2014kruskal.
 
 \begin{tcolorbox}[title=Prueba de Kruskal-Wallis]
 La prueba de Kruskal-Wallis sirve para ver si las distribuciones de una variable son iguales entre varios grupos. Se basa en rangos y no en los valores originales. El estadístico se calcula con la fórmula:
@@ -118,7 +126,7 @@ La hipótesis nula establece que todas las distribuciones son iguales entre los 
 
 **Prueba Chi-cuadrado de independencia**
 
-Para analizar si existe una relación entre el grado de discapacidad y otras variables categóricas, como la condición de actividad o el tipo de jornada laboral, se aplicó la prueba Chi-cuadrado de independencia. Esta técnica permite evaluar si dos variables categóricas están asociadas o si son independientes (@mchugh2013chi).
+Para analizar si existe una relación entre el grado de discapacidad y otras variables categóricas, como la condición de actividad o el tipo de jornada laboral, se aplicó la prueba Chi-cuadrado de independencia. Esta técnica permite evaluar si dos variables categóricas están asociadas o si son independientes @mchugh2013chi.
 
 \begin{tcolorbox}[title=Prueba Chi-cuadrado de independencia]
 El estadístico de la prueba se calcula con la fórmula:
@@ -161,7 +169,7 @@ donde:
 El valor de \( V \) está acotado entre 0 y 1. Un valor cercano a 0 indica poca o ninguna asociación, mientras que un valor cercano a 1 indica una asociación fuerte.
 \end{tcolorbox}
 
-### Resultados
+# Resultados
 
 El análisis de los microdatos de la ENADIS 2023 revela una relación significativa entre el grado de discapacidad y diversos indicadores de acceso al empleo, ingreso y calidad laboral. Estos hallazgos empíricos coinciden con la literatura académica y técnica revisada, tanto en el contexto costarricense como en estudios realizados en el resto del mundo. A continuación, se presentan los principales resultados agrupados en cuatro dimensiones clave: ingreso, condición de actividad y horas trabajadas, posición ocupacional, y calidad del empleo.
 
@@ -210,24 +218,23 @@ Finalmente, en el análisis de la posición ocupacional (empleado/a, patrono/a, 
 
 En conjunto, estos valores de la V de Cramer permiten afirmar que el grado de discapacidad sí está relacionado con peores condiciones laborales, pero que la fuerza de dicha relación es limitada, lo cual refuerza la necesidad de entender la exclusión laboral como un fenómeno multicausal. La discapacidad no actúa de manera aislada, sino en interacción con el entorno económico, institucional, educativo y sociocultural del país.
 
-{{< pagebreak >}}
+# Conclusiones
 
-### Conclusiones
 
-Quisque ante lorem, viverra a diam vel, pulvinar aliquet nunc. Integer nibh justo, mattis a justo vel, ultrices porta dolor. Suspendisse sollicitudin bibendum justo, sit amet interdum felis semper vitae. Sed blandit non urna vel finibus. Suspendisse vel accumsan erat, euismod malesuada sem. In congue vitae lacus in tincidunt. Nulla et turpis nec metus suscipit bibendum ac at massa. Etiam hendrerit elit nunc, vitae suscipit mauris ullamcorper sed. Fusce pulvinar ligula sed felis varius, id finibus lectus accumsan. Suspendisse consectetur elit sit amet metus efficitur semper.
+Los hallazgos de esta investigación revelan con claridad que el grado de discapacidad constituye un factor diferenciador en el acceso a oportunidades laborales y económicas en Costa Rica. A partir del análisis de los microdatos de la ENADIS 2023, se evidenció que a mayor severidad en la discapacidad, menores son los ingresos per cápita, la participación en el empleo formal y la cantidad de horas trabajadas. Estos resultados son estadísticamente significativos y respaldados por pruebas robustas como Kruskal-Wallis y chi-cuadrado de independencia, que permiten afirmar con fundamento que la desigualdad estructural se expresa con fuerza entre los distintos grupos según su grado de discapacidad.
 
-Nullam non magna dictum, tempus massa ac, tincidunt est. Morbi in lacinia mi. Sed eget leo et augue blandit mollis. Donec placerat gravida luctus. Etiam sagittis leo vitae lacus auctor ultricies. Suspendisse elit libero, sagittis vel volutpat nec, ultricies nec ante. Curabitur et orci magna. Vivamus pharetra massa semper ornare sodales. Quisque et pretium orci.
+Aunque las medidas de asociación como la V de Cramer muestran que la fuerza estadística de estas relaciones es débil o moderada, su relevancia práctica no puede ser ignorada. Las personas con discapacidad, especialmente aquellas con limitaciones severas, enfrentan condiciones laborales más precarias, menor acceso a empleos estables y mayor dependencia de ocupaciones por cuenta propia o informales. Esto se enmarca en un entorno que no ha logrado adecuarse de manera efectiva a las necesidades de accesibilidad, adaptación y equidad para esta población.
 
-Donec eu semper mauris. Donec sed lacus sit amet turpis luctus facilisis mattis dapibus tellus. Morbi quis accumsan odio. Integer nulla felis, consectetur non cursus id, ultrices a mi. Nunc interdum cursus congue. Phasellus lobortis egestas dapibus. In hac habitasse platea dictumst. Nulla et dolor et felis lobortis luctus a in felis. Etiam non eros mollis, lacinia neque sed, ornare mi. Nam ut accumsan tellus, sagittis fringilla urna. Phasellus a pellentesque felis, eu congue nunc. Nulla consectetur purus quam, in aliquet nunc blandit eget.
+En términos de política pública, los resultados respaldan la necesidad de replantear las estrategias de inclusión laboral desde un enfoque interseccional y estructural. No basta con promover el empleo entre personas con discapacidad; es indispensable garantizar que dicho empleo sea digno, bien remunerado y libre de barreras discriminatorias. Asimismo, deben fortalecerse los mecanismos de fiscalización, los incentivos para empleadores inclusivos, y las políticas de accesibilidad universal tanto en el sector público como en el privado.
 
-Vestibulum fringilla lorem sit amet bibendum eleifend. Nunc eget risus eget arcu semper fermentum. In hac habitasse platea dictumst. Donec tempor eleifend feugiat. Duis a mollis felis, venenatis aliquet nisi. Cras in nulla libero. Donec tincidunt nibh mi, ac sagittis neque aliquet vitae. Quisque sit amet sodales diam. Vivamus quis vestibulum tortor. Fusce neque elit, elementum quis dolor non, vulputate tempor est. Nulla sed ipsum sit amet dui dapibus ultricies ac vel libero. Vestibulum sodales neque in nisl dignissim fermentum. Aenean ornare purus id velit pretium tempus.
-
-Duis eros ex, auctor ac nisl sed, eleifend tristique ante. Praesent ut gravida lacus. Integer pulvinar at dolor quis sollicitudin. Curabitur odio velit, blandit eget mauris vitae, dapibus pulvinar risus. Proin ut odio non leo lobortis faucibus quis sed ipsum. Nulla pretium, diam sit amet vehicula fringilla, diam libero suscipit dui, quis facilisis urna orci sed diam. Integer nec augue in eros euismod interdum. Curabitur ipsum nibh, tristique quis erat ut, varius euismod turpis. Vestibulum auctor magna ut massa maximus commodo.
-
-Suspendisse molestie purus at magna vehicula ornare. Vestibulum et mollis dui, eget convallis leo. Mauris consectetur vel turpis congue rutrum. Nam bibendum sagittis aliquam. Quisque quis ante vitae est scelerisque ultrices id sit amet sem. Duis tincidunt vulputate neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sit amet purus hendrerit, faucibus ante id, ultricies orci. Phasellus pulvinar, felis eget cursus consequat, purus mi malesuada turpis, in ornare mi magna fermentum purus. Aliquam lacinia tortor tortor, a congue sem porta sed. Donec finibus, sapien consectetur suscipit aliquet, orci augue tincidunt leo, at auctor quam quam sed lectus.
-
-Pellentesque tempus purus et auctor interdum. Etiam at quam enim. Donec velit magna, dignissim congue fringilla et, facilisis non felis. Ut nisi orci, consequat nec iaculis sed, fringilla sed tortor. Quisque fringilla ullamcorper dignissim. Morbi condimentum lorem vel dui molestie, eget pellentesque lorem fermentum. Integer faucibus ex id libero viverra porta. Nunc bibendum metus vitae diam auctor, at tincidunt arcu dapibus. Donec venenatis sagittis libero sit amet ultrices.
+Este estudio demuestra que el grado de discapacidad no solo tiene implicaciones sobre la funcionalidad individual, sino que es un determinante clave en los resultados socioeconómicos de las personas. Comprenderlo como un eje de desigualdad estructural permite avanzar hacia políticas más justas y eficaces. De cara al futuro, se sugiere profundizar en enfoques multivariados que incluyan variables como sexo, región y nivel educativo, así como considerar estudios longitudinales que permitan observar trayectorias laborales en el tiempo. Sólo con evidencia sólida y políticas basadas en datos será posible construir una sociedad verdaderamente inclusiva y equitativa.
 
 {{< pagebreak >}}
 
-### Bibliografía
+# Anexos
+
+## Repositorio en GitHub
+
+<https://github.com/Diego-Vega-Viquez/Bitacoras-CA0303>
+
+# Bibliografía
