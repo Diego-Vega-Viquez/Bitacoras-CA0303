@@ -61,7 +61,11 @@ library(kableExtra)
 **Palabras clave**: Discapacidad, Acceso al empleo, Ingreso económico, Grado de discapacidad, Inclusión laboral, Desigualdad socioeconómica
 
 # Introducción
+
 La discapacidad constituye una dimensión estructural de la desigualdad social que afecta a millones de personas en todo el mundo. En contextos como el costarricense, donde la inclusión es un principio proclamado pero no siempre concretado, es fundamental comprender cómo varía el acceso a oportunidades laborales y económicas según el grado de discapacidad que enfrenta la población. Diversos estudios han demostrado que las personas con discapacidad no solo enfrentan barreras físicas o sensoriales, sino también exclusiones sistémicas que limitan sus posibilidades de participación económica, acceso a empleo formal y percepción de ingresos dignos. Estas desigualdades no surgen únicamente de la condición funcional individual, sino de la interacción entre ésta y un entorno que continúa siendo poco accesible, discriminatorio o indiferente.
+
+A partir de esta problemática, la presente investigación se plantea la siguiente pregunta central: ¿Cuáles son las diferencias en el nivel de ingresos y las oportunidades laborales entre personas con distintos grados de discapacidad en Costa Rica?
+
 
 Este proyecto parte de la premisa de que no todas las personas con discapacidad viven la misma realidad. El grado de discapacidad —entendido como la severidad de la limitación funcional— puede intensificar los efectos de la exclusión laboral y económica. Así, mientras algunas personas logran insertarse en el mercado laboral en condiciones relativamente equitativas, otras enfrentan obstáculos persistentes, como el subempleo, la informalidad o el desempleo prolongado. La diversidad de trayectorias laborales en función del grado de discapacidad es una evidencia de que la inclusión no es un fenómeno binario, sino un continuo complejo influido por múltiples factores sociales, económicos y políticos.
 
