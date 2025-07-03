@@ -118,11 +118,9 @@ Esta prueba fue utilizada para determinar si existen diferencias en la distribuc
 
 \begin{tcolorbox}[title=Prueba de Kruskal-Wallis]
 La prueba de Kruskal-Wallis sirve para ver si las distribuciones de una variable son iguales entre varios grupos. Se basa en rangos y no en los valores originales. El estadístico se calcula con la fórmula:
-
-\[
-H = \frac{12}{N(N+1)} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)
-\]
-
+\begin{center}
+$H = \frac{12}{N(N+1)} \sum\limits_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)$
+\end{center}
 donde \( N \) es el total de observaciones, \( k \) el número de grupos, \( n_i \) el tamaño del grupo \( i \), y \( R_i \) la suma de los rangos del grupo \( i \).
 \end{tcolorbox}
 
@@ -134,16 +132,14 @@ Para analizar si existe una relación entre el grado de discapacidad y otras var
 
 \begin{tcolorbox}[title=Prueba Chi-cuadrado de independencia]
 El estadístico de la prueba se calcula con la fórmula:
-
-\[
-\chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
-\]
-
+\begin{center}
+$\chi^2 = \sum\limits_{i=1}^r \sum\limits_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$
+\end{center}
 donde \( O_{ij} \) es la frecuencia observada en la celda \( i, j \), y \( E_{ij} \) es la frecuencia esperada, calculada como:
 
-\[
+\begin{center}
 E_{ij} = \frac{(F_i)(C_j)}{N}
-\]
+\end{center}
 
 siendo \( F_i \) el total de la fila \( i \), \( C_j \) el total de la columna \( j \), y \( N \) el número total de casos.
 \end{tcolorbox}
@@ -158,9 +154,9 @@ La V de Cramer tiene la ventaja de ser fácil de interpretar: sus valores van de
 \begin{tcolorbox}[title=V de Cramer]
 La V de Cramer es una medida de asociación entre dos variables categóricas. Se utiliza comúnmente después de realizar una prueba chi-cuadrado para cuantificar la intensidad de la relación. Su fórmula es:
 
-\[
-V = \sqrt{ \frac{\chi^2}{N \cdot (k - 1)} }
-\]
+\begin{center}
+$V = \sqrt{ \frac{\chi^2}{N \cdot (k - 1)} }$
+\end{center}
 
 donde:
 
@@ -232,6 +228,17 @@ Aunque las medidas de asociación como la V de Cramer muestran que la fuerza est
 En términos de política pública, los resultados respaldan la necesidad de replantear las estrategias de inclusión laboral desde un enfoque interseccional y estructural. No basta con promover el empleo entre personas con discapacidad; es indispensable garantizar que dicho empleo sea digno, bien remunerado y libre de barreras discriminatorias. Asimismo, deben fortalecerse los mecanismos de fiscalización, los incentivos para empleadores inclusivos, y las políticas de accesibilidad universal tanto en el sector público como en el privado.
 
 Este estudio demuestra que el grado de discapacidad no solo tiene implicaciones sobre la funcionalidad individual, sino que es un determinante clave en los resultados socioeconómicos de las personas. Comprenderlo como un eje de desigualdad estructural permite avanzar hacia políticas más justas y eficaces. De cara al futuro, se sugiere profundizar en enfoques multivariados que incluyan variables como sexo, región y nivel educativo, así como considerar estudios longitudinales que permitan observar trayectorias laborales en el tiempo. Sólo con evidencia sólida y políticas basadas en datos será posible construir una sociedad verdaderamente inclusiva y equitativa.
+
+# Agradecimientos
+
+Los autores desean expresar su más profundo agradecimiento al Profesor Ph.D. Maikol Solís por su acompañamiento durante todo el proceso de desarrollo del presente trabajo. Su disposición constante para brindar asistencia en los aspectos técnicos y metodológicos relacionados con el programa utilizado fue fundamental para el avance y culminación exitosa de este proyecto.
+
+De igual manera, se extiende un sincero agradecimiento a la Dra. Milena Castro, quien durante la segunda parte del semestre brindó un valioso acompañamiento académico. Su orientación en la definición del tema de investigación, así como sus recomendaciones metodológicas, fueron clave para enriquecer el enfoque y la solidez del trabajo realizado.
+
+Asimismo, se agradece a los compañeros del curso CA0303: Estadística Actuarial I, cuyo apoyo y colaboración fueron de gran utilidad a lo largo de todo el semestre en el que se desarrolló este proyecto.
+
+⸻
+
 
 {{< pagebreak >}}
 

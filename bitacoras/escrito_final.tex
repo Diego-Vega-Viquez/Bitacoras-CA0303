@@ -1,0 +1,866 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+  oneside]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=15pt,footskip=1.25cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Análisis estadístico del acceso a oportunidades laborales y nivel económico según el grado de discapacidad en Costa Rica},
+  pdfauthor={Jose Andrey Prado Rojas; José Carlos Quintero Cedeño; Diego Alberto Vega Víquez},
+  pdflang={es},
+  pdfkeywords={Discapacidad, Acceso al empleo, Ingreso económico, Grado
+de discapacidad, Inclusión laboral, Desigualdad socioeconómica},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Análisis estadístico del acceso a oportunidades laborales y nivel
+económico según el grado de discapacidad en Costa Rica}
+\author{Jose Andrey Prado Rojas \and José Carlos Quintero
+Cedeño \and Diego Alberto Vega Víquez}
+\date{2025-07-03}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Este trabajo explora la relación entre el grado de discapacidad y el
+acceso a oportunidades laborales y económicas en Costa Rica, utilizando
+datos de la Encuesta Nacional sobre Discapacidad (ENADIS 2023). Se parte
+del modelo social de la discapacidad y de marcos teóricos sobre
+desigualdad estructural y discriminación para analizar las barreras que
+enfrentan las personas con discapacidad en el mercado de trabajo. A
+través de pruebas estadísticas no paramétricas como Kruskal-Wallis y
+chi-cuadrado de independencia, se identifican asociaciones
+significativas entre el grado de discapacidad y variables como ingreso
+per cápita, condición de actividad, posición en el empleo y cantidad de
+horas trabajadas. Los resultados muestran que las personas con mayor
+grado de discapacidad presentan desventajas sistemáticas en términos de
+participación laboral, calidad del empleo y nivel de ingresos. Se
+concluye que existen patrones de exclusión vinculados al grado de
+discapacidad que refuerzan desigualdades económicas preexistentes, lo
+que evidencia la necesidad de políticas públicas inclusivas que aborden
+no solo el acceso, sino también la equidad en las condiciones de empleo.
+\end{abstract}
+
+
+\setstretch{1}
+\textbf{Palabras clave}: Discapacidad, Acceso al empleo, Ingreso
+económico, Grado de discapacidad, Inclusión laboral, Desigualdad
+socioeconómica
+
+\section{Introducción}\label{introducciuxf3n}
+
+La discapacidad constituye una dimensión estructural de la desigualdad
+social que afecta a millones de personas en todo el mundo. En contextos
+como el costarricense, donde la inclusión es un principio proclamado
+pero no siempre concretado, es fundamental comprender cómo varía el
+acceso a oportunidades laborales y económicas según el grado de
+discapacidad que enfrenta la población. Diversos estudios han demostrado
+que las personas con discapacidad no solo enfrentan barreras físicas o
+sensoriales, sino también exclusiones sistémicas que limitan sus
+posibilidades de participación económica, acceso a empleo formal y
+percepción de ingresos dignos. Estas desigualdades no surgen únicamente
+de la condición funcional individual, sino de la interacción entre ésta
+y un entorno que continúa siendo poco accesible, discriminatorio o
+indiferente.
+
+A partir de esta problemática, la presente investigación se plantea la
+siguiente pregunta central: ¿Cuáles son las diferencias en el nivel de
+ingresos y las oportunidades laborales entre personas con distintos
+grados de discapacidad en Costa Rica?
+
+Este proyecto parte de la premisa de que no todas las personas con
+discapacidad viven la misma realidad. El grado de discapacidad
+---entendido como la severidad de la limitación funcional--- puede
+intensificar los efectos de la exclusión laboral y económica. Así,
+mientras algunas personas logran insertarse en el mercado laboral en
+condiciones relativamente equitativas, otras enfrentan obstáculos
+persistentes, como el subempleo, la informalidad o el desempleo
+prolongado. La diversidad de trayectorias laborales en función del grado
+de discapacidad es una evidencia de que la inclusión no es un fenómeno
+binario, sino un continuo complejo influido por múltiples factores
+sociales, económicos y políticos.
+
+A partir de datos de la Encuesta Nacional sobre Discapacidad INEC
+(2023), esta investigación adopta un enfoque cuantitativo para
+identificar patrones en la participación laboral, la posición
+ocupacional, las horas trabajadas y el ingreso per cápita del hogar.
+Estas dimensiones permiten construir un diagnóstico riguroso sobre las
+desigualdades que experimentan las personas con discapacidad en Costa
+Rica. En particular, se aplican pruebas estadísticas no paramétricas
+(como Kruskal-Wallis) y categóricas (como Chi-cuadrado y V de Cramer)
+para detectar asociaciones significativas entre el grado de discapacidad
+y diversas variables socioeconómicas.
+
+Los resultados obtenidos aportan evidencia empírica que refuerza la
+necesidad de diseñar políticas públicas que no se limiten a promover el
+acceso formal al empleo, sino que también aborden la calidad, la
+estabilidad y la equidad en las condiciones laborales. Comprender estas
+diferencias es un paso clave para avanzar hacia una verdadera inclusión
+laboral. Al visibilizar los efectos concretos que tiene el grado de
+discapacidad en la vida económica de las personas, este estudio
+contribuye a la formulación de estrategias que respondan a las
+necesidades específicas de una población históricamente excluida del
+desarrollo social.
+
+\section{Metodología}\label{metodologuxeda}
+
+\textbf{Descripción de los datos}
+
+\textbf{Fuente de la información}
+
+La fuente de datos corresponde a la Encuesta Nacional sobre Discapacidad
+(ENADIS), aplicada en Costa Rica por el Instituto Nacional de
+Estadística y Censos INEC (2023). Esta encuesta proporciona información
+representativa a nivel nacional sobre características sociodemográficas,
+estado de salud, educación, empleo e ingresos de la población con y sin
+discapacidad.
+
+\textbf{Población de estudio}
+
+La población objeto de estudio se limita a las personas con edades entre
+18 y 65 años, correspondiente a la población en edad de trabajar. Dentro
+de esta población, se analiza a las personas con discapacidad leve,
+moderada o severa, comparándolas con aquellas que no reportan
+discapacidad.
+
+\textbf{Contexto temporal y espacial de los datos}
+
+Los datos corresponden al año 2023 y tienen cobertura nacional,
+incluyendo tanto zonas urbanas como rurales de todas las regiones
+planificadas del país. Las estimaciones y análisis se basan en una
+muestra compleja, con ponderadores aplicados para representar
+correctamente a la población costarricense.
+
+\textbf{Unidad estadística o individuos}
+
+Cada unidad de análisis corresponde a una persona residente en Costa
+Rica entre 18 y 65 años, clasificada según su grado de discapacidad,
+nivel educativo, condición de actividad, tipo de empleo, horas laboradas
+e ingreso del hogar.
+
+\textbf{Variables de interés}
+
+Las variables utilizadas para el análisis son:
+
+\emph{Grado de discapacidad}: sin discapacidad, leve, moderada y severa.
+
+\emph{Condición de actividad}: ocupado, desocupado, fuera de la fuerza
+de trabajo.
+
+\emph{Tipo de empleo principal}: empleado, trabajador por cuenta propia,
+informal, entre otros.
+
+\emph{Cantidad de horas trabajadas}: categorizadas como menos de 15
+horas, de 15 a menos de 40, de 40 a 48, y más de 48 horas semanales.
+
+\emph{Ingreso per cápita del hogar}: calculado dividiendo el ingreso
+total del hogar entre la cantidad de personas que lo conforman.
+
+Estas variables se analizan para identificar las diferencias económicas
+y laborales asociadas al grado de discapacidad. Para cada una, se
+aplicaron pruebas estadísticas no paramétricas y categóricas según
+corresponda, considerando los supuestos metodológicos requeridos (como
+falta de normalidad en los ingresos y naturaleza categórica de la
+mayoría de las variables explicativas).
+
+\textbf{Métodos}
+
+\textbf{Prueba de Kruskal-Wallis}
+
+Esta prueba fue utilizada para determinar si existen diferencias en la
+distribución del ingreso per cápita del hogar entre personas
+clasificadas según su grado de discapacidad (sin, leve, moderada,
+severa). La prueba de Kruskal-Wallis permite comparar tres o más grupos
+independientes utilizando rangos en lugar de valores originales, lo cual
+es ideal cuando los datos no son normales o tienen valores atípicos
+importantes Ostertagová et~al. (2014).
+
+\begin{tcolorbox}[title=Prueba de Kruskal-Wallis]
+La prueba de Kruskal-Wallis sirve para ver si las distribuciones de una variable son iguales entre varios grupos. Se basa en rangos y no en los valores originales. El estadístico se calcula con la fórmula:
+\begin{center}
+$H = \frac{12}{N(N+1)} \sum\limits_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)$
+\end{center}
+donde \( N \) es el total de observaciones, \( k \) el número de grupos, \( n_i \) el tamaño del grupo \( i \), y \( R_i \) la suma de los rangos del grupo \( i \).
+\end{tcolorbox}
+
+La hipótesis nula establece que todas las distribuciones son iguales
+entre los grupos, y se rechaza si el valor p es menor al nivel de
+significancia (por ejemplo, 0.05), lo que indicaría que al menos un
+grupo tiene una distribución distinta de los demás.
+
+\textbf{Prueba Chi-cuadrado de independencia}
+
+Para analizar si existe una relación entre el grado de discapacidad y
+otras variables categóricas, como la condición de actividad o el tipo de
+jornada laboral, se aplicó la prueba Chi-cuadrado de independencia. Esta
+técnica permite evaluar si dos variables categóricas están asociadas o
+si son independientes McHugh (2013).
+
+\begin{tcolorbox}[title=Prueba Chi-cuadrado de independencia]
+El estadístico de la prueba se calcula con la fórmula:
+\begin{center}
+$\chi^2 = \sum\limits_{i=1}^r \sum\limits_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$
+\end{center}
+donde \( O_{ij} \) es la frecuencia observada en la celda \( i, j \), y \( E_{ij} \) es la frecuencia esperada, calculada como:
+
+\begin{center}
+E_{ij} = \frac{(F_i)(C_j)}{N}
+\end{center}
+
+siendo \( F_i \) el total de la fila \( i \), \( C_j \) el total de la columna \( j \), y \( N \) el número total de casos.
+\end{tcolorbox}
+
+Cabe destacar que este tipo de análisis ha sido empleado en estudios
+como el de Lay-Raby et~al. (2021), donde se utilizaron datos
+representativos de Chile para modelar las probabilidades de acceso al
+empleo de personas con discapacidad. En ese trabajo se identificaron
+variables relevantes como el nivel educativo, el ingreso y los
+subsidios, que influyen de forma significativa en las oportunidades
+laborales. Aunque en este proyecto no se aplicó un modelo de regresión
+logística multinomial, los hallazgos de dicha investigación sirvieron de
+apoyo para la interpretación de los patrones encontrados con los métodos
+descriptivos y las pruebas de hipótesis seleccionadas.
+
+Cuando la prueba chi-cuadrado detecta una asociación significativa entre
+variables categóricas, se hace necesario cuantificar la fuerza de esa
+relación. Para este propósito se utilizó la \textbf{V de Cramer}, una
+medida que permite interpretar la magnitud del vínculo entre las
+variables analizadas.
+
+La V de Cramer tiene la ventaja de ser fácil de interpretar: sus valores
+van de 0 a 1, donde 0 indica ausencia de asociación y 1 representa una
+relación perfecta. Esta medida es particularmente útil en tablas de
+contingencia de cualquier dimensión, y permite comparar el grado de
+asociación entre diferentes pares de variables. Aunque no existe una
+escala rígida, se suele considerar que valores menores a 0.10 indican
+una relación débil, entre 0.10 y 0.29 una relación moderada, y mayores a
+0.30 una relación fuerte.
+
+\begin{tcolorbox}[title=V de Cramer]
+La V de Cramer es una medida de asociación entre dos variables categóricas. Se utiliza comúnmente después de realizar una prueba chi-cuadrado para cuantificar la intensidad de la relación. Su fórmula es:
+
+\begin{center}
+$V = \sqrt{ \frac{\chi^2}{N \cdot (k - 1)} }$
+\end{center}
+
+donde:
+
+\begin{itemize}
+  \item \( \chi^2 \) es el estadístico de la prueba chi-cuadrado de independencia,  
+  \item \( N \) es el número total de observaciones,  
+  \item \( k \) es el menor entre el número de filas \( r \) o columnas \( c \): \( k = \min(r, c) \).
+\end{itemize}
+
+El valor de \( V \) está acotado entre 0 y 1. Un valor cercano a 0 indica poca o ninguna asociación, mientras que un valor cercano a 1 indica una asociación fuerte.
+\end{tcolorbox}
+
+\section{Resultados}\label{resultados}
+
+El análisis de los microdatos de la ENADIS 2023 revela una relación
+significativa entre el grado de discapacidad y diversos indicadores de
+acceso al empleo, ingreso y calidad laboral. Estos hallazgos empíricos
+coinciden con la literatura académica y técnica revisada, tanto en el
+contexto costarricense como en estudios realizados en el resto del
+mundo. A continuación, se presentan los principales resultados agrupados
+en cuatro dimensiones clave: ingreso, condición de actividad y horas
+trabajadas, posición ocupacional, y calidad del empleo.
+
+Los ingresos per cápita del hogar varían significativamente según el
+grado de discapacidad. La prueba de Kruskal-Wallis aplicada al ingreso
+per cápita arrojó un estadístico ( \chi\^{}2 ) = 192.41, con 3 grados de
+libertad y un valor p \textless{} 2.2e-16, lo que confirma que las
+distribuciones de ingreso no son iguales entre los grupos. Las personas
+sin discapacidad tienen las medianas de ingreso más altas, mientras que
+estas disminuyen conforme aumenta la severidad de la discapacidad.
+
+Esta diferencia puede observarse gráficamente en la
+Figura~\ref{fig-ingreso}, donde se presenta un diagrama de cajas del
+ingreso per cápita del hogar (en escala logarítmica) según el grado de
+discapacidad.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{../res/graficos/ingreso_hogar_vs_grado_discapacidad.png}
+
+}
+
+\caption{\label{fig-ingreso}Distribución del ingreso per cápita del
+hogar por grado de discapacidad}
+
+\end{figure}%
+
+Se aprecia que las personas sin discapacidad concentran mayores niveles
+de ingreso y menor dispersión relativa. A medida que aumenta el grado de
+discapacidad (de leve a severo), la mediana de ingreso disminuye
+visiblemente, y la distribución presenta mayor asimetría y presencia de
+valores extremos. Además, la media (representada con una ``x'') es
+sistemáticamente superior a la mediana, lo que sugiere que existen
+algunos ingresos altos que elevan el promedio, especialmente en los
+grupos sin discapacidad o con discapacidad leve.
+
+Este resultado es coherente con los hallazgos de Jiménez Lara \& Huete
+García (2010) en España, donde se mostró que las personas con
+discapacidad no solo tienen menores ingresos, sino que deben asumir
+mayores gastos en su vida cotidiana, generando un agravio económico
+comparativo frente a la población general. A diferencia de este patrón
+de reducción absoluta del ingreso, el estudio de Pu \& Syu (2023) en
+Taiwán evidenció un fenómeno diferente: aunque el ingreso total no se
+reduce drásticamente tras adquirir una discapacidad, sí cambia su
+composición. Las personas con discapacidad pasan a depender menos del
+ingreso salarial y más de fuentes pasivas como intereses, renta de
+propiedades o transferencias. Este cambio en la composición puede
+indicar una mayor exposición a ingresos inestables o no recurrentes,
+situación que también podría darse en Costa Rica, aunque se requieren
+más estudios para confirmarlo.
+
+El análisis de la condición de actividad mediante la prueba de
+Chi-cuadrado reveló diferencias estadísticamente significativas ((
+\chi\^{}2 ) = 219.33, gl = 6, p \textless{} 2.2e-16). Las personas con
+discapacidad severa presentan una proporción mucho mayor de inactividad
+económica, mientras que la tasa de ocupación es más alta en personas sin
+discapacidad.
+
+Como se observa en la Figura~\ref{fig-condic}, estas diferencias son
+consistentes: la proporción de personas fuera de la fuerza de trabajo
+aumenta conforme se agrava el grado de discapacidad, pasando de un 25\%
+en personas sin discapacidad a un 45\% en aquellas con discapacidad
+severa. Por el contrario, la proporción de personas ocupadas disminuye
+notablemente en ese mismo trayecto, bajando de un 71\% a solo un 51\%.
+Este patrón es coherente con lo reportado por Ananian \& Dellaferrera
+(2024), quienes concluyen que las tasas de participación laboral de
+personas con discapacidad son más bajas en la mayoría de países, incluso
+cuando estas personas tienen niveles de educación y experiencia
+similares a la población sin discapacidad.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{../res/graficos/cond_act_seg_grad_disc.png}
+
+}
+
+\caption{\label{fig-condic}Distribución porcentual de la condición de
+actividad por grado de discapacidad}
+
+\end{figure}%
+
+Además, la distribución de las horas trabajadas semanalmente presenta
+diferencias estadísticamente significativas entre los grupos definidos
+por grado de discapacidad (( \chi\^{}2 ) = 173.32, gl = 9, p \textless{}
+2.2e-16). Tal como se muestra en la Figura~\ref{fig-horas}, en los
+grupos con discapacidad moderada y severa es más común observar jornadas
+parciales, especialmente aquellas inferiores a las 40 horas semanales.
+Por ejemplo, un 39\% de las personas con discapacidad severa trabaja
+menos de 40 horas a la semana, en contraste con un 24\% entre quienes no
+reportan discapacidad.
+
+Este patrón indica una reducción en la jornada laboral proporcional a la
+severidad de la discapacidad, y sugiere una mayor prevalencia de empleos
+de medio tiempo o con condiciones menos estables. Esta tendencia ha sido
+documentada por Donelly et~al. (2020), quienes demostraron que los
+graduados universitarios con discapacidad, además de recibir menores
+ingresos, tienden a trabajar menos horas y a enfrentar trayectorias
+laborales más fragmentadas. Asimismo, Henly \& Brucker (2020) señalan
+que la reducción de horas suele ir acompañada de menor autonomía y
+menores posibilidades de desarrollo profesional, contribuyendo a
+perpetuar un ciclo de precariedad.
+
+En el contexto costarricense, Oca \& Andrés (2020) destacan que una
+proporción considerable de personas con discapacidad no trabaja debido a
+barreras estructurales como la falta de accesibilidad, prejuicios por
+parte de empleadores y desconocimiento sobre incentivos legales. Por
+tanto, las menores jornadas observadas no necesariamente reflejan una
+preferencia voluntaria por parte de las personas con discapacidad, sino
+limitaciones impuestas por un entorno laboral poco inclusivo.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{../res/graficos/grado_disc_vs_horas_lab.png}
+
+}
+
+\caption{\label{fig-horas}Distribución de las horas laboradas semanales
+por grado de discapacidad}
+
+\end{figure}%
+
+El análisis de la variable posición en el trabajo mostró diferencias
+claras entre los grupos según el grado de discapacidad (( \chi\^{}2 ) =
+114.06, gl = 15, p \textless{} 2.2e-16). Como se observa en la
+Figura~\ref{fig-posicion}, las personas con discapacidad tienden a
+desempeñarse con mayor frecuencia como trabajadoras por cuenta propia o
+como ayudantes sin remuneración, mientras que la categoría de empleados
+asalariados es más común entre las personas sin discapacidad.
+
+\begin{figure}
+
+\centering{
+
+\includegraphics[width=0.8\textwidth,height=\textheight]{../res/graficos/pos_trabajo_vs_grad_disc.png}
+
+}
+
+\caption{\label{fig-posicion}Distribución del grado de discapacidad por
+posición en el empleo principal}
+
+\end{figure}%
+
+Esta tendencia refleja un mayor grado de informalidad y vulnerabilidad
+laboral entre quienes presentan alguna discapacidad, lo cual coincide
+con lo planteado por L. A. Schur (2002), quienes señalan que, en
+contextos donde el mercado laboral no es inclusivo, las personas con
+discapacidad terminan accediendo mayormente a empleos informales,
+temporales o de medio tiempo, que suelen estar peor remunerados y
+carecer de protección social.
+
+De forma complementaria, Pinilla-Roncancio \& Gallardo (2023) documentan
+que en seis países latinoamericanos se observa un patrón similar: las
+personas con discapacidad, y especialmente las mujeres y quienes viven
+en zonas rurales, enfrentan mayores barreras para acceder al empleo
+formal. Estas barreras incluyen prejuicios en los procesos de
+contratación, escasa adaptación en los lugares de trabajo y ausencia de
+políticas efectivas que incentiven la inclusión laboral. En este
+sentido, los resultados costarricenses obtenidos a partir de la ENADIS
+2023 refuerzan la evidencia sobre esta exclusión estructural en la
+región.
+
+Los resultados anteriores se complementan con el cálculo de la V de
+Cramer, una medida estadística utilizada para evaluar la fuerza de la
+asociación entre dos variables categóricas. A diferencia de la prueba
+Chi-cuadrado, que solo indica si existe una relación significativa, la V
+de Cramer permite cuantificar cuán fuerte o débil es esa relación. Sus
+valores van de 0 a 1, donde 0 significa ausencia total de asociación y 1
+indica una relación perfecta.
+
+En este caso, el grado de discapacidad se contrastó con diferentes
+variables categóricas del ámbito laboral. En primer lugar, para la
+condición de actividad (ocupado/a, desocupado/a, fuera de la fuerza
+laboral), se obtuvo un valor de \(V = 0.1058\), lo cual representa una
+asociación débil pero no trivial. Este hallazgo es coherente con lo
+observado en la Figura~\ref{fig-condic}, donde se evidencia que la
+inactividad económica aumenta conforme se agrava el grado de
+discapacidad. Aunque la diferencia es visible, la magnitud moderada del
+valor indica que otros factores también contribuyen a la exclusión del
+empleo, como la falta de accesibilidad, prejuicios estructurales y
+políticas públicas insuficientes ---tal como sugieren Ananian \&
+Dellaferrera (2024) y Oca \& Andrés (2020).
+
+Para la variable horas trabajadas semanalmente, el valor de la V de
+Cramer fue incluso menor \(V = 0.0939\), indicando una asociación más
+débil. En la Figura~\ref{fig-horas}, se aprecia que las personas con
+discapacidad severa o moderada tienden a concentrarse en jornadas
+parciales (menos de 40 horas), en contraste con quienes no presentan
+discapacidad, que predominan en jornadas completas. Este patrón sugiere
+que, aunque hay diferencias significativas, la discapacidad por sí sola
+no explica completamente la distribución del tiempo laboral, lo cual
+coincide con lo documentado por Donelly et~al. (2020) y Henly \& Brucker
+(2020) sobre los obstáculos estructurales que afectan la estabilidad y
+calidad del empleo.
+
+Finalmente, en el análisis de la posición ocupacional (empleado/a,
+patrono/a, cuenta propia, ayudante sin remuneración), el valor de
+\(V = 0.0729\) fue el más bajo de los tres casos. Esto indica que, entre
+las personas que sí están ocupadas, el tipo de puesto de trabajo no
+varía de forma marcada según el grado de discapacidad. Aun así, la
+Figura~\ref{fig-posicion} muestra que las personas con discapacidad
+tienen mayor presencia en trabajos por cuenta propia y no remunerados,
+lo cual puede estar vinculado a procesos de autoexclusión forzada o
+empleo informal, como también señalan L. A. Schur (2002) y
+Pinilla-Roncancio \& Gallardo (2023) en sus análisis sobre barreras de
+acceso al empleo formal.
+
+En conjunto, estos valores de la V de Cramer permiten afirmar que el
+grado de discapacidad sí está relacionado con peores condiciones
+laborales, pero que la fuerza de dicha relación es limitada, lo cual
+refuerza la necesidad de entender la exclusión laboral como un fenómeno
+multicausal. La discapacidad no actúa de manera aislada, sino en
+interacción con el entorno económico, institucional, educativo y
+sociocultural del país.
+
+\section{Conclusiones}\label{conclusiones}
+
+Los hallazgos de esta investigación revelan con claridad que el grado de
+discapacidad constituye un factor diferenciador en el acceso a
+oportunidades laborales y económicas en Costa Rica. A partir del
+análisis de los microdatos de la ENADIS 2023, se evidenció que a mayor
+severidad en la discapacidad, menores son los ingresos per cápita, la
+participación en el empleo formal y la cantidad de horas trabajadas.
+Estos resultados son estadísticamente significativos y respaldados por
+pruebas robustas como Kruskal-Wallis y chi-cuadrado de independencia,
+que permiten afirmar con fundamento que la desigualdad estructural se
+expresa con fuerza entre los distintos grupos según su grado de
+discapacidad.
+
+Aunque las medidas de asociación como la V de Cramer muestran que la
+fuerza estadística de estas relaciones es débil o moderada, su
+relevancia práctica no puede ser ignorada. Las personas con
+discapacidad, especialmente aquellas con limitaciones severas, enfrentan
+condiciones laborales más precarias, menor acceso a empleos estables y
+mayor dependencia de ocupaciones por cuenta propia o informales. Esto se
+enmarca en un entorno que no ha logrado adecuarse de manera efectiva a
+las necesidades de accesibilidad, adaptación y equidad para esta
+población.
+
+En términos de política pública, los resultados respaldan la necesidad
+de replantear las estrategias de inclusión laboral desde un enfoque
+interseccional y estructural. No basta con promover el empleo entre
+personas con discapacidad; es indispensable garantizar que dicho empleo
+sea digno, bien remunerado y libre de barreras discriminatorias.
+Asimismo, deben fortalecerse los mecanismos de fiscalización, los
+incentivos para empleadores inclusivos, y las políticas de accesibilidad
+universal tanto en el sector público como en el privado.
+
+Este estudio demuestra que el grado de discapacidad no solo tiene
+implicaciones sobre la funcionalidad individual, sino que es un
+determinante clave en los resultados socioeconómicos de las personas.
+Comprenderlo como un eje de desigualdad estructural permite avanzar
+hacia políticas más justas y eficaces. De cara al futuro, se sugiere
+profundizar en enfoques multivariados que incluyan variables como sexo,
+región y nivel educativo, así como considerar estudios longitudinales
+que permitan observar trayectorias laborales en el tiempo. Sólo con
+evidencia sólida y políticas basadas en datos será posible construir una
+sociedad verdaderamente inclusiva y equitativa.
+
+\section{Agradecimientos}\label{agradecimientos}
+
+Los autores desean expresar su más profundo agradecimiento al Profesor
+Ph.D.~Maikol Solís por su acompañamiento durante todo el proceso de
+desarrollo del presente trabajo. Su disposición constante para brindar
+asistencia en los aspectos técnicos y metodológicos relacionados con el
+programa utilizado fue fundamental para el avance y culminación exitosa
+de este proyecto.
+
+De igual manera, se extiende un sincero agradecimiento a la Dra. Milena
+Castro, quien durante la segunda parte del semestre brindó un valioso
+acompañamiento académico. Su orientación en la definición del tema de
+investigación, así como sus recomendaciones metodológicas, fueron clave
+para enriquecer el enfoque y la solidez del trabajo realizado.
+
+Asimismo, se agradece a los compañeros del curso CA0303: Estadística
+Actuarial I, cuyo apoyo y colaboración fueron de gran utilidad a lo
+largo de todo el semestre en el que se desarrolló este proyecto.
+
+⸻
+
+\newpage{}
+
+\section{Anexos}\label{anexos}
+
+\subsection{Repositorio en GitHub}\label{repositorio-en-github}
+
+\url{https://github.com/Diego-Vega-Viquez/Bitacoras-CA0303}
+
+\section*{Bibliografía}\label{bibliografuxeda}
+\addcontentsline{toc}{section}{Bibliografía}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-ameri_disability_2015}
+Ameri, M., Schur, L., Adya, M., Bentley, S., McKay, P., \& Kruse, D.
+(2015). \emph{The disability employment puzzle: A field experiment on
+employer hiring behavior}. National Bureau of Economic Research.
+\url{http://www.nber.org/papers/w21560}
+
+\bibitem[\citeproctext]{ref-ananian_study_2024}
+Ananian, S., \& Dellaferrera, G. (2024). \emph{A study on the employment
+and wage outcomes of people with disabilities} {[}Working Paper 124{]}.
+International Labour Organization.
+\url{https://doi.org/10.54394/YRCN8597}
+
+\bibitem[\citeproctext]{ref-donelly_income_2020}
+Donelly, M., Gordon, S., \& Bowling, A. (2020). Income and employment
+equity of graduates with and without disabilities. \emph{Work},
+\emph{65}(4), 547-561. \url{https://doi.org/10.3233/WOR-203109}
+
+\bibitem[\citeproctext]{ref-henly_intrinsic_2020}
+Henly, M., \& Brucker, D. L. (2020). More than just lower wages:
+Intrinsic job quality for college graduates with disabilities.
+\emph{Journal of Education and Work}, \emph{33}(5), 474-493.
+\url{https://doi.org/10.1080/13639080.2020.1842865}
+
+\bibitem[\citeproctext]{ref-inec_enadis_2023_pdf}
+INEC. (2023). \emph{Encuesta {Nacional} sobre {Discapacidad} ({ENADIS}):
+{Metodología} y {Resultados} {[}recurso electrónico{]}}. Instituto
+Nacional de Estadística y Censos ({INEC}).
+\url{https://inec.cr/sites/default/files/documentos/enadis2023-metodologia.pdf}
+
+\bibitem[\citeproctext]{ref-jimenez_agravio_2010}
+Jiménez Lara, A., \& Huete García, A. (2010). \emph{Estudio sobre el
+agravio comparativo económico que origina la discapacidad}. Ministerio
+de Sanidad y Política Social, Universidad Carlos III.
+\url{http://www.mscbs.gob.es/}
+
+\bibitem[\citeproctext]{ref-lay_raby_multinomial_2021}
+Lay-Raby, N., Fuente-Mella, H. de la, \& Lameles-Corvalán, O. (2021).
+Multinomial Logistic Regression to Estimate and Predict the Job
+Opportunities for People with Disabilities in Chile. \emph{Information},
+\emph{12}(9), 356. \url{https://doi.org/10.3390/info12090356}
+
+\bibitem[\citeproctext]{ref-malo_ocana_genero_2006}
+Malo Ocaña, M. Á., \& Dávila Quintana, C. D. (2006). Género,
+discapacidad y posición familiar: la participación laboral de las
+mujeres con discapacidad. \emph{Cuadernos aragoneses de economía},
+\emph{16}(1), 61-82.
+\url{https://dialnet.unirioja.es/servlet/articulo?codigo=2005269}
+
+\bibitem[\citeproctext]{ref-mchugh2013chi}
+McHugh, M. L. (2013). The Chi-square test of independence.
+\emph{Biochemia Medica}, \emph{23}(2), 143-149.
+\url{https://doi.org/10.11613/BM.2013.018}
+
+\bibitem[\citeproctext]{ref-oca_retos_2020}
+Oca, C. M. de, \& Andrés, H. (2020). Retos para la inclusión laboral de
+personas con discapacidad en {Costa} {Rica}. \emph{Economía y Sociedad},
+\emph{25}(58), 50-68. \url{https://doi.org/10.15359/eys.25/58.4}
+
+\bibitem[\citeproctext]{ref-ostertagova2014kruskal}
+Ostertagová, E., Ostertag, O., \& Kováč, J. (2014). Methodology and
+Application of the Kruskal-Wallis Test. \emph{Applied Mechanics and
+Materials}, \emph{611}, 115-120.
+\url{https://doi.org/10.4028/www.scientific.net/AMM.611.115}
+
+\bibitem[\citeproctext]{ref-pinilla_inequality_2023}
+Pinilla-Roncancio, M., \& Gallardo, M. (2023). Inequality in labour
+market opportunities for people with disabilities: Evidence for six
+Latin American countries. \emph{Global Social Policy}, \emph{23}(1),
+67-91. \url{https://doi.org/10.1177/14680181211070201}
+
+\bibitem[\citeproctext]{ref-pu_effects_2023}
+Pu, C., \& Syu, H.-F. (2023). Effects of disability on income and income
+composition. \emph{PLOS ONE}, \emph{18}(5), e0286462.
+\url{https://doi.org/10.1371/journal.pone.0286462}
+
+\bibitem[\citeproctext]{ref-rae_diccionario_2023}
+Real Academia Española. (2023). \emph{Diccionario de la lengua española}
+(24.ª ed.). Asociación de Academias de la Lengua Española.
+\url{https://dle.rae.es}
+
+\bibitem[\citeproctext]{ref-oms_informe_2011}
+Salud, O. M. de la, \& Mundial, B. (2011). \emph{Informe mundial sobre
+la discapacidad}. Organización Mundial de la Salud.
+\url{https://www.who.int/disabilities/world_report/2011/en/}
+
+\bibitem[\citeproctext]{ref-schur_dead_2002}
+Schur, L. A. (2002). Dead End Jobs or a Path to Economic Well Being? The
+Consequences of Non-Standard Work among People with Disabilities.
+\emph{Behavioral Sciences and the Law}, \emph{20}(5), 601-620.
+\url{https://doi.org/10.1002/bsl.512}
+
+\bibitem[\citeproctext]{ref-schur_disability_2017}
+Schur, L., Han, K., Kim, A., Ameri, M., Blanck, P., \& Kruse, D. (2017).
+Disability at {Work}: {A} {Look} {Back} and {Forward}. \emph{Journal of
+Occupational Rehabilitation}, \emph{27}(4), 482-497.
+\url{https://doi.org/10.1007/s10926-017-9739-5}
+
+\bibitem[\citeproctext]{ref-vargas2013}
+Vargas, M. C. (2013). La población con discapacidad en los censos del
+siglo {XX} en {Costa} {Rica}. \emph{Población y Salud en Mesoamérica}.
+\url{https://doi.org/10.15517/psm.v11i1.10525}
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
